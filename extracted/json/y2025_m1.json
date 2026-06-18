@@ -1,0 +1,133 @@
+{
+  "exam_id": "y2025_m1",
+  "year": 2025,
+  "moed": "א",
+  "date": "2025-07-27",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 4 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    4,
+    6
+  ],
+  "source_pdf": "y2025_s2m1y25-n.pdf",
+  "questions": [
+    {
+      "qid": "y2025_m1_q1",
+      "number": 1,
+      "points": 25,
+      "statement_he": "יש למצוא מקסימום מוחלט ומינימום מוחלט של הפונקציה $f(x,y,z)=x^2+2y^2+2z$ על מעטפת האליפסואיד $\\dfrac{x^2}{4}+\\dfrac{y^2}{9}+\\dfrac{z^2}{4}=1$.",
+      "topic": "multivariable_calc",
+      "subtopics": [
+        "lagrange_multipliers"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "ellipsoid",
+        "absolute_extrema"
+      ],
+      "subparts": null,
+      "solution_he": "נשתמש בכופלי לגראנז'. נסמן $g(x,y,z)=\\dfrac{x^2}{4}+\\dfrac{y^2}{9}+\\dfrac{z^2}{4}-1$.\n\nהגרדיאנטים:\n$$\\nabla f = (2x,\\,4y,\\,2),\\qquad \\nabla g = \\left(\\tfrac{x}{2},\\,\\tfrac{2y}{9},\\,\\tfrac{z}{2}\\right).$$\n\nמתנאי $\\nabla f = \\lambda \\nabla g$ מתקבל:\n$$2x = \\tfrac{\\lambda x}{2}\\;\\Rightarrow\\; x(4-\\lambda)=0,\\quad 4y = \\tfrac{2\\lambda y}{9}\\;\\Rightarrow\\; y\\!\\left(2-\\tfrac{\\lambda}{9}\\right)=0,\\quad 2 = \\tfrac{\\lambda z}{2}\\;\\Rightarrow\\; z = \\tfrac{4}{\\lambda}.$$\n\n**מקרה I:** $\\lambda = 4$. אז $y=0,\\ z=1$, ומהאילוץ $x^2/4 + 1/4 = 1$, כלומר $x=\\pm\\sqrt{3}$.\nנקודות $(\\pm\\sqrt{3},\\,0,\\,1)$, ערך $f = 3+0+2 = 5$.\n\n**מקרה II:** $\\lambda = 18$. אז $x=0,\\ z=\\tfrac{2}{9}$, ומהאילוץ $\\tfrac{y^2}{9} = 1-\\tfrac{1}{81} = \\tfrac{80}{81}$, כלומר $y = \\pm\\tfrac{4\\sqrt{5}}{3}$.\nנקודות $(0,\\,\\pm\\tfrac{4\\sqrt{5}}{3},\\,\\tfrac{2}{9})$, ערך $f = 0 + 2\\cdot\\tfrac{80}{9} + \\tfrac{4}{9} = \\tfrac{164}{9}$.\n\n**מקרה III:** $x=0$ ו-$y=0$. מהאילוץ $z=\\pm 2$, ערך $f = \\pm 4$.\n\nהשוואת הערכים $5,\\ \\tfrac{164}{9}\\approx 18.22,\\ \\pm 4$:\n\n**מקסימום מוחלט:** $f_{\\max} = \\dfrac{164}{9}$ בנקודות $\\left(0,\\,\\pm\\tfrac{4\\sqrt{5}}{3},\\,\\tfrac{2}{9}\\right)$.\n\n**מינימום מוחלט:** $f_{\\min} = -4$ בנקודה $(0,0,-2)$."
+    },
+    {
+      "qid": "y2025_m1_q2",
+      "number": 2,
+      "points": 25,
+      "statement_he": "נתונה הפונקציה $f(x)=x(\\pi-x)$ המוגדרת בתחום $[0,\\pi]$.\n\nא. יש לחשב את טור הקוסינוסים של הפונקציה.\n\nב. יש להעזר בסעיף א על מנת למצוא סכום אינסופי שמתכנס ל-$\\pi^2$.",
+      "topic": "fourier_series",
+      "subtopics": [
+        "cosine_series",
+        "series_sum_application"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "polynomial",
+        "pi_squared"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "**(א)** הרחבה זוגית של $f(x)=x(\\pi-x)$ ל-$(-\\pi,\\pi)$ עם תקופה $2\\pi$. נחשב את המקדמים.\n\nהמקדם החופשי:\n$$\\tfrac{a_0}{2} = \\tfrac{1}{\\pi}\\int_0^\\pi (\\pi x - x^2)\\,dx = \\tfrac{1}{\\pi}\\left[\\tfrac{\\pi x^2}{2} - \\tfrac{x^3}{3}\\right]_0^\\pi = \\tfrac{1}{\\pi}\\cdot \\tfrac{\\pi^3}{6} = \\tfrac{\\pi^2}{6}.$$\n\nעבור $n\\ge 1$:\n$$a_n = \\tfrac{2}{\\pi}\\int_0^\\pi (\\pi x - x^2)\\cos(nx)\\,dx.$$\n\nאינטגרציה בחלקים פעמיים (עם $u=\\pi x - x^2$, $dv = \\cos(nx)dx$):\n- שלב 1: $\\left[\\tfrac{(\\pi x - x^2)\\sin(nx)}{n}\\right]_0^\\pi - \\tfrac{1}{n}\\int_0^\\pi (\\pi - 2x)\\sin(nx)\\,dx$. הביטוי המפורש מתאפס בקצוות.\n- שלב 2: $\\int_0^\\pi (\\pi - 2x)\\sin(nx)dx = \\tfrac{\\pi(1+(-1)^n)}{n}$ (חישוב ישיר).\n\nלכן:\n$$\\int_0^\\pi (\\pi x - x^2)\\cos(nx)\\,dx = -\\tfrac{\\pi(1+(-1)^n)}{n^2},\\qquad a_n = -\\tfrac{2(1+(-1)^n)}{n^2}.$$\n\nלכן $a_n=0$ עבור $n$ אי-זוגי, ועבור $n=2k$ זוגי: $a_{2k} = -\\tfrac{1}{k^2}$.\n\n$$\\boxed{\\;x(\\pi-x) = \\tfrac{\\pi^2}{6} - \\sum_{k=1}^{\\infty}\\tfrac{\\cos(2kx)}{k^2}\\quad\\text{על }[0,\\pi].\\;}$$\n\n**(ב)** נציב $x=0$: $f(0)=0$ ו-$\\cos(0)=1$, ולכן\n$$0 = \\tfrac{\\pi^2}{6} - \\sum_{k=1}^{\\infty}\\tfrac{1}{k^2}\\;\\Longrightarrow\\; \\sum_{k=1}^{\\infty}\\tfrac{1}{k^2} = \\tfrac{\\pi^2}{6}.$$\n\nמכאן הטור האינסופי המתכנס ל-$\\pi^2$:\n$$\\sum_{k=1}^{\\infty}\\tfrac{6}{k^2} = \\pi^2.$$"
+    },
+    {
+      "qid": "y2025_m1_q3",
+      "number": 3,
+      "points": 25,
+      "statement_he": "נתון חרוט עם רדיוס בסיס $a$ וגובה $h$.\n\nא. בהנחה שצפיפות המסה של החרוט אחידה $\\rho=\\rho_0$ יש למצוא את המסה הכוללת, את מרכז המסה ואת מומנט האנרציה סביב ציר הסימטריה של החרוט.\n\nב. יש לחזור על א' בהנחה ש-$\\rho=r$ כאשר $r$ הוא המרחק מציר הסימטריה של החרוט.",
+      "topic": "triple_integrals",
+      "subtopics": [
+        "cylindrical",
+        "mass",
+        "com",
+        "moi"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "cone",
+        "non-uniform-density"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "נציב את החרוט עם הבסיס במישור $z=0$ (רדיוס $a$) והקודקוד ב-$(0,0,h)$. בגובה $z$ הרדיוס: $R(z)=a\\!\\left(1-\\tfrac{z}{h}\\right)$.\n\n**(א) צפיפות אחידה $\\rho=\\rho_0$**\n\nמסה (= $\\rho_0$ כפול הנפח של חרוט):\n$$M = \\rho_0\\int_0^h \\pi R(z)^2\\,dz = \\pi\\rho_0 a^2\\int_0^h\\!\\left(1-\\tfrac{z}{h}\\right)^2 dz = \\tfrac{\\pi\\rho_0 a^2 h}{3}.$$\n\nמרכז מסה — מטעמי סימטריה $\\bar x = \\bar y = 0$. עבור $\\bar z$:\n$$\\bar z = \\tfrac{1}{V}\\int_0^h z\\,\\pi R(z)^2\\,dz = \\tfrac{\\pi a^2}{V}\\!\\left(\\tfrac{h^2}{2}-\\tfrac{2h^2}{3}+\\tfrac{h^2}{4}\\right) = \\tfrac{\\pi a^2 h^2/12}{\\pi a^2 h/3} = \\tfrac{h}{4}.$$\n\n(נמצא במרחק $h/4$ מהבסיס.)\n\nמומנט אנרציה סביב ציר $z$ (בעזרת קואורדינטות גליליות):\n$$I_z = \\rho_0\\int_0^h\\int_0^{R(z)}\\!\\!r^2\\cdot 2\\pi r\\,dr\\,dz = \\tfrac{\\pi\\rho_0}{2}\\int_0^h R(z)^4 dz = \\tfrac{\\pi\\rho_0 a^4}{2}\\cdot \\tfrac{h}{5} = \\tfrac{\\pi\\rho_0 a^4 h}{10} = \\tfrac{3Ma^2}{10}.$$\n\n**(ב) צפיפות $\\rho = r$** (מרחק מציר הסימטריה)\n\n$$M = \\int_0^h\\!\\int_0^{R(z)}\\!\\!r\\cdot 2\\pi r\\,dr\\,dz = \\tfrac{2\\pi}{3}\\int_0^h R(z)^3 dz = \\tfrac{2\\pi a^3}{3}\\cdot\\tfrac{h}{4} = \\tfrac{\\pi a^3 h}{6}.$$\n\nמרכז מסה ($\\bar x = \\bar y = 0$):\n$$\\int z\\,dm = \\tfrac{2\\pi}{3}\\int_0^h z\\,R(z)^3 dz = \\tfrac{2\\pi a^3}{3}\\int_0^h z\\!\\left(1-\\tfrac{z}{h}\\right)^3 dz = \\tfrac{2\\pi a^3}{3}\\cdot \\tfrac{h^2}{20} = \\tfrac{\\pi a^3 h^2}{30}.$$\n$$\\bar z = \\tfrac{\\pi a^3 h^2/30}{\\pi a^3 h/6} = \\tfrac{h}{5}.$$\n\nמומנט אנרציה:\n$$I_z = \\int_0^h\\!\\int_0^{R(z)}\\!\\!r^2\\cdot r\\cdot 2\\pi r\\,dr\\,dz = \\tfrac{2\\pi}{5}\\int_0^h R(z)^5 dz = \\tfrac{2\\pi a^5 h}{30} = \\tfrac{\\pi a^5 h}{15} = \\tfrac{2Ma^2}{5}.$$\n\n(שוב — תוצאה \"נקייה\" בזכות עקביות עם המסה $M$.)"
+    },
+    {
+      "qid": "y2025_m1_q4",
+      "number": 4,
+      "points": 25,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C \\vec{F}\\cdot d\\vec{r}$ כאשר\n$$\\vec{F}=\\bigl(y e^{xy}+x y^2 e^{xy}+y\\bigr)\\hat{\\imath} + \\bigl(x e^{xy}+y x^2 e^{xy}+x+3\\bigr)\\hat{\\jmath}$$\nו-$C$ הוא מסלול הנתון על ידי $x=t^2-2$, $y=t^6+3t$, $0\\le t\\le 1$.",
+      "topic": "line_integrals",
+      "subtopics": [
+        "vector_field",
+        "conservative"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "exact_differential",
+        "parametric_curve"
+      ],
+      "subparts": null,
+      "solution_he": "נחפש פוטנציאל $\\phi$ כך ש-$\\vec F = \\nabla\\phi$.\n\nנסמן $H = xy\\,e^{xy}$. אז:\n$$\\tfrac{\\partial H}{\\partial x} = y\\,e^{xy} + xy\\cdot y\\,e^{xy} = y\\,e^{xy}(1+xy) = y\\,e^{xy}+xy^2 e^{xy},$$\n$$\\tfrac{\\partial H}{\\partial y} = x\\,e^{xy} + xy\\cdot x\\,e^{xy} = x\\,e^{xy}(1+xy) = x\\,e^{xy}+x^2 y\\,e^{xy}.$$\n\nלכן $\\vec F = \\nabla(xy\\,e^{xy}) + (y,\\,x+3)$. הרכיב הנותר $(y,\\,x+3)$ גם הוא משמר (תנאי $\\partial_y(y)=1=\\partial_x(x+3)$ מתקיים); הפוטנציאל שלו $xy+3y$.\n\nלכן:\n$$\\phi(x,y) = xy\\,e^{xy} + xy + 3y.$$\n\nנקודת התחלה ($t=0$): $(x,y)=(-2,0)$, $\\phi(-2,0) = 0 + 0 + 0 = 0$.\nנקודת סיום ($t=1$): $(x,y) = (-1, 4)$, $\\phi(-1,4) = -4\\,e^{-4} - 4 + 12 = 8 - 4e^{-4}$.\n\n$$\\int_C \\vec F\\cdot d\\vec r = \\phi(\\text{end}) - \\phi(\\text{start}) = \\boxed{\\,8 - 4e^{-4}\\,}.$$"
+    },
+    {
+      "qid": "y2025_m1_q5",
+      "number": 5,
+      "points": 25,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma \\vec{F}\\cdot\\hat{n}\\,ds$ כאשר המשטח $\\sigma$ הוא חלק המשטח $z=16-x^2-y^2$ הנמצא מעל מישור $xy$, ל-$\\hat{n}$ מרכיב $z$ שלילי, ו-$\\vec{F}=\\tanh y\\,\\hat{\\imath}+6\\cosh x\\,\\hat{\\jmath}+2x^2y^2\\,\\hat{k}$.",
+      "topic": "surface_integrals",
+      "subtopics": [
+        "flux",
+        "divergence_theorem"
+      ],
+      "difficulty": 3,
+      "tags": [
+        "paraboloid",
+        "closed_surface_trick"
+      ],
+      "subparts": null,
+      "solution_he": "המשטח $z = 16-x^2-y^2$ מעל מישור $xy$ הוא פרבולואיד הפותח מטה, חותך את המישור $z=0$ ב-$x^2+y^2=16$. נסגור עם הדיסקה $D:\\{z=0,\\ x^2+y^2\\le 16\\}$ ונפעיל את משפט הדיברגנץ על הנפח $V$.\n\nחישוב הדיברגנץ:\n$$\\nabla\\cdot\\vec F = \\tfrac{\\partial}{\\partial x}\\tanh y + \\tfrac{\\partial}{\\partial y}(6\\cosh x) + \\tfrac{\\partial}{\\partial z}(2x^2 y^2) = 0+0+0 = 0.$$\n\n(זו הסיבה לבחירת הטריק — הפונקציות $\\tanh,\\cosh$ עצמן בלתי-נעימות, אבל הדיברגנץ מאפס!)\n\nלכן השטף הכולל החוצה דרך $\\sigma\\cup D$ הוא $0$.\n\nעל הדיסקה $D$ ($z=0$, הנפח מעליה) הנורמל החיצוני הוא $\\hat n = -\\hat k$. שם $\\vec F\\cdot\\hat n = -F_z|_{z=0} = -2x^2 y^2$.\n\nבקואורדינטות פולריות ($x=r\\cos\\theta,\\,y=r\\sin\\theta$, $x^2 y^2 = r^4\\cos^2\\theta\\sin^2\\theta = \\tfrac{r^4 \\sin^2(2\\theta)}{4}$):\n$$\\iint_D 2x^2 y^2\\,dA = \\tfrac{1}{2}\\int_0^{2\\pi}\\!\\!\\sin^2(2\\theta)d\\theta\\int_0^4\\!\\! r^5\\,dr = \\tfrac{1}{2}\\cdot \\pi\\cdot\\tfrac{4^6}{6} = \\tfrac{1024\\pi}{3}.$$\n\nלכן $\\displaystyle\\iint_{D,\\text{out}}\\vec F\\cdot\\hat n\\,dS = -\\tfrac{1024\\pi}{3}$, ומאיזון השטף הכולל לאפס:\n$$\\iint_{\\sigma,\\text{out}}\\vec F\\cdot\\hat n\\,dS = +\\tfrac{1024\\pi}{3}.$$\n\nהנורמל \"החיצוני\" על $\\sigma$ הוא בעל רכיב $z$ חיובי (פונה למעלה החוצה מ-$V$). השאלה מבקשת נורמל עם רכיב $z$ שלילי — כלומר ההפוך:\n\n$$\\boxed{\\;\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = -\\tfrac{1024\\pi}{3}.\\;}$$"
+    },
+    {
+      "qid": "y2025_m1_q6",
+      "number": 6,
+      "points": 25,
+      "statement_he": "כאשר $S$ הוא המשטח $(x(u,v),y(u,v),z(u,v))$ ונתון ש-$x(u,v)=u+v$, $y(u,v)=u-v$, $z(u,v)=v$, $0\\le u\\le 1$, $0\\le v\\le 2$:\n\nא. יש לחשב את $\\displaystyle\\iint_S (xy+z^2)\\,d\\sigma$.\n\nב. יש לחשב את שטח המשטח $S$.",
+      "topic": "surface_integrals",
+      "subtopics": [
+        "parametric_surface",
+        "scalar",
+        "surface_area"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "plane_param"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "פרמטריזציה: $\\vec r(u,v) = (u+v,\\ u-v,\\ v)$.\n\nנגזרות חלקיות ווקטור נורמל:\n$$\\vec r_u = (1,1,0),\\quad \\vec r_v = (1,-1,1),\\quad \\vec r_u\\times\\vec r_v = (1,-1,-2).$$\n$$|\\vec r_u\\times\\vec r_v| = \\sqrt{1+1+4} = \\sqrt{6}.$$\n\n**(א)** האינטגרנד הופך נקי בקואורדינטות $(u,v)$:\n$$xy + z^2 = (u+v)(u-v) + v^2 = u^2 - v^2 + v^2 = u^2.$$\n\nלכן:\n$$\\iint_S (xy+z^2)\\,d\\sigma = \\int_0^2\\!\\!\\int_0^1 u^2\\cdot\\sqrt 6\\,du\\,dv = \\sqrt 6\\cdot\\tfrac{1}{3}\\cdot 2 = \\tfrac{2\\sqrt 6}{3}.$$\n\n**(ב)** שטח המשטח:\n$$\\text{Area}(S) = \\int_0^2\\!\\!\\int_0^1 \\sqrt 6\\,du\\,dv = 2\\sqrt 6.$$"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2021_m2",
+  "year": 2021,
+  "moed": "ב",
+  "date": "2021-08-09",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2021_s2m2y21.pdf",
+  "questions": [
+    {
+      "qid": "y2021_m2_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא על החיתוך של המישור $y+z=1$ והגליל $x^2+y^2=5$ את הנקודות הקרובות ביותר והרחוקות ביותר מראשית הצירים.",
+      "solution_he": "**פרמטריזציה של החיתוך:** מהגליל $x=\\sqrt 5\\cos\\theta,\\;y=\\sqrt 5\\sin\\theta$, ומהמישור $z=1-y=1-\\sqrt 5\\sin\\theta$.\n\n**מרחק² מהראשית:**\n$$D^2(\\theta)=x^2+y^2+z^2=5+(1-\\sqrt 5\\sin\\theta)^2=6-2\\sqrt 5\\sin\\theta+5\\sin^2\\theta.$$\n\n**נגזרת:**\n$$\\tfrac{dD^2}{d\\theta}=-2\\sqrt 5\\cos\\theta+10\\sin\\theta\\cos\\theta=2\\cos\\theta(5\\sin\\theta-\\sqrt 5).$$\n\n$=0$ ⇒ $\\cos\\theta=0$ או $\\sin\\theta=\\tfrac{1}{\\sqrt 5}$.\n\n**מקרה A — $\\cos\\theta=0$:**\n- $\\theta=\\tfrac{\\pi}{2}$: $(0,\\sqrt 5,1-\\sqrt 5)$, $D^2=11-2\\sqrt 5\\approx 6.53$.\n- $\\theta=\\tfrac{3\\pi}{2}$: $(0,-\\sqrt 5,1+\\sqrt 5)$, $D^2=11+2\\sqrt 5\\approx 15.47$.\n\n**מקרה B — $\\sin\\theta=\\tfrac{1}{\\sqrt 5}$:** $\\cos\\theta=\\pm\\tfrac{2}{\\sqrt 5}$ ⇒ $x=\\pm 2,\\;y=1,\\;z=0$, $D^2=4+1+0=5$.\n\n**זיהוי הקיצונים:**\n\n$$\\boxed{\\;\\text{קרובות ביותר: }(\\pm 2,1,0),\\;D=\\sqrt 5;\\quad\\text{רחוקה ביותר: }(0,-\\sqrt 5,1+\\sqrt 5),\\;D=\\sqrt{11+2\\sqrt 5}.\\;}$$"
+    },
+    {
+      "qid": "y2021_m2_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. יש לפתח בטור קוסינוסים את הפונקציה $f(x)=x(\\pi-x)$ בקטע $[0,\\pi]$.\n\nב. יש להעזר בפיתוח כדי להראות ש-$\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{n^2}=\\dfrac{\\pi^2}{6}$ ולחשב את $\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{n^4}$.",
+      "solution_he": "**(א)** טור קוסינוסים = הרחבה זוגית, $b_n=0$.\n\n**המקדם החופשי:**\n$$a_0=\\tfrac{2}{\\pi}\\!\\int_0^\\pi x(\\pi-x)dx=\\tfrac{2}{\\pi}\\!\\left[\\tfrac{\\pi x^2}{2}-\\tfrac{x^3}{3}\\right]_0^\\pi=\\tfrac{2}{\\pi}\\cdot\\tfrac{\\pi^3}{6}=\\tfrac{\\pi^2}{3}.$$\n\n**מקדמי קוסינוס** (אינטגרציה בחלקים פעמיים; ראה מתחת):\n$$\\int_0^\\pi\\pi x\\cos(nx)dx=\\tfrac{\\pi[(-1)^n-1]}{n^2},\\quad\\int_0^\\pi x^2\\cos(nx)dx=\\tfrac{2\\pi(-1)^n}{n^2}.$$\n\nלכן\n$$\\int_0^\\pi x(\\pi-x)\\cos(nx)dx=\\tfrac{\\pi[(-1)^n-1]}{n^2}-\\tfrac{2\\pi(-1)^n}{n^2}=-\\tfrac{\\pi[(-1)^n+1]}{n^2}.$$\n\n$$a_n=-\\tfrac{2[(-1)^n+1]}{n^2}=\\begin{cases}0 & n\\text{ אי-זוגי}\\\\[3pt]-\\tfrac{4}{n^2} & n\\text{ זוגי}\\end{cases}.$$\n\nעבור $n=2k$ ($k\\ge 1$): $a_{2k}=-\\tfrac{4}{(2k)^2}=-\\tfrac{1}{k^2}$.\n\n$$\\boxed{\\;f(x)=\\tfrac{\\pi^2}{6}-\\sum_{k=1}^\\infty\\tfrac{\\cos(2kx)}{k^2}.\\;}$$\n\n(מקדמים זוגיים בלבד כי לפונקציה המורחבת יש סימטריה נוספת סביב $x=\\tfrac{\\pi}{2}$ — תקופה אפקטיבית $\\pi$.)\n\n**(ב.1)** הצבה $x=0$: $f(0)=0$:\n$$0=\\tfrac{\\pi^2}{6}-\\sum_{k=1}^\\infty\\tfrac{1}{k^2}\\;\\Longrightarrow\\;\\sum_{k=1}^\\infty\\tfrac{1}{k^2}=\\tfrac{\\pi^2}{6}.\\;\\checkmark$$\n\n**(ב.2) Parseval:** $\\tfrac{a_0^2}{2}+\\sum a_n^2=\\tfrac{1}{\\pi}\\!\\int_{-\\pi}^\\pi f^2\\,dx$.\n\n$$\\int_{-\\pi}^\\pi f^2 dx=2\\int_0^\\pi(\\pi^2 x^2-2\\pi x^3+x^4)dx=2\\pi^5\\!\\left[\\tfrac{1}{3}-\\tfrac{1}{2}+\\tfrac{1}{5}\\right]=\\tfrac{\\pi^5}{15}.$$\n\n$$\\tfrac{1}{\\pi}\\cdot\\tfrac{\\pi^5}{15}=\\tfrac{\\pi^4}{15}.$$\n\nצד שמאל: $\\tfrac{(\\pi^2/3)^2}{2}+\\sum_{k=1}^\\infty\\tfrac{1}{k^4}=\\tfrac{\\pi^4}{18}+\\sum\\tfrac{1}{k^4}$.\n\n$$\\sum_{k=1}^\\infty\\tfrac{1}{k^4}=\\tfrac{\\pi^4}{15}-\\tfrac{\\pi^4}{18}=\\pi^4\\cdot\\tfrac{18-15}{270}=\\tfrac{\\pi^4}{90}.$$\n\n$$\\boxed{\\;\\sum_{n=1}^\\infty\\tfrac{1}{n^4}=\\tfrac{\\pi^4}{90}.\\;}$$"
+    },
+    {
+      "qid": "y2021_m2_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר המשטח $\\sigma$ הוא חלק מעטפת האליפסואיד $4x^2+4y^2+9z^2=36$ הנמצא מעל המישור $z=1$, ל-$\\hat n$ מרכיב $z$ חיובי, ו-$\\vec F=(2x+z^{24})\\hat\\imath-(2y+z)\\hat\\jmath+(2x^2+3y^9)\\hat k$.",
+      "solution_he": "**הברקה — דיברגנץ:** $\\nabla\\cdot\\vec F=2-2+0=0$.\n\nלכן השטף הכולל דרך כל משטח סגור מתאפס. נסגור עם הדיסקה $D$ ב-$z=1$.\n\n**זיהוי הדיסקה:** ב-$z=1$ ⇒ $4x^2+4y^2+9=36$ ⇒ $x^2+y^2=\\tfrac{27}{4}$, רדיוס $\\tfrac{3\\sqrt 3}{2}$.\n\n**נפח חסום $V$:** בין הכיפה $\\sigma$ (מעל) והדיסקה $D$ (מתחת).\n\n**Stokes/דיברגנץ:** עם נורמלים חיצוניים (כיפה כלפי מעלה ✓, דיסקה כלפי מטה $-\\hat k$):\n$$\\iint_\\sigma\\vec F\\cdot\\hat n\\,dS+\\iint_D\\vec F\\cdot(-\\hat k)\\,dA=0.$$\n\n$$\\iint_\\sigma\\vec F\\cdot\\hat n\\,dS=\\iint_D F_z\\bigg|_{z=1}\\,dA=\\iint_D(2x^2+3y^9)\\,dA.$$\n\n**חישוב:**\n- $\\iint_D 3y^9\\,dA=0$ (פונקציה אי-זוגית, תחום סימטרי).\n- $\\iint_D x^2\\,dA=\\tfrac{1}{2}\\iint_D r^2\\,dA$ (סימטריה $x\\leftrightarrow y$) $=\\tfrac{1}{2}\\cdot 2\\pi\\!\\int_0^{3\\sqrt 3/2}\\!\\!r^3\\,dr=\\pi\\cdot\\tfrac{(3\\sqrt 3/2)^4}{4}$.\n\n$(3\\sqrt 3/2)^4=(27/4)^2=\\tfrac{729}{16}$ ⇒ $\\iint_D x^2\\,dA=\\tfrac{729\\pi}{64}$.\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=2\\cdot\\tfrac{729\\pi}{64}=\\tfrac{729\\pi}{32}.\\;}$$"
+    },
+    {
+      "qid": "y2021_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר המשטח $\\sigma$ הוא חלק החרוט $z=2\\sqrt{x^2+y^2}$ הנמצא בתוך החרוט $z=12-4\\sqrt{x^2+y^2}$, $\\vec F=x\\hat\\imath+y\\hat\\jmath+\\hat k$, ול-$\\hat n$ מרכיב $z$ חיובי.",
+      "solution_he": "**זיהוי החיתוך:** $2r=12-4r$ ⇒ $r=2,\\;z=4$.\n\nלכן $\\sigma$ הוא קונוס מהראשית $(r=0,z=0)$ עד למעגל $(r=2,z=4)$.\n\n**פרמטריזציה ישירה:** $\\vec r(x,y)=(x,y,2\\sqrt{x^2+y^2})$.\n\n$$\\vec r_x=(1,0,\\tfrac{2x}{r}),\\quad\\vec r_y=(0,1,\\tfrac{2y}{r}),\\quad\\vec r_x\\times\\vec r_y=\\left(-\\tfrac{2x}{r},-\\tfrac{2y}{r},1\\right).$$\n\nהרכיב $\\hat k$ חיובי ✓ — זוהי האוריינטציה הנדרשת.\n\n**מכפלה סקלרית:**\n$$\\vec F\\cdot(\\vec r_x\\times\\vec r_y)=x\\cdot\\!\\left(-\\tfrac{2x}{r}\\right)+y\\cdot\\!\\left(-\\tfrac{2y}{r}\\right)+1=-\\tfrac{2(x^2+y^2)}{r}+1=-2r+1.$$\n\n**אינטגרציה בקואורדינטות פולריות** (תחום $D_{xy}$: $r\\in[0,2]$):\n$$\\iint_\\sigma\\vec F\\cdot\\hat n\\,dS=\\int_0^{2\\pi}\\!\\!\\int_0^2(-2r+1)\\,r\\,dr\\,d\\theta=2\\pi\\!\\int_0^2(-2r^2+r)\\,dr.$$\n\n$$=2\\pi\\!\\left[-\\tfrac{2r^3}{3}+\\tfrac{r^2}{2}\\right]_0^2=2\\pi\\!\\left[-\\tfrac{16}{3}+2\\right]=2\\pi\\cdot\\!\\left(-\\tfrac{10}{3}\\right).$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=-\\tfrac{20\\pi}{3}.\\;}$$\n\n**אימות בדיברגנץ:** $\\nabla\\cdot\\vec F=2$. $V_{\\text{cone}}=\\tfrac{16\\pi}{3}$ ⇒ $\\iiint 2\\,dV=\\tfrac{32\\pi}{3}$. עם דיסקה עליונה ($z=4,\\;\\vec F\\cdot\\hat k=1$): שטף $=4\\pi$. שטף **חיצוני** של הקונוס $=\\tfrac{32\\pi}{3}-4\\pi=\\tfrac{20\\pi}{3}$. אך הנורמל הנדרש (עם $\\hat k>0$) הוא **פנימי**, ולכן $-\\tfrac{20\\pi}{3}$. ✓"
+    },
+    {
+      "qid": "y2021_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתון ש-$C$ מסלול סגור פשוט נגד כיוון השעון שתוחם אזור ששטחו $S$ על פני המישור $ax+by+cz=c$ כאשר $a^2+b^2+c^2=1$. יש לחשב את $\\displaystyle\\oint_C(bz-cy)\\,dx+(cx-az)\\,dy+(ay-bx)\\,dz$.",
+      "solution_he": "**אסטרטגיה — Stokes:** $\\vec F=(bz-cy,\\,cx-az,\\,ay-bx)$.\n\n**רוטור:**\n$$\\nabla\\times\\vec F=\\bigl(\\partial_y F_3-\\partial_z F_2,\\;\\partial_z F_1-\\partial_x F_3,\\;\\partial_x F_2-\\partial_y F_1\\bigr)=(a-(-a),\\;b-(-b),\\;c-(-c))=2(a,b,c).$$\n\n**נורמל למישור:** עבור $ax+by+cz=c$ עם $a^2+b^2+c^2=1$, $\\hat n=(a,b,c)$ הוא וקטור יחידה ✓.\n\n(האוריינטציה: CCW על המישור כפי שנצפה מהצד שאליו $\\hat n$ מצביע — מתאים ל-Stokes הסטנדרטי.)\n\n**Stokes:**\n$$\\oint_C\\vec F\\cdot d\\vec r=\\iint_S(\\nabla\\times\\vec F)\\cdot\\hat n\\,dS=\\iint_S 2(a^2+b^2+c^2)\\,dS=2\\!\\iint_S dS=2S.$$\n\n$$\\boxed{\\;\\oint_C(bz-cy)\\,dx+(cx-az)\\,dy+(ay-bx)\\,dz=2S.\\;}$$\n\n(תוצאה אלגנטית: האינטגרל פרופורציוני ישירות לשטח $S$, ללא תלות בצורה.)"
+    },
+    {
+      "qid": "y2021_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=y\\hat\\imath+x\\hat\\jmath+xy\\hat k$, ו-$\\sigma$ הוא המשטח הנתון על ידי $\\vec R=(u-v)\\hat\\imath+(u+v)\\hat\\jmath+uv\\,\\hat k$, $0\\le u\\le 2$, $0\\le v\\le 1$.",
+      "solution_he": "**הוקטורים הטנגנטיים:**\n$$\\vec R_u=(1,1,v),\\quad\\vec R_v=(-1,1,u).$$\n\n**הנורמל (לא-מנורמל):**\n$$\\vec R_u\\times\\vec R_v=\\det\\!\\begin{pmatrix}\\hat\\imath&\\hat\\jmath&\\hat k\\\\1&1&v\\\\-1&1&u\\end{pmatrix}=(u-v,\\,-(u+v),\\,2).$$\n\n**הצבת המשטח ב-$\\vec F$:** עם $x=u-v$, $y=u+v$, $z=uv$:\n$$\\vec F=(u+v,\\,u-v,\\,(u-v)(u+v))=(u+v,\\,u-v,\\,u^2-v^2).$$\n\n**מכפלה סקלרית:**\n$$\\vec F\\cdot(\\vec R_u\\times\\vec R_v)=(u+v)(u-v)+(u-v)\\bigl(-(u+v)\\bigr)+(u^2-v^2)\\cdot 2=2(u^2-v^2).$$\n\n(שני האיברים הראשונים מתבטלים זה את זה.)\n\n**אינטגרציה:**\n$$\\iint_\\sigma\\vec F\\cdot\\hat n\\,dS=2\\!\\int_0^2\\!\\!\\int_0^1\\!(u^2-v^2)\\,dv\\,du=2\\!\\int_0^2\\!\\bigl(u^2-\\tfrac{1}{3}\\bigr)du=2\\!\\left[\\tfrac{u^3}{3}-\\tfrac{u}{3}\\right]_0^2.$$\n\n$$=2\\!\\left[\\tfrac{8}{3}-\\tfrac{2}{3}\\right]=2\\cdot 2=4.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=4.\\;}$$"
+    }
+  ]
+}

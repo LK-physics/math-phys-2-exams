@@ -1,0 +1,132 @@
+{
+  "exam_id": "y2025_m2",
+  "year": 2025,
+  "moed": "ב",
+  "date": "2025-08-24",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 4 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    4,
+    6
+  ],
+  "source_pdf": "y2025_s2m2y25-n.pdf",
+  "questions": [
+    {
+      "qid": "y2025_m2_q1",
+      "number": 1,
+      "points": 25,
+      "statement_he": "יש למצוא על פני הכדור $x^2+y^2+z^2=9$ את הנקודות שעבורן מקבלת הפונקציה $f(x,y,z)=xyz$ ערך מקסימלי וערך מינימלי. איך תשתנה התשובה אם נחפש רק נקודות עבורן $z\\ge 2$?",
+      "topic": "multivariable_calc",
+      "subtopics": [
+        "lagrange_multipliers"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "sphere",
+        "constrained_extrema"
+      ],
+      "subparts": null,
+      "solution_he": "**שלב 1 — נקודות קיצון על כל הכדור.**\n\nלגראנז' עבור $g(x,y,z) = x^2+y^2+z^2-9$:\n$$\\nabla f = (yz,\\,xz,\\,xy) = \\lambda(2x,\\,2y,\\,2z).$$\n\nנכפיל ב-$x,y,z$ בהתאמה: $xyz = 2\\lambda x^2 = 2\\lambda y^2 = 2\\lambda z^2$.\n\nאם $\\lambda\\ne 0$: $x^2 = y^2 = z^2 = 3$ (מהאילוץ). אז שמונה נקודות $(\\pm\\sqrt 3,\\pm\\sqrt 3,\\pm\\sqrt 3)$ עם $f = \\pm 3\\sqrt 3$ (תלוי בזוגיות מספר הסימנים השליליים).\n\nאם $\\lambda = 0$: לפחות שתיים מהקואורדינטות אפס, $f=0$.\n\n**מקסימום: $\\;f_{\\max}=3\\sqrt 3\\approx 5.196\\;$ בנקודות עם מספר זוגי של סימנים שליליים — למשל $(\\sqrt 3,\\sqrt 3,\\sqrt 3)$.**\n**מינימום: $\\;f_{\\min}=-3\\sqrt 3\\;$ בנקודות עם מספר אי-זוגי של סימנים שליליים — למשל $(-\\sqrt 3,\\sqrt 3,\\sqrt 3)$.**\n\n**שלב 2 — תוספת המגבלה $z\\ge 2$.**\n\nהקיצונים הלא-מוגבלים נמצאים ב-$z=\\pm\\sqrt 3\\approx\\pm 1.73$, כלומר *מחוץ* לתחום $z\\ge 2$. לכן הקיצון על התת-תחום נמצא על השפה $z=2$.\n\nעל המעגל $\\{z=2,\\ x^2+y^2=5\\}$: $f = 2xy$. מקסימום של $2xy$ תחת $x^2+y^2=5$ מתקבל ב-$x=y=\\pm\\sqrt{5/2}$ (משוויון אריתמטי-גיאומטרי), ושם $|2xy| = x^2+y^2 = 5$.\n\nנבדוק גם את הקודקוד $(0,0,3)$ עם $f=0$.\n\n**עם המגבלה $z\\ge 2$: $\\;f_{\\max}=5\\;$ בנקודות $(\\pm\\sqrt{5/2},\\pm\\sqrt{5/2},2)$ (אותם סימנים), ו-$f_{\\min}=-5$ בנקודות עם סימנים מנוגדים.**"
+    },
+    {
+      "qid": "y2025_m2_q2",
+      "number": 2,
+      "points": 25,
+      "statement_he": "נתונה הפונקציה $f(x)=\\sin x$ המוגדרת בתחום $\\bigl(0,\\tfrac{\\pi}{2}\\bigr)$.\n\nא. יש לחשב את טור הסינוסים של $f$.\n\nב. מה הערך שמתקבל אם מציבים בטור $x=\\tfrac{\\pi}{2}$? מדוע?",
+      "topic": "fourier_series",
+      "subtopics": [
+        "sine_series"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "sine_of_sine"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "**(א)** טור סינוסים מתאים להרחבה אי-זוגית עם תקופה $\\pi$. ב-$L=\\pi/2$:\n$$b_n = \\tfrac{2}{L}\\int_0^L f(x)\\sin\\!\\left(\\tfrac{n\\pi x}{L}\\right)dx = \\tfrac{4}{\\pi}\\int_0^{\\pi/2}\\sin x\\,\\sin(2nx)\\,dx.$$\n\nלפי נוסחת מכפלה לסכום: $\\sin x\\sin(2nx) = \\tfrac{1}{2}[\\cos((2n-1)x) - \\cos((2n+1)x)]$.\n\n$$\\int_0^{\\pi/2}\\cos((2n-1)x)\\,dx = \\tfrac{\\sin((2n-1)\\pi/2)}{2n-1} = \\tfrac{(-1)^{n+1}}{2n-1},$$\n$$\\int_0^{\\pi/2}\\cos((2n+1)x)\\,dx = \\tfrac{\\sin((2n+1)\\pi/2)}{2n+1} = \\tfrac{(-1)^n}{2n+1}.$$\n\nלכן:\n$$\\int_0^{\\pi/2}\\sin x\\sin(2nx)\\,dx = \\tfrac{(-1)^{n+1}}{2}\\!\\left[\\tfrac{1}{2n-1} + \\tfrac{1}{2n+1}\\right] = \\tfrac{(-1)^{n+1}\\cdot 2n}{4n^2-1}.$$\n\n$$b_n = \\tfrac{8n\\,(-1)^{n+1}}{\\pi(4n^2-1)}.$$\n\n$$\\boxed{\\;\\sin x = \\tfrac{8}{\\pi}\\sum_{n=1}^\\infty \\tfrac{(-1)^{n+1}\\,n}{4n^2-1}\\sin(2nx)\\quad\\text{עבור }x\\in(0,\\tfrac{\\pi}{2}).\\;}$$\n\n**(ב)** ב-$x=\\pi/2$ כל $\\sin(2n\\cdot\\pi/2) = \\sin(n\\pi) = 0$, אז סכום הטור הוא $0$ — ולא $\\sin(\\pi/2) = 1$.\n\n**הסיבה:** טור הסינוסים מציג את ההרחבה ה*אי-זוגית* של $\\sin x$ ל-$(-\\pi/2,\\pi/2)$ ואז את המשכה התקופתי בתקופה $\\pi$. ההרחבה האי-זוגית של $\\sin x$ היא בדיוק $\\sin x$ עצמה על $(-\\pi/2,\\pi/2)$, אבל ב-$x=\\pi/2$ מתרחשת קפיצה: הגבול משמאל הוא $+1$ והגבול מימין (מהמשך התקופתי) הוא $-1$. טור פוריה מתכנס בנקודת קפיצה אל ממוצע הגבולות:\n$$\\tfrac{1+(-1)}{2} = 0.$$"
+    },
+    {
+      "qid": "y2025_m2_q3",
+      "number": 3,
+      "points": 25,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C \\vec{F}\\cdot d\\vec{r}$ כאשר $\\vec{F}=y^2\\hat{\\imath}+z^2\\hat{\\jmath}+x^2\\hat{k}$ והמסלול $C$ הוא היקף המשולש שקודקודיו $A_1(0,0,2)$, $A_2(0,1,0)$, $A_3(1,0,0)$, בכיוון $A_3\\to A_2\\to A_1$.",
+      "topic": "line_integrals",
+      "subtopics": [
+        "vector_field",
+        "stokes_theorem"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "triangle_3d",
+        "closed_curve"
+      ],
+      "subparts": null,
+      "solution_he": "המשולש מונח על המישור $x+y+\\tfrac{z}{2}=1$ (בדיקה: $A_3=(1,0,0)$: ✓, $A_2=(0,1,0)$: ✓, $A_1=(0,0,2)$: ✓). נשתמש במשפט סטוקס.\n\nחישוב הקבע:\n$$\\nabla\\times\\vec F = (\\partial_y x^2 - \\partial_z z^2,\\ \\partial_z y^2 - \\partial_x x^2,\\ \\partial_x z^2 - \\partial_y y^2) = -2(z,\\,x,\\,y).$$\n\nהמסלול $A_3\\to A_2\\to A_1\\to A_3$ מסביב למשולש. כיוון הסיבוב לפי כלל יד ימין: $\\vec{A_3A_2}\\times\\vec{A_3A_1} = (-1,1,0)\\times(-1,0,2) = (2,2,1)$ — לכן הנורמל החיובי הוא בכיוון $(2,2,1)$.\n\nעל המישור, אם נציב $z = 2-2x-2y$, אז $\\hat n\\,dS = (2,2,1)\\,dx\\,dy$ (תוצאה ידועה לחישוב נורמל לגרף).\n\nהאינטגרנד על המישור:\n$$(\\nabla\\times\\vec F)\\cdot\\hat n\\,dS = -2(z,x,y)\\cdot(2,2,1)\\,dx\\,dy = -2(2z + 2x + y)\\,dx\\,dy.$$\n\nנציב $z=2-2x-2y$: $2z+2x+y = 4-4x-4y+2x+y = 4-2x-3y$.\n\nתחום הפרמטרים $D = \\{(x,y):\\,x,y\\ge 0,\\ x+y\\le 1\\}$ (הטל המשולש על מישור $xy$).\n\n$$\\int_C\\vec F\\cdot d\\vec r = -2\\int_0^1\\!\\!\\int_0^{1-x} (4-2x-3y)\\,dy\\,dx.$$\n\nהאינטגרל הפנימי: $\\int_0^{1-x}(4-2x-3y)dy = (4-2x)(1-x) - \\tfrac{3(1-x)^2}{2} = \\tfrac{5}{2} - 3x + \\tfrac{x^2}{2}$.\n\n$$\\int_0^1\\!\\left(\\tfrac{5}{2} - 3x + \\tfrac{x^2}{2}\\right) dx = \\tfrac{5}{2} - \\tfrac{3}{2} + \\tfrac{1}{6} = \\tfrac{7}{6}.$$\n\n$$\\boxed{\\;\\int_C \\vec F\\cdot d\\vec r = -2\\cdot\\tfrac{7}{6} = -\\tfrac{7}{3}.\\;}$$\n\n(אימות ישיר: שלושת אינטגרלי הקטעים נותנים $-\\tfrac{1}{3}-\\tfrac{4}{3}-\\tfrac{2}{3} = -\\tfrac{7}{3}$. ✓)"
+    },
+    {
+      "qid": "y2025_m2_q4",
+      "number": 4,
+      "points": 25,
+      "statement_he": "נתון גוף דו-ממדי המתואר על ידי הפונקציה $r=1+\\sin\\theta$ כאשר $0\\le\\theta\\le 2\\pi$. צפיפות מסה אחידה.\n\nא. יש לחשב את השטח של הגוף.\n\nב. יש לחשב את מרכז המסה של הגוף.\n\nג. יש לחשב את הנפח שיתקבל אם נסובב את הגוף סביב הישר $y=5-2x$.",
+      "topic": "double_integrals",
+      "subtopics": [
+        "polar",
+        "area",
+        "com"
+      ],
+      "difficulty": 3,
+      "tags": [
+        "cardioid",
+        "pappus_theorem",
+        "volume_of_revolution"
+      ],
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "solution_he": "הגוף הוא קרדיואיד $r = 1+\\sin\\theta$.\n\n**(א) שטח:**\n$$A = \\tfrac{1}{2}\\int_0^{2\\pi}(1+\\sin\\theta)^2 d\\theta = \\tfrac{1}{2}\\int_0^{2\\pi}(1 + 2\\sin\\theta + \\sin^2\\theta)\\,d\\theta = \\tfrac{1}{2}(2\\pi + 0 + \\pi) = \\tfrac{3\\pi}{2}.$$\n\n**(ב) מרכז מסה:** הקרדיואיד סימטרי סביב ציר $y$ (כי $r(\\pi-\\theta) = r(\\theta)$), אז $\\bar x = 0$.\n$$\\bar y = \\tfrac{1}{A}\\iint y\\,dA = \\tfrac{1}{A}\\int_0^{2\\pi}\\int_0^{r(\\theta)} r\\sin\\theta\\cdot r\\,dr\\,d\\theta = \\tfrac{1}{3A}\\int_0^{2\\pi}\\sin\\theta\\,r^3(\\theta)\\,d\\theta.$$\n\nנפתח: $\\sin\\theta\\cdot(1+\\sin\\theta)^3 = \\sin\\theta + 3\\sin^2\\theta + 3\\sin^3\\theta + \\sin^4\\theta$.\n\nאינטגרציה על $[0,2\\pi]$: חזקות אי-זוגיות של סינוס מתאפסות, $\\int\\sin^2 = \\pi$, $\\int\\sin^4 = \\tfrac{3\\pi}{4}$.\n\n$$\\int_0^{2\\pi}\\sin\\theta\\,r^3 d\\theta = 0 + 3\\pi + 0 + \\tfrac{3\\pi}{4} = \\tfrac{15\\pi}{4}.$$\n\n$$\\bar y = \\tfrac{1}{3\\cdot\\tfrac{3\\pi}{2}}\\cdot\\tfrac{15\\pi}{4} = \\tfrac{2}{9\\pi}\\cdot\\tfrac{15\\pi}{4} = \\tfrac{5}{6}.$$\n\n**מרכז מסה:** $\\left(0,\\,\\tfrac{5}{6}\\right)$.\n\n**(ג) נפח גוף סיבוב סביב הישר $y=5-2x$ (כלומר $2x+y-5=0$).**\n\nהקרדיואיד שוכן כולו מתחת לישר: על הקרדיואיד $y\\le 2 < 5$, ולכן בודאי $2x+y<5$ (בהתחשב גם בערכי $x$). הקרדיואיד אינו חוצה את הישר ⇒ ניתן להפעיל את משפט פאפוס.\n\nמרחק מרכז המסה $\\left(0,\\tfrac{5}{6}\\right)$ מהישר:\n$$d = \\tfrac{|2\\cdot 0 + \\tfrac{5}{6} - 5|}{\\sqrt{2^2+1^2}} = \\tfrac{25/6}{\\sqrt 5} = \\tfrac{5\\sqrt 5}{6}.$$\n\nלפי פאפוס:\n$$V = 2\\pi\\cdot d\\cdot A = 2\\pi\\cdot\\tfrac{5\\sqrt 5}{6}\\cdot\\tfrac{3\\pi}{2} = \\boxed{\\tfrac{5\\sqrt 5\\,\\pi^2}{2}}.$$"
+    },
+    {
+      "qid": "y2025_m2_q5",
+      "number": 5,
+      "points": 25,
+      "statement_he": "מה השטח התחום בין $x^{2/3}+y^{2/3}=a^{2/3}$ ($x$ ו-$y$ לא שליליים) והצירים $x$ ו-$y$.",
+      "topic": "double_integrals",
+      "subtopics": [
+        "area",
+        "change_of_variables"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "astroid"
+      ],
+      "subparts": null,
+      "solution_he": "זוהי אסטרואידה $x^{2/3}+y^{2/3}=a^{2/3}$ בריבוע הראשון. נשתמש בפרמטריזציה $x = a\\cos^3 t,\\ y = a\\sin^3 t,\\ 0\\le t\\le \\tfrac{\\pi}{2}$.\n\nנחשב את השטח לפי $A = \\int_0^a y\\,dx$ — שינוי משתנה לפרמטריזציה:\n$$dx = -3a\\cos^2 t\\sin t\\,dt.$$\n\nכשהפרמטר עובר מ-$t=0$ ($x=a,y=0$) ל-$t=\\pi/2$ ($x=0,y=a$):\n$$A = \\int_a^0 y\\,dx = -\\int_0^{\\pi/2} a\\sin^3 t\\cdot(-3a\\cos^2 t\\sin t)\\,dt = 3a^2\\int_0^{\\pi/2}\\sin^4 t\\cos^2 t\\,dt.$$\n\nהאינטגרל הטריגונומטרי הסטנדרטי (פונקציית בטא):\n$$\\int_0^{\\pi/2}\\sin^4 t\\cos^2 t\\,dt = \\tfrac{1}{2}B(\\tfrac{5}{2},\\tfrac{3}{2}) = \\tfrac{1}{2}\\cdot\\tfrac{\\Gamma(5/2)\\Gamma(3/2)}{\\Gamma(4)} = \\tfrac{1}{2}\\cdot\\tfrac{(3\\sqrt\\pi/4)(\\sqrt\\pi/2)}{6} = \\tfrac{\\pi}{32}.$$\n\n$$\\boxed{\\;A = 3a^2\\cdot\\tfrac{\\pi}{32} = \\tfrac{3\\pi a^2}{32}.\\;}$$"
+    },
+    {
+      "qid": "y2025_m2_q6",
+      "number": 6,
+      "points": 25,
+      "statement_he": "נתון המשטח הסגור $\\sigma$ שהוא מעטפת התחום החסום על ידי המשטח $z=10-x^2-y^2$ והמישור $z=-6$. $\\hat{n}$ הוא וקטור היחידה המצביע מהתחום החסום החוצה.\n\nא. יש לחשב את $\\displaystyle\\iint_\\sigma \\vec{F}\\cdot\\hat{n}\\,ds$ כאשר $\\vec{F}=xy^2\\hat{\\imath}+z^2\\hat{\\jmath}+yx^2\\hat{k}$.\n\nב. יש לחשב את השטח של $\\sigma$.",
+      "topic": "surface_integrals",
+      "subtopics": [
+        "flux",
+        "divergence_theorem",
+        "surface_area"
+      ],
+      "difficulty": 3,
+      "tags": [
+        "paraboloid",
+        "closed_surface"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "התחום החסום $V$ הוא הפרבולואיד $z = 10-x^2-y^2$ \"כלפי מטה\" שנחתך עם המישור $z=-6$. החיתוך: $x^2+y^2 = 16$ (מעגל ברדיוס $4$).\n\n**(א) שטף דרך המעטפת הסגורה.**\n\n$$\\nabla\\cdot\\vec F = \\tfrac{\\partial}{\\partial x}(xy^2) + \\tfrac{\\partial}{\\partial y}(z^2) + \\tfrac{\\partial}{\\partial z}(yx^2) = y^2 + 0 + 0 = y^2.$$\n\nלפי משפט הדיברגנץ:\n$$\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = \\iiint_V y^2\\,dV.$$\n\nקואורדינטות גליליות ($y = r\\sin\\theta$, $dV = r\\,dr\\,dz\\,d\\theta$). עבור $z\\in[-6,10]$, $r\\in[0,\\sqrt{10-z}]$:\n$$\\iiint_V y^2 dV = \\int_0^{2\\pi}\\!\\!\\sin^2\\theta\\,d\\theta\\int_{-6}^{10}\\!\\!\\int_0^{\\sqrt{10-z}}\\!\\!r^2\\cdot r\\,dr\\,dz = \\pi\\int_{-6}^{10}\\tfrac{(10-z)^2}{4} dz.$$\n\nהאינטגרל הפנימי:\n$$\\tfrac{1}{4}\\int_{-6}^{10}(10-z)^2 dz = \\tfrac{1}{4}\\!\\left[-\\tfrac{(10-z)^3}{3}\\right]_{-6}^{10} = \\tfrac{1}{4}\\cdot\\tfrac{16^3}{3} = \\tfrac{4096}{12} = \\tfrac{1024}{3}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds = \\tfrac{1024\\pi}{3}.\\;}$$\n\n**(ב) שטח של $\\sigma$ = דיסקה תחתונה + כיפת פרבולואיד.**\n\n*דיסקה תחתונה* ($z=-6$, $r\\le 4$): $A_{\\text{disc}} = 16\\pi$.\n\n*פרבולואיד* ($z = 10-x^2-y^2$, $r\\le 4$):\n$$dS = \\sqrt{1 + z_x^2 + z_y^2}\\,dA = \\sqrt{1+4r^2}\\,r\\,dr\\,d\\theta.$$\n$$A_{\\text{par}} = 2\\pi\\int_0^4 r\\sqrt{1+4r^2}\\,dr.$$\n\nנציב $u=1+4r^2$, $du=8r\\,dr$:\n$$A_{\\text{par}} = 2\\pi\\cdot\\tfrac{1}{8}\\int_1^{65}\\sqrt u\\,du = \\tfrac{\\pi}{4}\\cdot\\tfrac{2}{3}[u^{3/2}]_1^{65} = \\tfrac{\\pi}{6}(65\\sqrt{65}-1).$$\n\n**שטח כולל:**\n$$S = 16\\pi + \\tfrac{\\pi}{6}(65\\sqrt{65}-1) = \\tfrac{\\pi}{6}(95 + 65\\sqrt{65}).$$"
+    }
+  ]
+}

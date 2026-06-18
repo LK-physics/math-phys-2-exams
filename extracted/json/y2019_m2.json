@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2019_m2",
+  "year": 2019,
+  "moed": "ב",
+  "date": "2019-09-05",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2019_s2m2y19.pdf",
+  "questions": [
+    {
+      "qid": "y2019_m2_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא על המשטח $xy^2 z^3=2$ את הנקודה הקרובה ביותר אל ראשית הצירים.",
+      "solution_he": "**Lagrange:** מינימום של $D^2=x^2+y^2+z^2$ תחת $g=xy^2 z^3-2=0$.\n\n$$\\nabla D^2=\\lambda\\nabla g:\\quad 2x=\\lambda y^2 z^3,\\;\\; 2y=2\\lambda xy z^3,\\;\\; 2z=3\\lambda xy^2 z^2.$$\n\nמהאילוץ $x,y,z\\neq 0$. נחלק זוגות:\n- $\\tfrac{2x}{y^2 z^3}=\\tfrac{1}{xz^3}$ (מהמשוואות 1,2) ⇒ $2x^2=y^2$.\n- $\\tfrac{1}{xz^3}=\\tfrac{2}{3xy^2 z}$ (מהמשוואות 2,3) ⇒ $3y^2=2z^2$.\n\n**יחסים:** $y^2=2x^2$, $z^2=\\tfrac{3y^2}{2}=3x^2$.\n\n**הצבה לאילוץ:** $x\\cdot 2x^2\\cdot z^3=2$ ⇒ $x^3 z^3=1$ ⇒ $xz=1$ (פתרון ממשי) ⇒ $z=\\tfrac{1}{x}$.\n\n**מציאת $x$:** $z^2=\\tfrac{1}{x^2}=3x^2$ ⇒ $x^4=\\tfrac{1}{3}$ ⇒ $x^2=\\tfrac{1}{\\sqrt 3}$, $x=\\pm 3^{-1/4}$.\n\nמהאילוץ המקורי $xy^2z^3=2>0$ ו-$y^2>0$, לכן $xz^3>0$, כלומר $x$ ו-$z$ באותו סימן.\n\n**הנקודה הקרובה** (אחת מארבע):\n$$\\bigl(x,y,z\\bigr)=\\bigl(3^{-1/4},\\;\\sqrt 2\\cdot 3^{-1/4},\\;3^{1/4}\\bigr).$$\n\n**מרחק²:**\n$$D^2=\\tfrac{1}{\\sqrt 3}+\\tfrac{2}{\\sqrt 3}+\\sqrt 3=\\sqrt 3+\\sqrt 3=2\\sqrt 3.$$\n\n$$\\boxed{\\;D_{\\min}=\\sqrt{2\\sqrt 3}=\\sqrt 2\\cdot 3^{1/4}\\approx 1.861.\\;}$$"
+    },
+    {
+      "qid": "y2019_m2_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x)=\\cos(ax)$ כאשר $a$ ממשי לא שלם, המוגדרת בקטע $[-\\pi,\\pi]$.\n\nא. יש למצוא את טור פוריה של הפונקציה.\n\nב. יש להראות כי $\\displaystyle\\cot(\\pi a)=\\dfrac{1}{\\pi}\\!\\left[\\dfrac{1}{a}-\\sum_{n=1}^\\infty\\dfrac{2a}{n^2-a^2}\\right]$.",
+      "solution_he": "**(א)** $\\cos(ax)$ זוגי, אז $b_n=0$.\n\n$$a_0=\\tfrac{2}{\\pi}\\!\\int_0^\\pi\\!\\cos(ax)dx=\\tfrac{2\\sin(a\\pi)}{a\\pi}.$$\n\n**מקדמי קוסינוס** ($n\\ge 1$, ב-product-to-sum):\n$$a_n=\\tfrac{1}{\\pi}\\!\\int_{-\\pi}^\\pi\\!\\!\\cos(ax)\\cos(nx)dx=\\tfrac{1}{\\pi}\\!\\left[\\tfrac{\\sin((a+n)\\pi)}{a+n}+\\tfrac{\\sin((a-n)\\pi)}{a-n}\\right].$$\n\nמהזהויות $\\sin((a\\pm n)\\pi)=(-1)^n\\sin(a\\pi)$:\n$$a_n=\\tfrac{(-1)^n\\sin(a\\pi)}{\\pi}\\!\\left[\\tfrac{1}{a+n}+\\tfrac{1}{a-n}\\right]=\\tfrac{2a(-1)^n\\sin(a\\pi)}{\\pi(a^2-n^2)}.$$\n\n$$\\boxed{\\;\\cos(ax)=\\tfrac{\\sin(a\\pi)}{a\\pi}+\\tfrac{2a\\sin(a\\pi)}{\\pi}\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(nx)}{a^2-n^2}.\\;}$$\n\n**(ב)** הצבה $x=\\pi$ ($f(\\pi)=\\cos(a\\pi)$):\n$$\\cos(a\\pi)=\\tfrac{\\sin(a\\pi)}{a\\pi}+\\tfrac{2a\\sin(a\\pi)}{\\pi}\\!\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(n\\pi)}{a^2-n^2}.$$\n\n$(-1)^n\\cos(n\\pi)=(-1)^{2n}=1$:\n$$\\cos(a\\pi)=\\tfrac{\\sin(a\\pi)}{a\\pi}+\\tfrac{2a\\sin(a\\pi)}{\\pi}\\!\\sum_{n=1}^\\infty\\tfrac{1}{a^2-n^2}.$$\n\nחלוקה ב-$\\sin(a\\pi)$:\n$$\\cot(a\\pi)=\\tfrac{1}{a\\pi}+\\tfrac{2a}{\\pi}\\!\\sum_{n=1}^\\infty\\tfrac{1}{a^2-n^2}=\\tfrac{1}{\\pi}\\!\\left[\\tfrac{1}{a}-\\sum_{n=1}^\\infty\\tfrac{2a}{n^2-a^2}\\right].\\;\\checkmark$$\n\n(זוהי **נוסחת המכפלה של אוילר ל-$\\sin$** בצורה הלוגריתמית.)"
+    },
+    {
+      "qid": "y2019_m2_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתון כדור שמרכזו בראשית ורדיוסו $5$. בהנחה שצפיפות הכדור אחידה, יש למצוא את מרכז המסה ואת מומנט האנרציה ביחס לציר $z$ של חלק הכדור הנמצא מעל המישור $z=4$.",
+      "solution_he": "**הכיפה:** מ-$z=4$ עד $z=5$, גובה $h=1$. נפח: $V=\\tfrac{\\pi h^2(3R-h)}{3}=\\tfrac{\\pi\\cdot 14}{3}=\\tfrac{14\\pi}{3}$.\n\n**מרכז מסה:** בסימטריה $\\bar x=\\bar y=0$. עבור $\\bar z$, בקואורדינטות גליליות מעטפת-דיסקות ($\\rho_{\\max}(z)=\\sqrt{25-z^2}$, שטח $=\\pi(25-z^2)$):\n\n$$\\int_V z\\,dV=\\pi\\!\\int_4^5 z(25-z^2)\\,dz=\\pi\\!\\left[\\tfrac{25z^2}{2}-\\tfrac{z^4}{4}\\right]_4^5.$$\n\nב-$z=5$: $\\tfrac{625}{2}-\\tfrac{625}{4}=\\tfrac{625}{4}$. ב-$z=4$: $200-64=\\tfrac{544}{4}$. הפרש: $\\tfrac{81}{4}$.\n\n$$\\bar z=\\tfrac{\\int z\\,dV}{V}=\\tfrac{81\\pi/4}{14\\pi/3}=\\tfrac{243}{56}\\approx 4.339.$$\n\n**מומנט אנרציה ביחס לציר $z$:** $I_z=\\int_V r^2\\,dV$ (צפיפות $=1$).\n\nעבור גובה $z$ קבוע, $\\int_0^{\\rho_{\\max}}r^2\\cdot 2\\pi r\\,dr=\\tfrac{\\pi(25-z^2)^2}{2}$:\n\n$$I_z=\\tfrac{\\pi}{2}\\!\\int_4^5(25-z^2)^2\\,dz=\\tfrac{\\pi}{2}\\!\\int_4^5(625-50z^2+z^4)dz.$$\n\nהאנטי-נגזרת: $625z-\\tfrac{50z^3}{3}+\\tfrac{z^5}{5}$.\n\nב-$z=5$: $3125-\\tfrac{6250}{3}+625=\\tfrac{5000}{3}$.\n\nב-$z=4$: $2500-\\tfrac{3200}{3}+\\tfrac{1024}{5}=\\tfrac{24572}{15}$.\n\nהפרש: $\\tfrac{25000-24572}{15}=\\tfrac{428}{15}$.\n\n$$\\boxed{\\;\\bar z=\\tfrac{243}{56},\\quad I_z=\\tfrac{\\pi}{2}\\cdot\\tfrac{428}{15}=\\tfrac{214\\pi}{15}.\\;}$$"
+    },
+    {
+      "qid": "y2019_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק מעטפת כדור יחידה הנמצא מעל מישור $xy$, $\\hat n$ מצביע מהכדור החוצה, ו-$\\vec F=z^2 x\\hat\\imath+\\bigl(\\tfrac{1}{3}y^3+\\tan z\\bigr)\\hat\\jmath+(x^2 z+y^2)\\hat k$.",
+      "solution_he": "**אסטרטגיה — דיברגנץ:** $\\nabla\\cdot\\vec F=z^2+y^2+x^2=r^2$ (יפה).\n\n**סגירה:** נסגור את החצי-כדור עם הדיסקה $D=\\{z=0,\\,r\\le 1\\}$, נורמל חיצוני $-\\hat k$.\n\n**אינטגרל הנפח:**\n$$\\iiint_V r^2\\,dV=\\int_0^{2\\pi}\\!\\!d\\theta\\!\\int_0^{\\pi/2}\\!\\sin\\phi\\,d\\phi\\!\\int_0^1\\!r^4\\,dr=2\\pi\\cdot 1\\cdot\\tfrac{1}{5}=\\tfrac{2\\pi}{5}.$$\n\n**שטף דרך הדיסקה** ($z=0$ ⇒ $F_z=y^2$, $\\hat n_D=-\\hat k$):\n$$\\iint_D\\vec F\\cdot(-\\hat k)\\,dA=-\\!\\iint_D y^2\\,dA=-\\!\\int_0^{2\\pi}\\!\\!\\sin^2\\theta\\,d\\theta\\!\\int_0^1\\!r^3\\,dr=-\\pi\\cdot\\tfrac{1}{4}=-\\tfrac{\\pi}{4}.$$\n\n**חישוב השטף דרך $\\sigma$:**\n$$\\iint_\\sigma=\\iiint_V\\nabla\\cdot\\vec F\\,dV-\\iint_D=\\tfrac{2\\pi}{5}-(-\\tfrac{\\pi}{4})=\\tfrac{2\\pi}{5}+\\tfrac{\\pi}{4}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=\\tfrac{8\\pi+5\\pi}{20}=\\tfrac{13\\pi}{20}.\\;}$$"
+    },
+    {
+      "qid": "y2019_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $z=x^2+2y$. יש לחשב את שטח היריעה שהיטלה על מישור $xy$ הוא משולש שקודקודיו $(0,0)$, $(1,0)$ ו-$(1,2)$.",
+      "solution_he": "**אלמנט שטח:** עבור משטח $z=f(x,y)$,\n$$dS=\\sqrt{1+z_x^2+z_y^2}\\,dA=\\sqrt{1+(2x)^2+2^2}\\,dA=\\sqrt{5+4x^2}\\,dA.$$\n\n**זיהוי המשולש:** קודקודים $(0,0),(1,0),(1,2)$. הצלע $(0,0)\\to(1,2)$ היא הקו $y=2x$. הצלעות האחרות הן $y=0$ ו-$x=1$. עבור $x\\in[0,1]$ קבוע: $0\\le y\\le 2x$.\n\n**אינטגרציה:**\n$$A=\\!\\int_0^1\\!\\!\\int_0^{2x}\\!\\!\\sqrt{5+4x^2}\\,dy\\,dx=\\!\\int_0^1\\!2x\\sqrt{5+4x^2}\\,dx.$$\n\n**הצבה $u=5+4x^2,\\;du=8x\\,dx$:**\n$$A=\\tfrac{1}{4}\\!\\int_5^9\\!\\sqrt u\\,du=\\tfrac{1}{4}\\cdot\\tfrac{2}{3}\\!\\left[u^{3/2}\\right]_5^9=\\tfrac{1}{6}\\bigl(9^{3/2}-5^{3/2}\\bigr)=\\tfrac{27-5\\sqrt 5}{6}.$$\n\n$$\\boxed{\\;A=\\tfrac{27-5\\sqrt 5}{6}\\approx 2.637.\\;}$$"
+    },
+    {
+      "qid": "y2019_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=x^2 y\\hat\\imath+\\tfrac{1}{3}x^3\\hat\\jmath+xy\\hat k$ ו-$C$ הוא המסלול המתקבל מחיתוך המשטח $z=y^2-x^2$ עם הגליל $x^2+y^2=1$, נגד כיוון השעון.",
+      "solution_he": "**Stokes:** נחשב את $\\nabla\\times\\vec F$:\n$$\\nabla\\times\\vec F=\\bigl(\\partial_y(xy)-\\partial_z(\\tfrac{x^3}{3}),\\;\\partial_z(x^2 y)-\\partial_x(xy),\\;\\partial_x(\\tfrac{x^3}{3})-\\partial_y(x^2 y)\\bigr)=(x,\\,-y,\\,x^2-x^2)=(x,-y,0).$$\n\n**משטח Stokes:** נבחר את $z=y^2-x^2$ מעל דיסקת היחידה $D$ (שפתה היא בדיוק $C$).\n\n**פרמטריזציה:** $\\vec r(x,y)=(x,y,y^2-x^2)$ ⇒ $\\vec r_x=(1,0,-2x),\\;\\vec r_y=(0,1,2y)$.\n$$\\vec r_x\\times\\vec r_y=(2x,-2y,1).$$\n\nהרכיב $\\hat k>0$ ✓ — תואם CCW בהיטל $xy$.\n\n**מכפלה סקלרית:**\n$$(\\nabla\\times\\vec F)\\cdot(\\vec r_x\\times\\vec r_y)=x\\cdot 2x+(-y)(-2y)+0=2(x^2+y^2)=2r^2.$$\n\n**אינטגרציה על דיסקת היחידה:**\n$$\\oint_C\\vec F\\cdot d\\vec r=\\iint_D 2r^2\\,dA=2\\!\\int_0^{2\\pi}\\!\\!\\int_0^1\\!r^3\\,dr\\,d\\theta=2\\cdot 2\\pi\\cdot\\tfrac{1}{4}=\\pi.$$\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=\\pi.\\;}$$"
+    }
+  ]
+}

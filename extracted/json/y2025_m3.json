@@ -1,0 +1,144 @@
+{
+  "exam_id": "y2025_m3",
+  "year": 2025,
+  "moed": "ג",
+  "date": "2025-10-22",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 4 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    4,
+    6
+  ],
+  "source_pdf": "y2025_s2m3y25.pdf",
+  "questions": [
+    {
+      "qid": "y2025_m3_q1",
+      "number": 1,
+      "points": 25,
+      "statement_he": "א. יש למצוא על פני הכדור $x^2+y^2+z^2=R^2$ את הנקודות שעבורן מקבלת הפונקציה $f(x,y,z)=x+2y+3z$ ערך מקסימלי וערך מינימלי.\n\nב. איך תשתנה התשובה אם נחפש רק נקודות עבורן $y=x$?",
+      "topic": "multivariable_calc",
+      "subtopics": [
+        "lagrange_multipliers"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "sphere",
+        "linear_function"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "**(א)** לגראנז' עבור $f = x+2y+3z$ ו-$g = x^2+y^2+z^2 - R^2$:\n$$\\nabla f = (1,2,3) = \\lambda(2x,2y,2z)\\;\\Longrightarrow\\; x = \\tfrac{1}{2\\lambda},\\ y = \\tfrac{1}{\\lambda},\\ z = \\tfrac{3}{2\\lambda}.$$\n\nמהאילוץ:\n$$\\tfrac{1}{4\\lambda^2}+\\tfrac{1}{\\lambda^2}+\\tfrac{9}{4\\lambda^2} = \\tfrac{14}{4\\lambda^2} = R^2\\;\\Longrightarrow\\; \\lambda = \\pm\\tfrac{\\sqrt{14}}{2R}.$$\n\nעבור $\\lambda > 0$ (מקסימום):\n$$\\left(x,y,z\\right) = \\left(\\tfrac{R}{\\sqrt{14}},\\,\\tfrac{2R}{\\sqrt{14}},\\,\\tfrac{3R}{\\sqrt{14}}\\right),\\qquad f_{\\max} = \\tfrac{R}{\\sqrt{14}}(1+4+9) = R\\sqrt{14}.$$\n\nמינימום בנקודה הנגדית: $f_{\\min} = -R\\sqrt{14}$ ב-$\\left(-\\tfrac{R}{\\sqrt{14}},-\\tfrac{2R}{\\sqrt{14}},-\\tfrac{3R}{\\sqrt{14}}\\right)$.\n\n**(ב)** כעת שתי משוואות אילוץ: $x^2+y^2+z^2 = R^2$ ו-$y=x$. נציב $y=x$ לאילוץ: $2x^2 + z^2 = R^2$. הפונקציה הופכת ל-$f = 3x+3z = 3(x+z)$.\n\nלגראנז' חד-מימדי על $h(x,z) = x+z$ תחת $2x^2 + z^2 = R^2$:\n$$(1,1) = \\mu(4x,2z)\\;\\Longrightarrow\\; x = \\tfrac{1}{4\\mu},\\ z = \\tfrac{1}{2\\mu}.$$\n\nמהאילוץ: $\\tfrac{2}{16\\mu^2}+\\tfrac{1}{4\\mu^2} = \\tfrac{3}{8\\mu^2} = R^2$, אז $\\mu = \\pm\\sqrt{\\tfrac{3}{8R^2}}$.\n\nמקסימום: $\\;x = y = \\tfrac{R}{\\sqrt 6},\\ z = \\tfrac{2R}{\\sqrt 6}$, ערך:\n$$f_{\\max} = 3(x+z) = 3\\cdot\\tfrac{3R}{\\sqrt 6} = \\tfrac{9R}{\\sqrt 6} = \\tfrac{3R\\sqrt 6}{2}.$$\n\nמינימום: ערכים נגדיים, $f_{\\min} = -\\tfrac{3R\\sqrt 6}{2}$.\n\n**הבדל מהותי:** $R\\sqrt{14}\\approx 3.74R$ אבל $\\tfrac{3R\\sqrt 6}{2}\\approx 3.67R$ — המקסימום קטן יותר תחת מגבלה נוספת, כצפוי."
+    },
+    {
+      "qid": "y2025_m3_q2",
+      "number": 2,
+      "points": 25,
+      "statement_he": "נתונה הפונקציה $f(x)=x+\\dfrac{L}{4}$ המוגדרת בתחום $(0,L)$.\n\nא. יש לחשב את טור הקוסינוסים של $f$.\n\nב. יש לחשב את טור פוריה של $f$.\n\nג. לאיזה ערך מתכנסים הטורים שחושבו בסעיפים א ו-ב בנקודה $x=0$?",
+      "topic": "fourier_series",
+      "subtopics": [
+        "cosine_series",
+        "full_series"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "linear_function",
+        "convergence_at_endpoint"
+      ],
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "solution_he": "**(א) טור קוסינוסים** — הרחבה זוגית של $f(x) = x + \\tfrac{L}{4}$ ל-$(-L,L)$, תקופה $2L$.\n\n$$\\tfrac{a_0}{2} = \\tfrac{1}{L}\\int_0^L\\!\\!\\left(x+\\tfrac{L}{4}\\right) dx = \\tfrac{1}{L}\\!\\left[\\tfrac{L^2}{2}+\\tfrac{L^2}{4}\\right] = \\tfrac{3L}{4}.$$\n\n$$a_n = \\tfrac{2}{L}\\int_0^L\\!\\!\\left(x+\\tfrac{L}{4}\\right)\\cos\\!\\left(\\tfrac{n\\pi x}{L}\\right) dx\\quad(n\\ge 1).$$\n\nהחלק עם $L/4$ מתאפס (אינטגרל קוסינוס על תקופה שלמה של ההרחבה הזוגית). נשאר $\\int_0^L x\\cos\\!\\left(\\tfrac{n\\pi x}{L}\\right)dx$, שמחושב באינטגרציה בחלקים:\n$$\\int_0^L x\\cos\\!\\left(\\tfrac{n\\pi x}{L}\\right)dx = \\tfrac{L^2}{n^2\\pi^2}\\!\\left[(-1)^n - 1\\right] = \\begin{cases}0 & n\\text{ זוגי} \\\\ -\\tfrac{2L^2}{n^2\\pi^2} & n\\text{ אי-זוגי}\\end{cases}$$\n\nלכן $a_n = -\\tfrac{4L}{n^2\\pi^2}$ עבור $n=2k+1$, ו-$a_n=0$ עבור $n$ זוגי.\n\n$$\\boxed{\\;f(x) = \\tfrac{3L}{4} - \\tfrac{4L}{\\pi^2}\\sum_{k=0}^\\infty \\tfrac{\\cos\\!\\big(\\tfrac{(2k+1)\\pi x}{L}\\big)}{(2k+1)^2}.\\;}$$\n\n**(ב) טור פוריה מלא** — הרחבה תקופתית של $f$ עם תקופה $L$ (לא $2L$, כי הפונקציה אינה זוגית/אי-זוגית).\n\n$$\\tfrac{a_0}{2} = \\tfrac{1}{L}\\int_0^L f\\,dx = \\tfrac{3L}{4}.$$\n\n$$a_n = \\tfrac{2}{L}\\int_0^L\\!\\!\\left(x+\\tfrac{L}{4}\\right)\\cos\\!\\left(\\tfrac{2\\pi n x}{L}\\right)dx = 0 \\quad(n\\ge 1),$$\n\n(שני המרכיבים אינטגרל על תקופה שלמה של קוסינוס; וחישוב $\\int_0^L x\\cos(2\\pi n x/L)dx$ בחלקים נותן אפס).\n\n$$b_n = \\tfrac{2}{L}\\int_0^L\\!\\!\\left(x+\\tfrac{L}{4}\\right)\\sin\\!\\left(\\tfrac{2\\pi n x}{L}\\right)dx.$$\n\nאינטגרל $\\int_0^L \\tfrac{L}{4}\\sin(2\\pi n x/L)dx = 0$; $\\int_0^L x\\sin(2\\pi n x/L) dx = -\\tfrac{L^2}{2\\pi n}$. לכן $b_n = -\\tfrac{L}{\\pi n}$.\n\n$$\\boxed{\\;f(x) = \\tfrac{3L}{4} - \\tfrac{L}{\\pi}\\sum_{n=1}^\\infty \\tfrac{\\sin\\!\\big(\\tfrac{2\\pi n x}{L}\\big)}{n}.\\;}$$\n\n**(ג) ב-$x=0$:**\n\n*טור הקוסינוסים:* ההרחבה הזוגית של $f$ ל-$(-L,L)$ נותנת $f(0^+) = L/4$, ובהרחבה הזוגית גם $f(0^-) = L/4$. רציפות, לכן הטור מתכנס ל-$L/4$.\n\n*טור פוריה המלא:* ההרחבה התקופתית בעלת תקופה $L$ מציבה את הקפיצה מ-$f(L^-) = 5L/4$ ל-$f(0^+) = L/4$. בנקודת קפיצה הטור מתכנס לממוצע:\n$$\\tfrac{5L/4 + L/4}{2} = \\tfrac{3L}{4}.$$"
+    },
+    {
+      "qid": "y2025_m3_q3",
+      "number": 3,
+      "points": 25,
+      "statement_he": "א. יש לחשב את $\\displaystyle\\iint_\\sigma \\vec{F}\\cdot\\hat{n}\\,ds$ כאשר המשטח $\\sigma$ הוא מעטפת של הנפח $V$ המוגדר כ-$V=\\{(x,y,z)\\mid x^2+y^2+z^2\\le 4,\\ z\\ge 0\\}$, $\\vec{F}=xy\\hat{\\imath}+yz\\hat{\\jmath}+zx\\hat{k}$, ו-$\\hat{n}$ הוא וקטור יחידה המצביע מהתחום החסום החוצה.\n\nב. איך תשתנה התשובה אם $V=\\{(x,y,z)\\mid x^2+y^2+z^2\\le 4\\}$?",
+      "topic": "surface_integrals",
+      "subtopics": [
+        "flux",
+        "divergence_theorem"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "half_ball",
+        "full_ball",
+        "spherical"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "**(א)** משפט הדיברגנץ:\n$$\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = \\iiint_V \\nabla\\cdot\\vec F\\,dV.$$\n\nחישוב הדיברגנץ:\n$$\\nabla\\cdot\\vec F = \\tfrac{\\partial(xy)}{\\partial x} + \\tfrac{\\partial(yz)}{\\partial y} + \\tfrac{\\partial(zx)}{\\partial z} = y + z + x.$$\n\n$V$ הוא חצי כדור עליון ברדיוס 2. מטעמי סימטריה במחצית התחתון תחת $x\\to -x$ ו-$y\\to -y$, $\\iiint_V x\\,dV = \\iiint_V y\\,dV = 0$. נשאר רק $\\iiint_V z\\,dV$.\n\nמרכז המסה של חצי כדור עליון הוא $\\bar z = \\tfrac{3R}{8} = \\tfrac{3}{4}$, והנפח $V_{\\text{half}} = \\tfrac{1}{2}\\cdot\\tfrac{4\\pi R^3}{3} = \\tfrac{16\\pi}{3}$.\n\n$$\\iiint_V z\\,dV = \\bar z\\cdot V_{\\text{half}} = \\tfrac{3}{4}\\cdot\\tfrac{16\\pi}{3} = 4\\pi.$$\n\n$$\\boxed{\\;\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = 4\\pi.\\;}$$\n\n**(ב) כדור שלם** — כל שלושת האינטגרלים $\\iiint x\\,dV, \\iiint y\\,dV, \\iiint z\\,dV$ מתאפסים בסימטריה. לכן:\n$$\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = 0.$$"
+    },
+    {
+      "qid": "y2025_m3_q4",
+      "number": 4,
+      "points": 25,
+      "statement_he": "א. יש לחשב את $\\displaystyle\\iint_S (x+y)\\,ds$ כאשר $S$ הוא המשטח $(x(u,v),y(u,v),z(u,v))$ ונתון ש-$x(u,v)=u\\cos v$, $y(u,v)=u\\sin v$, $z(u,v)=u^2$, $0\\le u\\le 1$, $0\\le v\\le 2\\pi$.\n\nב. יש לחשב את שטח המשטח $S$.",
+      "topic": "surface_integrals",
+      "subtopics": [
+        "parametric_surface",
+        "scalar",
+        "surface_area"
+      ],
+      "difficulty": 2,
+      "tags": [
+        "paraboloid"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "פרמטריזציה $\\vec r(u,v) = (u\\cos v,\\,u\\sin v,\\,u^2)$ — זה פרבולואיד $z = x^2+y^2$ ל-$0\\le z\\le 1$.\n\nנגזרות:\n$$\\vec r_u = (\\cos v,\\,\\sin v,\\,2u),\\qquad \\vec r_v = (-u\\sin v,\\,u\\cos v,\\,0).$$\n\nמכפלה וקטורית:\n$$\\vec r_u\\times\\vec r_v = (-2u^2\\cos v,\\,-2u^2\\sin v,\\,u),\\quad |\\vec r_u\\times\\vec r_v| = u\\sqrt{4u^2+1}.$$\n\n**(א)** $x+y = u(\\cos v + \\sin v)$, וגורם זה הוא הסיבה לאיפוס:\n$$\\iint_S (x+y)\\,ds = \\int_0^{2\\pi}(\\cos v + \\sin v)\\,dv \\cdot \\int_0^1 u^2\\sqrt{4u^2+1}\\,du = 0\\cdot(\\ldots) = 0.$$\n\n(אינטגרל סינוס/קוסינוס על תקופה שלמה הוא אפס.)\n\n**(ב) שטח המשטח:**\n$$A = \\int_0^{2\\pi}\\!\\!\\int_0^1 u\\sqrt{4u^2+1}\\,du\\,dv = 2\\pi\\int_0^1 u\\sqrt{4u^2+1}\\,du.$$\n\nהצבה $w = 4u^2+1$, $dw = 8u\\,du$:\n$$A = 2\\pi\\cdot\\tfrac{1}{8}\\int_1^5\\!\\sqrt w\\,dw = \\tfrac{\\pi}{4}\\cdot\\tfrac{2}{3}\\!\\left[w^{3/2}\\right]_1^5 = \\tfrac{\\pi}{6}(5\\sqrt 5 - 1).$$"
+    },
+    {
+      "qid": "y2025_m3_q5",
+      "number": 5,
+      "points": 25,
+      "statement_he": "נתון משולש במישור $xy$ שקודקודיו $(-2,0)$, $(2,0)$, ו-$(0,3)$.\n\nא. מה הנפח שמתקבל אם מסובבים את המשולש סביב הישר $y=x+5$?\n\nב. מה הנפח שמתקבל אם מסובבים את המשולש סביב הישר $x=0$?",
+      "topic": "double_integrals",
+      "subtopics": [
+        "volume",
+        "com"
+      ],
+      "difficulty": 3,
+      "tags": [
+        "pappus_theorem",
+        "triangle",
+        "volume_of_revolution"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "משולש עם קודקודים $(-2,0),\\,(2,0),\\,(0,3)$. מרכז המסה (= הצנטרואיד) הוא ממוצע הקודקודים: $(0,\\,1)$. השטח: $\\tfrac{1}{2}\\cdot 4\\cdot 3 = 6$.\n\n**(א) סיבוב סביב $y=x+5$** (כלומר הישר $x-y+5=0$).\n\nהמשולש כולו תחת הישר: בקודקוד הכי גבוה $(0,3)$, $x-y+5 = -3+5 = 2 > 0$; בקודקוד $(2,0)$, $x-y+5 = 7 > 0$; ב-$(-2,0)$, $x-y+5 = 3 > 0$. הישר אינו חוצה את המשולש ⇒ ניתן להפעיל את פאפוס.\n\nמרחק מרכז המסה מהישר:\n$$d = \\tfrac{|0 - 1 + 5|}{\\sqrt{1^2+(-1)^2}} = \\tfrac{4}{\\sqrt 2} = 2\\sqrt 2.$$\n\n$$V = 2\\pi\\cdot d\\cdot A = 2\\pi\\cdot 2\\sqrt 2\\cdot 6 = \\boxed{24\\sqrt 2\\,\\pi}.$$\n\n**(ב) סיבוב סביב $x=0$ (ציר $y$).**\n\nכאן הציר *חוצה* את המשולש — פאפוס לא ישים ישירות. נשתמש בשיטת הדיסקות.\n\nבגובה $y\\in[0,3]$ המשולש מתפרס לרוחב $|x|\\le 2(1-\\tfrac{y}{3})$. כשמסובבים סביב ציר $y$, החצי הימני וחצי השמאלי מטיילים *באותה* טבעת אחרי סיבוב מלא — כלומר היקף הסיבוב הוא דיסקה ברדיוס $R(y) = 2(1-\\tfrac{y}{3})$:\n$$V = \\int_0^3 \\pi R(y)^2\\,dy = 4\\pi\\int_0^3\\!\\left(1-\\tfrac{y}{3}\\right)^2 dy.$$\n\nנציב $u = 1-\\tfrac{y}{3}$, $du = -\\tfrac{1}{3}dy$:\n$$V = 4\\pi\\cdot 3\\int_0^1 u^2\\,du = 4\\pi.$$\n\n(או באמצעות פאפוס לחצי המשולש בלבד: שטח חצי $=3$, מרכז מסה ב-$x=2/3$, $V = 2\\pi\\cdot\\tfrac{2}{3}\\cdot 3 = 4\\pi$.)\n\n$$\\boxed{V = 4\\pi.}$$"
+    },
+    {
+      "qid": "y2025_m3_q6",
+      "number": 6,
+      "points": 25,
+      "statement_he": "נתונה פונקציה וקטורית $\\vec{F}=\\dfrac{-y}{x^2+y^2}\\hat{\\imath}+\\dfrac{x}{x^2+y^2}\\hat{\\jmath}$ במישור $xy$.\n\nא. יש לחשב את $\\displaystyle\\int_C \\vec{F}\\cdot d\\vec{r}$ כאשר $C$ הוא מסלול כלשהו במישור $xy$ נגד כיוון השעון שמקיף את הראשית.\n\nב. מה התוצאה בסעיף א אם $C$ לא מקיף את הראשית?",
+      "topic": "line_integrals",
+      "subtopics": [
+        "vector_field",
+        "conservative",
+        "green_theorem"
+      ],
+      "difficulty": 3,
+      "tags": [
+        "irrotational_vortex",
+        "multiply_connected"
+      ],
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "solution_he": "זהו \"מערבולת אי-רוטציונית\" — שדה $\\vec F = \\tfrac{1}{x^2+y^2}(-y,\\,x)$ עם רוטור אפס בכל מקום מלבד הראשית.\n\n**(א) מסלול נגד-שעוני שמקיף את הראשית.**\n\nחישוב לדוגמה על מעגל יחידה $\\vec r(t) = (\\cos t,\\sin t)$: $d\\vec r = (-\\sin t,\\cos t)\\,dt$, ועל המעגל $x^2+y^2=1$:\n$$\\vec F\\cdot d\\vec r = (\\sin^2 t + \\cos^2 t)\\,dt = dt\\;\\Rightarrow\\;\\oint = 2\\pi.$$\n\nעבור מסלול כללי $C$ שמקיף את הראשית: נסמן ב-$C_\\varepsilon$ מעגל קטן סביב הראשית (נגד-שעוני). בתחום בין $C$ ל-$C_\\varepsilon$ השדה משמר (רוטור אפס בקשר פשוט שלא מכיל את הראשית), ולכן ממשפט גרין באזור טבעתי:\n$$\\oint_C\\vec F\\cdot d\\vec r = \\oint_{C_\\varepsilon}\\vec F\\cdot d\\vec r = 2\\pi.$$\n\n$$\\boxed{\\oint_C \\vec F\\cdot d\\vec r = 2\\pi.}$$\n\n**(ב) מסלול שלא מקיף את הראשית.**\n\nבאזור הפנימי של מסלול כזה, $\\vec F$ מוגדר וחלק (אין סינגולריות), והוא משמר (קל לוודא ש-$\\partial_x F_2 = \\partial_y F_1 = (y^2-x^2)/(x^2+y^2)^2$, כלומר השדה אי-רוטציוני). הקשר היוצא מהראשית — האזור הפנימי של $C$ — הוא קשר פשוט שלא מכיל את הראשית. לכן ממשפט גרין:\n$$\\oint_C\\vec F\\cdot d\\vec r = \\iint_D 0\\,dA = 0.$$\n\n**הערה פיזיקלית:** השדה הזה מייצג שדה מהירות של מערבולת אידיאלית; הסירקולציה $2\\pi$ מודדת את \"התוכן\" של הסינגולריות, ועצמאית בצורת המסלול שמקיף אותה — תופעה שמופיעה גם בשטף מגנטי דרך סולנואיד (אפקט אהרונוב-בוהם), במכניקת זרמים, ובחשמל סטטי דו-ממדי סביב מטען קווי."
+    }
+  ]
+}

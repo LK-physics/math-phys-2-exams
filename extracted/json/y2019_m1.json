@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2019_m1",
+  "year": 2019,
+  "moed": "א",
+  "date": "2019-07-29",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2019_s2m1y19.pdf",
+  "questions": [
+    {
+      "qid": "y2019_m1_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא על החיתוך של המישור $4x-3y+8z=5$ והחרוט $z^2=x^2+y^2$ נקודה שמרחקה מציר $z$ מקסימלי ונקודה שמרחקה מציר $z$ מינימלי.",
+      "solution_he": "**אסטרטגיה:** מרחק מציר $z$ הוא $\\rho^2=x^2+y^2$. בעזרת אילוץ החרוט $z^2=x^2+y^2$, די למצוא קיצונים של $|z|$.\n\n**Lagrange עם שני אילוצים:** $f=z^2$, $g_1=x^2+y^2-z^2$, $g_2=4x-3y+8z-5$.\n\n$(0,0,2z)=\\lambda(2x,2y,-2z)+\\mu(4,-3,8)$:\n- $x$: $\\lambda x+2\\mu=0$ ⇒ $\\mu=-\\tfrac{\\lambda x}{2}$.\n- $y$: $\\lambda y-\\tfrac{3\\mu}{2}\\!=\\!0$ ⇒ $\\lambda y=\\tfrac{3\\mu}{2}=-\\tfrac{3\\lambda x}{4}$. אם $\\lambda\\neq 0$: $y=-\\tfrac{3x}{4}$.\n- $z$: $2z=-2\\lambda z-4\\lambda x$ ⇒ $z(1+\\lambda)=-2\\lambda x$.\n\n**מאילוץ החרוט:** $x^2+\\tfrac{9x^2}{16}=z^2$ ⇒ $z^2=\\tfrac{25x^2}{16}$ ⇒ $z=\\pm\\tfrac{5x}{4}$.\n\n**מאילוץ המישור:** $4x-3\\bigl(-\\tfrac{3x}{4}\\bigr)+8z=5$ ⇒ $\\tfrac{25x}{4}+8z=5$.\n\n**מקרה I: $z=\\tfrac{5x}{4}$.** $\\tfrac{25x}{4}+10x=5$ ⇒ $\\tfrac{65x}{4}=5$ ⇒ $x=\\tfrac{4}{13}$.\n$y=-\\tfrac{3}{13},\\;z=\\tfrac{5}{13},\\;\\rho=\\tfrac{5}{13}$.\n\n**מקרה II: $z=-\\tfrac{5x}{4}$.** $\\tfrac{25x}{4}-10x=5$ ⇒ $-\\tfrac{15x}{4}=5$ ⇒ $x=-\\tfrac{4}{3}$.\n$y=1,\\;z=\\tfrac{5}{3},\\;\\rho=\\tfrac{5}{3}$.\n\n$$\\boxed{\\;\\text{מינ' מרחק: }\\bigl(\\tfrac{4}{13},-\\tfrac{3}{13},\\tfrac{5}{13}\\bigr),\\;\\rho=\\tfrac{5}{13};\\quad\\text{מקס' מרחק: }\\bigl(-\\tfrac{4}{3},1,\\tfrac{5}{3}\\bigr),\\;\\rho=\\tfrac{5}{3}.\\;}$$\n\n(החיתוך הוא אליפסה — סופי וחסום — כי זווית המישור מציר $z$ ($\\sim 58^\\circ$) גדולה מחצי-זווית-החרוט ($45^\\circ$).)"
+    },
+    {
+      "qid": "y2019_m1_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתונה הפונקציה $e^x$ המוגדרת בקטע $[-\\pi,\\pi]$.\n\nא. יש לחשב את טור פוריה של הפונקציה (מומלץ לפתח עם פונקציות אקספוננציאליות).\n\nב. יש לחשב את $\\displaystyle\\sum_{n=-\\infty}^\\infty\\dfrac{1}{1+n^2}$.",
+      "solution_he": "**(א) מקדמים מרוכבים:**\n$$c_n=\\tfrac{1}{2\\pi}\\!\\int_{-\\pi}^\\pi\\! e^x e^{-inx}dx=\\tfrac{1}{2\\pi(1-in)}\\bigl[e^{(1-in)\\pi}-e^{-(1-in)\\pi}\\bigr].$$\n\n$e^{\\pm in\\pi}=(-1)^n$, אז $e^{(1-in)\\pi}=e^\\pi(-1)^n$ ו-$e^{-(1-in)\\pi}=e^{-\\pi}(-1)^n$:\n$$c_n=\\tfrac{(-1)^n(e^\\pi-e^{-\\pi})}{2\\pi(1-in)}=\\tfrac{(-1)^n\\sinh\\pi}{\\pi(1-in)}=\\tfrac{(-1)^n\\sinh\\pi\\,(1+in)}{\\pi(1+n^2)}.$$\n\n**מקדמים ממשיים** (מהזהויות $a_n=c_n+c_{-n}$, $b_n=i(c_n-c_{-n})$):\n$$a_0=\\tfrac{2\\sinh\\pi}{\\pi},\\quad a_n=\\tfrac{2(-1)^n\\sinh\\pi}{\\pi(1+n^2)},\\quad b_n=-\\tfrac{2n(-1)^n\\sinh\\pi}{\\pi(1+n^2)}.$$\n\n$$e^x\\sim\\tfrac{\\sinh\\pi}{\\pi}+\\tfrac{2\\sinh\\pi}{\\pi}\\sum_{n=1}^\\infty\\tfrac{(-1)^n}{1+n^2}\\bigl[\\cos(nx)-n\\sin(nx)\\bigr].$$\n\n**(ב)** הצבה $x=\\pi$ (Dirichlet בנקודת קפיצה — מתכנס לממוצע):\n$$\\tfrac{e^\\pi+e^{-\\pi}}{2}=\\cosh\\pi=\\tfrac{\\sinh\\pi}{\\pi}+\\tfrac{2\\sinh\\pi}{\\pi}\\!\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(n\\pi)}{1+n^2}.$$\n\n$(-1)^n\\cos(n\\pi)=(-1)^{2n}=1$, אז:\n$$\\cosh\\pi=\\tfrac{\\sinh\\pi}{\\pi}\\!\\left[1+2\\sum_{n=1}^\\infty\\tfrac{1}{1+n^2}\\right].$$\n\n$$\\sum_{n=1}^\\infty\\tfrac{1}{1+n^2}=\\tfrac{\\pi\\coth\\pi-1}{2}.$$\n\nהסכום הדו-צדדי: $\\sum_{n=-\\infty}^\\infty=1+2\\sum_{n=1}^\\infty$:\n$$\\boxed{\\;\\sum_{n=-\\infty}^\\infty\\tfrac{1}{1+n^2}=\\pi\\coth\\pi.\\;}$$\n\n(מספרית: $\\pi\\coth\\pi\\approx 3.153$.)"
+    },
+    {
+      "qid": "y2019_m1_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_0^1\\!\\!\\int_{\\sqrt y}^1\\dfrac{y\\,e^{x^2}}{x^3}\\,dx\\,dy$.",
+      "solution_he": "**הבעיה:** $\\int e^{x^2}dx$ אינו אלמנטרי — נחליף סדר אינטגרציה.\n\n**זיהוי התחום:** $0\\le y\\le 1$, $\\sqrt y\\le x\\le 1$ ⇒ $y\\le x^2$. נחליף:\n$$D=\\{(x,y):\\;0\\le x\\le 1,\\;0\\le y\\le x^2\\}.$$\n\n$$I=\\int_0^1\\!\\!\\int_0^{x^2}\\!\\tfrac{y e^{x^2}}{x^3}\\,dy\\,dx=\\int_0^1\\!\\tfrac{e^{x^2}}{x^3}\\cdot\\tfrac{x^4}{2}\\,dx=\\tfrac{1}{2}\\!\\int_0^1\\!x\\,e^{x^2}\\,dx.$$\n\n**הצבה $u=x^2$, $du=2x\\,dx$:**\n$$I=\\tfrac{1}{2}\\cdot\\tfrac{1}{2}\\!\\int_0^1\\!e^u\\,du=\\tfrac{1}{4}(e-1).$$\n\n$$\\boxed{\\;I=\\tfrac{e-1}{4}\\approx 0.430.\\;}$$"
+    },
+    {
+      "qid": "y2019_m1_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(xy+e^{x^2})\\hat\\imath+(x^3+3xy^2+\\tanh y)\\hat\\jmath$ ו-$C$ הוא מסלול סגור שהוא היקף של רבע עיגול שמרכזו בראשית ורדיוסו $3$ ברביע הראשון, נגד כיוון השעון.",
+      "solution_he": "**גרין:** $\\partial Q/\\partial x-\\partial P/\\partial y=(3x^2+3y^2)-x=3(x^2+y^2)-x$.\n\n(הביטויים $e^{x^2}$ ו-$\\tanh y$ נעלמו — לכן נבחרו, להכריח את השימוש בגרין.)\n\n**בקואורדינטות פולריות** ($D$: $r\\in[0,3]$, $\\theta\\in[0,\\tfrac{\\pi}{2}]$):\n\n$$\\iint_D 3r^2\\cdot r\\,dr\\,d\\theta=3\\cdot\\tfrac{\\pi}{2}\\!\\int_0^3 r^3\\,dr=3\\cdot\\tfrac{\\pi}{2}\\cdot\\tfrac{81}{4}=\\tfrac{243\\pi}{8}.$$\n\n$$\\iint_D x\\,dA=\\!\\int_0^{\\pi/2}\\!\\!\\cos\\theta\\,d\\theta\\!\\int_0^3\\!r^2\\,dr=1\\cdot 9=9.$$\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=\\tfrac{243\\pi}{8}-9.\\;}$$\n\n(מספרית: $\\approx 86.4$.)"
+    },
+    {
+      "qid": "y2019_m1_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(y+\\sin x)\\hat\\imath+(z^2+\\cos y)\\hat\\jmath+x^3\\hat k$ ו-$C$ הוא המסלול $\\vec r(t)=\\cos t\\,\\hat\\imath+\\sin t\\,\\hat\\jmath+\\sin 2t\\,\\hat k$ עבור $t$ מ-$0$ עד $2\\pi$ (רמז: המסלול נמצא על המשטח $z=2xy$).",
+      "solution_he": "**אסטרטגיה:** Stokes על המשטח $z=2xy$ עם ההיטל על דיסקת היחידה.\n\n**רוטור:**\n$$\\nabla\\times\\vec F=(-2z,\\,-3x^2,\\,-1).$$\n\n**פרמטריזציה:** $\\vec r(x,y)=(x,y,2xy)$ ⇒ $\\vec r_x=(1,0,2y),\\;\\vec r_y=(0,1,2x)$.\n$$\\vec r_x\\times\\vec r_y=(-2y,\\,-2x,\\,1).$$\n\n**אוריינטציה:** ההיטל של $\\vec r(t)$ על מישור $xy$ הוא $(\\cos t,\\sin t)$ — מסלול נגד כיוון השעון. תואם נורמל עם רכיב $\\hat k>0$ ✓.\n\n**מכפלה סקלרית:**\n$$(\\nabla\\times\\vec F)\\cdot(\\vec r_x\\times\\vec r_y)=4yz+6x^3-1.$$\n\nעל המשטח $z=2xy$: $4yz=8xy^2$.\n\n**אינטגרציה על דיסקת היחידה $D$:**\n- $\\iint_D 8xy^2\\,dA=0$ (אי-זוגי ב-$x$).\n- $\\iint_D 6x^3\\,dA=0$ (אי-זוגי ב-$x$).\n- $\\iint_D 1\\,dA=\\pi$.\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=0+0-\\pi=-\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2019_m1_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_S(x^4+y^3+z^2)\\,ds$ כאשר $S$ הוא משטח של כדור יחידה שמרכזו בראשית.",
+      "solution_he": "**ניצול סימטריה:**\n\n**$\\iint y^3\\,dS=0$** — פונקציה אי-זוגית, ספירה סימטרית.\n\n**$\\iint z^2\\,dS$**: לפי סימטריה $\\iint x^2=\\iint y^2=\\iint z^2$. סכומם $=\\iint(x^2+y^2+z^2)dS=\\iint 1\\,dS=4\\pi$. אז $\\iint z^2\\,dS=\\tfrac{4\\pi}{3}$.\n\n**$\\iint x^4\\,dS=\\iint z^4\\,dS$** (סימטריה). חישוב ישיר על הספירה: $z=\\cos\\phi$, $dS=\\sin\\phi\\,d\\phi\\,d\\theta$:\n$$\\iint z^4\\,dS=\\int_0^{2\\pi}\\!d\\theta\\!\\int_0^\\pi\\!\\cos^4\\phi\\sin\\phi\\,d\\phi=2\\pi\\!\\int_{-1}^1 u^4\\,du=2\\pi\\cdot\\tfrac{2}{5}=\\tfrac{4\\pi}{5}.$$\n\n**סיכום:**\n$$\\iint_S(x^4+y^3+z^2)\\,dS=\\tfrac{4\\pi}{5}+0+\\tfrac{4\\pi}{3}=\\tfrac{12\\pi+20\\pi}{15}=\\tfrac{32\\pi}{15}.$$\n\n$$\\boxed{\\;\\iint_S(x^4+y^3+z^2)\\,ds=\\tfrac{32\\pi}{15}.\\;}$$"
+    }
+  ]
+}

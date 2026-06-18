@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>בחינות מתמטיקה לפיזיקאים II — ארכיון שאלות</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  MathJax = {
+    tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root {
+    --bg:#0f1115; --panel:#1a1d23; --panel2:#23272f; --text:#e6e8eb;
+    --muted:#8a93a3; --accent:#6aa1ff; --accent2:#9d6aff; --line:#2b303a;
+    --easy:#4ade80; --medium:#fbbf24; --hard:#f87171;
+  }
+  body.light {
+    --bg:#f5f6f8; --panel:#ffffff; --panel2:#eef0f4; --text:#1a1d23;
+    --muted:#5a6275; --accent:#2563eb; --accent2:#7c3aed; --line:#dde1e8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", "Arial Hebrew", system-ui, sans-serif;
+         background: var(--bg); color: var(--text); line-height: 1.6; }
+  header { padding: 18px 24px; background: var(--panel); border-bottom: 1px solid var(--line);
+           display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  header h1 { margin: 0; font-size: 22px; }
+  header h1 small { color: var(--muted); font-weight: normal; font-size: 14px; margin-right: 8px; }
+  .theme-toggle { background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+                  padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+  nav.tabs { display: flex; gap: 4px; padding: 0 24px; background: var(--panel);
+             border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  nav.tabs button { background: transparent; border: none; color: var(--muted);
+                    padding: 12px 16px; cursor: pointer; font-size: 15px; border-bottom: 2px solid transparent; }
+  nav.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); }
+  nav.tabs button:hover { color: var(--text); }
+  main { padding: 20px 24px; max-width: 1200px; margin: 0 auto; }
+  .controls { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+  .controls input, .controls select { background: var(--panel); color: var(--text); border: 1px solid var(--line);
+                                       padding: 8px 12px; border-radius: 6px; font-size: 14px; min-width: 200px; }
+  .topic-section { margin-bottom: 32px; }
+  .topic-header { display: flex; justify-content: space-between; align-items: baseline;
+                  border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-bottom: 16px; }
+  .topic-header h2 { margin: 0; color: var(--accent); }
+  .topic-header .count { color: var(--muted); font-size: 14px; }
+  .question { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+              padding: 16px 20px; margin-bottom: 12px; }
+  .q-meta { display: flex; gap: 10px; align-items: center; margin-bottom: 10px;
+            font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .q-meta .year-badge { background: var(--panel2); color: var(--text); padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .q-meta .points { background: var(--accent2); color: white; padding: 2px 8px; border-radius: 4px; }
+  .q-meta .diff-1 { background: var(--easy); color: #0f1115; padding: 2px 8px; border-radius: 4px; }
+  .q-meta .diff-2 { background: var(--medium); color: #0f1115; padding: 2px 8px; border-radius: 4px; }
+  .q-meta .diff-3 { background: var(--hard); color: white; padding: 2px 8px; border-radius: 4px; }
+  .q-meta .tag { background: var(--panel2); color: var(--muted); padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+  .q-meta a { color: var(--accent); text-decoration: none; margin-right: auto; }
+  .q-meta a:hover { text-decoration: underline; }
+  .q-body { font-size: 15px; line-height: 1.7; }
+  .q-body p { margin: 6px 0; white-space: pre-wrap; }
+  .exam-table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 8px; overflow: hidden; }
+  .exam-table th, .exam-table td { padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line); }
+  .exam-table th { background: var(--panel2); font-weight: 600; }
+  .exam-table a { color: var(--accent); text-decoration: none; }
+  .exam-table a:hover { text-decoration: underline; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+  .stat-card .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+  .stat-card .label { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .loader { text-align: center; padding: 40px; color: var(--muted); }
+  .note { background: var(--panel2); border-right: 3px solid var(--accent); padding: 12px 16px; margin-bottom: 20px; border-radius: 4px; color: var(--muted); font-size: 14px; }
+  .hero { background: linear-gradient(135deg, #1a3a6e 0%, #2563eb 50%, #1a3a6e 100%); padding: 44px 24px 36px; text-align: center; }
+  body.light .hero { background: linear-gradient(135deg, #2563eb 0%, #4f8aff 50%, #2563eb 100%); }
+  .hero h1 { color: white; font-size: 32px; margin: 0 0 8px; }
+  .hero .tagline { color: rgba(255,255,255,0.82); font-size: 16px; margin: 0; }
+  .intro { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px 26px; margin-bottom: 24px; }
+  .intro h2 { margin: 0 0 10px; color: var(--accent); font-size: 18px; }
+  .intro p { margin: 0 0 14px; color: var(--text); }
+  .intro p:last-child { margin-bottom: 0; }
+  .intro ol { margin: 6px 0 0; padding-right: 24px; }
+  .intro ol li { margin-bottom: 8px; }
+  .intro .pdf-icon, .intro .sol-icon { background: var(--panel2); padding: 1px 7px; border-radius: 4px; font-size: 13px; color: var(--accent); }
+  .search-wrap { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 24px;
+                 display: flex; align-items: stretch; gap: 18px; position: sticky; top: 0; z-index: 5; flex-wrap: wrap; }
+  .search-field { flex: 1 1 320px; display: flex; align-items: center; gap: 10px; }
+  .search-field label { color: var(--muted); font-size: 16px; font-weight: 600; white-space: nowrap; }
+  .search-field input { flex: 1; background: var(--bg); color: var(--text); border: 1px solid var(--line);
+                        padding: 13px 18px; border-radius: 8px; font-size: 17px; font-family: inherit; min-width: 0; }
+  .search-field input:focus { outline: none; border-color: var(--accent); }
+  .search-field input.has-value { border-color: var(--accent); }
+  .section-title { color: var(--accent); font-size: 20px; margin: 32px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--line); }
+  .exam-picker { display: flex; gap: 14px; align-items: center; padding: 18px 20px;
+                 background: var(--panel); border: 1px solid var(--line); border-radius: 10px; flex-wrap: wrap; }
+  .exam-picker label { color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .exam-picker select { background: var(--bg); color: var(--text); border: 1px solid var(--line);
+                        padding: 9px 14px; border-radius: 6px; font-size: 15px; font-family: inherit;
+                        min-width: 140px; cursor: pointer; }
+  .exam-picker select:focus { outline: none; border-color: var(--accent); }
+  .exam-picker select:disabled { opacity: 0.45; cursor: not-allowed; }
+  .exam-picker .pdf-link { margin-right: auto; color: var(--accent); text-decoration: none;
+                            background: var(--panel2); padding: 8px 14px; border-radius: 6px;
+                            border: 1px solid var(--line); font-size: 14px; }
+  .exam-picker .pdf-link:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  .exam-picker .pdf-link.hidden { visibility: hidden; }
+  .sol-toggle { background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+                padding: 7px 14px; border-radius: 6px; cursor: pointer; margin-top: 12px;
+                font-size: 14px; font-family: inherit; }
+  .sol-toggle:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  .q-solution { margin-top: 12px; padding: 14px 18px; background: var(--panel2);
+                border-right: 3px solid var(--easy); border-radius: 6px;
+                font-size: 15px; line-height: 1.75; white-space: pre-wrap; }
+  .q-solution.muted { color: var(--muted); font-style: italic; }
+  .q-solution strong { color: var(--accent); }
+</style>
+</head>
+<body class="">
+<script>
+  // Apply saved theme BEFORE rendering to avoid flash
+  (function() {
+    try {
+      if (localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+    } catch(e) {}
+  })();
+</script>
+<header>
+  <h1>ארכיון בחינות <small>מתמטיקה לפיזיקאים II · 86-148</small></h1>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 מצב כהה/בהיר</button>
+</header>
+<div class="hero">
+  <h1>בחינות מתמטיקה לפיזיקאים II</h1>
+  <p class="tagline">פרופ' ליאור קליין · אוניברסיטת בר-אילן · ארכיון שאלות מ-1999 עד היום, עם פתרונות מלאים</p>
+</div>
+<main>
+  <section class="intro">
+    <h2>מה האתר הזה?</h2>
+    <p>אתר זה מרכז את כל שאלות הבחינות שניתנו בקורס <strong>מתמטיקה לפיזיקאים II</strong> (86-148, סמסטר ב') על ידי פרופ' ליאור קליין, מ-1999 עד היום, ביחד עם פתרונות מפורטים.</p>
+
+    <h2 style="margin-top:18px">למי הוא מיועד?</h2>
+    <p>לסטודנטים בקורס המתכוננים לבחינה. הארכיון מאפשר לתרגל ולקבל פתרונות עם כל הצעדים והתובנות — כך שהלמידה היא לא רק "מה התשובה" אלא גם "איך מגיעים אליה".</p>
+
+    <h2 style="margin-top:18px">איך משתמשים?</h2>
+    <ol>
+      <li><strong>חיפוש לפי מילה:</strong> יש שתי שורות חיפוש נפרדות — אחת מסננת לפי <strong>ניסוח השאלה</strong> והשנייה לפי <strong>גוף הפתרון</strong>. בשני המקרים מוצגות השאלות בלבד — לפתיחת הפתרון יש ללחוץ על הכפתור המתאים.</li>
+      <li><strong>עיון לפי שנה:</strong> בחרו שנה מהתפריט הראשון ואז את המועד הרצוי — שאלות הבחינה יוצגו אוטומטית, כל אחת עם כפתור פתרון משלה.</li>
+      <li><strong>קבלת פתרון:</strong> מתחת לכל שאלה — כפתור <span class="sol-icon">▼ הצג פתרון</span> חושף פתרון מלא עם נימוקים .</li>
+      <li><strong>סריקת הבחינה המקורית:</strong> אחרי בחירת בחינה מופיע גם הקישור <span class="pdf-icon">📄 הורד PDF</span> לפתיחת דף הבחינה המקורי.</li>
+    </ol>
+  </section>
+
+  <div class="search-wrap">
+    <div class="search-field">
+      <label for="search-q">🔎 חיפוש בשאלות:</label>
+      <input type="text" id="search-q" placeholder="מילה בניסוח השאלה..." oninput="filterSearch()">
+    </div>
+    <div class="search-field">
+      <label for="search-s">💡 חיפוש בפתרונות:</label>
+      <input type="text" id="search-s" placeholder="מילה בגוף הפתרון..." oninput="filterSearch()">
+    </div>
+  </div>
+
+  <h2 class="section-title">📅 בחינות לפי שנה ומועד</h2>
+  <div id="years-table"><div class="loader">טוען…</div></div>
+
+  <div id="detail-panel"></div>
+</main>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  try {
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  } catch(e) {}
+}
+
+let ALL_EXAMS = [];
+let ALL_QUESTIONS = [];
+
+const EXAM_FILES = [
+  "extracted/json/y2025_m1.json",
+  "extracted/json/y2025_m2.json",
+  "extracted/json/y2025_m3.json",
+  "extracted/json/y2022_m1.json",
+  "extracted/json/y2022_m2.json",
+  "extracted/json/y2021_m1.json",
+  "extracted/json/y2021_m2.json",
+  "extracted/json/y2019_m1.json",
+  "extracted/json/y2019_m2.json",
+  "extracted/json/y2018_m1.json",
+  "extracted/json/y2018_m2.json",
+  "extracted/json/y2017_m1.json",
+  "extracted/json/y2017_m2.json",
+  "extracted/json/y2016_m1.json",
+  "extracted/json/y2016_m2.json",
+  "extracted/json/y2015_m1.json",
+  "extracted/json/y2020_m1.json",
+  "extracted/json/y2020_m2.json"
+];
+
+async function loadExams() {
+  for (const f of EXAM_FILES) {
+    try {
+      const r = await fetch(f);
+      const e = await r.json();
+      ALL_EXAMS.push(e);
+      for (const q of e.questions) {
+        ALL_QUESTIONS.push({...q, year: e.year, moed: e.moed, exam_id: e.exam_id, source_pdf: e.source_pdf});
+      }
+    } catch(err) { console.error("load fail", f, err); }
+  }
+  document.getElementById('years-table').innerHTML = renderYears();
+}
+
+function questionCard(q) {
+  const pdfLink = `extracted/pdfs/${q.source_pdf}`;
+  const hasSol = q.solution_he && q.solution_he.trim();
+  const solHTML = hasSol
+    ? `<div class="q-solution" hidden>${q.solution_he}</div>`
+    : `<div class="q-solution muted" hidden>טרם זמין</div>`;
+  return `
+    <div class="question">
+      <div class="q-meta">
+        <a href="${pdfLink}" target="_blank">📄 ${q.source_pdf}</a>
+        <span class="year-badge">${q.year} · מועד ${q.moed} · שאלה ${q.number}</span>
+        <span class="points">${q.points} נק'</span>
+      </div>
+      <div class="q-body"><p>${q.statement_he}</p></div>
+      <button class="sol-toggle" onclick="toggleSol(this)">▼ הצג פתרון</button>
+      ${solHTML}
+    </div>
+  `;
+}
+
+function toggleSol(btn) {
+  const sol = btn.nextElementSibling;
+  if (sol.hasAttribute('hidden')) {
+    sol.removeAttribute('hidden');
+    btn.textContent = '▲ הסתר פתרון';
+    if (window.MathJax) MathJax.typesetPromise([sol]);
+  } else {
+    sol.setAttribute('hidden', '');
+    btn.textContent = '▼ הצג פתרון';
+  }
+}
+
+function renderYears() {
+  const years = [...new Set(ALL_EXAMS.map(e => e.year))].sort((a,b) => b - a);
+  return `
+    <div class="exam-picker">
+      <label for="year-picker">שנה:</label>
+      <select id="year-picker" onchange="onYearPick()">
+        <option value="">— בחר שנה —</option>
+        ${years.map(y => `<option value="${y}">${y}</option>`).join('')}
+      </select>
+      <label for="moed-picker">מועד:</label>
+      <select id="moed-picker" onchange="onMoedPick()" disabled>
+        <option value="">— בחר מועד —</option>
+      </select>
+      <a id="pdf-link" class="pdf-link hidden" target="_blank">📄 הורד PDF של הבחינה</a>
+    </div>
+  `;
+}
+
+function onYearPick() {
+  const year = +document.getElementById('year-picker').value;
+  const moedSelect = document.getElementById('moed-picker');
+  const pdfLink = document.getElementById('pdf-link');
+  const detail = document.getElementById('detail-panel');
+  pdfLink.classList.add('hidden');
+  detail.innerHTML = '';
+  if (!year) {
+    moedSelect.innerHTML = '<option value="">— בחר מועד —</option>';
+    moedSelect.disabled = true;
+    return;
+  }
+  const moedim = ALL_EXAMS.filter(e => e.year === year)
+                          .sort((a,b) => 'אבג'.indexOf(a.moed) - 'אבג'.indexOf(b.moed));
+  moedSelect.disabled = false;
+  moedSelect.innerHTML = '<option value="">— בחר מועד —</option>'
+    + moedim.map(e => `<option value="${e.exam_id}">מועד ${e.moed} (${e.questions.length} שאלות)</option>`).join('');
+  if (moedim.length === 1) {
+    moedSelect.value = moedim[0].exam_id;
+    showExam(moedim[0].exam_id);
+  }
+}
+
+function onMoedPick() {
+  const examId = document.getElementById('moed-picker').value;
+  if (!examId) {
+    document.getElementById('detail-panel').innerHTML = '';
+    document.getElementById('pdf-link').classList.add('hidden');
+    return;
+  }
+  showExam(examId);
+}
+
+function showExam(examId) {
+  const exam = ALL_EXAMS.find(e => e.exam_id === examId);
+  if (!exam) return;
+  const qInput = document.getElementById('search-q');
+  const sInput = document.getElementById('search-s');
+  if (qInput) { qInput.value = ''; qInput.classList.remove('has-value'); }
+  if (sInput) { sInput.value = ''; sInput.classList.remove('has-value'); }
+  // sync picker UI (if user came from search results, etc.)
+  const yearPicker = document.getElementById('year-picker');
+  const moedPicker = document.getElementById('moed-picker');
+  if (yearPicker && +yearPicker.value !== exam.year) {
+    yearPicker.value = exam.year;
+    onYearPick();
+  }
+  if (moedPicker) moedPicker.value = exam.exam_id;
+  // show PDF link
+  const pdfLink = document.getElementById('pdf-link');
+  if (pdfLink) {
+    pdfLink.href = `extracted/pdfs/${exam.source_pdf}`;
+    pdfLink.classList.remove('hidden');
+  }
+  const qs = exam.questions.map(q => ({...q, year: exam.year, moed: exam.moed, exam_id: exam.exam_id, source_pdf: exam.source_pdf}));
+  const detail = document.getElementById('detail-panel');
+  detail.innerHTML = `
+    <h2 class="section-title" style="display:flex;justify-content:space-between;align-items:baseline">
+      <span>📋 ${exam.year} · מועד ${exam.moed}</span>
+      <span style="font-size:14px;color:var(--muted);font-weight:normal">${exam.questions.length} שאלות${exam.instructions ? ' · ' + exam.instructions : ''}</span>
+    </h2>
+    ${qs.map(questionCard).join('')}
+  `;
+  detail.scrollIntoView({behavior: 'smooth', block: 'start'});
+  if (window.MathJax) MathJax.typesetPromise([detail]);
+}
+
+function filterSearch() {
+  const qInput = document.getElementById('search-q');
+  const sInput = document.getElementById('search-s');
+  const qStr = qInput.value.trim().toLowerCase();
+  const sStr = sInput.value.trim().toLowerCase();
+  qInput.classList.toggle('has-value', !!qStr);
+  sInput.classList.toggle('has-value', !!sStr);
+  const detail = document.getElementById('detail-panel');
+  if (!qStr && !sStr) { detail.innerHTML = ''; return; }
+  const filt = ALL_QUESTIONS.filter(x => {
+    if (qStr && !(x.statement_he || '').toLowerCase().includes(qStr)) return false;
+    if (sStr && !(x.solution_he || '').toLowerCase().includes(sStr)) return false;
+    return true;
+  });
+  const parts = [];
+  if (qStr) parts.push(`שאלות מכילות: "${qStr}"`);
+  if (sStr) parts.push(`פתרונות מכילים: "${sStr}"`);
+  const title = parts.join(' · ');
+  detail.innerHTML = `
+    <h2 class="section-title">🔎 ${title} <span style="font-size:14px;color:var(--muted);font-weight:normal">· ${filt.length} שאלות</span></h2>
+    ${filt.length ? filt.map(questionCard).join('') : '<div class="loader">אין תוצאות תואמות</div>'}
+  `;
+  if (window.MathJax) MathJax.typesetPromise([detail]);
+}
+
+loadExams();
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "exam_id": "y2016_m2",
+  "year": 2016,
+  "moed": "ב",
+  "date": "2016-09-07",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 6 מתוך 7 השאלות הבאות. שימו לב, ניקוד השאלות אינו זהה!",
+  "answer_n_of_m": [
+    6,
+    7
+  ],
+  "source_pdf": "y2016_s2m2y16.pdf",
+  "questions": [
+    {
+      "qid": "y2016_m2_q1",
+      "number": 1,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא על חלק מעטפת האליפסואיד $x^2+2y^2+3z^2=30$ שעבורו $z$ לא שלילי את הנקודות בהן הפונקציה $f(x,y,z)=2x-4y+3z$ מקבלת ערך מינימלי וערך מקסימלי.",
+      "solution_he": "**Lagrange על האליפסואיד:** $(2,-4,3)=\\lambda(2x,4y,6z)$ ⇒ $x=\\tfrac{1}{\\lambda},\\;y=-\\tfrac{1}{\\lambda},\\;z=\\tfrac{1}{2\\lambda}$.\n\nהצבה לאילוץ: $\\tfrac{1}{\\lambda^2}+\\tfrac{2}{\\lambda^2}+\\tfrac{3}{4\\lambda^2}=\\tfrac{15}{4\\lambda^2}=30$ ⇒ $\\lambda^2=\\tfrac{1}{8}$.\n\n**$\\lambda>0$:** $z=\\sqrt 2>0$ ✓. נקודה $(2\\sqrt 2,-2\\sqrt 2,\\sqrt 2)$. $f=4\\sqrt 2+8\\sqrt 2+3\\sqrt 2=15\\sqrt 2$.\n\n**$\\lambda<0$:** $z<0$ — מחוץ לתחום.\n\n**שפה $z=0$:** אליפסה $x^2+2y^2=30$, מקסם $f=2x-4y$.\nLagrange: $(2,-4)=\\mu(2x,4y)$ ⇒ $x=\\tfrac{1}{\\mu},\\;y=-\\tfrac{1}{\\mu}$. $\\tfrac{3}{\\mu^2}=30$ ⇒ $\\mu=\\pm\\tfrac{1}{\\sqrt{10}}$.\n\n$\\mu>0$: $(\\sqrt{10},-\\sqrt{10},0)$, $f=6\\sqrt{10}$.\n$\\mu<0$: $(-\\sqrt{10},\\sqrt{10},0)$, $f=-6\\sqrt{10}$.\n\n**השוואה:** $15\\sqrt 2\\approx 21.2>6\\sqrt{10}\\approx 18.97$. אז:\n\n$$\\boxed{\\;f_{\\max}=15\\sqrt 2\\text{ ב-}(2\\sqrt 2,-2\\sqrt 2,\\sqrt 2);\\quad f_{\\min}=-6\\sqrt{10}\\text{ ב-}(-\\sqrt{10},\\sqrt{10},0).\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q2",
+      "number": 2,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא את טור פוריה של הפונקציה $f(x)$ המוגדרת: $f(x)=0$ בתחום $[-\\pi,0]$ ו-$f(x)=\\sin x$ בתחום $[0,\\pi]$, מחזורית $f(x+2\\pi n)=f(x)$. יש להעזר בפיתוח על מנת לחשב את הסכומים $\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{4n^2-1}$ ו-$\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{(4n^2-1)^2}$.",
+      "solution_he": "**שאלה זהה ל-2021 מועד א' שאלה 2** — אינטגרציה רק על $[0,\\pi]$:\n\n$a_0=\\tfrac{2}{\\pi},\\;a_1=0,\\;a_{2k}=-\\tfrac{2}{\\pi(4k^2-1)},\\;a_{\\text{אי-זוגי}>1}=0$.\n$b_1=\\tfrac{1}{2}$, $b_{n\\neq 1}=0$.\n\n$$\\boxed{\\;f(x)=\\tfrac{1}{\\pi}+\\tfrac{\\sin x}{2}-\\tfrac{2}{\\pi}\\sum_{k=1}^\\infty\\tfrac{\\cos(2kx)}{4k^2-1}.\\;}$$\n\n**סכום ראשון** (הצבה $x=0$, $f(0)=0$):\n$$0=\\tfrac{1}{\\pi}-\\tfrac{2}{\\pi}\\sum\\tfrac{1}{4k^2-1}\\Rightarrow\\sum_{k=1}^\\infty\\tfrac{1}{4k^2-1}=\\tfrac{1}{2}.$$\n\n**סכום שני** (Parseval, $\\int_0^\\pi\\sin^2 x dx=\\tfrac{\\pi}{2}$):\n$$\\tfrac{1}{2}=\\tfrac{(2/\\pi)^2}{2}+(\\tfrac{1}{2})^2+\\sum\\!\\left(\\tfrac{2}{\\pi(4k^2-1)}\\right)^2\\!\\cdot 1=\\tfrac{2}{\\pi^2}+\\tfrac{1}{4}+\\tfrac{4}{\\pi^2}\\sum\\tfrac{1}{(4k^2-1)^2}.$$\n\n$$\\sum_{k=1}^\\infty\\tfrac{1}{(4k^2-1)^2}=\\tfrac{\\pi^2}{4}\\!\\left(\\tfrac{1}{4}-\\tfrac{2}{\\pi^2}\\right)=\\tfrac{\\pi^2}{16}-\\tfrac{1}{2}.$$\n\n$$\\boxed{\\;\\sum\\tfrac{1}{4n^2-1}=\\tfrac{1}{2},\\quad\\sum\\tfrac{1}{(4n^2-1)^2}=\\tfrac{\\pi^2}{16}-\\tfrac{1}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q3",
+      "number": 3,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתון המשטח $xy+2\\sin(xz^2)+2z=1$.\n\nא. יש למצוא מישור משיק למשטח בנקודה $(1,1,0)$.\n\nב. יש למצוא משוואה של המישור שניצב למישור המשיק ושגם מכיל את הנקודה $(1,1,0)$ ואת ראשית הצירים.",
+      "solution_he": "**(א) גרדיאנט** $G=xy+2\\sin(xz^2)+2z-1$:\n- $G_x=y+2z^2\\cos(xz^2)$\n- $G_y=x$\n- $G_z=4xz\\cos(xz^2)+2$\n\nב-$(1,1,0)$: $\\nabla G=(1+0,\\,1,\\,0+2)=(1,1,2)$.\n\n**משיק:** $(x-1)+(y-1)+2z=0$ ⇒ $\\boxed{\\;x+y+2z=2.\\;}$\n\n**(ב) מישור ניצב למשיק שמכיל את הראשית ו-$(1,1,0)$:**\n\nהמישור עובר בשתי נקודות, אז הוא מכיל את הוקטור $\\vec u=(1,1,0)$ (מהראשית).\n\nתנאי הניצבות למישור המשיק: הנורמל $\\vec m$ של המישור החדש מאונך לנורמל המשיק $\\vec n_t=(1,1,2)$.\n\nתנאי הכלת $(1,1,0)$ והראשית: $\\vec m\\cdot(1,1,0)=0$.\n\nמכאן $\\vec m\\perp(1,1,2)$ וגם $\\vec m\\perp(1,1,0)$:\n$$\\vec m\\parallel(1,1,2)\\times(1,1,0)=(1\\cdot 0-2\\cdot 1,\\,2\\cdot 1-1\\cdot 0,\\,1-1)=(-2,2,0)\\parallel(-1,1,0).$$\n\nהמישור עובר בראשית:\n$$\\boxed{\\;-x+y=0,\\;\\text{או}\\;y=x.\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתון גוף דו-ממדי המתואר על ידי הפונקציה $r=3+\\sin\\theta$ כאשר $0\\le\\theta\\le 2\\pi$. לגוף צפיפות מסה משטחית הנתונה על ידי $\\delta=2+\\cos\\theta$.\n\nא. יש לחשב את השטח של הגוף.\n\nב. יש לחשב את המסה של הגוף.\n\nג. יש לחשב את מומנט האנרציה של הגוף סביב ציר שניצב לגוף ועובר דרך ראשית הצירים.",
+      "solution_he": "**(א) שטח:** $A=\\tfrac{1}{2}\\!\\int_0^{2\\pi}(3+\\sin\\theta)^2 d\\theta$.\n\nהרחבה: $(3+\\sin\\theta)^2=9+6\\sin\\theta+\\sin^2\\theta=\\tfrac{19}{2}+6\\sin\\theta-\\tfrac{\\cos 2\\theta}{2}$.\n\nאינטגרל על $[0,2\\pi]$: רק $\\tfrac{19}{2}$ שורד ⇒ $\\int=19\\pi$.\n\n$$\\boxed{\\;A=\\tfrac{19\\pi}{2}.\\;}$$\n\n**(ב) מסה:** $M=\\tfrac{1}{2}\\!\\int_0^{2\\pi}(2+\\cos\\theta)(3+\\sin\\theta)^2 d\\theta$.\n\nהרחבה: $(2+\\cos\\theta)(9+6\\sin\\theta+\\sin^2\\theta)=18+12\\sin\\theta+2\\sin^2\\theta+9\\cos\\theta+6\\sin\\theta\\cos\\theta+\\sin^2\\theta\\cos\\theta$.\n\nאינטגרל ב-$[0,2\\pi]$:\n- $18\\to 36\\pi$; $\\sin,\\cos\\to 0$; $2\\sin^2\\theta\\to 2\\pi$; $\\sin 2\\theta\\to 0$; $\\sin^2\\theta\\cos\\theta=\\tfrac{d}{d\\theta}(\\sin^3\\theta/3)\\to 0$.\n\nסך: $38\\pi$. אז $M=19\\pi$.\n\n$$\\boxed{\\;M=19\\pi.\\;}$$\n\n**(ג) מומנט אנרציה:** $I_z=\\tfrac{1}{4}\\!\\int_0^{2\\pi}(2+\\cos\\theta)(3+\\sin\\theta)^4 d\\theta$.\n\n$(3+\\sin\\theta)^4=81+108\\sin\\theta+54\\sin^2\\theta+12\\sin^3\\theta+\\sin^4\\theta$.\n\nכפל ב-$2$ ואינטגרל:\n$162\\to 324\\pi,\\;108\\sin^2\\theta\\to 108\\pi,\\;2\\sin^4\\theta\\to 2\\cdot\\tfrac{3\\pi}{4}=\\tfrac{3\\pi}{2}$ (Wallis); השאר $\\to 0$.\n\nכפל ב-$\\cos\\theta$ ואינטגרל: כל האיברים מתאפסים על $[0,2\\pi]$ (אורטוגונליות).\n\nסך: $324\\pi+108\\pi+\\tfrac{3\\pi}{2}=\\tfrac{867\\pi}{2}$.\n\n$$\\boxed{\\;I_z=\\tfrac{1}{4}\\cdot\\tfrac{867\\pi}{2}=\\tfrac{867\\pi}{8}.\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $C$ הוא החיתוך של המשטח $z=\\sqrt{x^2+2y^2}$ עם הכדור $x^2+y^2+z^2=1$ עם כיוון השעון (במבט מ-$z$ גדול מ-$1$) ו-$\\vec F=2y\\hat\\imath-x\\hat\\jmath+\\tfrac{z^3}{3}\\hat k$.",
+      "solution_he": "**זיהוי החיתוך:** הצבה $z^2=x^2+2y^2$ לכדור: $x^2+y^2+x^2+2y^2=1$ ⇒ $2x^2+3y^2=1$ (אליפסה). הגובה $z=\\sqrt{x^2+2y^2}>0$.\n\n**רוטור:**\n$$\\nabla\\times\\vec F=(0-0,\\,0-0,\\,-1-2)=(0,0,-3).$$\n\n(קבוע!)\n\n**אוריינטציה:** כיוון השעון במבט מלמעלה ⇒ $\\hat n$ מצביע **כלפי מטה** במשטח Stokes.\n\n**בחירת משטח:** קונוס $z=\\sqrt{x^2+2y^2}$ פנימי לאליפסה. הנורמל הטבעי שלו ($\\vec r_x\\times\\vec r_y$) הוא **כלפי מעלה**, אז נשתמש בנורמל ההפוך.\n\n**חישוב:** $(\\nabla\\times\\vec F)\\cdot\\hat n_{\\text{down}}\\,dS = -(\\nabla\\times\\vec F)_z\\,|dA|=3\\,dA$ (היטל $xy$).\n\n(כי $(\\vec r_x\\times\\vec r_y)_z=1$, כלומר היטל מצטמצם לשטח 2D.)\n\n$$\\oint_C=3\\cdot\\text{Area}(D),\\quad D=\\{2x^2+3y^2\\le 1\\}.$$\n\n**שטח האליפסה** עם חצי-צירים $\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 3}$: $\\pi\\cdot\\tfrac{1}{\\sqrt 2}\\cdot\\tfrac{1}{\\sqrt 3}=\\tfrac{\\pi}{\\sqrt 6}$.\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=\\tfrac{3\\pi}{\\sqrt 6}=\\tfrac{\\pi\\sqrt 6}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק המשטח $x+2y+z=10$ הנמצא בתוך הגליל האינסופי $(x-1)^2+y^2=1$, $\\vec F=y^2\\hat\\imath+2x\\hat\\jmath+2\\hat k$, ול-$\\hat n$ מרכיב $z$ חיובי.",
+      "solution_he": "**פרמטריזציה:** $\\vec r(x,y)=(x,y,10-x-2y)$, $\\vec r_x=(1,0,-1)$, $\\vec r_y=(0,1,-2)$.\n\n$$\\vec r_x\\times\\vec r_y=(1,2,1)\\;\\;(\\hat k>0\\;✓).$$\n\n**מכפלה סקלרית:**\n$$\\vec F\\cdot(1,2,1)=y^2+4x+2.$$\n\n**אינטגרציה על הדיסקה** $D:(x-1)^2+y^2\\le 1$ (יחידה, מרכז $(1,0)$):\n\nהצבה $u=x-1,v=y$: $D$ הופך לדיסקת יחידה במרכז ראשית, ו-$y^2+4x+2=v^2+4u+6$.\n\n- $\\iint_D v^2\\,dA=\\tfrac{\\pi}{4}$.\n- $\\iint_D 4u\\,dA=0$ (אי-זוגי).\n- $\\iint_D 6\\,dA=6\\pi$.\n\n$$\\iint_\\sigma=\\tfrac{\\pi}{4}+6\\pi=\\tfrac{25\\pi}{4}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=\\tfrac{25\\pi}{4}.\\;}$$"
+    },
+    {
+      "qid": "y2016_m2_q7",
+      "number": 7,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא החלק ממעטפת האליפסואיד $\\dfrac{x^2}{4}+\\dfrac{y^2}{9}+\\dfrac{z^2}{4}=1$ עבורו $z\\ge 0$, ונתון כי $\\vec F=2x\\sin y\\,\\hat\\imath+2\\cos y\\,\\hat\\jmath+10\\hat k$ ול-$\\hat n$ מרכיב $z$ לא שלילי.",
+      "solution_he": "**דיברגנץ:** $\\nabla\\cdot\\vec F=2\\sin y+(-2\\sin y)+0=0$.\n\n**סגירה:** דיסקה $D$ ב-$z=0$, $\\tfrac{x^2}{4}+\\tfrac{y^2}{9}\\le 1$ — אליפסה עם חצי-צירים $2,3$. שטח $=6\\pi$.\n\n**הנורמל החיצוני של $V$** (חצי-אליפסואיד עליון) על $D$ הוא $-\\hat k$.\n\n**שטף דרך הדיסקה:** $\\vec F\\cdot(-\\hat k)=-10$ ⇒ $\\iint_D=-10\\cdot 6\\pi=-60\\pi$.\n\n**משפט הדיברגנץ:** $\\iint_\\sigma+\\iint_D=0$ ⇒ $\\iint_\\sigma=60\\pi$.\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=60\\pi.\\;}$$"
+    }
+  ]
+}

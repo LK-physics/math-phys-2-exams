@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2021_m1",
+  "year": 2021,
+  "moed": "א",
+  "date": "2021-07-06",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2021_s2m1y21.pdf",
+  "questions": [
+    {
+      "qid": "y2021_m1_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא מקסימום מוחלט ומינימום מוחלט של הפונקציה $f(x,y,z)=x^3-y^3+2z^2$ על מעטפת **סגורה** של כדור שמרכזו בראשית ורדיוסו $1$.",
+      "solution_he": "**הערה:** \"מעטפת סגורה של כדור\" כאן = הכדור הסגור $x^2+y^2+z^2\\le 1$ (גוף סגור עם המעטפת בתוכו).\n\n**שלב 1 — נקודות פנימיות:** $\\nabla f=(3x^2,-3y^2,4z)=0$ ⇒ $(0,0,0)$ עם $f=0$.\n\n**שלב 2 — שפה (לגראנז' על $x^2+y^2+z^2=1$):**\n$$3x^2=2\\lambda x,\\quad -3y^2=2\\lambda y,\\quad 4z=2\\lambda z.$$\n\nהמשוואה השלישית: $z=0$ או $\\lambda=2$.\n\n**(א) $z=0$ + $x^2+y^2=1$:**\n- אם $x=0$, $y=\\pm 1$ ⇒ $f=-y^3=\\mp 1$.\n- אם $y=0$, $x=\\pm 1$ ⇒ $f=x^3=\\pm 1$.\n- אם $x=\\tfrac{2\\lambda}{3},\\,y=-\\tfrac{2\\lambda}{3}$: $x=-y$ ⇒ $2x^2=1$ ⇒ $x=\\pm\\tfrac{1}{\\sqrt 2}$, $f=\\pm\\tfrac{1}{\\sqrt 2}\\approx\\pm 0.707$.\n\n**(ב) $\\lambda=2$:** $x(3x-4)=0$ ⇒ $x=0$ (כי $|x|\\le 1$). $y(-3y-4)=0$ ⇒ $y=0$. אז $z=\\pm 1$ ⇒ $f=2$.\n\n**סיכום הערכים:** $\\{0,\\pm 1,\\pm\\tfrac{1}{\\sqrt 2},2\\}$.\n\n$$\\boxed{\\;f_{\\max}=2\\text{ ב-}(0,0,\\pm 1),\\qquad f_{\\min}=-1\\text{ ב-}(-1,0,0)\\text{ וב-}(0,1,0).\\;}$$"
+    },
+    {
+      "qid": "y2021_m1_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. יש למצוא את טור פוריה של הפונקציה $f(x)$ המוגדרת: $f(x)=0$ בתחום $[-\\pi,0]$ ו-$f(x)=\\sin x$ בתחום $[0,\\pi]$, ומחזורית $f(x+2\\pi n)=f(x)$.\n\nב. יש להעזר בפיתוח על מנת להראות ש-$\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{4n^2-1}=\\dfrac{1}{2}$ ו-$\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{(4n^2-1)^2}=\\dfrac{\\pi^2}{16}-\\dfrac{1}{2}$.",
+      "solution_he": "**(א)** הפונקציה אינה זוגית ואינה אי-זוגית (חצי-גל סינוסי על $[0,\\pi]$, אפס על $[-\\pi,0]$). תורם רק האינטגרל על $[0,\\pi]$:\n\n$$a_0=\\tfrac{1}{\\pi}\\!\\int_0^\\pi\\sin x\\,dx=\\tfrac{2}{\\pi}.$$\n\n**מקדמי קוסינוס:** $a_n=\\tfrac{1}{\\pi}\\int_0^\\pi\\sin x\\cos(nx)dx$. בעזרת $\\sin x\\cos(nx)=\\tfrac{1}{2}[\\sin((1+n)x)+\\sin((1-n)x)]$.\n\nעבור $n=1$: $\\sin x\\cos x=\\tfrac{1}{2}\\sin 2x$ ⇒ $a_1=0$.\n\nעבור $n\\neq 1$: לאחר אינטגרציה ופישוט,\n$$a_n=\\tfrac{1+(-1)^n}{\\pi(1-n^2)}=\\begin{cases}0 & n\\text{ אי-זוגי}\\\\[4pt]\\tfrac{-2}{\\pi(n^2-1)} & n\\text{ זוגי}\\end{cases}.$$\n\nלכן בכתיב $n=2k$: $a_{2k}=\\tfrac{-2}{\\pi(4k^2-1)}$ עבור $k\\ge 1$.\n\n**מקדמי סינוס:** $b_n=\\tfrac{1}{\\pi}\\int_0^\\pi\\sin x\\sin(nx)dx$. עבור $n=1$: $\\int\\sin^2 x\\,dx=\\tfrac{\\pi}{2}$ ⇒ $b_1=\\tfrac{1}{2}$. עבור $n\\neq 1$: $b_n=0$.\n\n**טור פוריה:**\n$$\\boxed{\\;f(x)=\\tfrac{1}{\\pi}+\\tfrac{\\sin x}{2}-\\tfrac{2}{\\pi}\\sum_{k=1}^\\infty\\tfrac{\\cos(2kx)}{4k^2-1}.\\;}$$\n\n**(ב.1) הצבה $x=0$:** ההמשך מ-$[-\\pi,0]$ ל-$[0,\\pi]$ רציף בנקודה $x=0$ (שני הצדדים שווים $0$), אז הטור מתכנס ל-$f(0)=0$:\n$$0=\\tfrac{1}{\\pi}+0-\\tfrac{2}{\\pi}\\sum_{k=1}^\\infty\\tfrac{1}{4k^2-1}\\;\\Longrightarrow\\;\\sum_{k=1}^\\infty\\tfrac{1}{4k^2-1}=\\tfrac{1}{2}.\\;\\checkmark$$\n\n**(ב.2) Parseval:**\n$$\\tfrac{a_0^2}{2}+\\sum(a_n^2+b_n^2)=\\tfrac{1}{\\pi}\\!\\int_{-\\pi}^\\pi f^2\\,dx.$$\n\nצד ימין: $\\tfrac{1}{\\pi}\\!\\int_0^\\pi\\sin^2 x\\,dx=\\tfrac{1}{2}$.\n\nצד שמאל: $\\tfrac{(2/\\pi)^2}{2}+(\\tfrac{1}{2})^2+\\sum_{k=1}^\\infty\\!\\left(\\tfrac{-2}{\\pi(4k^2-1)}\\right)^2=\\tfrac{2}{\\pi^2}+\\tfrac{1}{4}+\\tfrac{4}{\\pi^2}\\sum_{k=1}^\\infty\\tfrac{1}{(4k^2-1)^2}$.\n\nהשוואה: $\\tfrac{1}{2}-\\tfrac{1}{4}-\\tfrac{2}{\\pi^2}=\\tfrac{4}{\\pi^2}\\sum\\tfrac{1}{(4k^2-1)^2}$.\n\n$$\\sum_{k=1}^\\infty\\tfrac{1}{(4k^2-1)^2}=\\tfrac{\\pi^2}{4}\\!\\left(\\tfrac{1}{4}-\\tfrac{2}{\\pi^2}\\right)=\\tfrac{\\pi^2}{16}-\\tfrac{1}{2}.\\;\\checkmark$$"
+    },
+    {
+      "qid": "y2021_m1_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתונים שני כדורים שרדיוסם $r_0$ ואשר המרחק בין מרכזיהם הוא $d$. בהינתן ש-$d<2r_0$, מה גודל הנפח המשותף לשני הכדורים?",
+      "solution_he": "**סימטריזציה:** נמקם את המרכזים ב-$(\\pm d/2,0,0)$. החיתוך סימטרי סביב המישור $x=0$, ולכן הנפח המשותף = $2\\times$(כיפה של הכדור השמאלי עבור $x>0$).\n\n**גובה הכיפה:** הכדור השמאלי נמשך עד $x=-\\tfrac{d}{2}+r_0$. החלק עם $x>0$ הוא כיפה בגובה $h=r_0-\\tfrac{d}{2}$.\n\n**חישוב בקליפת דיסקות:** הכדור השמאלי מקיים $(x+\\tfrac{d}{2})^2+y^2+z^2=r_0^2$, אז רדיוס הדיסקה ב-$x$ קבוע הוא $\\rho(x)=\\sqrt{r_0^2-(x+\\tfrac{d}{2})^2}$.\n\n$$V_{\\text{cap}}=\\int_0^{r_0-d/2}\\!\\!\\pi\\bigl[r_0^2-(x+\\tfrac{d}{2})^2\\bigr]dx\\stackrel{u=x+d/2}{=}\\pi\\!\\int_{d/2}^{r_0}\\!\\!\\bigl[r_0^2-u^2\\bigr]du=\\pi\\!\\left[r_0^2 u-\\tfrac{u^3}{3}\\right]_{d/2}^{r_0}.$$\n\n$$V_{\\text{cap}}=\\pi\\!\\left[\\tfrac{2r_0^3}{3}-\\tfrac{r_0^2 d}{2}+\\tfrac{d^3}{24}\\right].$$\n\n**הנפח המשותף:**\n$$V=2V_{\\text{cap}}=\\tfrac{\\pi}{12}\\bigl[16r_0^3-12r_0^2 d+d^3\\bigr]=\\boxed{\\;\\tfrac{\\pi(2r_0-d)^2(4r_0+d)}{12}.\\;}$$\n\n**אימותים:** $d=0$ ⇒ $V=\\tfrac{\\pi\\cdot 4r_0^2\\cdot 4r_0}{12}=\\tfrac{4\\pi r_0^3}{3}$ ✓ (כדור שלם). $d=2r_0$ ⇒ $V=0$ ✓ (משיק)."
+    },
+    {
+      "qid": "y2021_m1_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=\\dfrac{2x}{1+y^2}\\hat\\imath-\\dfrac{2y(1+x^2)}{(1+y^2)^2}\\hat\\jmath$ ו-$C$ הוא המסלול $x=t^3-1$, $y=t^6-t$, $0\\le t\\le 1$.",
+      "solution_he": "**בדיקת שמרנות:**\n$$\\tfrac{\\partial F_1}{\\partial y}=\\tfrac{-4xy}{(1+y^2)^2},\\qquad \\tfrac{\\partial F_2}{\\partial x}=-\\tfrac{2y\\cdot 2x}{(1+y^2)^2}=\\tfrac{-4xy}{(1+y^2)^2}.\\;\\checkmark$$\n\n**מציאת פוטנציאל:** $\\partial\\phi/\\partial x=\\tfrac{2x}{1+y^2}$ ⇒ $\\phi=\\tfrac{x^2}{1+y^2}+g(y)$.\n\nביצירת $\\partial\\phi/\\partial y$: $-\\tfrac{2yx^2}{(1+y^2)^2}+g'(y)=-\\tfrac{2y(1+x^2)}{(1+y^2)^2}$ ⇒ $g'(y)=-\\tfrac{2y}{(1+y^2)^2}$ ⇒ $g(y)=\\tfrac{1}{1+y^2}$.\n\n$$\\phi(x,y)=\\tfrac{1+x^2}{1+y^2}.$$\n\n**הצבת נקודות הקצה:**\n- $t=0$: $(x,y)=(-1,0)$ ⇒ $\\phi=\\tfrac{2}{1}=2$.\n- $t=1$: $(x,y)=(0,0)$ ⇒ $\\phi=\\tfrac{1}{1}=1$.\n\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r=\\phi(\\text{end})-\\phi(\\text{start})=1-2=-1.\\;}$$"
+    },
+    {
+      "qid": "y2021_m1_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(xy+y^2)\\hat\\imath+x^2\\hat\\jmath$ ו-$C$ הוא היקף האזור התחום על ידי $y=x^2$ ו-$y=\\sqrt x$, נגד כיוון השעון.",
+      "solution_he": "**גרין:** $P=xy+y^2$, $Q=x^2$ ⇒\n$$\\tfrac{\\partial Q}{\\partial x}-\\tfrac{\\partial P}{\\partial y}=2x-(x+2y)=x-2y.$$\n\n**זיהוי התחום:** חיתוך $x^2=\\sqrt x$ ⇒ $x^4=x$ ⇒ $x=0,1$. עבור $x\\in[0,1]$: $x^2\\le\\sqrt x$, אז $x^2\\le y\\le\\sqrt x$.\n\n**חישוב:**\n$$\\iint_D(x-2y)\\,dA=\\int_0^1\\!\\!\\int_{x^2}^{\\sqrt x}(x-2y)\\,dy\\,dx=\\int_0^1\\bigl[xy-y^2\\bigr]_{x^2}^{\\sqrt x}dx.$$\n\nהצבה: $(x\\sqrt x-x)-(x^3-x^4)=x^{3/2}-x-x^3+x^4$.\n\n$$\\int_0^1\\bigl(x^{3/2}-x-x^3+x^4\\bigr)dx=\\tfrac{2}{5}-\\tfrac{1}{2}-\\tfrac{1}{4}+\\tfrac{1}{5}=\\tfrac{8-10-5+4}{20}=-\\tfrac{3}{20}.$$\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=-\\tfrac{3}{20}.\\;}$$"
+    },
+    {
+      "qid": "y2021_m1_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_S(x+y+z)\\,ds$ כאשר $S$ הוא המשטח $(x(u,v),y(u,v),z(u,v))$ ונתון ש-$x(u,v)=2u+v$, $y(u,v)=u-2v$, $z(u,v)=u+3v$, $0\\le u\\le 1$, $0\\le v\\le 2$.",
+      "solution_he": "**זיהוי המשטח:** התלות ב-$(u,v)$ ליניארית, לכן $S$ הוא **מקבילית מישורית**.\n\n**הוקטורים הטנגנטיים:**\n$$\\vec r_u=(2,1,1),\\quad \\vec r_v=(1,-2,3).$$\n\n**הנורמל ושטח האלמנט:**\n$$\\vec r_u\\times\\vec r_v=\\det\\!\\begin{pmatrix}\\hat\\imath&\\hat\\jmath&\\hat k\\\\2&1&1\\\\1&-2&3\\end{pmatrix}=(3-(-2),\\,-(6-1),\\,-4-1)=(5,-5,-5).$$\n\n$$|\\vec r_u\\times\\vec r_v|=5\\sqrt 3\\;\\Rightarrow\\;dS=5\\sqrt 3\\,du\\,dv.$$\n\n**האינטגרנד:** $x+y+z=(2u+v)+(u-2v)+(u+3v)=4u+2v$.\n\n**אינטגרציה:**\n$$\\iint_S(x+y+z)dS=5\\sqrt 3\\int_0^1\\!\\!\\int_0^2(4u+2v)\\,dv\\,du=5\\sqrt 3\\int_0^1(8u+4)du=5\\sqrt 3\\cdot 8=40\\sqrt 3.$$\n\n$$\\boxed{\\;\\iint_S(x+y+z)\\,ds=40\\sqrt 3.\\;}$$"
+    }
+  ]
+}

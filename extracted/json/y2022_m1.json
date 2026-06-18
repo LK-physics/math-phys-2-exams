@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2022_m1",
+  "year": 2022,
+  "moed": "א",
+  "date": "2022-06-27",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2022_s2m1y22.pdf",
+  "questions": [
+    {
+      "qid": "y2022_m1_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא על המשטח $x^2-2xy+y^2-x+y=0$ את הנקודה הקרובה ביותר לנקודה $(1,2,-3)$.",
+      "solution_he": "המשטח לא תלוי ב-$z$, ולכן הוא גליל אינסופי מעל עקומה במישור $xy$. נכתוב את המשוואה:\n$$(x-y)^2 - (x-y) = 0 \\;\\Longrightarrow\\; (x-y)\\big((x-y)-1\\big)=0.$$\n\nכלומר המשטח הוא איחוד של **שני מישורים**: $y=x$ ו-$y=x-1$.\n\nלכל מישור הנורמל הוא $(1,-1,0)$ — אין רכיב $z$, ולכן נקודת ההיטל של $(1,2,-3)$ על כל מישור נמצאת בגובה $z=-3$.\n\n**מישור $y=x$:** מרחק $= \\dfrac{|1-2|}{\\sqrt 2} = \\dfrac{1}{\\sqrt 2}$. נקודת ההיטל: $\\left(\\tfrac{3}{2},\\,\\tfrac{3}{2},\\,-3\\right)$.\n\n**מישור $y=x-1$:** מרחק $= \\dfrac{|1-2-1|}{\\sqrt 2} = \\sqrt 2$. נקודת ההיטל: $(2,1,-3)$.\n\nהמרחק המינימלי הוא $\\tfrac{1}{\\sqrt 2}$:\n\n$$\\boxed{\\;\\text{הנקודה הקרובה ביותר: }\\left(\\tfrac{3}{2},\\,\\tfrac{3}{2},\\,-3\\right),\\quad d_{\\min} = \\tfrac{1}{\\sqrt 2}=\\tfrac{\\sqrt 2}{2}.\\;}$$\n\n(לאימות בלגראנז' — תוספת מקבילה: $\\nabla f = \\lambda \\nabla g$ עם $f=$ מרחק² ו-$g$ = משוואת המשטח נותנת $x+y=3$ ו-$z=-3$, ובצירוף $(x-y)(x-y-1)=0$ נקבל את שתי הנקודות לעיל.)"
+    },
+    {
+      "qid": "y2022_m1_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x)=e^x$ בתחום $[-\\pi,\\pi]$.\n\nא. יש לחשב את מקדמי פוריה $a_n$ ו-$b_n$ כך ש-$f(x)\\sim\\dfrac{a_0}{2}+\\sum_{n=1}^\\infty a_n\\cos nx + b_n\\sin nx$.\n\nב. יש לחשב את $\\displaystyle\\sum_{n=1}^\\infty |a_n|^2$.",
+      "solution_he": "**(א)** המקדם החופשי:\n$$a_0 = \\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi e^x\\,dx = \\tfrac{e^\\pi - e^{-\\pi}}{\\pi} = \\tfrac{2\\sinh\\pi}{\\pi}.$$\n\nנשתמש בזהויות\n$$\\int e^x\\cos(nx)dx = \\tfrac{e^x(\\cos nx + n\\sin nx)}{1+n^2},\\quad \\int e^x\\sin(nx)dx = \\tfrac{e^x(\\sin nx - n\\cos nx)}{1+n^2}.$$\n\nמאחר ש-$\\sin(n\\pi)=0$ ו-$\\cos(n\\pi)=(-1)^n$:\n\n$$a_n = \\tfrac{1}{\\pi}\\cdot\\tfrac{(e^\\pi-e^{-\\pi})\\cos(n\\pi)}{1+n^2} = \\tfrac{(-1)^n\\,2\\sinh\\pi}{\\pi(1+n^2)}.$$\n\n$$b_n = \\tfrac{1}{\\pi}\\cdot\\tfrac{-n(e^\\pi-e^{-\\pi})\\cos(n\\pi)}{1+n^2} = \\tfrac{(-1)^{n+1}\\,2n\\sinh\\pi}{\\pi(1+n^2)}.$$\n\n**(ב) הטריק:** $\\sum a_n^2$ הוא בדיוק תוצאת Parseval על **החלק הזוגי** של $f$ — מכיוון שהחלק הזוגי מכיל רק רכיבי קוסינוס (אותם $a_0,a_n$), ושאר הסדרה (סינוסים) מגיע מהחלק האי-זוגי.\n\nהחלק הזוגי של $e^x$: $f_e(x) = \\tfrac{e^x+e^{-x}}{2} = \\cosh x$.\n\nParseval על $\\cosh x$:\n$$\\tfrac{a_0^2}{2} + \\sum_{n=1}^\\infty a_n^2 = \\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi\\cosh^2 x\\,dx.$$\n\nנחשב את האינטגרל באמצעות $\\cosh^2 x = \\tfrac{1+\\cosh 2x}{2}$:\n$$\\int_{-\\pi}^\\pi \\cosh^2 x\\,dx = \\pi + \\tfrac{\\sinh(2\\pi)}{2}.$$\n\nלכן:\n$$\\tfrac{a_0^2}{2} + \\sum_{n=1}^\\infty a_n^2 = 1 + \\tfrac{\\sinh(2\\pi)}{2\\pi}.$$\n\nעם $\\tfrac{a_0^2}{2} = \\tfrac{2\\sinh^2\\pi}{\\pi^2}$:\n\n$$\\boxed{\\;\\sum_{n=1}^\\infty a_n^2 = 1 + \\tfrac{\\sinh(2\\pi)}{2\\pi} - \\tfrac{2\\sinh^2\\pi}{\\pi^2}.\\;}$$\n\n(מספרית: $\\approx 16.5$.)"
+    },
+    {
+      "qid": "y2022_m1_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_D f(x,y)\\,dA$ כאשר $f(x,y)=\\sin\\!\\left(\\dfrac{\\pi x}{y}\\right)$ ו-$D$ מוגדר על ידי $y\\ge\\dfrac{1}{2}$, $y\\ge x$, $y\\le\\sqrt[3]{x}$.",
+      "solution_he": "**זיהוי התחום:** מהתנאים $y\\ge x$ ו-$y\\le x^{1/3}$ נובע $y^3\\le x\\le y$. בנוסף $y\\ge\\tfrac{1}{2}$.\n\nהדרישה $y^3\\le y$ עם $y>0$ נותנת $y\\le 1$. לכן:\n$$D = \\{(x,y):\\;\\tfrac{1}{2}\\le y\\le 1,\\quad y^3\\le x\\le y\\}.$$\n\n**אינטגרציה:** סדר $dx\\,dy$ (קל כי $y$ הוא הקבוע באינטגרל הפנימי). הצבה $u=\\pi x/y$:\n$$\\int_{y^3}^{y}\\sin\\!\\left(\\tfrac{\\pi x}{y}\\right)dx = \\tfrac{y}{\\pi}\\big[-\\cos u\\big]_{\\pi y^2}^{\\pi} = \\tfrac{y}{\\pi}\\bigl(1 + \\cos(\\pi y^2)\\bigr).$$\n\nהאינטגרל החיצוני מתפצל לשניים:\n$$\\tfrac{1}{\\pi}\\int_{1/2}^1 y\\,dy = \\tfrac{1}{\\pi}\\cdot\\tfrac{1}{2}\\!\\left(1-\\tfrac{1}{4}\\right) = \\tfrac{3}{8\\pi}.$$\n\nעבור $\\int_{1/2}^1 y\\cos(\\pi y^2)dy$ — הצבה $v=\\pi y^2$, $dv=2\\pi y\\,dy$:\n$$\\tfrac{1}{\\pi}\\int_{1/2}^1 y\\cos(\\pi y^2)dy = \\tfrac{1}{2\\pi^2}\\big[\\sin(\\pi y^2)\\big]_{1/2}^{1} = \\tfrac{1}{2\\pi^2}\\bigl(0 - \\sin(\\tfrac{\\pi}{4})\\bigr) = -\\tfrac{\\sqrt 2}{4\\pi^2}.$$\n\n$$\\boxed{\\;\\iint_D f\\,dA = \\tfrac{3}{8\\pi} - \\tfrac{\\sqrt 2}{4\\pi^2} \\approx 0.084.\\;}$$"
+    },
+    {
+      "qid": "y2022_m1_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C \\vec F\\cdot d\\vec r$ כאשר $\\vec F = (e^{x-y}+y^2)\\hat\\imath + (2xy - e^{x-y} - 1)\\hat\\jmath$ ו-$C$ הוא המסלול $x(t) = 1 + \\sin\\!\\left(\\dfrac{\\pi t}{3}\\right)$, $y(t) = 5 - \\cos\\!\\left(\\dfrac{\\pi t}{2}\\right)$ שמתחיל ב-$t=0$ ומסתיים ב-$t=1$.",
+      "solution_he": "**בדיקת שמרנות:**\n$$\\tfrac{\\partial F_1}{\\partial y} = -e^{x-y} + 2y,\\qquad \\tfrac{\\partial F_2}{\\partial x} = 2y - e^{x-y}.$$\nשווים ⇒ השדה משמר.\n\n**מציאת פוטנציאל $\\phi$:** מהדרישה $\\partial\\phi/\\partial x = e^{x-y}+y^2$:\n$$\\phi(x,y) = e^{x-y} + xy^2 + g(y).$$\nמ-$\\partial\\phi/\\partial y = -e^{x-y} + 2xy + g'(y) = 2xy - e^{x-y} - 1$ נקבל $g'(y)=-1$, אז $g(y)=-y$.\n\n$$\\phi(x,y) = e^{x-y} + xy^2 - y.$$\n\n**הצבת נקודות הקצה:**\n- $t=0$: $x=1,\\,y=4$. $\\phi(1,4) = e^{-3} + 16 - 4 = e^{-3} + 12$.\n- $t=1$: $x=1+\\tfrac{\\sqrt 3}{2},\\,y=5$. $\\phi = e^{(1+\\sqrt 3/2)-5} + 25\\!\\left(1+\\tfrac{\\sqrt 3}{2}\\right) - 5 = e^{\\sqrt 3/2 - 4} + 20 + \\tfrac{25\\sqrt 3}{2}$.\n\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r = \\phi(\\text{end})-\\phi(\\text{start}) = e^{\\sqrt 3/2-4} - e^{-3} + 8 + \\tfrac{25\\sqrt 3}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2022_m1_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא את השטח התחום על ידי העקומה $x(t)=\\cos^3 t$, $y(t)=\\sin^3 t$ שמתחילה ב-$t=0$ ומסתיימת ב-$t=2\\pi$.",
+      "solution_he": "זוהי **אסטרואידה** (Astroid) מהצורה $x^{2/3}+y^{2/3}=1$.\n\nנשתמש בנוסחת השטח של גרין (בכיוון נגד-שעוני):\n$$A = \\tfrac{1}{2}\\oint_C(x\\,dy - y\\,dx).$$\n\nחישוב הדיפרנציאלים:\n- $dx = -3\\cos^2 t\\sin t\\,dt$\n- $dy = 3\\sin^2 t\\cos t\\,dt$\n\n$$x\\,dy - y\\,dx = \\cos^3 t\\cdot 3\\sin^2 t\\cos t\\,dt - \\sin^3 t\\cdot(-3\\cos^2 t\\sin t)dt = 3\\sin^2 t\\cos^2 t(\\cos^2 t + \\sin^2 t)dt = 3\\sin^2 t\\cos^2 t\\,dt.$$\n\nעם הזהות $\\sin^2 t\\cos^2 t = \\tfrac{1}{4}\\sin^2(2t)$:\n$$A = \\tfrac{1}{2}\\int_0^{2\\pi}\\tfrac{3}{4}\\sin^2(2t)\\,dt = \\tfrac{3}{8}\\cdot\\pi.$$\n\n$$\\boxed{\\;A = \\tfrac{3\\pi}{8}.\\;}$$"
+    },
+    {
+      "qid": "y2022_m1_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F = (x^3-\\cos z)\\hat\\imath + (y^3+e^{xz})\\hat\\jmath + (z+xy)\\hat k$, $\\hat n$ עם מרכיב $\\hat k$ חיובי, ו-$\\sigma$ הוא המשטח $z = 5+x^2+y^2$ עבור $z\\le 9$.",
+      "solution_he": "**אסטרטגיה:** הפונקציות $\\cos z, e^{xz}$ קשות לאינטגרציה ישירה — נסגור עם דיסקה ונפעיל את משפט הדיברגנץ.\n\n**סגירה:** הפרבולואיד $z=5+r^2$ נחתך עם $z=9$ במעגל $r=2$. נסגור עם הדיסקה $D=\\{z=9,\\,r\\le 2\\}$. הנפח החסום $V=\\{5+r^2\\le z\\le 9\\}$ דמוי-כיפה.\n\n**דיברגנץ:**\n$$\\nabla\\cdot\\vec F = 3x^2 + 3y^2 + 1.$$\n\n(הרכיבים הקשים מאופסים: $\\cos z$ לא תלוי ב-$x$, $e^{xz}$ לא תלוי ב-$y$, $xy$ לא תלוי ב-$z$.)\n\n**חישוב הנפח והאינטגרל:**\n\nנפח: $V_{\\text{vol}} = \\int_0^{2\\pi}\\int_0^2(9-(5+r^2))r\\,dr\\,d\\theta = 2\\pi\\int_0^2(4-r^2)r\\,dr = 8\\pi.$\n\n$\\iiint r^2\\,dV = 2\\pi\\int_0^2 r^3(4-r^2)dr = 2\\pi\\!\\left[r^4 - \\tfrac{r^6}{6}\\right]_0^2 = 2\\pi\\cdot\\tfrac{32}{6} = \\tfrac{32\\pi}{3}.$\n\n$\\iiint(3r^2+1)dV = 3\\cdot\\tfrac{32\\pi}{3} + 8\\pi = 40\\pi.$\n\n**שטף דרך הדיסקה ($\\hat n_D = \\hat k$ חוצה את $V$ כלפי מעלה):**\n\n$$\\iint_D F_z\\big|_{z=9}\\,dA = \\iint_D(9+xy)\\,dA = 9\\cdot\\pi(2)^2 + 0 = 36\\pi.$$\n\n**שטף יוצא דרך הפרבולואיד (חלק מ-$\\oiint_\\text{out}$):**\n$$\\iint_{\\sigma,\\text{out}}\\vec F\\cdot\\hat n\\,dS = 40\\pi - 36\\pi = 4\\pi.$$\n\n**התאמת אוריינטציה:** הנורמל \"החוצה\" של $V$ על הפרבולואיד מצביע **כלפי מטה** (כי $V$ נמצא מעל הפרבולואיד). השאלה מבקשת נורמל עם רכיב $\\hat k$ **חיובי** — כלומר ההפוך:\n\n$$\\boxed{\\;\\iint_\\sigma \\vec F\\cdot\\hat n\\,ds = -4\\pi.\\;}$$"
+    }
+  ]
+}

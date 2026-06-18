@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2022_m2",
+  "year": 2022,
+  "moed": "ב",
+  "date": "2022-08-09",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2022_s2m2y22.pdf",
+  "questions": [
+    {
+      "qid": "y2022_m2_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא את הערך המינימלי של הפונקציה $f(x,y,z)=x^3+y^2+z^2$ תחת האילוצים $x+y+z=9$ ו-$x+2y+3z=20$.",
+      "solution_he": "**פרמטריזציה ישירה של קו החיתוך** (קל יותר מ-Lagrange עם שני אילוצים):\n\nמהאילוצים: חיסור נותן $y+2z=11$ ⇒ $y=11-2z$. הצבה לאילוץ הראשון: $x+(11-2z)+z=9$ ⇒ $x=z-2$.\n\nנסמן $t=z$ ונקבל את הקו: $(x,y,z)=(t-2,\\;11-2t,\\;t)$.\n\n**הפונקציה לאורך הקו:**\n$$F(t)=(t-2)^3+(11-2t)^2+t^2.$$\n\n**נגזרת:**\n$$F'(t)=3(t-2)^2-4(11-2t)+2t=3t^2-2t-32.$$\n\n$F'(t)=0$ ⇒ $3t^2-2t-32=0$ ⇒ $t=\\tfrac{2\\pm\\sqrt{4+384}}{6}=\\tfrac{1\\pm\\sqrt{97}}{3}.$\n\n**זיהוי נקודת המינימום (מקומית):** $F''(t)=6t-2$.\n- $t_1=\\tfrac{1+\\sqrt{97}}{3}\\approx 3.616$ — $F''(t_1)=2\\sqrt{97}>0$ → **מינימום מקומי**.\n- $t_2=\\tfrac{1-\\sqrt{97}}{3}\\approx -2.949$ — $F''(t_2)<0$ → מקסימום מקומי.\n\n**הערה חשובה:** $F$ הוא פולינום ממעלה 3 ב-$t$ עם מקדם מוביל חיובי, לכן $F(t)\\to-\\infty$ כאשר $t\\to-\\infty$. אין מינימום גלובלי — רק מינימום מקומי.\n\n**חישוב הערך** עם $s=\\sqrt{97}$, $s^2=97$, $s^3=97s$:\n- $(t_1-2)=\\tfrac{s-5}{3}$, $(t_1-2)^3=\\tfrac{(s-5)^3}{27}=\\tfrac{172s-1580}{27}$\n- $(11-2t_1)^2=\\tfrac{(31-2s)^2}{9}=\\tfrac{1349-124s}{9}$\n- $t_1^2=\\tfrac{(1+s)^2}{9}=\\tfrac{98+2s}{9}$\n\n$$F(t_1)=\\tfrac{172s-1580+3(1447-122s)}{27}=\\tfrac{2761-194s}{27}.$$\n\n$$\\boxed{\\;f_{\\min,\\text{loc}}=\\tfrac{2761-194\\sqrt{97}}{27}\\approx 31.49,\\quad\\text{בנקודה }(x,y,z)=\\bigl(\\tfrac{s-5}{3},\\,\\tfrac{31-2s}{3},\\,\\tfrac{1+s}{3}\\bigr).\\;}$$\n\n(נקודת המקסימום המקומית: $F(t_2)=\\tfrac{2761+194\\sqrt{97}}{27}\\approx 172.6$.)"
+    },
+    {
+      "qid": "y2022_m2_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. מה מקדמי פוריה של הפונקציה $f(x)=|x|$ בתחום $[-\\pi,\\pi]$?\n\nב. מה מקדמי פוריה של הפונקציה $g(x)=3|x|+5(\\sin 2x+\\cos 2x)^2$ בתחום $[-\\pi,\\pi]$?",
+      "solution_he": "**(א)** $|x|$ פונקציה זוגית, לכן $b_n=0$ לכל $n$.\n\nהמקדם החופשי:\n$$a_0=\\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi|x|\\,dx=\\tfrac{2}{\\pi}\\int_0^\\pi x\\,dx=\\tfrac{2}{\\pi}\\cdot\\tfrac{\\pi^2}{2}=\\pi.$$\n\nמקדמי קוסינוס (אינטגרציה בחלקים, $u=x$, $dv=\\cos(nx)dx$):\n$$a_n=\\tfrac{2}{\\pi}\\int_0^\\pi x\\cos(nx)dx=\\tfrac{2}{\\pi n^2}\\bigl[(-1)^n-1\\bigr]=\\begin{cases}-\\tfrac{4}{\\pi n^2} & n\\text{ אי-זוגי}\\\\[4pt] 0 & n\\text{ זוגי, }n\\ge 2\\end{cases}.$$\n\nטור פוריה:\n$$|x|=\\tfrac{\\pi}{2}-\\tfrac{4}{\\pi}\\sum_{k=0}^\\infty\\tfrac{\\cos\\bigl((2k+1)x\\bigr)}{(2k+1)^2}.$$\n\n**(ב) טריק:** נפתח את החזקה הריבועית:\n$$(\\sin 2x+\\cos 2x)^2=\\sin^2 2x+\\cos^2 2x+2\\sin 2x\\cos 2x=1+\\sin 4x.$$\n\nלכן\n$$g(x)=3|x|+5+5\\sin 4x.$$\n\nמקדמי פוריה ליניאריים (סופרפוזיציה). שימוש בתוצאות (א) ו-במקדמים של קבוע ושל $\\sin 4x$ נפרד:\n\n**$a_0(g)$:** $3a_0(|x|)+a_0(\\text{const}=5)+0=3\\pi+10$. (קבוע $c$ תורם $a_0=2c$ במוסכמה $f\\sim\\tfrac{a_0}{2}+\\dots$.)\n\n**$a_n(g)$ עבור $n\\ge 1$:**\n$$a_n(g)=3a_n(|x|)=\\begin{cases}-\\tfrac{12}{\\pi n^2} & n\\text{ אי-זוגי}\\\\[4pt] 0 & n\\text{ זוגי}\\end{cases}.$$\n\n**$b_n(g)$:**\n$$b_n(g)=\\begin{cases}5 & n=4\\\\[3pt] 0 & \\text{אחרת}\\end{cases}.$$\n\n(כי $\\sin 4x$ הוא רכיב סינוס עם תדר $n=4$ ומקדם $1$.)\n\n$$\\boxed{\\;g(x)=\\tfrac{3\\pi+10}{2}-\\tfrac{12}{\\pi}\\!\\!\\sum_{k=0}^\\infty\\tfrac{\\cos\\bigl((2k+1)x\\bigr)}{(2k+1)^2}+5\\sin 4x.\\;}$$"
+    },
+    {
+      "qid": "y2022_m2_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C x^2 yz\\,dr$ כאשר $C$ הוא קטע מהחיתוך של המישורים $x+y-z=0$ ו-$x+y+z=1$ שמתחיל בנקודה $(1,-0.5,0.5)$ ומסתיים בנקודה $(-3,3.5,0.5)$. (כאן $dr$ הוא איבר אורך הקשת $ds$.)",
+      "solution_he": "**מציאת קו החיתוך:** חיבור המישורים $\\Rightarrow 2(x+y)=1$ ⇒ $x+y=\\tfrac{1}{2}$. חיסור $\\Rightarrow 2z=1$ ⇒ $z=\\tfrac{1}{2}$.\n\nלכן הקו הוא הישר $z=\\tfrac{1}{2},\\;y=\\tfrac{1}{2}-x$. פרמטריזציה: $x=t,\\;y=\\tfrac{1}{2}-t,\\;z=\\tfrac{1}{2}$.\n\nנקודת ההתחלה $t=1$ ⇒ $(1,-\\tfrac{1}{2},\\tfrac{1}{2})$ ✓; נקודת הסיום $t=-3$ ⇒ $(-3,\\tfrac{7}{2},\\tfrac{1}{2})$ ✓.\n\n**איבר אורך הקשת:**\n$$\\vec r\\,'(t)=(1,-1,0)\\Rightarrow|\\vec r\\,'(t)|=\\sqrt 2\\Rightarrow ds=\\sqrt 2\\,dt.$$\n\n**אינטגרנד:**\n$$x^2yz=t^2\\!\\left(\\tfrac{1}{2}-t\\right)\\!\\cdot\\tfrac{1}{2}=\\tfrac{t^2}{4}-\\tfrac{t^3}{2}.$$\n\n**אינטגרציה** (האינטגרל הסקלרי לפי אורך קשת אינו תלוי בכיוון, אז מ-$t=-3$ עד $t=1$):\n$$\\int_C x^2yz\\,ds=\\sqrt 2\\int_{-3}^{1}\\!\\!\\left(\\tfrac{t^2}{4}-\\tfrac{t^3}{2}\\right)\\!dt=\\sqrt 2\\left[\\tfrac{t^3}{12}-\\tfrac{t^4}{8}\\right]_{-3}^{1}.$$\n\nחישוב:\n- ב-$t=1$: $\\tfrac{1}{12}-\\tfrac{1}{8}=-\\tfrac{1}{24}$.\n- ב-$t=-3$: $-\\tfrac{27}{12}-\\tfrac{81}{8}=-\\tfrac{9}{4}-\\tfrac{81}{8}=-\\tfrac{99}{8}$.\n\nההפרש: $-\\tfrac{1}{24}-(-\\tfrac{99}{8})=-\\tfrac{1}{24}+\\tfrac{297}{24}=\\tfrac{296}{24}=\\tfrac{37}{3}$.\n\n$$\\boxed{\\;\\int_C x^2yz\\,ds=\\tfrac{37\\sqrt 2}{3}.\\;}$$"
+    },
+    {
+      "qid": "y2022_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_0^1\\!\\!\\int_{y^2}^{y^{2/3}} y\\,e^{x^2}\\,dx\\,dy$.",
+      "solution_he": "**הבעיה:** $\\int e^{x^2}\\,dx$ אינו אלמנטרי — חייבים להחליף סדר אינטגרציה.\n\n**זיהוי התחום:** $0\\le y\\le 1$, $y^2\\le x\\le y^{2/3}$. עבור $y\\in[0,1]$ אכן $y^2\\le y^{2/3}$ (לדוגמה $y=\\tfrac{1}{2}$: $\\tfrac{1}{4}\\le 0.63$).\n\n**החלפת סדר:** עבור $x\\in[0,1]$ קבוע, $y$ חייב לקיים $y^2\\le x$ (כלומר $y\\le\\sqrt x$) וגם $y^{2/3}\\ge x$ (כלומר $y\\ge x^{3/2}$). אז $x^{3/2}\\le y\\le\\sqrt x$:\n\n$$I=\\int_0^1\\!\\!\\int_{x^{3/2}}^{\\sqrt x} y\\,e^{x^2}\\,dy\\,dx=\\int_0^1 e^{x^2}\\cdot\\tfrac{y^2}{2}\\bigg|_{x^{3/2}}^{\\sqrt x}\\,dx=\\tfrac{1}{2}\\int_0^1 e^{x^2}(x-x^3)\\,dx.$$\n\n**הצבה $u=x^2$, $du=2x\\,dx$:**\n$$I=\\tfrac{1}{2}\\int_0^1 x(1-x^2)e^{x^2}dx=\\tfrac{1}{4}\\int_0^1(1-u)e^u\\,du.$$\n\n**אינטגרציה בחלקים:** $\\int(1-u)e^u du=(1-u)e^u+\\int e^u du=(2-u)e^u$.\n\nהצבת גבולות: $\\bigl[(2-u)e^u\\bigr]_0^1=e-2$.\n\n$$\\boxed{\\;I=\\tfrac{e-2}{4}\\approx 0.180.\\;}$$"
+    },
+    {
+      "qid": "y2022_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C(e^x+y^2)\\,dx+(e^y+x^2)\\,dy$ כאשר $C$ הוא היקף התחום החסום על ידי $y=x^2$ ו-$y=2-x$ נגד כיוון השעון.",
+      "solution_he": "**אסטרטגיה:** הביטויים $e^x,e^y$ קשים לאינטגרציה ישירה — נשתמש במשפט גרין כדי שייעלמו.\n\n**גרין:** $P=e^x+y^2$, $Q=e^y+x^2$:\n$$\\tfrac{\\partial Q}{\\partial x}-\\tfrac{\\partial P}{\\partial y}=2x-2y.$$\n\n(נשים לב ש-$e^x,e^y$ אכן ביטלו זה את זה — לכן הם נבחרו.)\n\n**זיהוי התחום:** חיתוך $y=x^2$ עם $y=2-x$: $x^2+x-2=0$ ⇒ $(x-1)(x+2)=0$ ⇒ $x=-2,1$. נקודות: $(-2,4)$ ו-$(1,1)$. הפרבולה למטה, הקו מעליה: $x^2\\le y\\le 2-x$ עבור $x\\in[-2,1]$.\n\n**חישוב $\\iint_D 2x\\,dA$:**\n$$\\int_{-2}^1\\!\\!2x(2-x-x^2)dx=\\int_{-2}^1(4x-2x^2-2x^3)dx=\\left[2x^2-\\tfrac{2x^3}{3}-\\tfrac{x^4}{2}\\right]_{-2}^1.$$\n\nב-$x=1$: $2-\\tfrac{2}{3}-\\tfrac{1}{2}=\\tfrac{5}{6}$. ב-$x=-2$: $8+\\tfrac{16}{3}-8=\\tfrac{16}{3}$. הפרש: $\\tfrac{5}{6}-\\tfrac{16}{3}=-\\tfrac{27}{6}=-\\tfrac{9}{2}$.\n\n**חישוב $\\iint_D 2y\\,dA$:**\n$$\\int_{-2}^1\\!\\!\\bigl[y^2\\bigr]_{x^2}^{2-x}\\,dx=\\int_{-2}^1\\!\\bigl((2-x)^2-x^4\\bigr)dx=\\int_{-2}^1(4-4x+x^2-x^4)dx.$$\n\nהאנטי-נגזרת $4x-2x^2+\\tfrac{x^3}{3}-\\tfrac{x^5}{5}$. ב-$x=1$: $\\tfrac{32}{15}$. ב-$x=-2$: $-\\tfrac{184}{15}$. הפרש: $\\tfrac{216}{15}=\\tfrac{72}{5}$.\n\n**תוצאה:**\n$$\\oint_C=-\\tfrac{9}{2}-\\tfrac{72}{5}=-\\tfrac{45+144}{10}=-\\tfrac{189}{10}.$$\n\n$$\\boxed{\\;\\oint_C(e^x+y^2)dx+(e^y+x^2)dy=-\\tfrac{189}{10}=-18.9.\\;}$$"
+    },
+    {
+      "qid": "y2022_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתון $\\vec F=y^3\\hat\\imath-x^4\\hat\\jmath+z^5\\hat k$. יש לחשב את $\\displaystyle\\iint_\\sigma(\\nabla\\times\\vec F)\\cdot\\hat n\\,ds$ כאשר $\\hat n$ עם מרכיב $\\hat k$ חיובי ו-$\\sigma$ הוא חלק ממעטפת כדור שמרכזו בראשית ורדיוסו $3$ הנמצא מעל המישור $z=1$.",
+      "solution_he": "**אסטרטגיה:** במקום אינטגרל משטחי על כיפה — נשתמש ב-Stokes ונחליף ב-$\\oint\\vec F\\cdot d\\vec r$ על השפה.\n\n**השפה:** מעגל החיתוך $x^2+y^2+z^2=9,\\;z=1$ ⇒ $x^2+y^2=8$, $r=2\\sqrt 2$, $z=1$.\n\n**אוריינטציה:** $\\hat n$ עם רכיב $\\hat k$ חיובי — באמצעות \"יד ימין\", $\\partial\\sigma$ מסתובב **נגד כיוון השעון** במבט מ-$+z$.\n\n**Stokes החלופי:** אפשר להחליף את הכיפה בדיסקה $D=\\{z=1,\\,x^2+y^2\\le 8\\}$ עם נורמל $\\hat k$ — שתי הצורות חולקות אותה שפה ואותה אוריינטציה.\n\n$$\\nabla\\times\\vec F=\\det\\!\\begin{pmatrix}\\hat\\imath & \\hat\\jmath & \\hat k\\\\ \\partial_x & \\partial_y & \\partial_z\\\\ y^3 & -x^4 & z^5\\end{pmatrix}=\\bigl(-4x^3-3y^2\\bigr)\\hat k.$$\n\n**אינטגרציה על הדיסקה:**\n$$\\iint_\\sigma(\\nabla\\times\\vec F)\\cdot\\hat n\\,dS=\\iint_D(-4x^3-3y^2)\\,dA.$$\n\n- $\\iint_D x^3\\,dA=0$ (פונקציה אי-זוגית ב-$x$, תחום סימטרי).\n- $\\iint_D y^2\\,dA$ בקואורדינטות פולריות: $\\int_0^{2\\pi}\\sin^2\\theta\\,d\\theta\\cdot\\int_0^{2\\sqrt 2}r^3 dr=\\pi\\cdot\\tfrac{(2\\sqrt 2)^4}{4}=\\pi\\cdot 16=16\\pi$.\n\n$$\\iint_\\sigma=-3\\cdot 16\\pi=-48\\pi.$$\n\n$$\\boxed{\\;\\iint_\\sigma(\\nabla\\times\\vec F)\\cdot\\hat n\\,ds=-48\\pi.\\;}$$\n\n**אימות (Stokes על השפה):** $\\vec r(t)=(2\\sqrt 2\\cos t,2\\sqrt 2\\sin t,1)$, $d\\vec r=2\\sqrt 2(-\\sin t,\\cos t,0)dt$:\n$$\\vec F\\cdot d\\vec r=-(2\\sqrt 2)^4\\sin^4 t\\,dt-(2\\sqrt 2)^5\\cos^5 t\\,dt.$$\n\n$\\int_0^{2\\pi}\\sin^4 t\\,dt=\\tfrac{3\\pi}{4}$, $\\int_0^{2\\pi}\\cos^5 t\\,dt=0$ ⇒ $\\oint=-64\\cdot\\tfrac{3\\pi}{4}=-48\\pi$. ✓"
+    }
+  ]
+}

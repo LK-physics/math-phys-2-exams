@@ -1,0 +1,76 @@
+{
+  "exam_id": "y2017_m1",
+  "year": 2017,
+  "moed": "א",
+  "date": "2017-07-25",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2017_s2m1y17.pdf",
+  "questions": [
+    {
+      "qid": "y2017_m1_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y,z)=2x^2-3y^2+2z$. יש למצוא את הנקודות בהן הפונקציה $f(x,y,z)$ מקבלת את ערכי המקסימום והמינימום המוחלטים שלה על פני האליפסואיד $3x^2+2y^2+z^2=1$.",
+      "solution_he": "**Lagrange:** $\\nabla f=\\lambda\\nabla g$ עם $g=3x^2+2y^2+z^2-1$:\n$$4x=6\\lambda x,\\quad -6y=4\\lambda y,\\quad 2=2\\lambda z.$$\n\nהמשוואה השלישית: $\\lambda z=1$ ⇒ $\\lambda,z\\neq 0$.\n\n**מקרה A — $\\lambda=\\tfrac{2}{3}$:** $z=\\tfrac{1}{\\lambda}=\\tfrac{3}{2}$. אבל $z^2=\\tfrac{9}{4}>1$ — מחוץ לאליפסואיד. אין פתרון.\n\n**מקרה B — $\\lambda=-\\tfrac{3}{2}$:** $z=-\\tfrac{2}{3}$, $z^2=\\tfrac{4}{9}\\le 1$ ✓. מהמשוואה הראשונה $4x=-9x$ ⇒ $x=0$. הצבה לאילוץ: $2y^2+\\tfrac{4}{9}=1$ ⇒ $y^2=\\tfrac{5}{18}$.\n\nנקודות: $(0,\\pm\\sqrt{\\tfrac{5}{18}},-\\tfrac{2}{3})$, $f=-3\\cdot\\tfrac{5}{18}-\\tfrac{4}{3}=-\\tfrac{5}{6}-\\tfrac{8}{6}=-\\tfrac{13}{6}$.\n\n**מקרה C — $x=y=0$:** $z^2=1$ ⇒ $z=\\pm 1$, $\\lambda=\\pm 1$.\n- $(0,0,1)$: $f=2$.\n- $(0,0,-1)$: $f=-2$.\n\n**סיכום:**\n- $f=2$ ב-$(0,0,1)$;\n- $f=-2$ ב-$(0,0,-1)$;\n- $f=-\\tfrac{13}{6}\\approx -2.167$ ב-$(0,\\pm\\sqrt{5/18},-\\tfrac{2}{3})$.\n\n$$\\boxed{\\;f_{\\max}=2\\text{ ב-}(0,0,1),\\qquad f_{\\min}=-\\tfrac{13}{6}\\text{ ב-}\\bigl(0,\\pm\\!\\sqrt{\\tfrac{5}{18}},-\\tfrac{2}{3}\\bigr).\\;}$$"
+    },
+    {
+      "qid": "y2017_m1_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x)=x^2$ המוגדרת בקטע $[-\\pi,\\pi]$.\n\nא. יש לחשב את טור פוריה של $f(x)$.\n\nב. יש להעזר בפיתוח בסעיף א כדי להראות ש-$\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{n^4}=\\dfrac{\\pi^4}{90}$.\n\nג. יש לחשב את $\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{(2n-1)^4}$.",
+      "solution_he": "**(א)** $x^2$ זוגי, $b_n=0$.\n\n$a_0=\\tfrac{2}{\\pi}\\!\\int_0^\\pi x^2 dx=\\tfrac{2\\pi^2}{3}$.\n\n$a_n$: אינטגרציה בחלקים פעמיים נותנת $\\int_0^\\pi x^2\\cos(nx)dx=\\tfrac{2\\pi(-1)^n}{n^2}$ ⇒ $a_n=\\tfrac{4(-1)^n}{n^2}$.\n\n$$\\boxed{\\;x^2=\\tfrac{\\pi^2}{3}+4\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(nx)}{n^2}.\\;}$$\n\n**(ב) Parseval:**\n$$\\tfrac{1}{\\pi}\\!\\int_{-\\pi}^\\pi x^4 dx=\\tfrac{a_0^2}{2}+\\sum a_n^2.$$\n\n$\\int_{-\\pi}^\\pi x^4 dx=\\tfrac{2\\pi^5}{5}$, ⇒ צד שמאל $=\\tfrac{2\\pi^4}{5}$.\n\n$\\tfrac{a_0^2}{2}=\\tfrac{2\\pi^4}{9}$, $\\sum a_n^2=16\\sum\\tfrac{1}{n^4}$.\n\n$$\\tfrac{2\\pi^4}{5}=\\tfrac{2\\pi^4}{9}+16\\sum\\tfrac{1}{n^4}\\Rightarrow 16\\sum\\tfrac{1}{n^4}=2\\pi^4\\!\\left(\\tfrac{1}{5}-\\tfrac{1}{9}\\right)=\\tfrac{8\\pi^4}{45}.$$\n\n$$\\sum_{n=1}^\\infty\\tfrac{1}{n^4}=\\tfrac{\\pi^4}{90}.\\;\\checkmark$$\n\n**(ג)** פיצול לאי-זוגיים וזוגיים:\n$$\\sum_{n=1}^\\infty\\tfrac{1}{n^4}=\\sum_{k=1}^\\infty\\tfrac{1}{(2k-1)^4}+\\sum_{k=1}^\\infty\\tfrac{1}{(2k)^4}=\\sum_{k=1}^\\infty\\tfrac{1}{(2k-1)^4}+\\tfrac{1}{16}\\sum_{n=1}^\\infty\\tfrac{1}{n^4}.$$\n\n$$\\sum_{n=1}^\\infty\\tfrac{1}{(2n-1)^4}=\\tfrac{15}{16}\\sum_{n=1}^\\infty\\tfrac{1}{n^4}=\\tfrac{15}{16}\\cdot\\tfrac{\\pi^4}{90}=\\tfrac{\\pi^4}{96}.$$\n\n$$\\boxed{\\;\\sum_{n=1}^\\infty\\tfrac{1}{(2n-1)^4}=\\tfrac{\\pi^4}{96}.\\;}$$"
+    },
+    {
+      "qid": "y2017_m1_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma(x^4+2y^2+3y^2 z^2+\\sin x)\\,ds$ כאשר $\\sigma$ מעטפת של כדור שמרכזו בראשית ורדיוסו $1$.",
+      "solution_he": "**ניצול סימטריה:**\n- $\\iint\\sin x\\,dS=0$ (אי-זוגי ב-$x$).\n- $\\iint x^4\\,dS=\\iint y^4\\,dS=\\iint z^4\\,dS=\\tfrac{4\\pi}{5}$ (תוצאה ידועה לכדור יחידה).\n- $\\iint y^2\\,dS=\\iint x^2\\,dS=\\iint z^2\\,dS$. סכומם $=\\iint 1\\,dS=4\\pi$, אז $\\iint y^2\\,dS=\\tfrac{4\\pi}{3}$.\n- $\\iint y^2 z^2\\,dS$: מהזהות $\\iint(x^2+y^2+z^2)^2\\,dS=\\iint 1\\,dS=4\\pi$:\n$$3\\!\\iint x^4\\,dS+6\\!\\iint y^2 z^2\\,dS=4\\pi\\Rightarrow 6\\!\\iint y^2 z^2\\,dS=4\\pi-\\tfrac{12\\pi}{5}=\\tfrac{8\\pi}{5}\\Rightarrow\\iint y^2 z^2\\,dS=\\tfrac{4\\pi}{15}.$$\n\n**סיכום:**\n$$\\iint_\\sigma=\\tfrac{4\\pi}{5}+2\\cdot\\tfrac{4\\pi}{3}+3\\cdot\\tfrac{4\\pi}{15}+0=\\tfrac{4\\pi}{5}+\\tfrac{8\\pi}{3}+\\tfrac{4\\pi}{5}=\\tfrac{8\\pi}{5}+\\tfrac{8\\pi}{3}=\\tfrac{24\\pi+40\\pi}{15}.$$\n\n$$\\boxed{\\;\\iint_\\sigma(x^4+2y^2+3y^2 z^2+\\sin x)\\,ds=\\tfrac{64\\pi}{15}.\\;}$$"
+    },
+    {
+      "qid": "y2017_m1_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x,y,z)=x^2+2y^2+3z$.\n\nא. יש למצוא את משוואת המישורים המשיקים למשטח $f(x,y,z)=6$ בנקודות $(1,-1,1)$ ו-$(1,1,1)$.\n\nב. יש למצוא את הזווית בין שני המישורים מסעיף א.\n\nג. יש למצוא וקטור מקביל לחיתוך בין שני המישורים מסעיף א.\n\nד. יש למצוא את מרחק שתי נקודות ההשקה מסעיף א לשני המישורים האחרים (כלומר מרחק כל נקודה למישור שהיא אינה נמצאת עליו).",
+      "solution_he": "**אימות:** $f(1,-1,1)=1+2+3=6$ ✓; $f(1,1,1)=1+2+3=6$ ✓.\n\n$\\nabla f=(2x,\\,4y,\\,3)$.\n\n**(א) משיקים:**\n- ב-$(1,-1,1)$: $\\nabla f=(2,-4,3)$ ⇒ $2(x-1)-4(y+1)+3(z-1)=0$ ⇒ $\\boxed{\\;2x-4y+3z=9\\;}$.\n- ב-$(1,1,1)$: $\\nabla f=(2,4,3)$ ⇒ $2(x-1)+4(y-1)+3(z-1)=0$ ⇒ $\\boxed{\\;2x+4y+3z=9\\;}$.\n\n**(ב) זווית:** הנורמלים $\\vec n_1=(2,-4,3)$, $\\vec n_2=(2,4,3)$.\n$$\\vec n_1\\cdot\\vec n_2=4-16+9=-3,\\quad|\\vec n_i|=\\sqrt{29}.$$\n\n$$\\boxed{\\;\\cos\\theta=-\\tfrac{3}{29},\\quad\\theta=\\arccos\\!\\left(-\\tfrac{3}{29}\\right)\\approx 95.9^\\circ.\\;}$$\n\n**(ג) וקטור מקביל לחיתוך:** $\\vec v=\\vec n_1\\times\\vec n_2$:\n$$\\vec v=\\det\\!\\begin{pmatrix}\\hat\\imath&\\hat\\jmath&\\hat k\\\\2&-4&3\\\\2&4&3\\end{pmatrix}=(-12-12,\\,-(6-6),\\,8+8)=(-24,0,16).$$\n\n$$\\boxed{\\;\\vec v\\parallel(-3,0,2).\\;}$$\n\n**(ד) מרחקי הנקודות מהמישור השני:**\n\nמרחק $(1,-1,1)$ ממישור 2 ($2x+4y+3z=9$):\n$$d_1=\\tfrac{|2-4+3-9|}{\\sqrt{29}}=\\tfrac{8}{\\sqrt{29}}.$$\n\nמרחק $(1,1,1)$ ממישור 1 ($2x-4y+3z=9$):\n$$d_2=\\tfrac{|2-4+3-9|}{\\sqrt{29}}=\\tfrac{8}{\\sqrt{29}}.$$\n\n$$\\boxed{\\;d_1=d_2=\\tfrac{8}{\\sqrt{29}}=\\tfrac{8\\sqrt{29}}{29}\\approx 1.486.\\;}$$"
+    },
+    {
+      "qid": "y2017_m1_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתון תיל שמסלולו מוגדר: $x(t)=2\\cos t$, $y(t)=2\\sin t$, $z(t)=t^2$, $0\\le t\\le 2\\pi$. צפיפות המסה $\\rho$ תלויה רק ב-$z$: $\\rho=2z^{0.5}$.\n\nא. מה המסה הכוללת של התיל?\n\nב. מה מומנט האנרציה של התיל סביב ציר $z$?\n\nג. נתון $\\vec F=x\\hat\\imath+y\\hat\\jmath+z\\hat k$. יש לחשב את $\\displaystyle\\int_C\\vec F\\cdot d\\vec r$ כאשר $C$ הוא המסלול לאורך התיל החל מ-$t=0$.",
+      "solution_he": "**אלמנט אורך:** $\\vec r\\,'(t)=(-2\\sin t,2\\cos t,2t)$ ⇒ $|\\vec r\\,'|=\\sqrt{4+4t^2}=2\\sqrt{1+t^2}$.\n\n$ds=2\\sqrt{1+t^2}\\,dt$. $\\rho=2\\sqrt z=2\\sqrt{t^2}=2t$ (עבור $t\\ge 0$).\n\n**(א) מסה:**\n$$M=\\!\\int_C\\rho\\,ds=\\!\\int_0^{2\\pi}\\!\\!2t\\cdot 2\\sqrt{1+t^2}\\,dt=4\\!\\int_0^{2\\pi}\\!t\\sqrt{1+t^2}\\,dt.$$\n\nהצבה $u=1+t^2$: $\\int_0^{2\\pi}t\\sqrt{1+t^2}dt=\\tfrac{1}{3}\\bigl[(1+4\\pi^2)^{3/2}-1\\bigr]$.\n\n$$\\boxed{\\;M=\\tfrac{4}{3}\\bigl[(1+4\\pi^2)^{3/2}-1\\bigr].\\;}$$\n\n**(ב) מומנט אנרציה ביחס לציר $z$:** $I_z=\\int_C(x^2+y^2)\\rho\\,ds=\\int_C 4\\cdot 2t\\cdot 2\\sqrt{1+t^2}dt=16\\!\\int_0^{2\\pi}\\!t\\sqrt{1+t^2}dt$.\n\n$$\\boxed{\\;I_z=\\tfrac{16}{3}\\bigl[(1+4\\pi^2)^{3/2}-1\\bigr].\\;}$$\n\n(שים לב: $I_z=4M$ — מכיוון שהגוף נמצא על גליל ברדיוס $2$, $x^2+y^2=4$ קבוע, ו-$I_z=4M$ באופן ישיר.)\n\n**(ג) שדה משמר:** $\\vec F=\\nabla\\phi$ עם $\\phi=\\tfrac{x^2+y^2+z^2}{2}$.\n\n- נקודת התחלה $t=0$: $(2,0,0)$, $\\phi=2$.\n- נקודת סיום $t=2\\pi$: $(2,0,4\\pi^2)$, $\\phi=\\tfrac{4+16\\pi^4}{2}=2+8\\pi^4$.\n\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r=8\\pi^4.\\;}$$"
+    },
+    {
+      "qid": "y2017_m1_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק מעטפת האליפסואיד $2x^2+2y^2+3z^2=5$ הנמצא מעל המישור $z=1$, ו-$\\vec F=2x\\hat\\imath-2y\\hat\\jmath+(2x^2+3y^2)\\hat k$.",
+      "solution_he": "**אסטרטגיה — דיברגנץ:** $\\nabla\\cdot\\vec F=2-2+0=0$ (יפה!).\n\n**זיהוי הדיסקה:** ב-$z=1$ ⇒ $2x^2+2y^2+3=5$ ⇒ $x^2+y^2=1$ (דיסקה רדיוס $1$).\n\n**סגירה:** עם $\\hat n$ על $\\sigma$ כלפי מעלה (חיצוני לנפח), הדיסקה $D$ נסגרת עם $-\\hat k$. דיברגנץ:\n$$\\iint_\\sigma+\\iint_{D,-\\hat k}=0\\Rightarrow\\iint_\\sigma=\\iint_{D,\\hat k}\\vec F\\cdot\\hat k\\,dA=\\iint_D(2x^2+3y^2)dA.$$\n\n**חישוב על דיסקת היחידה** (סימטריה $\\iint x^2=\\iint y^2=\\tfrac{\\pi}{4}$):\n\n$$\\iint_D(2x^2+3y^2)dA=2\\cdot\\tfrac{\\pi}{4}+3\\cdot\\tfrac{\\pi}{4}=\\tfrac{5\\pi}{4}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=\\tfrac{5\\pi}{4}.\\;}$$"
+    }
+  ]
+}

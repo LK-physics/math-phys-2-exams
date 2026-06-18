@@ -1,0 +1,70 @@
+{
+  "exam_id": "y2018_m2",
+  "year": 2018,
+  "moed": "ב",
+  "date": "2018-08-15",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 5 מתוך 6 השאלות הבאות",
+  "answer_n_of_m": [
+    5,
+    6
+  ],
+  "source_pdf": "y2018_s2m2y18.pdf",
+  "questions": [
+    {
+      "qid": "y2018_m2_q1",
+      "number": 1,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש למצוא על החיתוך של המישור $4x+4y+8z=5$ והחרוט $z^2=x^2+y^2$ את הנקודות בהן $f(x,y,z)=x+y+z$ מקבלת ערך מקסימלי וערך מינימלי.",
+      "solution_he": "**Lagrange עם שני אילוצים:** $\\nabla f=\\lambda\\nabla g_1+\\mu\\nabla g_2$ עם $g_1=x^2+y^2-z^2$, $g_2=4x+4y+8z-5$.\n\n$$1=2\\lambda x+4\\mu,\\quad 1=2\\lambda y+4\\mu,\\quad 1=-2\\lambda z+8\\mu.$$\n\nמהשוואת המשוואות 1,2: $\\lambda(x-y)=0$. אם $\\lambda=0$: $1=4\\mu$ ו-$1=8\\mu$ — סתירה. אז $x=y$.\n\n**אילוץ החרוט:** $z^2=2x^2$ ⇒ $z=\\pm x\\sqrt 2$.\n\n**אילוץ המישור:** $8x+8z=5$ ⇒ $z=\\tfrac{5}{8}-x$.\n\n**מקרה A — $z=x\\sqrt 2$:** $x(\\sqrt 2+1)=\\tfrac{5}{8}$ ⇒ $x=\\tfrac{5(\\sqrt 2-1)}{8}$, $z=\\tfrac{5(2-\\sqrt 2)}{8}$.\n\n$f=2x+z=\\tfrac{10(\\sqrt 2-1)+5(2-\\sqrt 2)}{8}=\\tfrac{5\\sqrt 2}{8}$.\n\n**מקרה B — $z=-x\\sqrt 2$:** $x=-\\tfrac{5(\\sqrt 2+1)}{8}$, $z=\\tfrac{5(2+\\sqrt 2)}{8}$.\n\n$f=2x+z=-\\tfrac{5\\sqrt 2}{8}$.\n\n$$\\boxed{\\;f_{\\max}=\\tfrac{5\\sqrt 2}{8}\\approx 0.884\\text{ ב-}\\bigl(\\tfrac{5(\\sqrt 2-1)}{8},\\tfrac{5(\\sqrt 2-1)}{8},\\tfrac{5(2-\\sqrt 2)}{8}\\bigr);}$$\n$$\\boxed{\\;f_{\\min}=-\\tfrac{5\\sqrt 2}{8}\\text{ ב-}\\bigl(-\\tfrac{5(\\sqrt 2+1)}{8},-\\tfrac{5(\\sqrt 2+1)}{8},\\tfrac{5(2+\\sqrt 2)}{8}\\bigr).\\;}$$"
+    },
+    {
+      "qid": "y2018_m2_q2",
+      "number": 2,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x)$ המקיימת $f(x)=\\cosh x$ בקטע $(-\\pi,\\pi)$ וכן $f(x+2\\pi)=f(x)$.\n\nא. יש להציג את טור פוריה של $f(x)$.\n\nב. יש לחשב את $\\displaystyle\\sum_{n=1}^\\infty\\dfrac{1}{(1+n^2)^2}$.",
+      "solution_he": "**(א)** $\\cosh x$ זוגי ⇒ $b_n=0$.\n\n$a_0=\\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi\\cosh x\\,dx=\\tfrac{2\\sinh\\pi}{\\pi}$.\n\n$a_n=\\tfrac{2}{\\pi}\\int_0^\\pi\\cosh x\\cos(nx)dx$. בעזרת הזהות\n$$\\int\\cosh x\\cos(nx)dx=\\tfrac{\\sinh x\\cos(nx)+n\\cosh x\\sin(nx)}{1+n^2},$$\n\nהצבה $\\sin(n\\pi)=0$, $\\cos(n\\pi)=(-1)^n$:\n$$a_n=\\tfrac{2(-1)^n\\sinh\\pi}{\\pi(1+n^2)}.$$\n\n$$\\boxed{\\;\\cosh x=\\tfrac{\\sinh\\pi}{\\pi}+\\tfrac{2\\sinh\\pi}{\\pi}\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(nx)}{1+n^2}.\\;}$$\n\n**(ב) Parseval:** $\\tfrac{1}{\\pi}\\!\\int_{-\\pi}^\\pi\\cosh^2 x\\,dx=\\tfrac{a_0^2}{2}+\\sum a_n^2$.\n\n$\\int_{-\\pi}^\\pi\\cosh^2 x\\,dx=\\pi+\\tfrac{\\sinh(2\\pi)}{2}$ ⇒ צד שמאל $=1+\\tfrac{\\sinh(2\\pi)}{2\\pi}$.\n\nעם $\\sinh(2\\pi)=2\\sinh\\pi\\cosh\\pi$: $\\tfrac{\\sinh(2\\pi)}{2\\pi}=\\tfrac{\\sinh\\pi\\cosh\\pi}{\\pi}$.\n\n$\\tfrac{a_0^2}{2}=\\tfrac{2\\sinh^2\\pi}{\\pi^2}$. $\\sum a_n^2=\\tfrac{4\\sinh^2\\pi}{\\pi^2}\\sum\\tfrac{1}{(1+n^2)^2}$.\n\nהסידור:\n$$\\sum_{n=1}^\\infty\\tfrac{1}{(1+n^2)^2}=\\tfrac{\\pi^2}{4\\sinh^2\\pi}\\!\\left[1+\\tfrac{\\sinh\\pi\\cosh\\pi}{\\pi}-\\tfrac{2\\sinh^2\\pi}{\\pi^2}\\right].$$\n\nפישוט:\n$$\\boxed{\\;\\sum_{n=1}^\\infty\\tfrac{1}{(1+n^2)^2}=\\tfrac{\\pi^2}{4\\sinh^2\\pi}+\\tfrac{\\pi\\coth\\pi}{4}-\\tfrac{1}{2}.\\;}$$\n\n(מספרית: $\\approx 0.306$.)"
+    },
+    {
+      "qid": "y2018_m2_q3",
+      "number": 3,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=\\dfrac{2x^3+2xy^2-2y}{x^2+y^2}\\hat\\imath+\\dfrac{2y^3+2x^2 y+2x}{x^2+y^2}\\hat\\jmath$ והמסלול $C$ נגד כיוון השעון הוא מסלול פשוט כלשהו במישור $xy$ המקיף את הראשית.",
+      "solution_he": "**פישוט:** $\\tfrac{2x^3+2xy^2}{x^2+y^2}=\\tfrac{2x(x^2+y^2)}{x^2+y^2}=2x$, וכך לרכיב השני: $\\tfrac{2y^3+2x^2 y}{x^2+y^2}=2y$.\n\n$$\\vec F=\\bigl(2x-\\tfrac{2y}{x^2+y^2}\\bigr)\\hat\\imath+\\bigl(2y+\\tfrac{2x}{x^2+y^2}\\bigr)\\hat\\jmath.$$\n\n**פיצול:**\n- $\\vec F_1=(2x,2y)=\\nabla(x^2+y^2)$ — משמר ⇒ אינטגרל סגור $=0$.\n- $\\vec F_2=2\\cdot\\tfrac{(-y,x)}{x^2+y^2}$ — שדה המסלול הקלאסי סביב הראשית. רוטור אפס בכל נקודה $\\ne(0,0)$, אבל אינטגרל סביב הראשית $\\ne 0$.\n\n**עיוות למעגל יחידה** (התוצאה תלויה רק במספר הסיבובים, $1$ עבור מסלול פשוט CCW): $x=\\cos t,\\,y=\\sin t$:\n$$\\vec F_2\\cdot d\\vec r/dt=2(-\\sin t)(-\\sin t)+2(\\cos t)(\\cos t)=2.$$\n\n$$\\oint\\vec F_2\\cdot d\\vec r=\\int_0^{2\\pi}2\\,dt=4\\pi.$$\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=0+4\\pi=4\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2018_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=xy\\hat\\imath+yz\\hat\\jmath+zx\\hat k$ והמסלול $C$ הוא היקף המשולש שקודקודיו $A_1=(0,0,1)$, $A_2=(0,1,0)$, $A_3=(1,0,0)$ בכיוון מ-$A_1$ ל-$A_2$.",
+      "solution_he": "**Stokes:** $\\nabla\\times\\vec F=(\\partial_y(zx)-\\partial_z(yz),\\,\\partial_z(xy)-\\partial_x(zx),\\,\\partial_x(yz)-\\partial_y(xy))=(-y,-z,-x)$.\n\n**המישור:** $x+y+z=1$ (סימטרי).\n\n**פרמטריזציה:** $\\vec r(s,t)=(t,s,1-s-t)$, $\\vec r_s\\times\\vec r_t=(-1,-1,-1)$.\n\nמסלול $A_1\\to A_2\\to A_3$ בפלן $(s,t)$: $(0,0)\\to(0,1)\\to(1,0)\\to(0,0)$ — CCW. תואם נורמל $(-1,-1,-1)$ ✓.\n\n**מכפלה סקלרית:**\n$$(\\nabla\\times\\vec F)\\cdot(\\vec r_s\\times\\vec r_t)=y+z+x=1\\text{ על המישור}.$$\n\n$$\\oint=\\iint_T 1\\,ds\\,dt=\\tfrac{1}{2}.$$\n\n**אימות ישיר על שלוש צלעות:**\n- $A_1\\to A_2$ ($\\vec r=(0,t,1-t)$): $\\int=\\int_0^1 t(1-t)dt=\\tfrac{1}{6}$.\n- $A_2\\to A_3$ ($\\vec r=(t,1-t,0)$): $\\int=\\int_0^1 t(1-t)dt=\\tfrac{1}{6}$.\n- $A_3\\to A_1$ ($\\vec r=(1-t,0,t)$): $\\int=\\int_0^1 t(1-t)dt=\\tfrac{1}{6}$.\n\nסך: $\\tfrac{1}{2}$ ✓.\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=\\tfrac{1}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2018_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק המשטח $3x+y+z=12$ הנמצא בתוך הגליל האינסופי $x^2+(y+1)^2=4$, $\\vec F=5\\hat\\imath+6\\hat\\jmath+z\\hat k$, ול-$\\hat n$ מרכיב $z$ חיובי.",
+      "solution_he": "**פרמטריזציה:** $\\vec r(x,y)=(x,y,12-3x-y)$, $\\vec r_x=(1,0,-3)$, $\\vec r_y=(0,1,-1)$.\n\n$$\\vec r_x\\times\\vec r_y=(3,1,1)\\;\\;(\\hat k>0\\;✓).$$\n\n**מכפלה סקלרית:** $\\vec F\\cdot(3,1,1)=15+6+z=21+z=21+(12-3x-y)=33-3x-y$.\n\n**אינטגרציה על דיסקה** (מרכז $(0,-1)$, רדיוס $2$). הצבה $u=x,\\,v=y+1$ ⇒ $y=v-1$:\n\nאינטגרנד: $33-3u-(v-1)=34-3u-v$.\n\n- $\\iint_D 34\\,du\\,dv=34\\cdot 4\\pi=136\\pi$.\n- $\\iint_D u\\,du\\,dv=0$ (סימטריה).\n- $\\iint_D v\\,du\\,dv=0$ (סימטריה).\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=136\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2018_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתונות שתי עקומות $\\vec r_1(t)=\\cos t\\,\\hat\\imath+\\sin t\\,\\hat\\jmath+t\\,\\hat k$ ו-$\\vec r_2(t)=(1+t)\\hat\\imath+t^2\\hat\\jmath+t^3\\hat k$, הנחתכות ב-$t=0$.\n\nא. יש למצוא את הזווית בין המשיקים לשתי העקומות בנקודת החיתוך.\n\nב. יש למצוא את משוואת המישור ששני המשיקים הנחתכים מסעיף א נמצאים בו.\n\nג. יש למצוא את הזווית בין הוקטור $\\vec r_1(\\tfrac{\\pi}{2})-\\vec r_2(1)$ למישור מסעיף ב'.",
+      "solution_he": "**אימות החיתוך:** $\\vec r_1(0)=(1,0,0)=\\vec r_2(0)$ ✓.\n\n**(א) משיקים:**\n- $\\vec r_1'(t)=(-\\sin t,\\cos t,1)$ ⇒ $\\vec T_1=\\vec r_1'(0)=(0,1,1)$.\n- $\\vec r_2'(t)=(1,2t,3t^2)$ ⇒ $\\vec T_2=\\vec r_2'(0)=(1,0,0)$.\n\n$\\vec T_1\\cdot\\vec T_2=0$ ⇒ ניצבים.\n\n$$\\boxed{\\;\\theta=\\tfrac{\\pi}{2}=90^\\circ.\\;}$$\n\n**(ב) המישור:** עובר דרך $(1,0,0)$ עם נורמל $\\vec T_1\\times\\vec T_2$:\n$$\\vec n=(0,1,1)\\times(1,0,0)=(1\\cdot 0-1\\cdot 0,\\,1\\cdot 1-0\\cdot 0,\\,0-1)=(0,1,-1).$$\n\nמשוואה: $0(x-1)+1(y)-1(z)=0$.\n\n$$\\boxed{\\;y-z=0\\;\\text{(או }y=z\\text{)}.\\;}$$\n\n**(ג) זווית בין וקטור למישור:**\n\n$\\vec r_1(\\tfrac{\\pi}{2})=(0,1,\\tfrac{\\pi}{2})$, $\\vec r_2(1)=(2,1,1)$.\n\n$\\vec v=\\vec r_1(\\tfrac{\\pi}{2})-\\vec r_2(1)=(-2,0,\\tfrac{\\pi}{2}-1)$.\n\nזווית בין וקטור למישור $=\\tfrac{\\pi}{2}-$ זווית בין הוקטור לנורמל:\n$$\\sin\\alpha=\\tfrac{|\\vec v\\cdot\\hat n|}{|\\vec v|}=\\tfrac{|1-\\tfrac{\\pi}{2}|}{\\sqrt 2\\cdot\\sqrt{4+(\\tfrac{\\pi}{2}-1)^2}}=\\tfrac{\\tfrac{\\pi}{2}-1}{\\sqrt 2\\sqrt{5-\\pi+\\tfrac{\\pi^2}{4}}}.$$\n\nמספרית: $\\approx 0.194$ ⇒ $\\alpha\\approx 11.2^\\circ$.\n\n$$\\boxed{\\;\\alpha=\\arcsin\\!\\left(\\tfrac{\\pi/2-1}{\\sqrt{2(5-\\pi+\\pi^2/4)}}\\right)\\approx 11.2^\\circ.\\;}$$"
+    }
+  ]
+}

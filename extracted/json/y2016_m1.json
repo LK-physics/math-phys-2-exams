@@ -1,0 +1,82 @@
+{
+  "exam_id": "y2016_m1",
+  "year": 2016,
+  "moed": "א",
+  "date": "2016-06-30",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 6 מתוך 7 השאלות הבאות. שימו לב, ניקוד השאלות אינו זהה!",
+  "answer_n_of_m": [
+    6,
+    7
+  ],
+  "source_pdf": "y2016_s2m1y16.pdf",
+  "questions": [
+    {
+      "qid": "y2016_m1_q1",
+      "number": 1,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא את הנקודות הקרובות ביותר והרחוקות ביותר לראשית תחת האילוצים $2x^2+y^2+z^2=2$ ו-$x-y-z=0$.",
+      "solution_he": "**Lagrange עם שני אילוצים:** $f=x^2+y^2+z^2$, $g_1=2x^2+y^2+z^2-2$, $g_2=x-y-z$.\n\n$\\nabla f=\\lambda\\nabla g_1+\\mu\\nabla g_2$:\n$$2x=4\\lambda x+\\mu,\\quad 2y=2\\lambda y-\\mu,\\quad 2z=2\\lambda z-\\mu.$$\n\nחיסור משוואות 2,3: $2(y-z)=2\\lambda(y-z)$ ⇒ $(y-z)(1-\\lambda)=0$.\n\n**מקרה A — $\\lambda=1$:** ממשוואה 2 $\\mu=0$. ממשוואה 1 $2x=4x$ ⇒ $x=0$. מ-$g_2$: $-y-z=0$ ⇒ $z=-y$. מ-$g_1$: $2y^2=2$ ⇒ $y=\\pm 1,\\;z=\\mp 1$.\nנקודות: $(0,\\pm 1,\\mp 1)$, $D^2=2$, $D=\\sqrt 2$.\n\n**מקרה B — $y=z$:** מ-$g_2$: $x=2y$. מ-$g_1$: $8y^2+y^2+y^2=10y^2=2$ ⇒ $y^2=\\tfrac{1}{5}$.\nנקודות: $\\pm(\\tfrac{2}{\\sqrt 5},\\tfrac{1}{\\sqrt 5},\\tfrac{1}{\\sqrt 5})$, $D^2=\\tfrac{4+1+1}{5}=\\tfrac{6}{5}$.\n\n**סיכום:**\n$$\\boxed{\\;\\text{קרובות: }\\pm\\!\\left(\\tfrac{2}{\\sqrt 5},\\tfrac{1}{\\sqrt 5},\\tfrac{1}{\\sqrt 5}\\right),\\;D_{\\min}=\\!\\sqrt{\\tfrac{6}{5}};\\quad\\text{רחוקות: }(0,\\pm 1,\\mp 1),\\;D_{\\max}=\\sqrt 2.\\;}$$"
+    },
+    {
+      "qid": "y2016_m1_q2",
+      "number": 2,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתונה הפונקציה $f(x)=\\cos(ax)$ המוגדרת בקטע $[-\\pi,\\pi]$ ונתון ש-$a$ אינו מספר שלם.\n\nא. יש לחשב את טור פוריה של $f(x)$.\n\nב. יש להעזר בפיתוח ב-(א) כדי להראות ש-$\\displaystyle\\cot(a\\pi)=\\dfrac{1}{\\pi}\\!\\left[\\dfrac{1}{a}-\\sum_{n=1}^\\infty\\dfrac{2a}{n^2-a^2}\\right]$.",
+      "solution_he": "**(א)** $\\cos(ax)$ זוגי, $b_n=0$.\n\n$a_0=\\tfrac{2\\sin(a\\pi)}{a\\pi}$.\n\n$a_n=\\tfrac{2a(-1)^n\\sin(a\\pi)}{\\pi(a^2-n^2)}$ (אינטגרציה ב-product-to-sum, ראה 2019 מועד ב' שאלה 2).\n\n$$\\boxed{\\;\\cos(ax)=\\tfrac{\\sin(a\\pi)}{a\\pi}+\\tfrac{2a\\sin(a\\pi)}{\\pi}\\sum_{n=1}^\\infty\\tfrac{(-1)^n\\cos(nx)}{a^2-n^2}.\\;}$$\n\n**(ב)** הצבה $x=\\pi$: $\\cos(a\\pi)$.\n\n$\\sum\\tfrac{(-1)^n\\cos(n\\pi)}{a^2-n^2}=\\sum\\tfrac{1}{a^2-n^2}$ (כי $(-1)^n\\cos(n\\pi)=1$).\n\n$$\\cos(a\\pi)=\\tfrac{\\sin(a\\pi)}{a\\pi}+\\tfrac{2a\\sin(a\\pi)}{\\pi}\\sum_{n=1}^\\infty\\tfrac{1}{a^2-n^2}.$$\n\nחלוקה ב-$\\sin(a\\pi)$:\n$$\\cot(a\\pi)=\\tfrac{1}{a\\pi}+\\tfrac{2a}{\\pi}\\sum\\tfrac{1}{a^2-n^2}=\\tfrac{1}{\\pi}\\!\\left[\\tfrac{1}{a}-\\sum_{n=1}^\\infty\\tfrac{2a}{n^2-a^2}\\right].\\;\\checkmark$$"
+    },
+    {
+      "qid": "y2016_m1_q3",
+      "number": 3,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתונים שני משטחים $G_1(x,y,z)=x^2-2yz+y^3=C_1$ ו-$G_2(x,y,z)=y^3-2xz+z^3=C_2$. כמו כן, נתון ששני המשטחים מכילים את הנקודה $(1,2,-1)$. יש למצוא:\n\nא. את משוואות שני המישורים המשיקים לשני המשטחים בנקודה זו.\n\nב. את הזווית בין שני המישורים.\n\nג. את משוואת הישר שהוא החיתוך של שני המישורים.",
+      "solution_he": "**גרדיאנטים:**\n- $\\nabla G_1=(2x,\\,-2z+3y^2,\\,-2y)$. ב-$(1,2,-1)$: $(2,\\,2+12,\\,-4)=(2,14,-4)$.\n- $\\nabla G_2=(-2z,\\,3y^2,\\,-2x+3z^2)$. ב-$(1,2,-1)$: $(2,\\,12,\\,-2+3)=(2,12,1)$.\n\n**(א) מישורים משיקים:**\n- $2(x-1)+14(y-2)-4(z+1)=0$ ⇒ $\\boxed{\\;2x+14y-4z=34,\\;\\text{או}\\;x+7y-2z=17.\\;}$\n- $2(x-1)+12(y-2)+(z+1)=0$ ⇒ $\\boxed{\\;2x+12y+z=25.\\;}$\n\n**(ב) זווית:** $\\vec n_1=(1,7,-2),\\;\\vec n_2=(2,12,1)$.\n$$\\vec n_1\\cdot\\vec n_2=2+84-2=84.$$\n$|\\vec n_1|=\\sqrt{54},\\;|\\vec n_2|=\\sqrt{149}$.\n$$\\boxed{\\;\\cos\\theta=\\tfrac{84}{\\sqrt{54\\cdot 149}}=\\tfrac{84}{\\sqrt{8046}}\\approx 0.937,\\quad\\theta\\approx 20.5^\\circ.\\;}$$\n\n**(ג) ישר החיתוך:** $\\vec v=\\vec n_1\\times\\vec n_2$:\n$$\\vec v=(7\\cdot 1-(-2)\\cdot 12,\\,-(1-(-4)),\\,12-14)=(31,-5,-2).$$\n\nנקודה: $(1,2,-1)$ נמצאת על שני המישורים.\n\n$$\\boxed{\\;(x,y,z)=(1,2,-1)+t(31,-5,-2),\\;t\\in\\mathbb R.\\;}$$"
+    },
+    {
+      "qid": "y2016_m1_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C\\vec F\\cdot d\\vec r$ כאשר המסלול $C$ הוא על העקומה $f(x)=e^{1/(2+x^3)}$ עבור $-1\\le x\\le a$ (נקודת ההתחלה $x=-1$) ו-$\\vec F=-\\pi\\sin(\\pi x)\\ln y\\,\\hat\\imath+\\dfrac{\\cos(\\pi x)}{y}\\hat\\jmath$.",
+      "solution_he": "**בדיקת שמרנות:**\n$$\\tfrac{\\partial F_1}{\\partial y}=-\\tfrac{\\pi\\sin\\pi x}{y},\\quad\\tfrac{\\partial F_2}{\\partial x}=-\\tfrac{\\pi\\sin\\pi x}{y}.\\;\\checkmark$$\n\n**פוטנציאל:** $\\partial\\phi/\\partial x=-\\pi\\sin\\pi x\\ln y$ ⇒ $\\phi=\\cos(\\pi x)\\ln y+g(y)$.\nמהדרישה $\\partial\\phi/\\partial y=\\cos\\pi x/y$: $g'(y)=0$ ⇒ $g=$ const.\n\n$$\\phi(x,y)=\\cos(\\pi x)\\ln y.$$\n\n**נקודות קצה** (על העקומה $y=e^{1/(2+x^3)}$, אז $\\ln y=\\tfrac{1}{2+x^3}$):\n- $x=-1$: $\\ln y=\\tfrac{1}{2-1}=1$, $\\cos(-\\pi)=-1$. $\\phi=-1$.\n- $x=a$: $\\ln y=\\tfrac{1}{2+a^3}$. $\\phi=\\tfrac{\\cos(\\pi a)}{2+a^3}$.\n\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r=\\phi(\\text{end})-\\phi(\\text{start})=\\tfrac{\\cos(\\pi a)}{2+a^3}+1.\\;}$$"
+    },
+    {
+      "qid": "y2016_m1_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב",
+        "ג"
+      ],
+      "statement_he": "נתון גוף התחום ע״י שני משטחים $z^2=9(x^2+y^2)$ ו-$z=14-2(x^2+y^2)$. כמו כן נתון שצפיפות המסה של הגוף נתונה ע״י $\\delta=x^2+y^2$.\n\nא. מה נפח הגוף?\n\nב. מה מסת הגוף?\n\nג. מה מרכז המסה של הגוף?",
+      "solution_he": "**זיהוי הגוף:** $z=3r$ (חרוט עליון, $r=\\sqrt{x^2+y^2}$) מ-$0$ ועד פרבולואיד $z=14-2r^2$. חיתוך: $3r=14-2r^2$ ⇒ $2r^2+3r-14=0$ ⇒ $r=2$ (נשלל $-\\tfrac{7}{2}$), $z=6$.\n\n$V_{\\text{body}}=\\{0\\le r\\le 2,\\;3r\\le z\\le 14-2r^2\\}$.\n\n**(א) נפח:**\n$$V=2\\pi\\!\\int_0^2 r(14-2r^2-3r)\\,dr=2\\pi\\!\\int_0^2(14r-2r^3-3r^2)dr.$$\n\n$=2\\pi[7r^2-\\tfrac{r^4}{2}-r^3]_0^2=2\\pi(28-8-8)=24\\pi$.\n\n$$\\boxed{\\;V=24\\pi.\\;}$$\n\n**(ב) מסה:** $M=\\int_V\\delta\\,dV=2\\pi\\!\\int_0^2 r^3(14-2r^2-3r)dr=2\\pi\\!\\int_0^2(14r^3-2r^5-3r^4)dr$.\n\n$=2\\pi[\\tfrac{14r^4}{4}-\\tfrac{r^6}{3}-\\tfrac{3r^5}{5}]_0^2=2\\pi(56-\\tfrac{64}{3}-\\tfrac{96}{5})=2\\pi\\cdot\\tfrac{840-320-288}{15}=2\\pi\\cdot\\tfrac{232}{15}$.\n\n$$\\boxed{\\;M=\\tfrac{464\\pi}{15}.\\;}$$\n\n**(ג) מרכז מסה:** סימטריה ⇒ $\\bar x=\\bar y=0$.\n\n$\\int_V z\\delta\\,dV=2\\pi\\!\\int_0^2 r^3\\!\\int_{3r}^{14-2r^2}\\!z\\,dz\\,dr=2\\pi\\!\\int_0^2 r^3\\cdot\\tfrac{(14-2r^2)^2-9r^2}{2}dr$.\n\n$(14-2r^2)^2-9r^2=196-65r^2+4r^4$. אז:\n$\\int_V z\\delta dV=\\pi\\!\\int_0^2 r^3(196-65r^2+4r^4)dr=\\pi[\\tfrac{196r^4}{4}-\\tfrac{65r^6}{6}+\\tfrac{4r^8}{8}]_0^2$\n$=\\pi[784-\\tfrac{65\\cdot 64}{6}+\\tfrac{256}{2}]=\\pi[784-\\tfrac{2080}{3}+128]=\\pi\\cdot\\tfrac{2736+384-2080}{3}=\\pi\\cdot\\tfrac{656}{3}$.\n\nהממ — לסיכום:\n$\\int_V z\\delta dV=\\tfrac{656\\pi}{3}$ (וזה $2$ פעמים החישוב המקורי בכוונה — שכפלתי בצורה אחרת).\n\nActually, fix me. $2\\pi \\cdot \\tfrac{(14-2r^2)^2-9r^2}{2} = \\pi[(14-2r^2)^2-9r^2]$. So integrand $r^3 \\pi[(14-2r^2)^2-9r^2]$ integrated gives $\\pi\\cdot[\\dots]_0^2$ = (as above).\n\n$\\bar z=\\tfrac{656\\pi/3}{464\\pi/15}=\\tfrac{656\\cdot 15}{3\\cdot 464}=\\tfrac{9840}{1392}=\\tfrac{205}{29}$.\n\n$$\\boxed{\\;\\text{מרכז מסה: }\\bigl(0,0,\\tfrac{205}{29}\\bigr)\\approx(0,0,7.07).\\;}$$"
+    },
+    {
+      "qid": "y2016_m1_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק המשטח הנתון $x^2+y^2+z^2=16$ הנמצא מעל למישור $y=z$ ו-$\\vec F=3\\hat\\imath-4\\hat\\jmath+2\\hat k$.",
+      "solution_he": "**מאפיין מיוחד:** המישור $y=z$ עובר בראשית, לכן ה\"כובע\" שמעליו הוא **חצי-כדור שלם** עם מעגל גדול ($R=4$) כשפה.\n\n$\\vec F$ קבוע ⇒ $\\nabla\\cdot\\vec F=0$ ⇒ דיברגנץ נותן שטף מסך נפח סגור $=0$.\n\n**סגירה:** דיסקה $D$ ברדיוס $4$ במישור $y=z$, מרכזה בראשית. הנורמל החיצוני של $V$ (חצי-הכדור) על $D$ מצביע **למטה** (לצד $y<z$), כלומר $\\hat n_D=\\tfrac{(0,-1,1)}{\\sqrt 2}$.\n\n**שטף דרך הדיסקה:**\n$$\\vec F\\cdot\\hat n_D=(3,-4,2)\\cdot\\tfrac{(0,-1,1)}{\\sqrt 2}=\\tfrac{0+4+2}{\\sqrt 2}=\\tfrac{6}{\\sqrt 2}=3\\sqrt 2.$$\n\n(קבוע — אינטגרל פשוט.)\n\n$$\\iint_D\\vec F\\cdot\\hat n_D\\,dA=3\\sqrt 2\\cdot 16\\pi=48\\sqrt 2\\,\\pi.$$\n\n**דיברגנץ:** $\\iint_\\sigma+\\iint_D=0$:\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=-48\\sqrt 2\\,\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2016_m1_q7",
+      "number": 7,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $C$ הוא השפה של חלק המישור $z=x+y$ החסום ע״י המישורים $x+y=1$, $x=0$, $y=0$, ו-$\\vec F=xy\\hat\\imath-zx\\hat\\jmath+yz\\hat k$. כיוון הסיבוב הוא נגד כיוון השעון במבט מכיוון $z$ חיובי.",
+      "solution_he": "**Stokes:** רוטור:\n$$\\nabla\\times\\vec F=(\\partial_y(yz)-\\partial_z(-zx),\\,\\partial_z(xy)-\\partial_x(yz),\\,\\partial_x(-zx)-\\partial_y(xy)).$$\n\n$$=\\bigl(z+x,\\,0,\\,-z-x\\bigr).$$\n\n**פרמטריזציה:** $\\vec r(x,y)=(x,y,x+y)$, $\\vec r_x=(1,0,1)$, $\\vec r_y=(0,1,1)$.\n$$\\vec r_x\\times\\vec r_y=(-1,-1,1)\\;\\;(\\hat k>0\\Rightarrow\\text{תואם CCW}\\;✓).$$\n\n**מכפלה סקלרית:**\n$$(\\nabla\\times\\vec F)\\cdot(\\vec r_x\\times\\vec r_y)=(z+x)(-1)+0+(-(z+x))(1)=-2(z+x).$$\n\nעל המשטח $z=x+y$: $z+x=2x+y$.\n\n**אינטגרציה על המשולש** $T=\\{x,y\\ge 0,\\;x+y\\le 1\\}$:\n$$\\oint_C=-2\\!\\int_0^1\\!\\!\\int_0^{1-x}(2x+y)\\,dy\\,dx=-2\\!\\int_0^1\\!\\bigl[2x(1-x)+\\tfrac{(1-x)^2}{2}\\bigr]dx.$$\n\nהרחבה: $2x(1-x)+\\tfrac{(1-x)^2}{2}=2x-2x^2+\\tfrac{1-2x+x^2}{2}=\\tfrac{1}{2}+x-\\tfrac{3x^2}{2}$.\n\n$$\\int_0^1\\bigl(\\tfrac{1}{2}+x-\\tfrac{3x^2}{2}\\bigr)dx=\\tfrac{1}{2}+\\tfrac{1}{2}-\\tfrac{1}{2}=\\tfrac{1}{2}.$$\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=-2\\cdot\\tfrac{1}{2}=-1.\\;}$$"
+    }
+  ]
+}
