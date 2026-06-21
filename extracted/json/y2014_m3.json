@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2014_m3",
+  "year": 2014,
+  "moed": "ג",
+  "date": "2014",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2014_s2m3y14.pdf",
+  "questions": [
+    {
+      "qid": "y2014_m3_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא מקסימום מוחלט ומינימום מוחלט של הפונקציה $f(x,y)=x^3-y^3$ בתחום שמקיים $x^2+y^2\\le 1$ וגם $y\\ge 0$.",
+      "solution_he": "**תיאור התחום.** חצי-עיגול עליון: $r\\le 1$, $y\\ge 0$. השפה: קשת $y=\\sqrt{1-x^2}$, $x\\in[-1,1]$ + הציר $y=0$, $x\\in[-1,1]$.\n\n**נקודות קריטיות פנימיות:** $f_x=3x^2$, $f_y=-3y^2$. שתיהן אפס ⇒ $(x,y)=(0,0)$ — אבל הנקודה על השפה ($y=0$), אין נקודות קריטיות \\emph{פנימיות}.\n\n**צלע $y=0$, $x\\in[-1,1]$:** $f(x,0)=x^3$, מונוטונית. ערכי קצוות: $f(1,0)=1$, $f(-1,0)=-1$.\n\n**צלע הקשת $x=\\cos\\theta,\\,y=\\sin\\theta,\\,\\theta\\in[0,\\pi]$:**\n$$f=\\cos^3\\theta-\\sin^3\\theta.$$\n$$\\tfrac{df}{d\\theta}=-3\\cos^2\\theta\\sin\\theta-3\\sin^2\\theta\\cos\\theta=-3\\sin\\theta\\cos\\theta(\\cos\\theta+\\sin\\theta)=0.$$\n\n* $\\sin\\theta=0$: $\\theta=0,\\pi$ ⇒ $(1,0),(-1,0)$ (כבר ספרנו).\n* $\\cos\\theta=0$: $\\theta=\\tfrac{\\pi}{2}$ ⇒ $(0,1)$. $f=0-1=-1$.\n* $\\cos\\theta+\\sin\\theta=0$: $\\theta=\\tfrac{3\\pi}{4}$ ⇒ $(-\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2})$. $f=-\\tfrac{1}{2\\sqrt 2}-\\tfrac{1}{2\\sqrt 2}=-\\tfrac{\\sqrt 2}{2}\\approx -0.71$.\n\n**סיכום:**\n| נקודה | ערך $f$ |\n|---|---|\n| $(1,0)$ | $\\mathbf{1}$ |\n| $(-1,0)$ | $\\mathbf{-1}$ |\n| $(0,1)$ | $\\mathbf{-1}$ |\n| $(-\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2})$ | $-\\tfrac{\\sqrt 2}{2}$ |\n\n$$\\boxed{\\;f_{\\max}=1\\text{ ב-}(1,0);\\quad f_{\\min}=-1\\text{ בשתי נקודות: }(-1,0)\\text{ ו-}(0,1).\\;}$$"
+    },
+    {
+      "qid": "y2014_m3_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את הזווית בין המישורים $x+2y+3z=1$ ו-$3x-3y+z=1$.",
+      "solution_he": "**זווית בין מישורים = זווית בין הנורמלים שלהם.**\n\n$\\vec n_1=(1,2,3)$, $|\\vec n_1|=\\sqrt{1+4+9}=\\sqrt{14}$.\n\n$\\vec n_2=(3,-3,1)$, $|\\vec n_2|=\\sqrt{9+9+1}=\\sqrt{19}$.\n\n$$\\vec n_1\\cdot\\vec n_2=3-6+3=0.$$\n\n$$\\cos\\theta=\\frac{0}{\\sqrt{14\\cdot 19}}=0\\ \\Longrightarrow\\ \\boxed{\\;\\theta=90^\\circ\\ (\\tfrac{\\pi}{2}).\\;}$$\n\n**המישורים ניצבים.**"
+    },
+    {
+      "qid": "y2014_m3_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא נקודה על המשטח $z=2x^2-3y^3$ בה המישור המשיק מקביל למישור $x+y+z=1$.",
+      "solution_he": "**עיקרון.** המישור המשיק מקביל למישור הנתון ⟺ הנורמלים שלהם מקבילים.\n\n**נורמל למשטח:** עם $F(x,y,z)=z-2x^2+3y^3$, $\\nabla F=(-4x,\\,9y^2,\\,1)$.\n\n**נורמל למישור הנתון:** $\\vec n_0=(1,1,1)$.\n\n**תנאי מקבילות:** $\\nabla F=\\lambda\\,\\vec n_0$:\n$$-4x=\\lambda,\\quad 9y^2=\\lambda,\\quad 1=\\lambda.$$\n\nמהמשוואה השלישית $\\lambda=1$, ולכן $x=-\\tfrac14$ ו-$y^2=\\tfrac19$ ⇒ $y=\\pm\\tfrac13$.\n\n**חישוב $z$ בנקודות:**\n$$z=2\\cdot\\tfrac{1}{16}-3y^3=\\tfrac18-3y^3.$$\n\n* $y=\\tfrac13$: $z=\\tfrac18-3\\cdot\\tfrac{1}{27}=\\tfrac18-\\tfrac19=\\tfrac{9-8}{72}=\\tfrac{1}{72}$.\n* $y=-\\tfrac13$: $z=\\tfrac18+\\tfrac19=\\tfrac{17}{72}$.\n\n$$\\boxed{\\;\\bigl(-\\tfrac14,\\,\\tfrac13,\\,\\tfrac{1}{72}\\bigr)\\ \\text{וגם}\\ \\bigl(-\\tfrac14,\\,-\\tfrac13,\\,\\tfrac{17}{72}\\bigr).\\;}$$"
+    },
+    {
+      "qid": "y2014_m3_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש לפתח בטור פוריה את הפונקציה $f(x)=1-|x|$ בתחום $-1\\le x\\le 1$. יש להיעזר בפיתוח על מנת לחשב את **אחד** משני הסכומים $\\displaystyle\\sum_{n=1}^\\infty\\frac{1}{(2n-1)^2}$ או $\\displaystyle\\sum_{n=1}^\\infty\\frac{1}{(2n-1)^4}$.",
+      "solution_he": "**מחזור $T=2$, חצי-מחזור $1$, וברירה: $\\cos(\\pi nx)$, $\\sin(\\pi nx)$.**\n\n$f$ זוגית ⇒ $b_n=0$.\n\n**מקדם DC:** $\\displaystyle a_0=\\int_{-1}^1(1-|x|)dx=2\\!\\int_0^1\\!(1-x)dx=2\\cdot\\tfrac12=1$, $\\tfrac{a_0}{2}=\\tfrac12$.\n\n**מקדמי קוסינוס:** $\\displaystyle a_n=\\int_{-1}^1(1-|x|)\\cos(\\pi nx)dx=2\\!\\int_0^1\\!(1-x)\\cos(\\pi nx)dx$.\n\n* $\\int_0^1\\cos(\\pi nx)dx=\\tfrac{\\sin\\pi n}{\\pi n}=0$.\n* $\\int_0^1 x\\cos(\\pi nx)dx=\\bigl[\\tfrac{x\\sin\\pi nx}{\\pi n}\\bigr]_0^1+\\bigl[\\tfrac{\\cos\\pi nx}{(\\pi n)^2}\\bigr]_0^1=0+\\tfrac{(-1)^n-1}{(\\pi n)^2}$.\n\n$$a_n=-\\frac{2((-1)^n-1)}{(\\pi n)^2}=\\frac{2(1-(-1)^n)}{(\\pi n)^2}.$$\n\n* $n$ זוגי: $a_n=0$.\n* $n=2k-1$ אי-זוגי: $a_n=\\tfrac{4}{(\\pi(2k-1))^2}$.\n\n**טור פוריה:**\n$$\\boxed{\\;1-|x|=\\tfrac12+\\tfrac{4}{\\pi^2}\\sum_{n=1}^\\infty\\tfrac{\\cos((2n-1)\\pi x)}{(2n-1)^2}.\\;}$$\n\n**חישוב הסכום הראשון** (קל יותר — ע״י הצבה ישירה). הצבת $x=0$: $f(0)=1$, $\\cos(0)=1$:\n$$1=\\tfrac12+\\tfrac{4}{\\pi^2}\\sum_{n=1}^\\infty\\tfrac{1}{(2n-1)^2}\\ \\Longrightarrow\\ \\boxed{\\;\\sum_{n=1}^\\infty\\tfrac{1}{(2n-1)^2}=\\tfrac{\\pi^2}{8}.\\;}$$\n\n(הערה: לחישוב הסכום השני $\\sum\\tfrac{1}{(2n-1)^4}=\\tfrac{\\pi^4}{96}$ יש להשתמש בזהות פרסבל.)"
+    },
+    {
+      "qid": "y2014_m3_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא המשטח $z=e^{x^2+y^2}$ עבור $0\\le x^2+y^2\\le 1$ ו-$\\vec F=x\\hat i+y\\hat j+z\\hat k$. לוקטור היחידה $\\hat n$ יש מרכיב $z$ חיובי.\n\nב. נתון המשטח הסגור $\\sigma$ שהוא שטח הפנים של מנסרה משולשת. בסיס אחד של המנסרה הוא משולש במישור $xy$ שקודקודיו $(0,0,0), (1,0,0), (0,1,0)$ והבסיס השני הוא משולש שקודקודיו $(0,0,5), (1,0,5), (0,1,5)$. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ עם $\\vec F=x^2 y\\hat i+xy^2\\hat j+z^3\\hat k$.\n\nג. יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $C$ הוא היקף המשולש שקודקודיו $(2,0,0), (0,0,4), (0,1,0)$, ו-$\\vec F=(z+e^{\\sin x})\\hat i+(4x+y^5\\tanh y)\\hat j+\\sin(z^5)\\hat k$. כיוון: $(2,0,0)\\to(0,0,4)\\to(0,1,0)\\to(2,0,0)$.\n\nד. נתונה מעטפת של כדור שמרכזו בראשית ורדיוסו $1$. צפיפות המסה המשטחית של הכדור היא $\\sigma=\\sigma_0\\sin^2\\theta\\sin^2\\phi$ כאשר $\\theta,\\phi$ זוויות של קואורדינטות כדוריות. יש לחשב את המסה הכוללת של המעטפת.\n\nה. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא חלק מעטפת האליפסואיד $\\tfrac{x^2}{4}+\\tfrac{y^2}{9}+\\tfrac{z^2}{16}=1$ הנמצא מעל מישור $xy$, ו-$\\vec F=2x\\hat i-2y\\hat j+3\\hat k$.",
+      "solution_he": "**(א) שטף דרך משטח מעריכי.** דיברגנץ: $\\nabla\\cdot\\vec F=1+1+1=3$.\n\nנסגור את $\\sigma$ עם הדיסקה $D$ במישור $z=e$, $r\\le 1$ (עם נורמל חיצוני $+\\hat z$). הנפח החצוי $V$: $\\{r\\le 1,\\,e^{r^2}\\le z\\le e\\}$.\n\nחישוב נפח:\n$$V=\\!\\int_0^{2\\pi}\\!\\!\\int_0^1\\!(e-e^{r^2})r\\,dr\\,d\\theta=2\\pi\\!\\int_0^1\\!(e r-r e^{r^2})dr=2\\pi\\bigl[\\tfrac{e r^2}{2}-\\tfrac{e^{r^2}}{2}\\bigr]_0^1=2\\pi\\bigl(\\tfrac{e}{2}-\\tfrac{e}{2}+\\tfrac12\\bigr)=\\pi.$$\n\n**שטף דרך $D$** (נורמל $+\\hat z$, $z=e$): $\\iint_D F_z\\,dA=\\iint_D e\\,dA=\\pi e$.\n\n**הנורמל המבוקש על $\\sigma$ עם מרכיב $z$ חיובי** הוא **לתוך** $V$ (כי $V$ מעל $\\sigma$). הנורמל החיצוני מ-$V$ על $\\sigma$ הוא לכן עם מרכיב $z$ \\emph{שלילי}.\n\nלפי דיברגנץ: $\\iint_{\\partial V}\\vec F\\cdot\\hat n_{\\text{חוץ}}dS=3V=3\\pi$.\n$$\\iint_\\sigma\\!\\vec F\\cdot\\hat n_{\\text{שלילי}\\,z}+\\iint_D\\!\\vec F\\cdot(+\\hat z)dA=3\\pi\\ \\Rightarrow\\ \\iint_\\sigma\\!\\vec F\\cdot\\hat n_{\\text{שלילי}\\,z}=3\\pi-\\pi e.$$\n\nולכן:\n$$\\iint_\\sigma\\vec F\\cdot\\hat n_{+z}\\,dS=-(3\\pi-\\pi e)=\\boxed{\\;\\pi(e-3)\\approx -0.886.\\;}$$\n\n(אימות בפרמטריזציה $\\vec r(r,\\theta)=(r\\cos\\theta,r\\sin\\theta,e^{r^2})$: $\\vec r_r\\times\\vec r_\\theta=(-2r^2 e^{r^2}\\cos\\theta,\\,-2r^2 e^{r^2}\\sin\\theta,\\,r)$ — מרכיב $z=r>0$ ✓. $\\vec F\\cdot(\\vec r_r\\times\\vec r_\\theta)=e^{r^2}(r-2r^3)$. אינטגרציה $r\\in[0,1]$, $\\theta\\in[0,2\\pi]$ נותנת $\\pi(e-3)$ ✓.)\n\n---\n\n**(ב) דיברגנץ על מנסרה משולשת.** $\\nabla\\cdot\\vec F=2xy+2xy+3z^2=4xy+3z^2$.\n\nתחום: $T=\\{x\\ge 0,y\\ge 0,x+y\\le 1\\}$ (משולש) $\\times\\,z\\in[0,5]$.\n\n$$\\iiint_V(4xy+3z^2)dV=\\int_0^5\\!dz\\!\\iint_T(4xy+3z^2)dA.$$\n\n* $\\displaystyle\\iint_T xy\\,dA=\\!\\int_0^1\\!x\\!\\int_0^{1-x}\\!y\\,dy\\,dx=\\tfrac12\\!\\int_0^1\\!x(1-x)^2 dx=\\tfrac12\\cdot\\tfrac{1}{12}=\\tfrac{1}{24}$.\n* $\\iint_T dA=\\tfrac12$.\n\nאיסוף:\n$$\\iiint_V 4xy\\,dV=4\\cdot\\tfrac{1}{24}\\cdot 5=\\tfrac{5}{6};\\qquad\\iiint_V 3z^2\\,dV=3\\cdot\\tfrac{125}{3}\\cdot\\tfrac12=\\tfrac{125}{2}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=\\tfrac{5}{6}+\\tfrac{125}{2}=\\tfrac{5+375}{6}=\\tfrac{380}{6}=\\tfrac{190}{3}.\\;}$$\n\n---\n\n**(ג) סטוקס על משולש מרחבי.**\n$$\\nabla\\times\\vec F=(0,\\,1,\\,4).$$\n\n(הוצאת הנגזרות: $\\partial_y\\sin(z^5)-\\partial_z(4x+y^5\\tanh y)=0$; $\\partial_z(z+e^{\\sin x})-\\partial_x\\sin(z^5)=1-0=1$; $\\partial_x(4x+y^5\\tanh y)-\\partial_y(z+e^{\\sin x})=4-0=4$.)\n\nנקח את המשטח הטריוויאלי — המשולש עצמו. וקטור שטח של משולש $ABC$ עם $A=(2,0,0),B=(0,0,4),C=(0,1,0)$ ב\\emph{כיוון של יד ימין} לפי הסדר $A\\to B\\to C$:\n\n$\\vec{AB}=(-2,0,4)$, $\\vec{AC}=(-2,1,0)$.\n$$\\vec{AB}\\times\\vec{AC}=(0\\cdot 0-4\\cdot 1,\\,-((-2)\\cdot 0-4\\cdot(-2)),\\,(-2)\\cdot 1-0\\cdot(-2))=(-4,-8,-2).$$\n\nוקטור שטח: $\\vec N=\\tfrac12\\vec{AB}\\times\\vec{AC}=(-2,-4,-1)$.\n\n$$\\oint_C\\!\\vec F\\cdot d\\vec r=(\\nabla\\times\\vec F)\\cdot\\vec N=(0,1,4)\\cdot(-2,-4,-1)=0-4-4=$$\n$$\\boxed{\\;-8.\\;}$$\n\n---\n\n**(ד) מסה של מעטפת כדור.** $dS$ על כדור ברדיוס $1$: $dS=\\sin\\theta\\,d\\theta\\,d\\phi$.\n\n$$M=\\!\\iint_S\\!\\sigma\\,dS=\\sigma_0\\!\\int_0^{2\\pi}\\!\\!\\int_0^\\pi\\!\\sin^2\\theta\\sin^2\\phi\\cdot\\sin\\theta\\,d\\theta\\,d\\phi=\\sigma_0\\!\\int_0^{2\\pi}\\!\\sin^2\\phi\\,d\\phi\\cdot\\!\\int_0^\\pi\\!\\sin^3\\theta\\,d\\theta.$$\n\n* $\\int_0^{2\\pi}\\sin^2\\phi\\,d\\phi=\\pi$.\n* $\\int_0^\\pi\\sin^3\\theta\\,d\\theta=\\int_0^\\pi\\sin\\theta(1-\\cos^2\\theta)d\\theta=\\bigl[-\\cos\\theta+\\tfrac{\\cos^3\\theta}{3}\\bigr]_0^\\pi=(1-\\tfrac13)+(1-\\tfrac13)=\\tfrac43$.\n\n$$\\boxed{\\;M=\\sigma_0\\cdot\\pi\\cdot\\tfrac{4}{3}=\\tfrac{4\\pi\\sigma_0}{3}.\\;}$$\n\n---\n\n**(ה) שטף דרך חצי אליפסואיד.** (זהה לחלוטין לסעיף (ה) במועד ב' של אותה שנה.)\n\n$\\nabla\\cdot\\vec F=2+(-2)+0=0$. נסגור עם אליפסה $D:\\tfrac{x^2}{4}+\\tfrac{y^2}{9}\\le 1$ ב-$z=0$, נורמל חיצוני $-\\hat z$.\n\n$\\iint_\\sigma+\\iint_D=0$. על $D$: $\\vec F\\cdot(-\\hat z)=-3$, שטח אליפסה $6\\pi$, ולכן $\\iint_D=-18\\pi$.\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=18\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2014_m3_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\displaystyle\\oint_C\\frac{y^3\\,dx-xy^2\\,dy}{(x^2+y^2)^2}$ כאשר $C$ הוא היקף האליפסה $2x^2+3y^2=1$ בכיוון מנוגד לכיוון השעון. (רמז: זכרו את אופן הוכחת משפט גאוס.)",
+      "solution_he": "**הרעיון מהרמז.** השדה סינגולרי בראשית $(0,0)$. בכל נקודה אחרת נוכל לבדוק שהאינטגרנד של גרין מתאפס; ואז להחליף את האליפסה במעגל קטן סביב הראשית — כפי שעושים בהוכחת ״חוק גאוס״ הנקודתי.\n\n**שלב 1 — גרין באזור חופשי מסינגולריות.** עם $P=\\tfrac{y^3}{(x^2+y^2)^2}$ ו-$Q=\\tfrac{-xy^2}{(x^2+y^2)^2}$:\n\n$$\\partial_y P=\\frac{3y^2(x^2+y^2)^2-y^3\\cdot 4y(x^2+y^2)}{(x^2+y^2)^4}=\\frac{3y^2(x^2+y^2)-4y^4}{(x^2+y^2)^3}=\\frac{y^2(3x^2-y^2)}{(x^2+y^2)^3}.$$\n\n$$\\partial_x Q=\\frac{-y^2(x^2+y^2)^2-(-xy^2)\\cdot 4x(x^2+y^2)}{(x^2+y^2)^4}=\\frac{-y^2(x^2+y^2)+4x^2 y^2}{(x^2+y^2)^3}=\\frac{y^2(3x^2-y^2)}{(x^2+y^2)^3}.$$\n\nלכן $\\partial_x Q-\\partial_y P=0$ בכל נקודה מחוץ לראשית. בעקיפת הסינגולריות (תחום טבעת בין $C$ למעגל קטן $C_\\epsilon$ ברדיוס $\\epsilon$ סביב הראשית) ממשפט גרין:\n$$\\oint_C(P\\,dx+Q\\,dy)\\;-\\;\\oint_{C_\\epsilon}(P\\,dx+Q\\,dy)=0\\ \\Rightarrow\\ \\oint_C=\\oint_{C_\\epsilon}.$$\n\n**שלב 2 — חישוב על מעגל ברדיוס $\\epsilon$.** הצבה $x=\\epsilon\\cos t,\\ y=\\epsilon\\sin t,\\ t\\in[0,2\\pi]$ (נגד השעון):\n$dx=-\\epsilon\\sin t\\,dt$, $dy=\\epsilon\\cos t\\,dt$, $x^2+y^2=\\epsilon^2$.\n\n$$y^3\\,dx-xy^2\\,dy=\\epsilon^3\\sin^3 t\\cdot(-\\epsilon\\sin t\\,dt)-\\epsilon\\cos t\\cdot\\epsilon^2\\sin^2 t\\cdot\\epsilon\\cos t\\,dt$$\n$$=-\\epsilon^4\\sin^2 t\\bigl(\\sin^2 t+\\cos^2 t\\bigr)\\,dt=-\\epsilon^4\\sin^2 t\\,dt.$$\n\nחלוקה ב-$(x^2+y^2)^2=\\epsilon^4$:\n$$\\oint_{C_\\epsilon}=-\\int_0^{2\\pi}\\sin^2 t\\,dt=-\\pi.$$\n\n**מסקנה:**\n$$\\boxed{\\;\\oint_C\\frac{y^3\\,dx-xy^2\\,dy}{(x^2+y^2)^2}=-\\pi.\\;}$$\n\nלב נוסף: התוצאה לא תלויה בצורת העקומה $C$ — כל עקומה סגורה פשוטה המקיפה את הראשית פעם אחת בכיוון נגד-שעון תיתן $-\\pi$. תכונה טופולוגית, כמו במקרה של חוק גאוס לחוט אינסופי."
+    }
+  ]
+}

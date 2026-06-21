@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2014_m2",
+  "year": 2014,
+  "moed": "ב",
+  "date": "2014-09-08",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2014_s2m2y14.pdf",
+  "questions": [
+    {
+      "qid": "y2014_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא מקסימום מוחלט ומינימום מוחלט של הפונקציה $f(x,y)=2x^2-y^2+x$ בתחום שמקיים $x^2+y^2\\le 1$ וגם $y\\ge x$.",
+      "solution_he": "**תיאור התחום.** חלק העיגול $r\\le 1$ שמעל הישר $y=x$. הישר חותך את המעגל ב-$\\bigl(\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2}\\bigr)$ וב-$\\bigl(-\\tfrac{1}{\\sqrt 2},-\\tfrac{1}{\\sqrt 2}\\bigr)$.\n\n**נקודה קריטית פנימית:** $f_x=4x+1=0\\Rightarrow x=-\\tfrac14$; $f_y=-2y=0\\Rightarrow y=0$. הנקודה $(-\\tfrac14,0)$ בתחום ($x^2+y^2=\\tfrac{1}{16}<1$, $0\\ge -\\tfrac14$ ✓).\n$$f(-\\tfrac14,0)=2\\cdot\\tfrac{1}{16}-0-\\tfrac14=-\\tfrac18.$$\n\n**צלע $y=x$, $x\\in[-\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2}]$:** $f(x,x)=2x^2-x^2+x=x^2+x$. $f'=2x+1=0\\Rightarrow x=-\\tfrac12$. נקודה $(-\\tfrac12,-\\tfrac12)$ ($r^2=\\tfrac12<1$ ✓).\n$$f(-\\tfrac12,-\\tfrac12)=\\tfrac14-\\tfrac12=-\\tfrac14.$$\n\n**צלע הקשת $x^2+y^2=1$, $y\\ge x$ (כלומר $\\theta\\in[\\tfrac{\\pi}{4},\\tfrac{5\\pi}{4}]$).** הצבה $x=\\cos\\theta$, $y=\\sin\\theta$:\n$$f=2\\cos^2\\theta-\\sin^2\\theta+\\cos\\theta=3\\cos^2\\theta+\\cos\\theta-1.$$\nניתן לכתוב כפונקציה של $u=\\cos\\theta$: $g(u)=3u^2+u-1$, $u\\in[-1,\\tfrac{1}{\\sqrt 2}]$ (טווח של $\\cos\\theta$ בקטע).\n\n$g'(u)=6u+1=0\\Rightarrow u=-\\tfrac16$. $g(-\\tfrac16)=\\tfrac{1}{12}-\\tfrac16-1=-\\tfrac{13}{12}$.\n* $g(\\tfrac{1}{\\sqrt 2})=\\tfrac32+\\tfrac{1}{\\sqrt 2}-1=\\tfrac12+\\tfrac{1}{\\sqrt 2}\\approx 1.21$.\n* $g(-1)=3-1-1=1$.\n* $g(-\\tfrac{1}{\\sqrt 2})=\\tfrac32-\\tfrac{1}{\\sqrt 2}-1=\\tfrac12-\\tfrac{1}{\\sqrt 2}\\approx -0.21$.\n\nנקודה $u=-\\tfrac16$ מתאימה ל-$x=-\\tfrac16$, $y=\\sin\\theta=\\sqrt{1-\\tfrac{1}{36}}=\\tfrac{\\sqrt{35}}{6}$ (חיובי כי $y\\ge x$).\n\n**אימות עם Lagrange על הקשת:** $\\nabla f=(4x+1,-2y)$, $\\nabla g=2(x,y)$. עם $y\\ne 0$: $\\lambda=-2$ ⇒ $4x+1=-2x$ ⇒ $x=-\\tfrac16$ ✓.\n\n**סיכום כל המועמדים:**\n| נקודה | ערך $f$ |\n|---|---|\n| $(-\\tfrac14,0)$ פנימית | $-\\tfrac18$ |\n| $(-\\tfrac12,-\\tfrac12)$ על $y=x$ | $-\\tfrac14$ |\n| $\\bigl(\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2}\\bigr)$ קצה | $\\tfrac{1+\\sqrt 2}{2}\\approx 1.21$ |\n| $\\bigl(-\\tfrac{1}{\\sqrt 2},-\\tfrac{1}{\\sqrt 2}\\bigr)$ קצה | $\\tfrac{1-\\sqrt 2}{2}\\approx -0.21$ |\n| $(-1,0)$ על קשת | $1$ |\n| $(-\\tfrac16,\\tfrac{\\sqrt{35}}{6})$ על קשת | $\\mathbf{-\\tfrac{13}{12}}$ |\n\n$$\\boxed{\\;f_{\\max}=\\tfrac{1+\\sqrt 2}{2}\\ \\text{ב-}\\bigl(\\tfrac{1}{\\sqrt 2},\\tfrac{1}{\\sqrt 2}\\bigr);\\quad f_{\\min}=-\\tfrac{13}{12}\\ \\text{ב-}\\bigl(-\\tfrac16,\\tfrac{\\sqrt{35}}{6}\\bigr).\\;}$$"
+    },
+    {
+      "qid": "y2014_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא וקטור מקביל לחיתוך המישורים $x+y+z=1$ ו-$x-y+z=1$.",
+      "solution_he": "**שיטה — מכפלה וקטורית של הנורמלים.** הוקטור המקביל לחיתוך ניצב לשני הנורמלים של המישורים.\n\n$\\vec n_1=(1,1,1)$, $\\vec n_2=(1,-1,1)$.\n\n$$\\vec v=\\vec n_1\\times\\vec n_2=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\1&1&1\\\\1&-1&1\\end{vmatrix}=\\hat i(1+1)-\\hat j(1-1)+\\hat k(-1-1)=(2,0,-2).$$\n\nניתן לפשט: $\\boxed{\\;\\vec v\\parallel(1,0,-1).\\;}$\n\n**אימות אלגברי:** חיסור המשוואות: $(x+y+z)-(x-y+z)=0\\Rightarrow 2y=0\\Rightarrow y=0$. הצבה: $x+z=1$. אז החיתוך הוא הישר $\\{(t,0,1-t):t\\in\\mathbb R\\}$, כיוון $(1,0,-1)$ ✓."
+    },
+    {
+      "qid": "y2014_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את משוואת המישור המשיק למשטח $z=x^2+3y^2$ בנקודה $(2,1,7)$.",
+      "solution_he": "**בדיקה שהנקודה על המשטח:** $z(2,1)=4+3=7$ ✓.\n\n**נגזרות חלקיות:** $z_x=2x=4$, $z_y=6y=6$ (בנקודה).\n\n**מישור משיק לגרף $z=g(x,y)$:**\n$$z-z_0=g_x(x_0,y_0)(x-x_0)+g_y(x_0,y_0)(y-y_0).$$\n\nהצבה:\n$$z-7=4(x-2)+6(y-1)\\ \\Longleftrightarrow\\ \\boxed{\\;4x+6y-z=7.\\;}$$"
+    },
+    {
+      "qid": "y2014_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש לפתח בטור פוריה את הפונקציה $f(x)=x-[x]-\\tfrac{1}{2}$ ($[x]$ הוא המספר השלם הגדול ביותר שקטן או שווה ל-$x$).",
+      "solution_he": "**זיהוי הפונקציה.** $x-[x]$ הוא ה״חלק השברי״ של $x$, בעל ערכים ב-$[0,1)$. הפונקציה $f(x)$ מחזורית עם מחזור $T=1$, ובמחזור $x\\in[0,1)$ ערכה $f(x)=x-\\tfrac12$, שעובר ליניארית מ-$-\\tfrac12$ ב-$x=0$ ל-$+\\tfrac12$ ב-$x\\to 1^-$ (פונקציית ״משור״).\n\n**סימטריה:** נסתכל על הקטע $(-\\tfrac12,\\tfrac12)$ (חצי מחזור משני צידי $0$). על $(0,\\tfrac12)$: $[x]=0$, $f(x)=x-\\tfrac12$. על $(-\\tfrac12,0)$: $[x]=-1$, $f(x)=x+1-\\tfrac12=x+\\tfrac12$. אם נחשב $f(-x)$ ב-$(0,\\tfrac12)$: $f(-x)=-x+\\tfrac12=-(x-\\tfrac12)=-f(x)$ ⇒ **$f$ אי-זוגית**, ולכן רק סינוסים.\n\n**מקדמי סינוס** (מחזור $T=1$, $\\omega_n=2\\pi n$):\n$$b_n=2\\!\\int_0^1\\!(x-\\tfrac12)\\sin(2\\pi nx)\\,dx=2\\!\\int_0^1\\!x\\sin(2\\pi nx)\\,dx-\\int_0^1\\!\\sin(2\\pi nx)\\,dx.$$\n\nהאינטגרל השני אפס (מחזור שלם של סינוס).\n\nאינטגרציה בחלקים על הראשון:\n$$\\int_0^1 x\\sin(2\\pi nx)dx=\\Bigl[-\\tfrac{x\\cos(2\\pi nx)}{2\\pi n}\\Bigr]_0^1+\\tfrac{1}{2\\pi n}\\!\\int_0^1\\!\\cos(2\\pi nx)dx=-\\tfrac{1}{2\\pi n}+0=-\\tfrac{1}{2\\pi n}.$$\n\nלכן $b_n=-\\tfrac{1}{\\pi n}$.\n\n**טור פוריה:**\n$$\\boxed{\\;f(x)=x-[x]-\\tfrac12=-\\sum_{n=1}^{\\infty}\\tfrac{\\sin(2\\pi nx)}{\\pi n}.\\;}$$\n\n**אימות ב-$x=\\tfrac14$:** $f(\\tfrac14)=-\\tfrac14$. הטור: $-\\tfrac{1}{\\pi}\\sum\\tfrac{\\sin(\\tfrac{\\pi n}{2})}{n}=-\\tfrac{1}{\\pi}\\cdot\\bigl(1-\\tfrac13+\\tfrac15-\\dots\\bigr)=-\\tfrac{1}{\\pi}\\cdot\\tfrac{\\pi}{4}=-\\tfrac14$ ✓."
+    },
+    {
+      "qid": "y2014_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. נתון המשטח הסגור $\\sigma$ שהוא מעטפת התחום החסום ע״י המשטח $z=9-x^2$ והמישורים $z=0$, $y=0$, $y=4$. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=(x-x^2)\\hat i+(x^3+y^2)\\hat j+y^{22}\\hat k$.\n\nב. יש לחשב את מומנט האנרציה של גליל שבסיסו עיגול שרדיוסו $1$ וגובהו $3$ סביב ציר הניצב לבסיס ועובר דרך מרכז העיגול אם נתון שהצפיפות $\\sigma$ של הגליל בכל נקודה נתונה ע״י $\\sigma=\\dfrac{zx^2}{x^2+y^2}$.\n\nג. יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר המסלול $C$ הוא החיתוך של הגליל האינסופי $x^2+y^2=9$ עם המשטח $z=x^2+2y^2$, ו-$\\vec F=-2y\\hat i+4x\\hat j+5\\hat k$. היטל המסלול על מישור $xy$ הוא נגד כיוון השעון במבט מכיוון $z$ חיובי.\n\nד. נתון כדור שמרכזו בראשית ורדיוסו $5$. יש למצוא את שטח מעטפת הכדור מעל המישור $z=3$.\n\nה. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר המשטח $\\sigma$ הוא חלק מעטפת האליפסואיד $\\dfrac{x^2}{4}+\\dfrac{y^2}{9}+\\dfrac{z^2}{16}=1$ הנמצא מעל מישור $xy$, ו-$\\vec F=2x\\hat i-2y\\hat j+3\\hat k$.",
+      "solution_he": "**(א) שטף דרך מעטפה סגורה — דיברגנץ.**\n$$\\nabla\\cdot\\vec F=(1-2x)+2y+0=1-2x+2y.$$\n\nתחום $V$: $x\\in[-3,3]$, $y\\in[0,4]$, $z\\in[0,9-x^2]$.\n\nאינטגרציה ב-$z$ (גורם $(9-x^2)$), ובהמשך ב-$y$:\n$$\\int_0^4(1-2x+2y)dy=(1-2x)\\cdot 4+16=20-8x.$$\n$$\\iiint_V\\!\\nabla\\cdot\\vec F\\,dV=\\int_{-3}^3(20-8x)(9-x^2)dx=\\int_{-3}^3(180-20x^2-72x+8x^3)dx.$$\n\nאיברים אי-זוגיים ב-$x$ מתאפסים בקטע סימטרי:\n$$=\\int_{-3}^3(180-20x^2)dx=2\\int_0^3(180-20x^2)dx=2\\bigl[180x-\\tfrac{20}{3}x^3\\bigr]_0^3=2(540-180)=720.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=720.\\;}$$\n\n---\n\n**(ב) מומנט אנרציה.** $I_z=\\iiint_V(x^2+y^2)\\sigma\\,dV=\\iiint_V(x^2+y^2)\\cdot\\tfrac{zx^2}{x^2+y^2}\\,dV=\\iiint_V zx^2\\,dV$.\n\n(הפישוט יפה — הצפיפות הסבוכה ביטלה את $(x^2+y^2)$ בדיוק.)\n\nקואורדינטות גליליות, $x=r\\cos\\theta$:\n$$I_z=\\!\\int_0^3\\!\\!z\\,dz\\!\\int_0^{2\\pi}\\!\\!\\cos^2\\theta\\,d\\theta\\!\\int_0^1\\!\\!r^2\\cdot r\\,dr=\\tfrac{9}{2}\\cdot\\pi\\cdot\\tfrac{1}{4}=\\boxed{\\;\\tfrac{9\\pi}{8}.\\;}$$\n\n---\n\n**(ג) אינטגרל קווי — סטוקס.**\n$$\\nabla\\times\\vec F=(\\partial_y F_3-\\partial_z F_2,\\,\\partial_z F_1-\\partial_x F_3,\\,\\partial_x F_2-\\partial_y F_1)=(0,0,4-(-2))=6\\hat k.$$\n\nהמסלול $C$ עוטף בהיטל את הדיסקה $D:x^2+y^2\\le 9$ במישור $xy$, ולכן (כיוון ש-$\\nabla\\times\\vec F=6\\hat k$ קבוע) ניתן לבחור את המשטח כדיסקה זו עם נורמל $+\\hat z$:\n$$\\oint_C\\!\\vec F\\cdot d\\vec r=\\iint_D 6\\hat k\\cdot\\hat z\\,dA=6\\cdot\\text{שטח}(D)=6\\cdot 9\\pi=\\boxed{\\;54\\pi.\\;}$$\n\n(הערה: כל משטח אחר ש-$C$ הוא שפתו ייתן אותה תוצאה — שטף של $\\nabla\\times\\vec F$ לא תלוי במשטח, רק בשפה.)\n\n---\n\n**(ד) שטח כיפת כדור.** $R=5$, $z=3$ ⇒ גובה הכיפה $h=R-z=2$.\n\nארכימדס: $A=2\\pi R h=2\\pi\\cdot 5\\cdot 2=\\boxed{\\;20\\pi.\\;}$\n\n---\n\n**(ה) שטף דרך חצי אליפסואיד.**\n$$\\nabla\\cdot\\vec F=2+(-2)+0=0.$$\n\nנסגור את חצי האליפסואיד עם האליפסה המלאה $D:\\tfrac{x^2}{4}+\\tfrac{y^2}{9}\\le 1$ במישור $z=0$, נורמל חיצוני $-\\hat z$.\n\nממשפט הדיברגנץ: $\\iint_\\sigma+\\iint_D=0$.\n\nעל $D$: $\\vec F\\cdot(-\\hat z)=-F_z=-3$. שטח אליפסה $\\pi\\cdot 2\\cdot 3=6\\pi$. לכן $\\iint_D=-3\\cdot 6\\pi=-18\\pi$.\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=-\\iint_D=18\\pi.\\;}$$"
+    },
+    {
+      "qid": "y2014_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\displaystyle\\iint_D\\cos\\!\\bigl(\\tfrac{x-y}{x+y}\\bigr)dx\\,dy$ כאשר התחום $D$ הוא משולש שקודקודיו $(0,0)$, $(2,0)$, $(0,2)$.",
+      "solution_he": "**שיטה: החלפת משתנים** $u=x-y$, $v=x+y$. הפיכה: $x=\\tfrac{u+v}{2}$, $y=\\tfrac{v-u}{2}$.\n\n**יעקוביאן:**\n$$\\frac{\\partial(x,y)}{\\partial(u,v)}=\\det\\!\\begin{pmatrix}\\tfrac12 & \\tfrac12\\\\ -\\tfrac12 & \\tfrac12\\end{pmatrix}=\\tfrac12\\ \\Rightarrow\\ dx\\,dy=\\tfrac12\\,du\\,dv.$$\n\n**העברת התחום:**\n| נקודה ב-$(x,y)$ | נקודה ב-$(u,v)$ |\n|---|---|\n| $(0,0)$ | $(0,0)$ |\n| $(2,0)$ | $(2,2)$ |\n| $(0,2)$ | $(-2,2)$ |\n\nהתחום הוא משולש בקואורדינטות חדשות שקודקודיו $(0,0),(2,2),(-2,2)$, ולכן $v\\in[0,2]$, $u\\in[-v,v]$.\n\n**אינטגרל פנימי ב-$u$:**\n$$\\int_{-v}^v\\cos\\!\\bigl(\\tfrac{u}{v}\\bigr)\\,du=v\\bigl[\\sin\\!\\bigl(\\tfrac{u}{v}\\bigr)\\bigr]_{-v}^v=v(\\sin 1-\\sin(-1))=2v\\sin 1.$$\n\n**אינטגרל חיצוני ב-$v$:**\n$$\\iint_D\\cos\\!\\bigl(\\tfrac{x-y}{x+y}\\bigr)dx\\,dy=\\tfrac12\\!\\int_0^2\\!2v\\sin 1\\,dv=\\sin 1\\cdot[v^2/2]_0^2=\\sin 1\\cdot 2.$$\n\n$$\\boxed{\\;\\iint_D\\cos\\!\\bigl(\\tfrac{x-y}{x+y}\\bigr)dx\\,dy=2\\sin 1\\approx 1.683.\\;}$$"
+    }
+  ]
+}
