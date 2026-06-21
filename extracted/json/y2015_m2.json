@@ -1,0 +1,80 @@
+{
+  "exam_id": "y2015_m2",
+  "year": 2015,
+  "moed": "ב",
+  "date": "2015-09-20",
+  "duration_hours": 3,
+  "instructions": "יש לענות על 6 מתוך 7 השאלות הבאות. שימו לב, ניקוד השאלות אינו זהה!",
+  "answer_n_of_m": [
+    6,
+    7
+  ],
+  "source_pdf": "y2015_s2m2y15.pdf",
+  "questions": [
+    {
+      "qid": "y2015_m2_q1",
+      "number": 1,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא על החיתוך של הגליל $x^2+y^2=1$ והמישור $x+y+z=1$ את הנקודות הקרובות ביותר והרחוקות ביותר מהראשית. (שונה בטעות)",
+      "solution_he": "**שיטה:** נמזער/נמקסם $f=x^2+y^2+z^2$ בכפוף לשני האילוצים $g_1=x^2+y^2-1=0$ ו-$g_2=x+y+z-1=0$.\n\n**רעיון מקצר:** על הגליל $x^2+y^2=1$, ולכן $f=1+z^2$. מתוך המישור $z=1-x-y$. אם נסמן $u=x+y$, אז $z=1-u$ ו-$f=1+(1-u)^2$.\n\nעל הגליל ניתן לכתוב $x=\\cos\\theta$, $y=\\sin\\theta$, ולכן $u=\\cos\\theta+\\sin\\theta=\\sqrt2\\sin\\!\\bigl(\\theta+\\tfrac{\\pi}{4}\\bigr)$, $u\\in[-\\sqrt 2,\\sqrt 2]$.\n\n**מינימום של $f$:** מקבלים כאשר $|1-u|$ מינימלי, כלומר $u=1$:\n$$\\sqrt2\\sin\\!\\bigl(\\theta+\\tfrac{\\pi}{4}\\bigr)=1\\ \\Rightarrow\\ \\theta=0\\ \\text{או}\\ \\theta=\\tfrac{\\pi}{2}.$$\nשני פתרונות: $(1,0,0)$ ו-$(0,1,0)$, ובשניהם $z=0$ ולכן $f=1$.\n\n**מקסימום של $f$:** מקבלים כאשר $|1-u|$ מקסימלי, ובקטע $[-\\sqrt2,\\sqrt2]$ זה ב-$u=-\\sqrt 2$:\n$$\\theta+\\tfrac{\\pi}{4}=-\\tfrac{\\pi}{2}\\ \\Rightarrow\\ \\theta=-\\tfrac{3\\pi}{4}\\ \\Rightarrow\\ (x,y)=\\bigl(-\\tfrac{1}{\\sqrt 2},-\\tfrac{1}{\\sqrt 2}\\bigr).$$\n$z=1-u=1+\\sqrt 2$ ⇒ $f=1+(1+\\sqrt 2)^2=4+2\\sqrt 2$.\n\n**אימות עם Lagrange:** $\\nabla f=\\lambda\\nabla g_1+\\mu\\nabla g_2$ נותן\n$$2x=2\\lambda x+\\mu,\\quad 2y=2\\lambda y+\\mu,\\quad 2z=\\mu.$$\nחיסור הראשונה מהשנייה: $2(x-y)=2\\lambda(x-y)$ ⇒ $x=y$ או $\\lambda=1$.\n\n* $\\lambda=1$ ⇒ מהראשונה $\\mu=0$ ⇒ $z=0$ ⇒ מהמישור $x+y=1$. שילוב עם $x^2+y^2=1$: $1+2xy=1$, $xy=0$ ⇒ $(1,0,0)$ או $(0,1,0)$.\n* $x=y$ ⇒ $2x^2=1$, $x=\\pm\\tfrac{1}{\\sqrt 2}$, $z=1-2x$. עבור $x=\\tfrac{1}{\\sqrt 2}$ נקבל $z=1-\\sqrt 2$ ו-$f=4-2\\sqrt 2\\approx 1.17$; עבור $x=-\\tfrac{1}{\\sqrt 2}$ נקבל $z=1+\\sqrt 2$ ו-$f=4+2\\sqrt 2\\approx 6.83$.\n\n**מסקנה:**\n$$\\boxed{\\;\\text{קרובות ביותר: }(1,0,0)\\text{ ו-}(0,1,0)\\ \\text{ במרחק }1;\\quad\\text{רחוקה ביותר: }\\!\\Bigl(-\\tfrac{1}{\\sqrt 2},-\\tfrac{1}{\\sqrt 2},1+\\sqrt 2\\Bigr)\\text{ במרחק }\\sqrt{4+2\\sqrt 2}\\approx 2.61.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q2",
+      "number": 2,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. יש לפתח בטור פוריה את הפונקציה $f(x)=|x|$ בתחום $(-\\pi,\\pi)$.\n\nב. בהסתמך על סעיף (א) יש להראות כי $\\displaystyle\\frac{\\pi^2}{8}=\\frac{1}{1^2}+\\frac{1}{3^2}+\\frac{1}{5^2}+\\dots$",
+      "solution_he": "**(א)** $|x|$ זוגית ⇒ $b_n=0$. נחשב את מקדמי הקוסינוס.\n\n$$a_0=\\frac{1}{\\pi}\\!\\int_{-\\pi}^{\\pi}\\!|x|\\,dx=\\frac{2}{\\pi}\\!\\int_0^\\pi x\\,dx=\\pi.$$\n\n$$a_n=\\frac{2}{\\pi}\\!\\int_0^\\pi x\\cos(nx)\\,dx,\\qquad n\\ge 1.$$\n\nאינטגרציה בחלקים: $\\int x\\cos(nx)dx=\\tfrac{x\\sin(nx)}{n}+\\tfrac{\\cos(nx)}{n^2}$, ולכן\n$$\\int_0^\\pi x\\cos(nx)dx=\\frac{(-1)^n-1}{n^2}=\\begin{cases}0,&n\\text{ זוגי}\\\\-\\tfrac{2}{n^2},&n\\text{ אי-זוגי}\\end{cases}.$$\n\nלכן $a_{2k+1}=-\\tfrac{4}{\\pi(2k+1)^2}$. הטור:\n$$\\boxed{\\;|x|=\\frac{\\pi}{2}-\\frac{4}{\\pi}\\sum_{k=0}^{\\infty}\\frac{\\cos\\bigl((2k+1)x\\bigr)}{(2k+1)^2},\\qquad x\\in(-\\pi,\\pi).\\;}$$\n\n**(ב)** $f$ רציפה ב-$x=0$, ולכן הטור מתכנס שם לערך הפונקציה $|0|=0$:\n$$0=\\frac{\\pi}{2}-\\frac{4}{\\pi}\\sum_{k=0}^{\\infty}\\frac{1}{(2k+1)^2}\\ \\Longrightarrow\\ \\sum_{k=0}^{\\infty}\\frac{1}{(2k+1)^2}=\\boxed{\\;\\frac{\\pi^2}{8}.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q3",
+      "number": 3,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתון המשטח $x+2y^2+3z^3=6$.\n\nא. יש למצוא מישור משיק למשטח בנקודה $(1,1,1)$ ומישור משיק למשטח בנקודה $(3,0,1)$.\n\nב. יש למצוא את הזוית בין שני המישורים המשיקים מסעיף (א).",
+      "solution_he": "**(א)** נסמן $F(x,y,z)=x+2y^2+3z^3-6$. הוקטור הנורמלי למישור המשיק הוא $\\nabla F=(1,\\,4y,\\,9z^2)$.\n\n* בנקודה $(1,1,1)$ (בדיקה: $1+2+3=6$ ✓): $\\nabla F=(1,4,9)$.\n$$\\boxed{\\;1\\cdot(x-1)+4\\cdot(y-1)+9\\cdot(z-1)=0\\ \\Longleftrightarrow\\ x+4y+9z=14.\\;}$$\n\n* בנקודה $(3,0,1)$ (בדיקה: $3+0+3=6$ ✓): $\\nabla F=(1,0,9)$.\n$$\\boxed{\\;1\\cdot(x-3)+0\\cdot(y-0)+9\\cdot(z-1)=0\\ \\Longleftrightarrow\\ x+9z=12.\\;}$$\n\n**(ב)** הזוית בין שני מישורים = הזוית בין הנורמלים שלהם. נסמן $\\vec n_1=(1,4,9)$, $\\vec n_2=(1,0,9)$.\n\n$$\\cos\\theta=\\frac{\\vec n_1\\cdot\\vec n_2}{|\\vec n_1|\\,|\\vec n_2|}=\\frac{1+0+81}{\\sqrt{98}\\cdot\\sqrt{82}}=\\frac{82}{\\sqrt{82\\cdot 98}}=\\sqrt{\\frac{82}{98}}=\\sqrt{\\frac{41}{49}}=\\frac{\\sqrt{41}}{7}.$$\n\nמספרית: $\\cos\\theta=\\tfrac{\\sqrt{41}}{7}\\approx 0.9152$, לכן\n$$\\boxed{\\;\\theta=\\arccos\\!\\frac{\\sqrt{41}}{7}\\approx 23.8^\\circ.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q4",
+      "number": 4,
+      "points": 20,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "נתון נפח $V$ התחום בין שני המשטחים $z=2x^2+2y^2-5$ ו-$z=-3x^2-3y^2+15$, וכן נתון שצפיפות המסה $\\delta$ ב-$V$ נתונה ע״י $\\delta=x^2$.\n\nא. יש לחשב את המסה של $V$.\n\nב. יש למצוא את מומנט האנרציה של הנפח $V$ סביב ציר $z$.",
+      "solution_he": "**הכנה — תיאור הנפח בקואורדינטות גליליות.** שני המשטחים פרבולואידים: התחתון $z_1=2r^2-5$ פותח כלפי מעלה, והעליון $z_2=-3r^2+15$ פותח כלפי מטה. נקודת החיתוך:\n$$2r^2-5=-3r^2+15\\ \\Rightarrow\\ r^2=4\\ \\Rightarrow\\ r=2.$$\nלכן $V$ מתואר ע״י $0\\le r\\le 2$, $0\\le\\theta\\le 2\\pi$, $2r^2-5\\le z\\le -3r^2+15$. גובה $V$ כפונקציה של $r$: $(-3r^2+15)-(2r^2-5)=20-5r^2$.\n\n**צפיפות בקואורדינטות גליליות:** $\\delta=x^2=r^2\\cos^2\\theta$.\n\n**(א) מסה.**\n$$M=\\!\\int_0^{2\\pi}\\!\\!\\int_0^2\\!\\!\\int_{2r^2-5}^{-3r^2+15}\\!r^2\\cos^2\\theta\\,\\cdot r\\,dz\\,dr\\,d\\theta=\\!\\int_0^{2\\pi}\\!\\cos^2\\theta\\,d\\theta\\!\\int_0^2\\!r^3(20-5r^2)\\,dr.$$\n\n$\\int_0^{2\\pi}\\cos^2\\theta\\,d\\theta=\\pi$.\n\n$$\\int_0^2(20r^3-5r^5)dr=\\Bigl[5r^4-\\tfrac{5}{6}r^6\\Bigr]_0^2=80-\\tfrac{320}{6}=80-\\tfrac{160}{3}=\\tfrac{80}{3}.$$\n\n$$\\boxed{\\;M=\\pi\\cdot\\frac{80}{3}=\\frac{80\\pi}{3}.\\;}$$\n\n**(ב) מומנט אנרציה סביב ציר $z$:** $I_z=\\iiint_V(x^2+y^2)\\,\\delta\\,dV=\\iiint_V r^2\\cdot r^2\\cos^2\\theta\\cdot r\\,dz\\,dr\\,d\\theta$.\n\n$$I_z=\\!\\int_0^{2\\pi}\\!\\cos^2\\theta\\,d\\theta\\!\\int_0^2\\!r^5(20-5r^2)dr=\\pi\\!\\int_0^2(20r^5-5r^7)dr.$$\n\n$$\\int_0^2(20r^5-5r^7)dr=\\Bigl[\\tfrac{10}{3}r^6-\\tfrac{5}{8}r^8\\Bigr]_0^2=\\tfrac{640}{3}-\\tfrac{5\\cdot 256}{8}=\\tfrac{640}{3}-160=\\tfrac{640-480}{3}=\\tfrac{160}{3}.$$\n\n$$\\boxed{\\;I_z=\\frac{160\\pi}{3}.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q5",
+      "number": 5,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\int_C\\vec F\\cdot d\\vec r$ כאשר המסלול $C$ הוא חלק הפרבולה $y=4x-x^2$ המקיים $y\\ge 0$ בכיוון השעון, ו-$\\displaystyle\\vec F=\\frac{y}{x+1}\\hat i+xy\\,\\hat j$.",
+      "solution_he": "**שיטה: גרין בכיוון השעון.** הפרבולה $y=4x-x^2=x(4-x)$ חיובית ב-$x\\in[0,4]$, עם מקסימום $(2,4)$. ״כיוון השעון״ על הקשת לבדה משמעו לעבור על הקשת מ-$(4,0)$ אל $(0,0)$.\n\nנסגור את הקשת עם קטע ציר ה-$x$ מ-$(0,0)$ אל $(4,0)$. הלולאה הסגורה (קשת + ציר $x$) נסעת בכיוון השעון. נסמן $D$ את התחום מתחת לפרבולה: $0\\le x\\le 4$, $0\\le y\\le 4x-x^2$.\n\n**גרין (כיוון השעון):** $\\displaystyle\\oint_{CW}(P\\,dx+Q\\,dy)=\\iint_D\\!\\bigl(\\tfrac{\\partial P}{\\partial y}-\\tfrac{\\partial Q}{\\partial x}\\bigr)dA$ עם $P=\\tfrac{y}{x+1}$, $Q=xy$:\n$$\\frac{\\partial P}{\\partial y}=\\frac{1}{x+1},\\qquad \\frac{\\partial Q}{\\partial x}=y\\ \\Longrightarrow\\ \\frac{\\partial P}{\\partial y}-\\frac{\\partial Q}{\\partial x}=\\frac{1}{x+1}-y.$$\n\n**על קטע ציר ה-$x$:** $y=0$ ו-$dy=0$, ולכן $P\\,dx+Q\\,dy=0$. התרומה היחידה ללולאה הסגורה היא מהקשת:\n$$\\int_C\\vec F\\cdot d\\vec r=\\iint_D\\!\\Bigl(\\frac{1}{x+1}-y\\Bigr)dA.$$\n\n**חישוב $\\displaystyle I_1=\\iint_D\\!\\frac{1}{x+1}dA$:**\n$$I_1=\\!\\int_0^4\\!\\!\\int_0^{4x-x^2}\\!\\frac{dy}{x+1}\\,dx=\\!\\int_0^4\\!\\frac{4x-x^2}{x+1}\\,dx.$$\nחלוקת פולינומים: $\\dfrac{-x^2+4x}{x+1}=-x+5-\\dfrac{5}{x+1}$ (בדיקה: $(-x+5)(x+1)=-x^2+4x+5$, חיסור $5/(x+1)\\cdot(x+1)=5$ נותן $-x^2+4x$ ✓).\n$$I_1=\\!\\int_0^4\\!\\!\\Bigl(-x+5-\\tfrac{5}{x+1}\\Bigr)dx=\\Bigl[-\\tfrac{x^2}{2}+5x-5\\ln(x+1)\\Bigr]_0^4=-8+20-5\\ln 5=12-5\\ln 5.$$\n\n**חישוב $\\displaystyle I_2=\\iint_D y\\,dA$:**\n$$I_2=\\!\\int_0^4\\!\\frac{(4x-x^2)^2}{2}\\,dx=\\tfrac{1}{2}\\!\\int_0^4\\!(16x^2-8x^3+x^4)\\,dx=\\tfrac{1}{2}\\Bigl[\\tfrac{16}{3}x^3-2x^4+\\tfrac{x^5}{5}\\Bigr]_0^4.$$\nחישוב: $\\tfrac{16\\cdot 64}{3}-2\\cdot 256+\\tfrac{1024}{5}=\\tfrac{5120-7680+3072}{15}=\\tfrac{512}{15}$. לכן $I_2=\\tfrac{256}{15}$.\n\n**איסוף:**\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r=I_1-I_2=12-5\\ln 5-\\tfrac{256}{15}=\\tfrac{-76}{15}-5\\ln 5\\approx -13.11.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q6",
+      "number": 6,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את השטח התחום בין $x^{2/3}+y^{2/3}=a^{2/3}$ ($x$ ו-$y$ לא שליליים) והצירים $x$ ו-$y$.\n\nרמז 1: ניתן להשתמש בהצגה הפרמטרית $x=a\\cos^3 t$ ו-$y=a\\sin^3 t$.\n\nרמז 2: $\\displaystyle\\oint_C(x\\,dy-y\\,dx)=2A$ כאשר $A$ הוא השטח התחום ע״י העקומה הסגורה $c$.",
+      "solution_he": "**הגדרת לולאה סגורה.** ברביע הראשון הקשת מחברת את $(a,0)$ אל $(0,a)$. נסגור אותה עם ציר ה-$y$ (מ-$(0,a)$ אל $(0,0)$) וציר ה-$x$ (מ-$(0,0)$ אל $(a,0)$) ונעבור בכיוון נגד השעון.\n\n**רמז 2 — נוסחת שטח גרין:** $\\displaystyle A=\\tfrac{1}{2}\\oint_C(x\\,dy-y\\,dx)$.\n\n**תרומת הצירים = 0:**\n\n* ציר $y$: $x=0$ ⇒ $x\\,dy=0$; וגם $dx=0$ ⇒ $y\\,dx=0$. סה״כ $0$.\n* ציר $x$: $y=0$ ⇒ $y\\,dx=0$; וגם $dy=0$ ⇒ $x\\,dy=0$. סה״כ $0$.\n\n**תרומת הקשת.** עם הפרמטריזציה $x=a\\cos^3 t,\\ y=a\\sin^3 t,\\ t\\in[0,\\pi/2]$ (מ-$(a,0)$ אל $(0,a)$, כיוון חיובי):\n$$dx=-3a\\cos^2 t\\sin t\\,dt,\\qquad dy=3a\\sin^2 t\\cos t\\,dt.$$\n$$x\\,dy-y\\,dx=a\\cos^3 t\\cdot 3a\\sin^2 t\\cos t\\,dt-a\\sin^3 t\\cdot(-3a\\cos^2 t\\sin t)dt.$$\n$$=3a^2\\cos^2 t\\sin^2 t(\\cos^2 t+\\sin^2 t)dt=3a^2\\cos^2 t\\sin^2 t\\,dt=\\tfrac{3a^2}{4}\\sin^2(2t)\\,dt.$$\n\n**אינטגרציה:** $\\displaystyle\\int_0^{\\pi/2}\\!\\sin^2(2t)\\,dt=\\tfrac{1}{2}\\!\\int_0^{\\pi}\\!\\sin^2 u\\,du=\\tfrac{\\pi}{4}$ (הצבה $u=2t$).\n\n$$\\oint_C(x\\,dy-y\\,dx)=\\tfrac{3a^2}{4}\\cdot\\tfrac{\\pi}{4}=\\tfrac{3\\pi a^2}{16}.$$\n\n**סיכום:**\n$$\\boxed{\\;A=\\tfrac{1}{2}\\cdot\\tfrac{3\\pi a^2}{16}=\\tfrac{3\\pi a^2}{32}.\\;}$$"
+    },
+    {
+      "qid": "y2015_m2_q7",
+      "number": 7,
+      "points": 20,
+      "subparts": null,
+      "statement_he": "יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר המשטח $\\sigma$ נתון ע״י $z=e-(x^2+y^2)e^{x^2+y^2}$ הנמצא מעל מישור $xy$ ו-$\\vec F=2yz\\sin x\\,\\hat i-y^2z\\cos x\\,\\hat j+\\cosh(x^2+y^2)\\,\\hat k$.",
+      "solution_he": "**שלב 1 — תחום המשטח.** במישור $xy$ מקבלים $z=0$ כאשר $(x^2+y^2)e^{x^2+y^2}=e$. הצבה $u=x^2+y^2$: $ue^u=e$, פתרון יחיד $u=1$. אז הצללית של $\\sigma$ על מישור $xy$ היא הדיסקה $x^2+y^2\\le 1$. בראשית ($r=0$): $z=e$. המשטח דמוי-פעמון מעל הדיסקה.\n\n**שלב 2 — חישוב הדיברגנץ.**\n$$\\frac{\\partial}{\\partial x}(2yz\\sin x)=2yz\\cos x,\\quad\\frac{\\partial}{\\partial y}(-y^2 z\\cos x)=-2yz\\cos x,\\quad\\frac{\\partial}{\\partial z}\\cosh(x^2+y^2)=0.$$\n$$\\nabla\\cdot\\vec F=2yz\\cos x-2yz\\cos x+0=\\boxed{0}.$$\n\n**שלב 3 — סגירה של $\\sigma$ במשפט הדיברגנץ.** נסמן $D$ את הדיסקה $\\{(x,y,0)\\,:\\,x^2+y^2\\le 1\\}$. המשטח $\\sigma$ עם נורמל חיצוני כלפי מעלה $+$ $D$ עם נורמל חיצוני $-\\hat z$ סוגרים את התחום $V$ מתחת ל-$\\sigma$. ממשפט הדיברגנץ:\n$$\\iint_\\sigma\\!\\vec F\\cdot\\hat n\\,dS+\\iint_D\\!\\vec F\\cdot(-\\hat z)\\,dA=\\iiint_V\\!\\nabla\\cdot\\vec F\\,dV=0.$$\n\n**שלב 4 — שטף דרך הדיסקה $D$.** על $D$ הנורמל החיצוני הוא $-\\hat z$, ו-$z=0$. הרכיבים של $\\vec F$ עם $z$ מתאפסים, נשאר רק:\n$$\\vec F\\cdot(-\\hat z)=-F_z\\big|_{z=0}=-\\cosh(x^2+y^2).$$\n$$\\iint_D\\!\\vec F\\cdot(-\\hat z)\\,dA=-\\!\\iint_D\\!\\cosh(x^2+y^2)\\,dA=-\\!\\int_0^{2\\pi}\\!\\!\\int_0^1\\!\\cosh(r^2)\\,r\\,dr\\,d\\theta.$$\nהצבה $u=r^2$, $du=2r\\,dr$:\n$$\\int_0^1\\!\\cosh(r^2)\\,r\\,dr=\\tfrac{1}{2}\\!\\int_0^1\\!\\cosh u\\,du=\\tfrac{\\sinh 1}{2}.$$\nלכן $\\iint_D\\!\\vec F\\cdot(-\\hat z)\\,dA=-2\\pi\\cdot\\tfrac{\\sinh 1}{2}=-\\pi\\sinh 1$.\n\n**שלב 5 — תוצאה.**\n$$\\iint_\\sigma\\!\\vec F\\cdot\\hat n\\,dS=-\\iint_D\\!\\vec F\\cdot(-\\hat z)\\,dA=\\pi\\sinh 1.$$\n$$\\boxed{\\;\\iint_\\sigma\\!\\vec F\\cdot\\hat n\\,dS=\\pi\\sinh 1\\approx 3.69.\\;}$$"
+    }
+  ]
+}
