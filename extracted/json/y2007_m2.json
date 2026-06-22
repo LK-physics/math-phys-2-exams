@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2007_m2",
+  "year": 2007,
+  "moed": "ב",
+  "date": "2007-09-10",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2007_s2m2y07.pdf",
+  "questions": [
+    {
+      "qid": "y2007_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את הישר $y=ax+b$ אשר סכום ריבועי המרחקים האנכיים של הנקודות $(0,2), (1,3)$ ו-$(2,5)$ ממנו הוא מינימלי.",
+      "solution_he": "**משוואות נורמליות:** $\\sum x_i=3$, $\\sum y_i=10$, $\\sum x_i^2=5$, $\\sum x_i y_i=0+3+10=13$, $n=3$.\n\n$$\\begin{cases}5a+3b=13\\\\3a+3b=10\\end{cases}$$\n\nחיסור: $2a=3\\Rightarrow a=\\tfrac{3}{2}$. הצבה: $b=\\tfrac{10-3\\cdot 3/2}{3}=\\tfrac{11/2}{3}=\\tfrac{11}{6}$.\n\n$$\\boxed{\\;y=\\tfrac{3}{2}x+\\tfrac{11}{6}.\\;}$$"
+    },
+    {
+      "qid": "y2007_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את המרחק המינימלי בין הישר העובר דרך $(2,-1,-1)$ ו-$(6,-8,0)$ והישר העובר דרך $(2,1,2)$ ו-$(0,2,-1)$.",
+      "solution_he": "**כיוונים:** $\\vec d_1=(4,-7,1)$, $\\vec d_2=(-2,1,-3)$.\n\n**וקטור חיבור:** $\\vec w=(2,1,2)-(2,-1,-1)=(0,2,3)$.\n\n**מכפלה וקטורית של הכיוונים:**\n$$\\vec d_1\\times\\vec d_2=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\4&-7&1\\\\-2&1&-3\\end{vmatrix}=(21-1,\\,-(-12+2),\\,4-14)=(20,10,-10).$$\n\n$|\\vec d_1\\times\\vec d_2|=10\\sqrt 6$.\n\n**מרחק:** $d=\\dfrac{|\\vec w\\cdot(\\vec d_1\\times\\vec d_2)|}{|\\vec d_1\\times\\vec d_2|}=\\dfrac{|0+20-30|}{10\\sqrt 6}=\\dfrac{10}{10\\sqrt 6}=$\n\n$$\\boxed{\\;\\tfrac{1}{\\sqrt 6}=\\tfrac{\\sqrt 6}{6}\\approx 0.408.\\;}$$"
+    },
+    {
+      "qid": "y2007_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את הנגזרת של הפונקציה $F(x,y,z)=x^2-2y^2+4z^2$ בנקודה $(1,1,-1)$ בכיוון $\\vec a=2\\hat i+\\hat j-\\hat k$.",
+      "solution_he": "**גרדיאנט:** $\\nabla F=(2x,-4y,8z)$. ב-$(1,1,-1)$: $(2,-4,-8)$.\n\n**כיוון:** $|\\vec a|=\\sqrt 6$. $\\hat a=(2,1,-1)/\\sqrt 6$.\n\n$$D_{\\hat a}F=\\tfrac{(2,-4,-8)\\cdot(2,1,-1)}{\\sqrt 6}=\\tfrac{4-4+8}{\\sqrt 6}=\\tfrac{8}{\\sqrt 6}=$$\n\n$$\\boxed{\\;\\tfrac{4\\sqrt 6}{3}\\approx 3.27.\\;}$$"
+    },
+    {
+      "qid": "y2007_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש לפתח בטור פוריה את הפונקציה $f(x)$ המוגדרת ע״י $f(x)=\\cos(\\pi x/4)$ בתחום $-1<x<1$, ו-$f(x)=f(x+2)$.",
+      "solution_he": "**זוגית, מחזור $2$, $L=1$:** $a_n=2\\int_0^1\\cos(\\pi x/4)\\cos(n\\pi x)dx$, $b_n=0$.\n\n**$a_0$:** $a_0=2\\int_0^1\\cos(\\pi x/4)dx=\\tfrac{8}{\\pi}\\sin(\\pi/4)=\\tfrac{4\\sqrt 2}{\\pi}$.\n\n**$a_n$:** $\\cos(\\pi x/4)\\cos(n\\pi x)=\\tfrac{1}{2}[\\cos((n-\\tfrac{1}{4})\\pi x)+\\cos((n+\\tfrac{1}{4})\\pi x)]$.\n\nערכים: $\\sin((n\\pm\\tfrac{1}{4})\\pi)=\\pm(-1)^n\\tfrac{1}{\\sqrt 2}$ (סימנים מתאימים).\n\nלאחר צמצומים:\n$$a_n=\\frac{4\\sqrt 2(-1)^{n+1}}{\\pi(16n^2-1)}.$$\n\n$$\\boxed{\\;\\cos(\\pi x/4)=\\frac{2\\sqrt 2}{\\pi}+\\sum_{n=1}^\\infty\\frac{4\\sqrt 2(-1)^{n+1}}{\\pi(16n^2-1)}\\cos(n\\pi x).\\;}$$\n\n**אימות $x=0$:** $\\cos 0=1$. $a_0/2+a_1+a_2+\\ldots\\approx 0.90+0.12-0.029+0.014-\\ldots\\to 1$ ✓."
+    },
+    {
+      "qid": "y2007_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש למצוא את מרכז המסה של גוף עם צפיפות אחידה התחום מלמעלה ע״י המשטח $z=xy$ ומלמטה ע״י המשולש הנמצא במישור $z=0$ ואשר תחום ע״י הישרים $y=x, y=0$ ו-$x=4$.\n\nב. יש לחשב את מומנט האינרציה של דיסקה בעלת רדיוס $R$ וצפיפות אחידה $\\sigma$ סביב ציר שהוא גם קוטר הדיסקה.\n\nג. מה השטח התחום בעקומה $\\rho=a(1-\\sin\\theta)$ ומה מרכז המסה של תחום זה?\n\nד. יש לחשב את $\\iint_S\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=2xy\\hat i+yz^2\\hat j+xz\\hat k$ והמשטח $S$ הוא חלק מהמישור $x+2z=6$ המוגבל ע״י המישורים $z=0, y=3, y=0, x=0$.\n\nה. מה הנפח המתקבל מסיבוב המשולש שקודקודיו הם $(0,1), (5,2)$ ו-$(-5,2)$ סביב הישר $y=x+10$?",
+      "solution_he": "**(א) COM של גוף מעל משולש.** התחום: $0\\le y\\le x\\le 4$, $0\\le z\\le xy$. צפיפות $1$.\n\n**מסה:** $M=\\int_0^4\\!\\!\\int_0^x\\!xy\\,dy\\,dx=\\int_0^4\\tfrac{x^3}{2}dx=\\tfrac{4^4}{8}=32$.\n\n**$\\bar x$:** $\\iiint x\\,dV=\\int_0^4\\!\\!\\int_0^x x\\cdot xy\\,dy\\,dx=\\int_0^4\\tfrac{x^4}{2}dx=\\tfrac{1024}{10}$. $\\bar x=\\tfrac{1024/10}{32}=\\tfrac{16}{5}$.\n\n**$\\bar y$:** $\\iiint y\\,dV=\\int_0^4 x\\cdot\\tfrac{x^3}{3}dx=\\tfrac{4^5}{15}=\\tfrac{1024}{15}$. $\\bar y=\\tfrac{32}{15}$.\n\n**$\\bar z$:** $\\iiint z\\,dV=\\int_0^4\\!\\!\\int_0^x\\tfrac{(xy)^2}{2}dy\\,dx=\\int_0^4\\tfrac{x^5}{6}dx=\\tfrac{4^6}{36}=\\tfrac{1024}{9}$. $\\bar z=\\tfrac{32}{9}$.\n\n$$\\boxed{\\;\\text{COM}=(\\tfrac{16}{5},\\tfrac{32}{15},\\tfrac{32}{9})\\approx(3.2,2.13,3.56).\\;}$$\n\n---\n\n**(ב) MOI דיסקה (צפיפות קבועה).** $I=\\sigma\\int_0^{2\\pi}\\int_0^R r^2\\sin^2\\theta\\cdot r\\,dr\\,d\\theta=\\sigma\\pi\\tfrac{R^4}{4}=$\n\n$$\\boxed{\\;I=\\tfrac{\\sigma\\pi R^4}{4}=\\tfrac{MR^2}{4},\\quad M=\\sigma\\pi R^2.\\;}$$\n\n---\n\n**(ג) קרדיואיד $\\rho=a(1-\\sin\\theta)$.**\n\n**שטח:** $A=\\tfrac{1}{2}\\int_0^{2\\pi}a^2(1-\\sin\\theta)^2 d\\theta=\\tfrac{a^2}{2}(2\\pi-0+\\pi)=\\tfrac{3\\pi a^2}{2}$.\n\n**COM** (סימטריה לציר $y$ ⇒ $\\bar x=0$):\n$\\iint y\\,dA=\\tfrac{1}{3}\\int_0^{2\\pi}\\sin\\theta\\cdot a^3(1-\\sin\\theta)^3 d\\theta$.\n\nהרחבה: $\\sin\\theta(1-3\\sin\\theta+3\\sin^2\\theta-\\sin^3\\theta)=\\sin\\theta-3\\sin^2\\theta+3\\sin^3\\theta-\\sin^4\\theta$.\nאינטגרציה: $0-3\\pi+0-\\tfrac{3\\pi}{4}=-\\tfrac{15\\pi}{4}$.\n\n$\\iint y\\,dA=\\tfrac{a^3}{3}\\cdot(-\\tfrac{15\\pi}{4})=-\\tfrac{5\\pi a^3}{4}$.\n\n$\\bar y=\\tfrac{-5\\pi a^3/4}{3\\pi a^2/2}=-\\tfrac{5a}{6}$.\n\n$$\\boxed{\\;A=\\tfrac{3\\pi a^2}{2},\\quad \\text{COM}=(0,-\\tfrac{5a}{6}).\\;}$$\n(קרדיואיד \"פתוח כלפי מטה\" — קודקוד ב-$\\theta=3\\pi/2$, $r=2a$. COM שלילי ב-$y$ הגיוני.)\n\n---\n\n**(ד) שטף דרך מלבן במישור.** $z=(6-x)/2$, $\\vec n dS=(1/2,0,1)dA$, $D=[0,6]\\times[0,3]$.\n\n$\\vec F\\cdot\\vec n=\\tfrac{1}{2}(2xy)+0+xz=xy+\\tfrac{x(6-x)}{2}=xy+3x-\\tfrac{x^2}{2}$.\n\n$$\\iint=\\!\\int_0^3\\!\\!\\int_0^6\\!(xy+3x-\\tfrac{x^2}{2})dx\\,dy=\\!\\int_0^3(18y+54-36)dy=\\!\\int_0^3(18y+18)dy=81+54=$$\n$$\\boxed{\\;\\iint_S\\vec F\\cdot\\hat n\\,ds=135.\\;}$$\n\n---\n\n**(ה) פפוס.** משולש קודקודים $(0,1),(5,2),(-5,2)$. בסיס מ-$(-5,2)$ ל-$(5,2)$ באורך $10$; גובה $|2-1|=1$. שטח $A=5$.\n\nצנטרואיד $(\\tfrac{0+5-5}{3},\\tfrac{1+2+2}{3})=(0,\\tfrac{5}{3})$.\n\nמרחק מהציר $x-y+10=0$: $\\bar d=|0-5/3+10|/\\sqrt 2=\\tfrac{25/3}{\\sqrt 2}=\\tfrac{25\\sqrt 2}{6}$.\n\n(אימות הציר לא חוצה את המשולש: $\\max(x-y+10)$ במשולש $\\sim 13$, הציר ב-$0$ ⇒ הציר רחוק. ✓)\n\n$$\\boxed{\\;V=2\\pi\\cdot\\tfrac{25\\sqrt 2}{6}\\cdot 5=\\tfrac{125\\pi\\sqrt 2}{3}\\approx 185.1.\\;}$$"
+    },
+    {
+      "qid": "y2007_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** מעבירים דרך הנקודה $(1,1,2)$ מישור החותך את הצירים בנקודות חיוביות. יש למצוא את משוואת המישור שעבורו הנפח התחום בין מישור זה למישורים $x=0, y=0, z=0$ מינימלי.",
+      "solution_he": "**הצגה:** מישור עם חיתוכים $A,B,C>0$: $\\tfrac{x}{A}+\\tfrac{y}{B}+\\tfrac{z}{C}=1$.\n\n**עובר ב-$(1,1,2)$:** $\\tfrac{1}{A}+\\tfrac{1}{B}+\\tfrac{2}{C}=1$.\n\n**נפח טטרהדרון:** $V=\\tfrac{ABC}{6}$.\n\n**מינימיזציה ע״י AM-GM:**\n$$1=\\tfrac{1}{A}+\\tfrac{1}{B}+\\tfrac{2}{C}\\ge 3\\sqrt[3]{\\tfrac{1}{A}\\cdot\\tfrac{1}{B}\\cdot\\tfrac{2}{C}}=3\\sqrt[3]{\\tfrac{2}{ABC}}.$$\n$\\tfrac{1}{27}\\ge\\tfrac{2}{ABC}\\Rightarrow ABC\\ge 54$. שוויון כש-$\\tfrac{1}{A}=\\tfrac{1}{B}=\\tfrac{2}{C}=\\tfrac{1}{3}$, כלומר $A=B=3, C=6$.\n\n$$\\boxed{\\;\\tfrac{x}{3}+\\tfrac{y}{3}+\\tfrac{z}{6}=1\\Leftrightarrow 2x+2y+z=6;\\quad V_{\\min}=\\tfrac{54}{6}=9.\\;}$$"
+    }
+  ]
+}

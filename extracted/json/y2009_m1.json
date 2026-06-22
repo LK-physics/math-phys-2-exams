@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2009_m1",
+  "year": 2009,
+  "moed": "א",
+  "date": "2009-07-16",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2009_s2m1y09.pdf",
+  "questions": [
+    {
+      "qid": "y2009_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "מסות במשקל של $1,2$ ו-$3$ ק״ג נמצאות במישור $xy$ בנקודות $(0,1), (1,0)$ ו-$(2,3)$ בהתאמה. היכן חותך את מישור $xy$ ציר סיבוב בכיוון $z$ אשר סביבו מומנט האינרציה של $3$ המסות מינימלי?",
+      "solution_he": "**עיקרון:** $I$ מינימלי כשהציר עובר דרך **מרכז המסה**.\n\n$M=1+2+3=6$.\n$$\\bar x=\\tfrac{1\\cdot 0+2\\cdot 1+3\\cdot 2}{6}=\\tfrac{8}{6}=\\tfrac{4}{3},\\quad\\bar y=\\tfrac{1\\cdot 1+2\\cdot 0+3\\cdot 3}{6}=\\tfrac{10}{6}=\\tfrac{5}{3}.$$\n\n$$\\boxed{\\;\\text{הציר חוצה את }xy\\text{ ב-}(\\tfrac{4}{3},\\tfrac{5}{3},0).\\;}$$\n\n**ערך $I_{\\min}$:** $I_O=1\\cdot 1+2\\cdot 1+3\\cdot 13=42$. $d^2=(4/3)^2+(5/3)^2=41/9$. $I_{\\min}=I_O-Md^2=42-6\\cdot 41/9=42-82/3=\\tfrac{44}{3}\\approx 14.67$ ק״ג·מ²."
+    },
+    {
+      "qid": "y2009_m1_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתון המשטח $z=-2x^2-y^2$. יש למצוא נקודה על פני המשטח בה המישור המשיק מקביל למישור $2x+y+2z=10$.",
+      "solution_he": "**נורמל למשטח** $F=z+2x^2+y^2$: $\\nabla F=(4x,2y,1)$.\n\n**מקביליות ל-$(2,1,2)$:** $\\frac{4x}{2}=\\frac{2y}{1}=\\frac{1}{2}$.\n\nמהשוויון האחרון: $4x=1\\Rightarrow x=\\tfrac{1}{4}$; $2y=\\tfrac{1}{2}\\Rightarrow y=\\tfrac{1}{4}$.\n\n**$z$ במשטח:** $z=-2(\\tfrac{1}{16})-\\tfrac{1}{16}=-\\tfrac{1}{8}-\\tfrac{1}{16}=-\\tfrac{3}{16}$.\n\n$$\\boxed{\\;\\left(\\tfrac{1}{4},\\tfrac{1}{4},-\\tfrac{3}{16}\\right).\\;}$$"
+    },
+    {
+      "qid": "y2009_m1_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא וקטור $\\vec u$ שמקביל למישור $x-y+z=4$ וניצב לוקטור $\\vec v=\\hat i-\\hat j+3\\hat k$.",
+      "solution_he": "**אסטרטגיה:** $\\vec u$ מקביל למישור ⇒ $\\vec u\\perp\\vec n$ עם $\\vec n=(1,-1,1)$. $\\vec u\\perp\\vec v$. שילוב: $\\vec u\\parallel\\vec n\\times\\vec v$.\n\n$$\\vec n\\times\\vec v=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\1&-1&1\\\\1&-1&3\\end{vmatrix}=\\hat i(-3+1)-\\hat j(3-1)+\\hat k(-1+1)=(-2,-2,0).$$\n\nלאחר נורמליזציה (פעמיים $-1$ במציאת כיוון):\n$$\\boxed{\\;\\vec u=(1,1,0)\\;\\text{(או כפל סקלרי).}\\;}$$\n\n**אימות:** $\\vec u\\cdot\\vec n=1-1+0=0$ ✓ (מקביל למישור). $\\vec u\\cdot\\vec v=1-1+0=0$ ✓ (ניצב ל-$\\vec v$)."
+    },
+    {
+      "qid": "y2009_m1_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את טור פוריה של הפונקציה $|x|$ המוגדרת בתחום $[-\\pi,\\pi]$.",
+      "solution_he": "**$|x|$ זוגית** ⇒ $b_n=0$.\n\n**$a_0$:** $a_0=\\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi|x|dx=\\tfrac{2}{\\pi}\\int_0^\\pi x\\,dx=\\tfrac{2}{\\pi}\\cdot\\tfrac{\\pi^2}{2}=\\pi$.\n\n**$a_n$:** $a_n=\\tfrac{2}{\\pi}\\int_0^\\pi x\\cos(nx)dx=\\tfrac{2}{\\pi}\\bigl[\\tfrac{x\\sin nx}{n}+\\tfrac{\\cos nx}{n^2}\\bigr]_0^\\pi=\\tfrac{2}{\\pi}\\cdot\\tfrac{(-1)^n-1}{n^2}$.\n\n* $n$ זוגי: $a_n=0$.\n* $n$ אי-זוגי: $a_n=-\\tfrac{4}{\\pi n^2}$.\n\n$$\\boxed{\\;|x|=\\tfrac{\\pi}{2}-\\tfrac{4}{\\pi}\\sum_{k=0}^\\infty\\tfrac{\\cos((2k+1)x)}{(2k+1)^2}.\\;}$$\n\n**מסקנה — Basel האי-זוגי:** ב-$x=0$: $0=\\tfrac{\\pi}{2}-\\tfrac{4}{\\pi}\\sum\\tfrac{1}{(2k+1)^2}\\Rightarrow\\sum_{k=0}^\\infty\\tfrac{1}{(2k+1)^2}=\\tfrac{\\pi^2}{8}$."
+    },
+    {
+      "qid": "y2009_m1_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\iint_G\\vec F\\cdot\\hat n\\,ds$ עבור $G$ הוא משטח הנתון ע״י $2z=10-xy$ כאשר $x^2+y^2\\le 1$ ו-$\\vec F(x,y,z)=(y,x,1)$.\n\nב. נתון החרוט $z^2=4(x^2+y^2)$ שבסיסו במישור $z=4$ ואשר צפיפות המסה שלו היא $\\rho(x,y,z)=z\\,\\dfrac{x^2}{x^2+y^2}$. יש לחשב את מרכז המסה של החרוט.\n\nג. נתון המשטח $S$ המתואר ע״י $z=4-2\\sqrt{x^2+y^2}$ עבור $x^2+y^2\\le 4$. יש לחשב את $\\iint_S z^2(x^2+y^2)ds$.\n\nד. יש לחשב את $\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=\\bigl(y^3+\\dfrac{2x+10}{100+x^2+x^7}\\bigr)\\hat i+(x^3+e^{y^3})\\hat j+\\hat k$, והמסלול $C$ נתון ע״י $x(t)=\\sin t, y(t)=\\cos t, z(t)=2\\cos t+3\\sin t$ עבור $0\\le t\\le 2\\pi$.\n\nה. המשטח $S$ הוא חלק מהמישור $x+y+z=3$ הנמצא בתוך הגליל $x^2+y^2=5$. מה גודל המשטח $S$ ומה ערך האינטגרל $\\iint_S\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=\\hat i+x^2\\hat j+y^2\\hat k$?",
+      "solution_he": "**(א) שטף דרך גרף.** $z=5-\\tfrac{xy}{2}$, $\\vec n dS=(\\tfrac{y}{2},\\tfrac{x}{2},1)dA$.\n\n$\\vec F\\cdot\\vec n=\\tfrac{y^2}{2}+\\tfrac{x^2}{2}+1=\\tfrac{r^2}{2}+1$.\n\n$$\\iint=\\int_0^{2\\pi}\\!\\!\\int_0^1(\\tfrac{r^2}{2}+1)r\\,dr\\,d\\theta=2\\pi(\\tfrac{1}{8}+\\tfrac{1}{2})=$$\n$$\\boxed{\\;\\tfrac{5\\pi}{4}.\\;}$$\n\n---\n\n**(ב) COM של חרוט.** בגליליות, $z=2r$ (חרוט), בסיס $r=2$ ב-$z=4$, גוף $r\\le z/2$, $z\\in[2r,4]$. צפיפות $\\rho=z\\cos^2\\theta$.\n\n**מסה:**\n$$M=\\int_0^{2\\pi}\\!\\cos^2\\theta d\\theta\\!\\int_0^2 r\\,dr\\!\\int_{2r}^4 z\\,dz=\\pi\\!\\int_0^2 r(8-2r^2)dr=\\pi[4r^2-\\tfrac{r^4}{2}]_0^2=8\\pi.$$\n\n**$\\bar x,\\bar y$:** $x\\rho$ נושא $\\cos^3\\theta$ ⇒ $\\int_0^{2\\pi}\\cos^3\\theta=0$. $y\\rho$ נושא $\\sin\\theta\\cos^2\\theta$ ⇒ אינטגרל $=0$. אז $\\bar x=\\bar y=0$.\n\n**$\\bar z$:** $z\\rho=z^2\\cos^2\\theta$:\n$$\\iiint z\\rho dV=\\pi\\!\\int_0^2 r\\!\\int_{2r}^4 z^2 dz\\,dr=\\tfrac{\\pi}{3}\\!\\int_0^2 r(64-8r^3)dr=\\tfrac{\\pi}{3}[32r^2-\\tfrac{8r^5}{5}]_0^2=\\tfrac{\\pi}{3}\\!\\cdot\\!\\tfrac{384}{5}=\\tfrac{128\\pi}{5}.$$\n$\\bar z=\\tfrac{128\\pi/5}{8\\pi}=\\tfrac{16}{5}$.\n\n$$\\boxed{\\;\\text{COM}=(0,0,\\tfrac{16}{5}).\\;}$$\n\n---\n\n**(ג) אינטגרל משטחי על חרוט הפוך.** $z=4-2r$, $z_x^2+z_y^2=4$, $dS=\\sqrt 5\\,r\\,dr\\,d\\theta$.\n\n$z^2(x^2+y^2)=(4-2r)^2 r^2=(16-16r+4r^2)r^2$.\n\n$$\\iint=\\sqrt 5\\!\\cdot 2\\pi\\!\\int_0^2(16r^3-16r^4+4r^5)dr=2\\pi\\sqrt 5[4r^4-\\tfrac{16r^5}{5}+\\tfrac{2r^6}{3}]_0^2.$$\n\nב-$r=2$: $64-\\tfrac{512}{5}+\\tfrac{128}{3}$. מכנה משותף 15: $\\tfrac{960-1536+640}{15}=\\tfrac{64}{15}$.\n\n$$\\boxed{\\;\\iint=\\tfrac{128\\pi\\sqrt 5}{15}\\approx 60.0.\\;}$$\n\n---\n\n**(ד) Stokes על מישור $z=3x+2y$.** המסלול נמצא על המישור ($z=3x+2y$ ⇔ $z=3\\sin t+2\\cos t$ ✓) ועל הגליל $r=1$.\n\n**רוטור:** עם $F_1=y^3+g(x)$, $F_2=x^3+e^{y^3}$, $F_3=1$:\n$$\\nabla\\times\\vec F=(0,0,3x^2-3y^2).$$\n\n$\\vec r(x,y)=(x,y,3x+2y)$, $\\vec r_x\\times\\vec r_y=(-3,-2,1)$.\n$(\\nabla\\times\\vec F)\\cdot\\vec n=3x^2-3y^2$.\n\nבפולריות: $x^2-y^2=r^2\\cos(2\\theta)$, $\\int_0^{2\\pi}\\cos(2\\theta)d\\theta=0$.\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=0.\\;}$$\n\n---\n\n**(ה) מישור בתוך גליל.**\n\n**שטח:** היטל מעל $xy$ הוא דיסקה $r\\le\\sqrt 5$ (שטח $5\\pi$). המישור $x+y+z=3$ נוטה מ-$xy$ עם $\\cos\\alpha=\\tfrac{1}{\\sqrt 3}$. שטח האמיתי: $\\tfrac{5\\pi}{\\cos\\alpha}=\\boxed{\\;5\\pi\\sqrt 3.\\;}$\n\n**שטף:** $z=3-x-y$, $\\vec n dS=(1,1,1)dA$.\n$\\vec F\\cdot\\vec n=1+x^2+y^2=1+r^2$.\n\n$$\\iint=\\int_0^{2\\pi}\\!\\!\\int_0^{\\sqrt 5}(1+r^2)r\\,dr\\,d\\theta=2\\pi[\\tfrac{r^2}{2}+\\tfrac{r^4}{4}]_0^{\\sqrt 5}=2\\pi(\\tfrac{5}{2}+\\tfrac{25}{4})=$$\n$$\\boxed{\\;\\iint_S\\vec F\\cdot\\hat n\\,ds=\\tfrac{35\\pi}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2009_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\displaystyle\\oint_C\\frac{y^3 dx-xy^2 dy}{(x^2+y^2)^2}$ כאשר $C$ הוא היקף האליפסה $2x^2+3y^2=1$ בכיוון מנוגד לכיוון השעון.",
+      "solution_he": "(שאלה זהה — מועדים א׳ 2010, 2011, 2012!)\n\nרוטור $=0$ מחוץ לראשית ⇒ האינטגרל זהה לאינטגרל על מעגל קטן סביב הראשית.\n\nעל $x=\\epsilon\\cos t, y=\\epsilon\\sin t$: $\\oint=\\int_0^{2\\pi}-\\sin^2 t\\,dt=$\n$$\\boxed{\\;-\\pi.\\;}$$"
+    }
+  ]
+}
