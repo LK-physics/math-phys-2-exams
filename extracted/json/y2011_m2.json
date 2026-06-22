@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2011_m2",
+  "year": 2011,
+  "moed": "ב",
+  "date": "2011",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2011_s2m2y11.pdf",
+  "questions": [
+    {
+      "qid": "y2011_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y)=x^3-y^3-2xy+2$. יש למצוא ולאפיין את כל נקודות הקיצון.",
+      "solution_he": "**נגזרות:** $f_x=3x^2-2y$, $f_y=-3y^2-2x$.\n\n**מערכת:** $f_x=0\\Rightarrow y=\\tfrac{3x^2}{2}$. הצבה ב-$f_y=0$: $-3(\\tfrac{3x^2}{2})^2-2x=0\\Rightarrow -\\tfrac{27x^4}{4}=2x\\Rightarrow x(8+27x^3)=0$.\n\n**שתי נקודות:**\n* $x=0\\Rightarrow y=0$: נקודה $(0,0)$.\n* $x^3=-\\tfrac{8}{27}\\Rightarrow x=-\\tfrac{2}{3}\\Rightarrow y=\\tfrac{3\\cdot 4/9}{2}=\\tfrac{2}{3}$: נקודה $(-\\tfrac{2}{3},\\tfrac{2}{3})$.\n\n**הסיאן:** $f_{xx}=6x$, $f_{yy}=-6y$, $f_{xy}=-2$.\n\n**ב-$(0,0)$:** $D=0\\cdot 0-4=-4<0$ ⇒ **נקודת אוכף**.\n\n**ב-$(-\\tfrac{2}{3},\\tfrac{2}{3})$:** $f_{xx}=-4$, $f_{yy}=-4$, $f_{xy}=-2$. $D=16-4=12>0$ ו-$f_{xx}<0$ ⇒ **מקסימום מקומי**.\n\n**ערך:** $f(-\\tfrac23,\\tfrac23)=-\\tfrac{8}{27}-\\tfrac{8}{27}+\\tfrac{8}{9}+2=\\tfrac{-16+24+54}{27}=\\tfrac{62}{27}\\approx 2.30$.\n\n$$\\boxed{\\;(0,0)\\text{ נקודת אוכף};\\quad(-\\tfrac23,\\tfrac23)\\text{ מקסימום מקומי, }f=\\tfrac{62}{27}.\\;}$$"
+    },
+    {
+      "qid": "y2011_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y,z)=\\sin(xyz)$. יש לחשב את $\\dfrac{\\partial^3 f}{\\partial x\\,\\partial y\\,\\partial z}$.",
+      "solution_he": "סמן $u=xyz$. $f=\\sin u$.\n\n**שלב 1:** $f_z=u_z\\cos u=xy\\cos u$.\n\n**שלב 2:** $f_{zy}=\\partial_y(xy\\cos u)=x\\cos u+xy\\cdot(-\\sin u)\\cdot u_y=x\\cos u-x^2 yz\\sin u$.\n\n**שלב 3:** $f_{zyx}=\\partial_x[x\\cos u-x^2 yz\\sin u]$:\n* $\\partial_x(x\\cos u)=\\cos u+x\\cdot(-\\sin u)\\cdot u_x=\\cos u-xyz\\sin u$.\n* $\\partial_x(x^2 yz\\sin u)=2xyz\\sin u+x^2 yz\\cos u\\cdot u_x=2xyz\\sin u+x^2 y^2 z^2\\cos u$.\n\n**צירוף:**\n$$f_{zyx}=\\cos u-xyz\\sin u-2xyz\\sin u-x^2 y^2 z^2\\cos u.$$\n\n$$\\boxed{\\;\\dfrac{\\partial^3 f}{\\partial x\\,\\partial y\\,\\partial z}=(1-x^2 y^2 z^2)\\cos(xyz)-3xyz\\sin(xyz).\\;}$$\n\n(לפי שוויון של Schwarz, סדר הנגזרות שווה ערך.)"
+    },
+    {
+      "qid": "y2011_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "באילו נקודות חותך המסלול $\\vec r=t\\hat i+t^2\\hat j-3t\\hat k$ את המשטח $z=y-3x^2$, ומה הזווית בין המשיק למסלול לבין הנורמל למשטח באותן נקודות?",
+      "solution_he": "**חיתוך:** הצבה: $-3t=t^2-3t^2=-2t^2\\Rightarrow 2t^2-3t=0\\Rightarrow t(2t-3)=0$.\n\n**שתי נקודות:**\n* $t=0$: $\\vec r=(0,0,0)$.\n* $t=\\tfrac{3}{2}$: $\\vec r=(\\tfrac{3}{2},\\tfrac{9}{4},-\\tfrac{9}{2})$.\n\n**וקטור משיק:** $\\vec T=\\vec r\\,'(t)=(1,2t,-3)$.\n\n**נורמל למשטח** $F=y-3x^2-z=0$: $\\vec N=\\nabla F=(-6x,1,-1)$.\n\n**נקודה 1 — $(0,0,0)$:**\n$\\vec T=(1,0,-3)$, $|\\vec T|=\\sqrt{10}$.\n$\\vec N=(0,1,-1)$, $|\\vec N|=\\sqrt 2$.\n$\\vec T\\cdot\\vec N=0+0+3=3$.\n$\\cos\\theta_1=\\tfrac{3}{\\sqrt{20}}=\\tfrac{3}{2\\sqrt 5}$ ⇒ $\\theta_1=\\arccos\\tfrac{3}{2\\sqrt 5}\\approx 47.9°$.\n\n**נקודה 2 — $(\\tfrac{3}{2},\\tfrac{9}{4},-\\tfrac{9}{2})$:**\n$\\vec T=(1,3,-3)$, $|\\vec T|=\\sqrt{19}$.\n$\\vec N=(-9,1,-1)$, $|\\vec N|=\\sqrt{83}$.\n$\\vec T\\cdot\\vec N=-9+3+3=-3$.\n$\\cos\\theta_2=-\\tfrac{3}{\\sqrt{1577}}\\approx -0.0756$ ⇒ $\\theta_2\\approx 94.3°$ (או $85.7°$ אם בוחנים זווית בלתי כיוונית).\n\n$$\\boxed{\\;(0,0,0):\\;\\theta\\approx 47.9°;\\quad(\\tfrac{3}{2},\\tfrac{9}{4},-\\tfrac{9}{2}):\\;\\theta\\approx 85.7°\\text{ או }94.3°.\\;}$$"
+    },
+    {
+      "qid": "y2011_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא טור פוריה עם פונקציות קוסינוס בלבד של הפונקציה $f(x)=\\cos x-\\sin x$ המוגדרת בתחום $(0,\\pi/4)$.",
+      "solution_he": "**טור קוסינוסים על $(0,\\pi/4)$:**\n$$f(x)=\\tfrac{a_0}{2}+\\sum_{n=1}^\\infty a_n\\cos(4nx),\\qquad a_n=\\tfrac{8}{\\pi}\\!\\int_0^{\\pi/4}f(x)\\cos(4nx)dx.$$\n\n**מקדם DC:** $a_0=\\tfrac{8}{\\pi}[\\sin x+\\cos x]_0^{\\pi/4}=\\tfrac{8}{\\pi}(\\sqrt 2-1)$.\n\n**מקדמים $a_n$.** זהויות:\n$\\cos x\\cos(4nx)=\\tfrac{1}{2}[\\cos((4n-1)x)+\\cos((4n+1)x)]$,\n$\\sin x\\cos(4nx)=\\tfrac{1}{2}[\\sin((4n+1)x)-\\sin((4n-1)x)]$.\n\nעם הסימון $c_n=(-1)^n/\\sqrt 2$ (כפי שחושב במועד א׳ ש׳4) ואינטגרציה עד $\\pi/4$, מתקבל לאחר צמצומים:\n$$a_n=\\frac{4(1-2c_n)}{\\pi}\\!\\left[\\frac{1}{4n-1}-\\frac{1}{4n+1}\\right]=\\frac{8(1-2c_n)}{\\pi(16n^2-1)}.$$\n\nהצבה $1-2c_n=1-\\sqrt 2(-1)^n$:\n\n$$\\boxed{\\;\\cos x-\\sin x=\\frac{4(\\sqrt 2-1)}{\\pi}+\\sum_{n=1}^\\infty\\frac{8\\bigl(1-(-1)^n\\sqrt 2\\bigr)}{\\pi(16n^2-1)}\\cos(4nx).\\;}$$\n\n**אימות $x=0$:** $f(0)=1$. $a_0/2=\\tfrac{4(\\sqrt 2-1)}{\\pi}\\approx 0.527$. $a_1=\\tfrac{8(1+\\sqrt 2)}{15\\pi}\\approx 0.410$. סכום עוצר חלקי $\\to 1$ ✓."
+    },
+    {
+      "qid": "y2011_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. נתון כדור שמרכזו בראשית ורדיוסו $1$ ואשר צפיפות המסה שלו $\\delta$ נתונה ע״י $\\delta=1+z^2-x$. יש למצוא את מרכז המסה של הכדור ואת מומנט האינרציה שלו (סביב ציר $z$).\n\nב. יש לחשב את השטח התחום בין $x^{2/3}+y^{2/3}=a^{2/3}$ ($x$ ו-$y$ לא שליליים) והצירים $x$ ו-$y$.\n\nג. $G$ הוא הנפח התחום בין המשטח $z=-2+x^2+y^2$ למשטח $z=4-2x^2-2y^2$, ו-$S$ המעטפת של $G$. יש לחשב את $\\iint_S\\vec F\\cdot\\hat n\\,ds$, $\\vec F=(x+z^2)\\hat i-xy\\hat j+yz\\hat k$.\n\nד. נתונה הפונקציה הוקטורית $\\vec F=e^{-k(x^2+y^2+z^2)}(x\\hat i+y\\hat j+z\\hat k)$. יש לחשב את $\\iiint_G\\nabla\\cdot\\vec F\\,dV$ כאשר $G$ הוא נפח כדור שמרכזו בראשית ורדיוסו $5$.\n\nה. המסלול הסגור $c$ נתון ע״י $r=2-\\sin\\theta$ עבור $0\\le\\theta\\le 2\\pi$. יש לחשב את $\\oint_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(y+y^2)\\hat i-x\\hat j$ והולכים בניגוד לכיוון השעון.",
+      "solution_he": "**(א) מסה, COM, MOI של כדור עם צפיפות $\\delta=1+z^2-x$.**\n\n**מסה.** סימטריה: $\\iiint x=0$. $\\iiint 1=\\tfrac{4\\pi}{3}$, $\\iiint z^2=\\tfrac{1}{3}\\iiint r^2=\\tfrac{1}{3}\\cdot 4\\pi\\!\\int_0^1 r^4 dr=\\tfrac{4\\pi}{15}$.\n$$M=\\tfrac{4\\pi}{3}+\\tfrac{4\\pi}{15}=\\tfrac{8\\pi}{5}.$$\n\n**COM:** $\\iiint x\\,\\delta\\,dV=\\iiint x(1+z^2-x)dV=0+0-\\iiint x^2 dV=-\\tfrac{4\\pi}{15}$.\n$\\iiint y\\,\\delta=0$, $\\iiint z\\,\\delta=0$ (כל איברים אי-זוגיים מתאפסים).\n$$\\bar x=\\tfrac{-4\\pi/15}{8\\pi/5}=-\\tfrac{1}{6},\\quad\\bar y=\\bar z=0.$$\n$$\\boxed{\\;\\text{COM}=(-\\tfrac{1}{6},0,0).\\;}$$\n\n**$I_z=\\iiint(x^2+y^2)\\delta\\,dV$.** עם $x^2+y^2=r^2-z^2$:\n* $\\iiint(r^2-z^2)\\cdot 1\\,dV=\\tfrac{4\\pi}{5}-\\tfrac{4\\pi}{15}=\\tfrac{8\\pi}{15}$.\n* $\\iiint(r^2-z^2)z^2 dV$: בכדור-ספרי, $z=r\\cos\\phi$. $\\iiint r^2 z^2=2\\pi\\cdot\\tfrac{2}{3}\\cdot\\tfrac{1}{7}=\\tfrac{4\\pi}{21}$. $\\iiint z^4=2\\pi\\cdot\\tfrac{2}{5}\\cdot\\tfrac{1}{7}=\\tfrac{4\\pi}{35}$. הפרש: $\\tfrac{4\\pi}{21}-\\tfrac{4\\pi}{35}=\\tfrac{20-12}{105}\\pi=\\tfrac{8\\pi}{105}$.\n* $\\iiint(r^2-z^2)(-x)dV=0$ (אי-זוגי).\n\n$$\\boxed{\\;I_z=\\tfrac{8\\pi}{15}+\\tfrac{8\\pi}{105}=\\tfrac{56\\pi+8\\pi}{105}=\\tfrac{64\\pi}{105}\\approx 1.915.\\;}$$\n\n---\n\n**(ב) אסטרואיד-רביע (זהה ל-2012 מועד א׳ ש׳5ה).** $A=\\tfrac{3\\pi a^2}{32}$ (פתרון מלא שם).\n\n---\n\n**(ג) דיברגנץ.** $\\nabla\\cdot\\vec F=1+(-x)+y=1-x+y$. סימטריה $z$-צירית של $G$ מתאפסת איברי $x,y$:\n$$\\iiint(1-x+y)dV=V.$$\n\n**נפח $G$:** חיתוך הפרבולואידים: $-2+r^2=4-2r^2\\Rightarrow r^2=2$.\n$$V=\\!\\iint_{r^2\\le 2}\\![(4-2r^2)-(-2+r^2)]dA=3\\!\\iint_{r\\le\\sqrt 2}(2-r^2)dA=6\\pi(2-1)=6\\pi.$$\n\n$$\\boxed{\\;\\iint_S\\vec F\\cdot\\hat n\\,ds=6\\pi.\\;}$$\n\n---\n\n**(ד) דיברגנץ של שדה רדיאלי גאוסיני.** הזהות $\\nabla\\cdot(e^{-kr^2}\\vec r)=3e^{-kr^2}-2kr^2 e^{-kr^2}=(3-2kr^2)e^{-kr^2}$.\n\n**טריק נחמד:** $\\dfrac{d}{dr}\\bigl[r^3 e^{-kr^2}\\bigr]=3r^2 e^{-kr^2}-2kr^4 e^{-kr^2}=r^2(3-2kr^2)e^{-kr^2}$.\n\nלכן באינטגרציה ב-$dV=4\\pi r^2 dr$:\n$$\\iiint_G\\nabla\\cdot\\vec F\\,dV=4\\pi\\!\\int_0^5\\!(3-2kr^2)e^{-kr^2}r^2 dr=4\\pi[r^3 e^{-kr^2}]_0^5=$$\n$$\\boxed{\\;500\\pi e^{-25k}.\\;}$$\n\n(אימות חלופי דרך משפט הדיברגנץ: שטף דרך הספירה $\\vec F\\cdot\\hat r=e^{-25k}\\cdot 5$ קבוע, שטח $4\\pi\\cdot 25$, שטף $=500\\pi e^{-25k}$.)\n\n---\n\n**(ה) Green.** $\\partial_x F_2-\\partial_y F_1=-1-(1+2y)=-2-2y$.\n\n$\\oint=\\iint_D(-2-2y)dA=-2A-2\\iint y\\,dA$.\n\n**שטח** $r=2-\\sin\\theta$: $A=\\tfrac{1}{2}\\int_0^{2\\pi}(2-\\sin\\theta)^2 d\\theta=\\tfrac{1}{2}(8\\pi+\\pi)=\\tfrac{9\\pi}{2}$.\n\n**$\\iint y\\,dA$:** $\\tfrac{1}{3}\\int_0^{2\\pi}\\sin\\theta(2-\\sin\\theta)^3 d\\theta$. הרחבה: $(2-\\sin\\theta)^3=8-12\\sin\\theta+6\\sin^2\\theta-\\sin^3\\theta$. כפל ב-$\\sin\\theta$ ואינטגרציה: $0-12\\pi+0-\\tfrac{3\\pi}{4}=-\\tfrac{51\\pi}{4}$. לכן $\\iint y\\,dA=-\\tfrac{17\\pi}{4}$.\n\n$$\\oint=-9\\pi-2\\cdot(-\\tfrac{17\\pi}{4})=-9\\pi+\\tfrac{17\\pi}{2}=\\tfrac{-18\\pi+17\\pi}{2}=-\\tfrac{\\pi}{2}.$$\n\n$$\\boxed{\\;\\oint_c\\vec F\\cdot d\\vec r=-\\tfrac{\\pi}{2}.\\;}$$"
+    },
+    {
+      "qid": "y2011_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** נתון האינטגרל $\\displaystyle\\oint_C(x^5-6y+y^3)dx+(y^4+6x-x^3)dy$ כאשר $C$ הוא מסלול פשוט בניגוד לכיוון השעון. מה הערך החיובי המקסימלי שיכול לקבל האינטגרל?",
+      "solution_he": "**Green:** $\\partial_x F_2-\\partial_y F_1=(6-3x^2)-(-6+3y^2)=12-3(x^2+y^2)=3(4-r^2)$.\n\n$$\\oint=\\iint_D 3(4-r^2)dA.$$\n\n**אופטימיזציה:** האינטגרנד חיובי כאשר $r<2$ ושלילי כאשר $r>2$. כדי למקסם, בוחרים את $D$ להיות **בדיוק** הדיסקה $r\\le 2$ (הכללת תחום עם $r>2$ מצמצמת את האינטגרל).\n\n**חישוב על $D=\\{r\\le 2\\}$:**\n$$\\iint_D(4-r^2)dA=2\\pi\\!\\int_0^2(4-r^2)r\\,dr=2\\pi[2r^2-\\tfrac{r^4}{4}]_0^2=2\\pi(8-4)=8\\pi.$$\n\n$$\\boxed{\\;\\max\\oint=3\\cdot 8\\pi=24\\pi\\approx 75.4.\\;}$$\n\n**הערה:** המסלול המקסמלי הוא המעגל $x^2+y^2=4$ בכיוון נגד השעון. כל מסלול פשוט אחר ייתן ערך נמוך יותר."
+    }
+  ]
+}

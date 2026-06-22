@@ -1,0 +1,69 @@
+{
+  "exam_id": "y2010_m2",
+  "year": 2010,
+  "moed": "ב",
+  "date": "2010-08-26",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2010_s2m2y10.pdf",
+  "questions": [
+    {
+      "qid": "y2010_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא 3 מספרים חיוביים שמכפלתם $10$ אשר עבורם מקבלת הפונקציה $f=2xy+2xz+yz$ ערך מקסימלי. (הערה: עם אילוץ $xyz=10$ הפונקציה אינה חסומה מעל, ולכן יש להבין את השאלה כחיפוש ערך **מינימלי**.)",
+      "solution_he": "**זיהוי טבע הבעיה.** לאורך המסלול $x=\\epsilon,\\,y=1/\\epsilon,\\,z=10\\epsilon$, $f=2+20\\epsilon+10/\\epsilon\\to\\infty$ ($\\epsilon\\to 0$). לכן אין מקסימום. AM-GM נותן חסם מלמטה: $f\\ge 3\\sqrt[3]{(2xy)(2xz)(yz)}=3\\sqrt[3]{4(xyz)^2}=3\\sqrt[3]{400}=6\\sqrt[3]{50}$.\n\nלכן נפתור עבור **מינימום**.\n\n**לגראנז׳:** $\\nabla f=\\lambda\\nabla(xyz)$, $\\nabla f=(2y+2z,2x+z,2x+y)$, $\\nabla(xyz)=(yz,xz,xy)$.\n\nהכפלת המשוואות ב-$x,y,z$ בהתאמה ושוויון:\n$2xy+2xz=2xy+yz=2xz+yz$. הפרשים נותנים $z(2x-y)=0$ ו-$y(2x-z)=0$, ולכן $y=z=2x$.\n\n**הצבה באילוץ:** $4x^3=10\\Rightarrow x=\\sqrt[3]{5/2}$, $y=z=2\\sqrt[3]{5/2}=\\sqrt[3]{20}$.\n\n$$\\boxed{\\;x=\\sqrt[3]{5/2},\\quad y=z=\\sqrt[3]{20};\\quad f_{\\min}=12x^2=12\\sqrt[3]{(5/2)^2}=6\\sqrt[3]{50}\\approx 22.1.\\;}$$\n\n**אימות שוויון AM-GM:** הוא מושג כש-$2xy=2xz=yz$, כלומר $y=z$ ו-$2x=y$ ✓."
+    },
+    {
+      "qid": "y2010_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y)=\\sinh(x/y)$. יש למצוא את נגזרת הפונקציה בנקודה $(1,1)$ לכיוון הראשית.",
+      "solution_he": "**גרדיאנט:** $\\nabla f=\\cosh(x/y)\\cdot(1/y,-x/y^2)$.\n\n**ב-$(1,1)$:** $\\nabla f=\\cosh(1)(1,-1)$.\n\n**כיוון לעבר הראשית** מ-$(1,1)$: $\\hat u=-(1,1)/\\sqrt 2$.\n\n**נגזרת כיוונית:**\n$$D_{\\hat u}f=\\cosh(1)(1,-1)\\cdot\\tfrac{-(1,1)}{\\sqrt 2}=\\tfrac{\\cosh(1)}{\\sqrt 2}(-1+1)=0.$$\n\n$$\\boxed{\\;D_{\\hat u}f=0.\\;}$$\n\n**אינטואיציה גאומטרית:** $f$ תלויה רק ב-$x/y$. לאורך כל ישר דרך הראשית, $x/y$ קבוע, ולכן $f$ קבועה. כיוון לעבר הראשית = כיוון רדיאלי = לאורך ישר דרך הראשית → אין שינוי."
+    },
+    {
+      "qid": "y2010_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "גוף נע בתאוצה של $\\vec a(t)=\\tfrac{1}{t}\\hat i+t\\hat j$. היכן הוא נמצא ב-$t=5$ אם נתון שב-$t=0$ הוא נמצא ב-$\\vec r(0)=\\hat i+\\hat j$ ושמהירותו בזמן $t=0$ היא $\\vec v(0)=10\\hat i$? (הערה: לתאוצה $1/t$ סינגולריות ב-$t=0$; מתמטית הטיפול הוא פורמלי. נשתמש ב-$\\int_0^t\\!\\frac{ds}{s}=\\ln t$ כפרשנות סטנדרטית לשאלה.)",
+      "solution_he": "**הערה — סינגולריות:** $a_x=1/t$ אינה אינטגרבילית מ-$0$. נפרש את הבעיה פורמלית: $v_x(t)=v_x(0)+\\ln t$ (חוץ-יציאה ל-$\\ln 0$ מאוזנת ב-IC). חלק $j$ רגולרי.\n\n**אינטגרציה:**\n$$\\vec v(t)=(10+\\ln t)\\hat i+\\tfrac{t^2}{2}\\hat j.$$\n\n$$\\vec r(t)=\\vec r(0)+\\int_0^t\\vec v\\,ds=(1+10t+t\\ln t-t)\\hat i+(1+\\tfrac{t^3}{6})\\hat j=(1+9t+t\\ln t)\\hat i+(1+\\tfrac{t^3}{6})\\hat j.$$\n\n(אינטגרל $\\int_0^t\\ln s\\,ds=s\\ln s-s\\big|_0^t=t\\ln t-t$, כאשר $\\lim_{s\\to 0^+}s\\ln s=0$.)\n\n**ב-$t=5$:**\n$$\\boxed{\\;\\vec r(5)=(46+5\\ln 5)\\hat i+\\tfrac{131}{6}\\hat j\\approx(54.05,\\,21.83).\\;}$$\n\n**הערה — אם IC ב-$t=1$ במקום $t=0$:** $\\vec r(5)=(37+5\\ln 5)\\hat i+\\tfrac{59}{3}\\hat j$. (פרשנות אלטרנטיבית מקובלת.)"
+    },
+    {
+      "qid": "y2010_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא פיתוח של הפונקציה $\\sinh x$ המוגדרת בתחום $[0,1]$ בטור של קוסינוסים.",
+      "solution_he": "**טור קוסינוסים על $(0,1)$:** $\\sinh x=\\tfrac{a_0}{2}+\\sum a_n\\cos(n\\pi x)$, $a_n=2\\int_0^1\\sinh x\\cos(n\\pi x)dx$.\n\n**$a_0$:** $a_0=2\\int_0^1\\sinh x\\,dx=2[\\cosh x]_0^1=2(\\cosh 1-1)$.\n\n**$a_n$:** עם $\\sinh x=\\tfrac{e^x-e^{-x}}{2}$ ו-$\\int e^{ax}\\cos(bx)dx=\\tfrac{e^{ax}(a\\cos bx+b\\sin bx)}{a^2+b^2}$:\n$$\\int_0^1 e^x\\cos(n\\pi x)dx=\\tfrac{e(-1)^n-1}{1+n^2\\pi^2},\\quad\\int_0^1 e^{-x}\\cos(n\\pi x)dx=\\tfrac{1-(-1)^n/e}{1+n^2\\pi^2}.$$\n\nהפרש (כפול $\\tfrac{1}{2}$):\n$$\\int_0^1\\sinh x\\cos(n\\pi x)dx=\\tfrac{(-1)^n(e+1/e)-2}{2(1+n^2\\pi^2)}=\\tfrac{(-1)^n\\cosh 1-1}{1+n^2\\pi^2}.$$\n\n$$a_n=\\tfrac{2[(-1)^n\\cosh 1-1]}{1+n^2\\pi^2}.$$\n\n**טור פוריה:**\n$$\\boxed{\\;\\sinh x=(\\cosh 1-1)+\\sum_{n=1}^\\infty\\tfrac{2[(-1)^n\\cosh 1-1]}{1+n^2\\pi^2}\\cos(n\\pi x).\\;}$$\n\n**ערכים מפורשים:** $a_1=\\tfrac{2(-\\cosh 1-1)}{1+\\pi^2}\\approx -0.430$; $a_2=\\tfrac{2(\\cosh 1-1)}{1+4\\pi^2}\\approx 0.0265$."
+    },
+    {
+      "qid": "y2010_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\iint_G\\vec F\\cdot\\hat n\\,ds$ כאשר $G$ הוא חלק המישור $x+y+z=1$ עבורו $x,y,z\\ge 0$, ו-$\\vec F(x,y,z)=(z,y,x)$.\n\nב. נתון כדור שמרכזו בראשית ורדיוסו $1$ ואשר צפיפות המסה שלו היא $\\rho(x,y,z)=z^2$. מה מסת הכדור ומה מומנט האינרציה שלו יחסית לציר $z$?\n\nג. נתון המשטח $S$ שהוא משולש שקודקודיו $(0,0,0), (1,0,1)$ ו-$(0,1,1)$. יש לחשב את $\\oint_c\\vec F\\cdot d\\vec r$ כאשר $c$ הוא היקף $S$ בכיוון מנוגד לכיוון השעון ו-$\\vec F=y^2\\hat i+x^2\\hat j+\\hat k$.\n\nד. יש לחשב את $\\int_C\\vec F\\cdot d\\vec r$ כאשר $C$ הוא מסלול במישור $xy$ בכיוון מנוגד לכיוון השעון על פני היקף האליפסה $x^2/4+y^2=1$ מהנקודה $(2,0)$ עד לנקודה $(-2,0)$ ו-$\\vec F=e^{\\sin y}\\hat i+2xe^{y^2}\\hat j+10\\hat k$.\n\nה. נתון המסלול $r=2+\\cos\\theta$ עבור $0\\le\\theta\\le 2\\pi$. יש לחשב את השטח התחום ע״י המסלול ואת הנפח שמתקבל מסיבוב גוף זה סביב ציר (רמז: פפוס).",
+      "solution_he": "**(א) שטף דרך משולש שווה צלעות בראשון.** וקטור נורמלי למישור $x+y+z=1$: $\\hat n=(1,1,1)/\\sqrt 3$.\n\nעל המישור: $\\vec F\\cdot\\hat n=(x+y+z)/\\sqrt 3=1/\\sqrt 3$.\n\nשטח המשולש (קודקודים $(1,0,0),(0,1,0),(0,0,1)$): $A=\\tfrac{\\sqrt 3}{2}$.\n\n$$\\boxed{\\;\\iint_G\\vec F\\cdot\\hat n\\,ds=\\tfrac{1}{\\sqrt 3}\\cdot\\tfrac{\\sqrt 3}{2}=\\tfrac{1}{2}.\\;}$$\n\n---\n\n**(ב) מסה ו-$I_z$ עם $\\rho=z^2$.**\n\nבספריות, $z=r\\cos\\phi$, $dV=r^2\\sin\\phi$.\n\n**מסה:** $M=\\int_0^1 r^4 dr\\!\\int_0^{2\\pi}\\!d\\theta\\!\\int_0^\\pi\\!\\cos^2\\phi\\sin\\phi\\,d\\phi=\\tfrac{1}{5}\\cdot 2\\pi\\cdot\\tfrac{2}{3}=\\tfrac{4\\pi}{15}$.\n\n**$I_z$:** $I_z=\\iiint(x^2+y^2)z^2 dV=\\int r^6\\sin^3\\phi\\cos^2\\phi dr d\\theta d\\phi$.\n$\\int_0^\\pi\\sin^3\\phi\\cos^2\\phi d\\phi$: הצבה $u=\\cos\\phi$, $\\sin^2=1-u^2$ → $\\int_{-1}^1(1-u^2)u^2 du=2(\\tfrac{1}{3}-\\tfrac{1}{5})=\\tfrac{4}{15}$.\n\n$$\\boxed{\\;M=\\tfrac{4\\pi}{15};\\quad I_z=2\\pi\\cdot\\tfrac{1}{7}\\cdot\\tfrac{4}{15}=\\tfrac{8\\pi}{105}.\\;}$$\n\n---\n\n**(ג) Stokes על משולש $z=x+y$.** רוטור: $\\nabla\\times(y^2,x^2,1)=(0,0,2x-2y)$.\n\nהקודקודים $(0,0,0),(1,0,1),(0,1,1)$ במישור $z=x+y$ מעל $D=\\{x,y\\ge 0, x+y\\le 1\\}$.\n\n$\\vec r(x,y)=(x,y,x+y)$, $\\vec r_x\\times\\vec r_y=(-1,-1,1)$. אוריינטציה: התאמה ל-CCW.\n\n$(\\nabla\\times\\vec F)\\cdot\\vec n=(2x-2y)\\cdot 1=2x-2y$.\n\nמסימטריה $D$ תחת $x\\leftrightarrow y$: $\\iint_D 2x\\,dA=\\iint_D 2y\\,dA$, ולכן\n\n$$\\boxed{\\;\\oint_c\\vec F\\cdot d\\vec r=\\iint_D(2x-2y)dA=0.\\;}$$\n\n---\n\n**(ד) קו על חצי-אליפסה — דרך גרין.** נסגור עם הקטע $y=0$ מ-$(-2,0)$ ל-$(2,0)$.\n\n**על הקטע:** $F_1=e^0=1$, $\\int_{-2}^2 dx=4$.\n\n**גרין על חצי הדיסקה האליפטית** $D$:\n$$\\partial_x F_2-\\partial_y F_1=2e^{y^2}-e^{\\sin y}\\cos y.$$\nהאינטגרל $\\iint_D(2e^{y^2}-e^{\\sin y}\\cos y)dA$ **אינו אלמנטרי** (האינטגרנדים $e^{y^2}\\sqrt{1-y^2}$ ו-$e^{\\sin y}\\cos y\\sqrt{1-y^2}$ אינם בעלי פרימיטיב סגור).\n\n**הצגה פורמלית:**\n$$\\int_C\\vec F\\cdot d\\vec r=\\iint_D(2e^{y^2}-e^{\\sin y}\\cos y)dA-4.$$\n\n**חישוב נומרי** (סימפסון עם $\\theta$-פרמטריזציה $x=2\\cos t,y=\\sin t$):\n$\\int_0^\\pi[-2\\sin t\\,e^{\\sin(\\sin t)}+4\\cos^2 t\\,e^{\\sin^2 t}]dt\\approx 0.9$.\n\n$$\\boxed{\\;\\int_C\\vec F\\cdot d\\vec r\\approx 0.9.\\;}$$\n\n(התשובה אינה ניתנת לביטוי באמצעות פונקציות אלמנטריות, מה שמרמז על שגיאת הקלדה במקור.)\n\n---\n\n**(ה) לימקון $r=2+\\cos\\theta$.**\n\n**שטח:** $A=\\tfrac{1}{2}\\int_0^{2\\pi}(2+\\cos\\theta)^2 d\\theta=\\tfrac{1}{2}(8\\pi+0+\\pi)=\\boxed{\\;\\tfrac{9\\pi}{2}.\\;}$\n\n**נפח סיבוב סביב ציר $x$** (ציר הסימטריה של הלימקון). הלימקון חוצה את ציר $x$ ב-$(-1,0)$ ו-$(3,0)$ ⇒ נסובב רק את חצי הלימקון העליון.\n\nלפי פפוס: $V=2\\pi\\iint_{\\text{חצי עליון}}y\\,dA$.\n\n$\\iint y\\,dA=\\int_0^\\pi\\sin\\theta\\cdot\\tfrac{r^3(\\theta)}{3}d\\theta=\\tfrac{1}{3}\\int_0^\\pi\\sin\\theta(2+\\cos\\theta)^3 d\\theta$.\n\nהצבה $u=2+\\cos\\theta$, $du=-\\sin\\theta\\,d\\theta$, גבולות $3\\to 1$:\n$=\\tfrac{1}{3}\\int_1^3 u^3 du=\\tfrac{1}{12}(81-1)=\\tfrac{80}{12}=\\tfrac{20}{3}$.\n\n$$\\boxed{\\;V=2\\pi\\cdot\\tfrac{20}{3}=\\tfrac{40\\pi}{3}\\approx 41.9.\\;}$$"
+    },
+    {
+      "qid": "y2010_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "**בונוס.**\n\nא. יש להראות שגוף הנע בהשפעת כוח מרכזי נע במישור קבוע.\n\nב. יש לנסח ולהוכיח את חוק השטחים הזהים (קפלר השני) לגבי תנועת גוף בהשפעת כוח מרכזי.",
+      "solution_he": "**(א) שמירת מומנט הזוויתי ⇒ תנועה במישור.**\n\n**הגדרה:** כוח מרכזי $\\vec F=f(r)\\hat r$, מקביל ל-$\\vec r$ (או אנטיפרלל).\n\n**מומנט זוויתי:** $\\vec L=m\\vec r\\times\\vec v$.\n\n**גזירה:**\n$$\\dot{\\vec L}=m(\\dot{\\vec r}\\times\\vec v+\\vec r\\times\\dot{\\vec v})=m(\\vec v\\times\\vec v+\\vec r\\times\\vec a)=m\\vec r\\times\\vec a.$$\n\nעבור כוח מרכזי, $\\vec a=\\tfrac{f(r)}{mr}\\vec r\\parallel\\vec r$, ולכן $\\vec r\\times\\vec a=0$. מסקנה: **$\\vec L$ קבוע**.\n\n**מסקנה גאומטרית:** אם $\\vec L\\ne 0$, אז בכל זמן $\\vec r\\perp\\vec L$ ו-$\\vec v\\perp\\vec L$. לכן התנועה נמצאת במישור העובר דרך הראשית, ניצב ל-$\\vec L$ הקבוע. (אם $\\vec L=0$, התנועה רדיאלית — במימד 1, גם זה במישור.) $\\square$\n\n---\n\n**(ב) חוק השטחים הזהים (קפלר השני).**\n\n**ניסוח:** רדיוס-וקטור $\\vec r$ של גוף בהשפעת כוח מרכזי סוחף שטחים שווים בזמנים שווים. שקול לכך ש-$\\tfrac{dA}{dt}$ קבוע.\n\n**הוכחה:** השטח האינפיניטסימלי שסוחף $\\vec r$ במשולש עם צלעות $\\vec r$ ו-$d\\vec r$:\n$$dA=\\tfrac{1}{2}|\\vec r\\times d\\vec r|=\\tfrac{1}{2}|\\vec r\\times\\vec v|dt.$$\n\nלכן:\n$$\\frac{dA}{dt}=\\frac{|\\vec r\\times\\vec v|}{2}=\\frac{|\\vec L|}{2m}.$$\n\nמ-(א), $|\\vec L|$ קבוע, ולכן $\\tfrac{dA}{dt}=\\text{const}$. בזמן $\\Delta t$ נסחף שטח $\\Delta A=\\tfrac{|\\vec L|}{2m}\\Delta t$, כלומר זמנים שווים ⇒ שטחים שווים. $\\square$\n\n**רלוונטיות פיזיקלית:** קפלר השני (1609) על תנועת כוכבי לכת — נובע ישירות מהיות הכוח הגרביטציוני מרכזי. תופעה זו אינה תלויה בצורת $f(r)$ — היא תקפה לכל כוח מרכזי, לא רק $1/r^2$."
+    }
+  ]
+}

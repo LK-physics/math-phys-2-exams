@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2012_m2",
+  "year": 2012,
+  "moed": "ב",
+  "date": "2012-09-03",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2012_s2m2y12.pdf",
+  "questions": [
+    {
+      "qid": "y2012_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא ולאפיין את נקודות הקיצון של הפונקציה $f(x,y)=3xe^y-x^3-e^{3y}$.",
+      "solution_he": "**(שאלה זהה ל-2013 מועד א׳ שאלה 1.)**\n\n**נגזרות חלקיות:** $f_x=3e^y-3x^2$, $f_y=3xe^y-3e^{3y}$.\n\n**נקודות קריטיות:** $f_x=0\\Rightarrow e^y=x^2$. $f_y=0\\Rightarrow xe^y=e^{3y}$.\n\nהצבת $e^y=x^2$ בשנייה: $x\\cdot x^2=e^{3y}=(e^y)^3$, ולכן $x=e^y>0$. שילוב עם $e^y=x^2$: $x=x^2\\Rightarrow x=1$, $y=0$.\n\n**נקודה יחידה:** $(1,0)$, $f(1,0)=1$.\n\n**הסיאן:** $f_{xx}=-6$, $f_{yy}=-6$, $f_{xy}=3$, $D=36-9=27>0$, $f_{xx}<0$.\n\n$$\\boxed{\\;(1,0)\\text{ נקודת מקסימום מקומי, }f_{\\max}=1.\\;}$$\n\n(הפונקציה אינה חסומה גלובלית — לאורך $y\\to -\\infty$ ו-$x\\to -\\infty$, $f\\to +\\infty$.)"
+    },
+    {
+      "qid": "y2012_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה התפלגות טמפרטורה $T(x,y,z)=\\dfrac{xyz}{1+x^2+y^2+z^2}$. מה קצב השינוי של הטמפרטורה בנקודה $(1,1,1)$ בכיוון ראשית הצירים?",
+      "solution_he": "**גרדיאנט.** סמן $u=xyz$, $v=1+x^2+y^2+z^2$. אז $T=u/v$ ו-$\\nabla T=(v\\nabla u-u\\nabla v)/v^2$.\n\nב-$(1,1,1)$: $u=1$, $v=4$, $\\nabla u=(yz,xz,xy)=(1,1,1)$, $\\nabla v=(2x,2y,2z)=(2,2,2)$.\n\n$$\\nabla T\\big|_{(1,1,1)}=\\tfrac{4(1,1,1)-1\\cdot(2,2,2)}{16}=\\tfrac{(2,2,2)}{16}=\\tfrac{1}{8}(1,1,1).$$\n\n**כיוון לעבר הראשית מ-$(1,1,1)$:** $\\hat u=-(1,1,1)/\\sqrt 3$.\n\n**נגזרת כיוונית:**\n$$D_{\\hat u}T=\\nabla T\\cdot\\hat u=\\tfrac{1}{8}(1,1,1)\\cdot\\tfrac{-(1,1,1)}{\\sqrt 3}=-\\tfrac{3}{8\\sqrt 3}=-\\tfrac{\\sqrt 3}{8}.$$\n\n$$\\boxed{\\;D_{\\hat u}T=-\\tfrac{\\sqrt 3}{8}\\approx -0.217.\\;}$$\n\nהסימן השלילי הגיוני: לאורך $-\\hat r$ הולכים לעבר הראשית שבה $T=0$, כך שהטמפרטורה יורדת."
+    },
+    {
+      "qid": "y2012_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "מקומו של גוף לכל זמן $t$ נתון ע״י $\\vec r=\\langle e^t\\cos t,\\,e^t\\sin t,\\,4t^2\\rangle$. מה הזווית בין וקטור המהירות ווקטור התאוצה בכל זמן $t$?",
+      "solution_he": "**מהירות ותאוצה.**\n* $\\vec v=(e^t(\\cos t-\\sin t),\\,e^t(\\sin t+\\cos t),\\,8t)$.\n* $\\vec a=(-2e^t\\sin t,\\,2e^t\\cos t,\\,8)$.\n\n**מכפלה סקלרית:**\n$$\\vec v\\cdot\\vec a=-2e^{2t}\\sin t(\\cos t-\\sin t)+2e^{2t}\\cos t(\\sin t+\\cos t)+64t=2e^{2t}+64t.$$\n\n(הצמצום במכפלה ה-$xy$: $-\\sin\\cos+\\sin^2+\\cos\\sin+\\cos^2=1$.)\n\n**גודלים:**\n* $|\\vec v|^2=2e^{2t}+64t^2$ ($(\\cos t-\\sin t)^2+(\\sin t+\\cos t)^2=2$).\n* $|\\vec a|^2=4e^{2t}+64$.\n\n**זווית:**\n$$\\boxed{\\;\\cos\\theta(t)=\\frac{2e^{2t}+64t}{\\sqrt{(2e^{2t}+64t^2)(4e^{2t}+64)}}=\\frac{e^{2t}+32t}{\\sqrt 2\\sqrt{(e^{2t}+32t^2)(e^{2t}+16)}}.\\;}$$\n\n**הערה חשובה:** הזווית **תלויה ב-$t$** ואינה קבועה. אלמלא הרכיב $z(t)=4t^2$, ההיטל $(e^t\\cos t,e^t\\sin t)$ הוא ספירלה לוגריתמית טהורה ובה הזווית קבועה ב-$\\pi/4$ (קל לבדוק: $\\cos\\theta_{2D}=2e^{2t}/(2\\sqrt 2 e^{2t})=1/\\sqrt 2$). הוספת ה-$4t^2$ שוברת את הקבועות.\n\n**ערכים מספריים:** $t=0$: $\\cos\\theta=2/(\\sqrt 2\\cdot 2\\sqrt{17})=1/\\sqrt{34}\\approx 0.171$, $\\theta\\approx 80.2°$. $t\\to\\infty$: $\\cos\\theta\\to 2e^{2t}/(\\sqrt 2 e^t\\cdot 2e^t)=1/\\sqrt 2$, $\\theta\\to 45°$ (החזרה לאסימפטוטה הספירלית)."
+    },
+    {
+      "qid": "y2012_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x)=\\dfrac{\\pi-x}{2}$. יש לפתח אותה בטור של סינוסים בתחום $(0,\\pi)$ ולהעריך באמצעות הפיתוח את הסכום $\\sum_{n=1}^\\infty\\frac{1}{n^2}$.",
+      "solution_he": "**טור סינוסים על $(0,L)$ עם $L=\\pi$.** $b_n=\\dfrac{2}{\\pi}\\int_0^\\pi f(x)\\sin(nx)dx=\\dfrac{1}{\\pi}\\int_0^\\pi(\\pi-x)\\sin(nx)dx$.\n\n**אינטגרלים:**\n* $\\int_0^\\pi\\sin(nx)dx=\\dfrac{1-(-1)^n}{n}$.\n* $\\int_0^\\pi x\\sin(nx)dx$: בחלקים, $=\\bigl[-\\tfrac{x\\cos nx}{n}\\bigr]_0^\\pi+\\int_0^\\pi\\tfrac{\\cos nx}{n}dx=-\\tfrac{\\pi(-1)^n}{n}+0=-\\tfrac{\\pi(-1)^n}{n}$.\n\n**מקדם:**\n$$b_n=\\tfrac{1}{\\pi}\\!\\left[\\pi\\cdot\\tfrac{1-(-1)^n}{n}+\\tfrac{\\pi(-1)^n}{n}\\right]=\\tfrac{1-(-1)^n+(-1)^n}{n}=\\tfrac{1}{n}.$$\n\n**טור פוריה (קלאסי):**\n$$\\boxed{\\;\\tfrac{\\pi-x}{2}=\\sum_{n=1}^\\infty\\tfrac{\\sin(nx)}{n},\\quad x\\in(0,\\pi).\\;}$$\n\n**פרסבל לחישוב $\\sum 1/n^2$:** $\\dfrac{2}{\\pi}\\int_0^\\pi f^2 dx=\\sum b_n^2$.\n\nצד שמאל: $\\tfrac{2}{\\pi}\\cdot\\tfrac{1}{4}\\int_0^\\pi(\\pi-x)^2 dx=\\tfrac{1}{2\\pi}\\cdot\\tfrac{\\pi^3}{3}=\\tfrac{\\pi^2}{6}$.\n\nצד ימין: $\\sum 1/n^2$.\n\n$$\\boxed{\\;\\sum_{n=1}^\\infty\\tfrac{1}{n^2}=\\tfrac{\\pi^2}{6}\\approx 1.6449\\quad\\text{(בעיית באזל).}\\;}$$"
+    },
+    {
+      "qid": "y2012_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא מעטפת של הגוף החסום מלמעלה ע״י המשטח $z=2x$ ומלמטה ע״י המשטח $z=x^2+y^2$, ו-$\\vec F=x^2 y\\,\\hat i-xy^2\\,\\hat j+(z+2)\\hat k$.\n\nב. יש לחשב את $\\oint_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=x^2 y\\,\\hat i+x^3\\,\\hat j+z^2\\,\\hat k$ ו-$c$ הוא החיתוך של המשטח $z=x^2+y^2$ עם המישור $z=y$.\n\nג. יש לחשב את מומנט האינרציה של דיסקה בעלת רדיוס $R$ וצפיפות $\\sigma=r^2$ (כאשר $r$ הוא המרחק ממרכז הדיסקה) עבור 3 צירי סיבוב: (א) ציר סיבוב שהוא גם קוטר הדיסקה; (ב) ציר סיבוב הנמצא במישור הדיסקה ומשיק לה; (ג) ציר סיבוב הניצב לדיסקה והעובר דרך מרכזה.\n\nד. יש לחשב את הנפח המתקבל ע״י סיבוב האליפסה $\\dfrac{(x-1)^2}{4}+\\dfrac{(y-1)^2}{9}=1$ סביב הישר $x+2y=20$.\n\nה. נתון המשטח $S$ המתואר ע״י $z=(x^2+y^2)^{3/2}$ עבור $x^2+y^2\\le 1$. יש לחשב את $\\iint_S z^{1/3}(x^2+y^2)^{1/2}ds$.",
+      "solution_he": "**(א) משפט הדיברגנץ.** $\\nabla\\cdot\\vec F=2xy-2xy+1=1$, לכן השטף = הנפח.\n\nהחיתוך בין הפרבולואיד והמישור: $x^2+y^2=2x\\Rightarrow(x-1)^2+y^2=1$ (היטל = דיסקה ברדיוס $1$ סביב $(1,0)$).\n\n**נפח** (פיצול הגובה $2x-(x^2+y^2)$ על ההיטל $D$): נשתמש בפולריות מועתקות $x=1+r\\cos\\theta$, $y=r\\sin\\theta$, $r\\in[0,1]$:\n$$2x-x^2-y^2=2(1+r\\cos\\theta)-(1+r\\cos\\theta)^2-r^2\\sin^2\\theta=1-r^2.$$\n$$V=\\int_0^{2\\pi}\\!\\!\\int_0^1(1-r^2)r\\,dr\\,d\\theta=2\\pi(\\tfrac{1}{2}-\\tfrac{1}{4})=\\tfrac{\\pi}{2}.$$\n\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=\\tfrac{\\pi}{2}.\\;}$$\n\n---\n\n**(ב) Stokes על דיסקת המישור.** רוטור: $\\nabla\\times(x^2 y,x^3,z^2)=(0-0,0-0,3x^2-x^2)=(0,0,2x^2)$.\n\nהחיתוך: $y=x^2+y^2\\Rightarrow x^2+(y-\\tfrac12)^2=\\tfrac14$. בהיטל ל-$xy$ זה מעגל ברדיוס $1/2$ סביב $(0,1/2)$; ב-3D המסלול נמצא במישור $z=y$.\n\n**משטח Stokes:** הדיסקה $S=\\{(x,y,y):x^2+(y-1/2)^2\\le 1/4\\}$. עם $\\vec r(x,y)=(x,y,y)$, $\\vec r_x\\times\\vec r_y=(0,-1,1)$.\n\n$(\\nabla\\times\\vec F)\\cdot(0,-1,1)=2x^2$.\n\nלפי טרנסליציה $\\iint_D x^2 dA=\\iint_{r\\le 1/2}x^2 dA=\\pi(1/2)^4/4=\\pi/64$ (לא תלוי במרכז).\n\n$$\\boxed{\\;\\oint_c\\vec F\\cdot d\\vec r=2\\cdot\\tfrac{\\pi}{64}=\\tfrac{\\pi}{32}\\approx 0.098.\\;}$$\n(הסימן מותאם לאוריינטציית $t$ עולה בפרמטריזציה $x=\\tfrac{\\cos t}{2},y=\\tfrac{1+\\sin t}{2}$.)\n\n---\n\n**(ג) שלושה מומנטי אינרציה.** מסה כוללת: $M=\\!\\int_0^{2\\pi}\\!\\int_0^R r^2\\cdot r\\,dr\\,d\\theta=2\\pi\\cdot\\tfrac{R^4}{4}=\\tfrac{\\pi R^4}{2}$.\n\n**(א) קוטר** (ציר $x$ במישור הדיסקה דרך המרכז):\n$$I_d=\\!\\iint y^2 dm=\\!\\int_0^R r^5 dr\\!\\int_0^{2\\pi}\\!\\sin^2\\theta d\\theta=\\tfrac{R^6}{6}\\cdot\\pi=\\boxed{\\;\\tfrac{\\pi R^6}{6}.\\;}$$\n\n**(ג) ציר ניצב למישור דרך המרכז** ($z$):\n$$I_z=\\!\\iint r^2 dm=2\\pi\\!\\int_0^R r^5 dr=\\boxed{\\;\\tfrac{\\pi R^6}{3}.\\;}$$\n(אימות: $I_z=I_x+I_y=2I_d$ — משפט הצירים הניצבים ללוח דק. ✓)\n\n**(ב) ציר במישור הדיסקה ומשיק לה** (משפט שטיינר עם $d=R$):\n$$I_t=I_d+MR^2=\\tfrac{\\pi R^6}{6}+\\tfrac{\\pi R^4}{2}\\cdot R^2=\\tfrac{\\pi R^6}{6}+\\tfrac{3\\pi R^6}{6}=\\boxed{\\;\\tfrac{2\\pi R^6}{3}.\\;}$$\n\n---\n\n**(ד) נפח סיבוב אליפסה — משפט פאפוס.** $V=2\\pi\\bar d\\cdot A$, כאשר $A$ שטח האליפסה ו-$\\bar d$ מרחק הצנטרואיד מציר הסיבוב.\n\n* $A=\\pi\\cdot 2\\cdot 3=6\\pi$.\n* צנטרואיד $(1,1)$. מרחקו מהישר $x+2y-20=0$: $\\bar d=|1+2-20|/\\sqrt 5=17/\\sqrt 5$.\n\n**אימות שהציר לא חוצה את האליפסה:** הקיצוניות בכיוון $(1,2)/\\sqrt 5$ מנקודה $(1,1)$ היא $\\sqrt{2^2+(2\\cdot 3)^2}/\\sqrt 5=\\sqrt{40/5}=2\\sqrt 2\\approx 2.83<17/\\sqrt 5\\approx 7.6$ ✓.\n\n$$\\boxed{\\;V=2\\pi\\cdot\\tfrac{17}{\\sqrt 5}\\cdot 6\\pi=\\tfrac{204\\pi^2}{\\sqrt 5}=\\tfrac{204\\sqrt 5\\,\\pi^2}{5}\\approx 900.3.\\;}$$\n\n---\n\n**(ה) אינטגרל משטחי על $z=r^3$.** עם $z_x^2+z_y^2=9r^4$, $dS=r\\sqrt{1+9r^4}\\,dr\\,d\\theta$.\n\nהאינטגרנד: $z^{1/3}(x^2+y^2)^{1/2}=(r^3)^{1/3}\\cdot r=r\\cdot r=r^2$.\n\n$$\\iint=\\!\\int_0^{2\\pi}\\!\\!\\int_0^1 r^2\\cdot r\\sqrt{1+9r^4}\\,dr\\,d\\theta=2\\pi\\!\\int_0^1\\!r^3\\sqrt{1+9r^4}\\,dr.$$\n\nהצבה $u=1+9r^4$, $du=36r^3 dr$, גבולות $1\\to 10$:\n$$=2\\pi\\cdot\\tfrac{1}{36}\\!\\int_1^{10}\\!\\sqrt u\\,du=\\tfrac{\\pi}{18}\\cdot\\tfrac{2}{3}(10\\sqrt{10}-1)=$$\n$$\\boxed{\\;\\tfrac{\\pi(10\\sqrt{10}-1)}{27}\\approx 3.56.\\;}$$"
+    },
+    {
+      "qid": "y2012_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F(\\vec r)=\\dfrac{c}{|\\vec r|^3}\\vec r+3\\vec r$, ו-$\\sigma$ הוא משטח סגור כלשהו המקיף תחום שנפחו $V$ הכולל את ראשית הצירים.",
+      "solution_he": "**שני איברים — שני משפטים שונים.**\n\n**איבר Coulomb $\\dfrac{c\\vec r}{r^3}$:** דיברגנץ $\\nabla\\cdot(\\vec r/r^3)=0$ לכל $\\vec r\\ne 0$, אך בראשית קיימת סינגולריות δ. לפי משפט גאוס \"החזק\":\n$$\\iint_\\sigma\\frac{c\\vec r}{r^3}\\cdot\\hat n\\,ds=c\\cdot\\Omega_{4\\pi}=4\\pi c$$\n(זרימה דרך כל משטח סגור המקיף את הראשית).\n\n**איבר $3\\vec r$:** $\\nabla\\cdot(3\\vec r)=3\\cdot 3=9$. לפי משפט הדיברגנץ:\n$$\\iint_\\sigma 3\\vec r\\cdot\\hat n\\,ds=\\iiint_V 9\\,dV=9V.$$\n\n**סכום:**\n$$\\boxed{\\;\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=4\\pi c+9V.\\;}$$\n\n**הערה — מתאם להוכחת משפט גאוס:** התרומה הסינגולרית של $\\vec r/r^3$ בלתי תלויה בצורת המעטפת — הרעיון הוא לדחוס מעטפת קטנה $\\sigma_\\epsilon$ סביב הראשית, ובאזור שבין שתי המעטפות $\\nabla\\cdot\\vec F=0$ ולכן השטף שווה. שטף דרך כדור קטן: $4\\pi$ (קל לחישוב ישיר). מסקנה: השטף דרך $\\sigma$ שווה ל-$4\\pi$. רגולריות + עיקרון על-עליון = חוק גאוס."
+    }
+  ]
+}

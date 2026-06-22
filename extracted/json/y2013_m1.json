@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2013_m1",
+  "year": 2013,
+  "moed": "א",
+  "date": "2013-07-14",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2013_s2m1y13.pdf",
+  "questions": [
+    {
+      "qid": "y2013_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא ולאפיין את נקודות הקיצון של הפונקציה $f(x,y)=3xe^y-x^3-e^{3y}$.",
+      "solution_he": "**נגזרות חלקיות:**\n$$f_x=3e^y-3x^2,\\qquad f_y=3xe^y-3e^{3y}.$$\n\n**נקודות קריטיות:** $f_x=0\\Rightarrow e^y=x^2$. $f_y=0\\Rightarrow xe^y=e^{3y}$.\n\nהצבת $e^y=x^2$ במשוואה השנייה: $x\\cdot x^2=e^{3y}\\Rightarrow x^3=(e^y)^3\\Rightarrow x=e^y$.\n\nשילוב $e^y=x^2$ עם $x=e^y$: $x=x^2\\Rightarrow x(x-1)=0$. אבל $x=e^y>0$, ולכן $x=1$, $e^y=1$, $y=0$.\n\n**נקודה קריטית יחידה: $(1,0)$.** ערך: $f(1,0)=3-1-1=1$.\n\n**אפיון (הסיאן):**\n$$f_{xx}=-6x,\\quad f_{yy}=3xe^y-9e^{3y},\\quad f_{xy}=3e^y.$$\nב-$(1,0)$: $f_{xx}=-6$, $f_{yy}=3-9=-6$, $f_{xy}=3$.\n\nדיסקרימיננטה: $D=f_{xx}f_{yy}-f_{xy}^2=36-9=27>0$ ו-$f_{xx}=-6<0$.\n\n$$\\boxed{\\;(1,0)\\text{ נקודת מקסימום מקומי, }f_{\\max}=1.\\;}$$\n\n**הערה:** הפונקציה אינה חסומה גלובלית (למשל לאורך $y\\to-\\infty$ ו-$x\\to-\\infty$ מתקיים $f\\to+\\infty$), ולכן זוהי מקסימום מקומי בלבד."
+    },
+    {
+      "qid": "y2013_m1_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא נקודה על פני המשטח $z=\\sqrt{1+x^2+y^2}$ בה המישור המשיק למשטח מקביל למישור $x+y+2z=1$.",
+      "solution_he": "**וקטור נורמלי למשטח:** עם $z_x=\\frac{x}{\\sqrt{1+x^2+y^2}}=\\frac{x}{z}$ ו-$z_y=\\frac{y}{z}$, הנורמל למשטח (כלפי מעלה) הוא\n$$\\vec n_S=\\left(-\\tfrac{x}{z},-\\tfrac{y}{z},1\\right).$$\n\n**נורמל למישור הנתון:** $\\vec n_P=(1,1,2)$.\n\n**תנאי מקביליות:** $\\vec n_S\\parallel\\vec n_P$. השוואת רכיבים:\n$$\\frac{-x/z}{1}=\\frac{-y/z}{1}=\\frac{1}{2}.$$\n\nמהשוויון האחרון: $x=-z/2$, $y=-z/2$.\n\n**הצבה במשוואת המשטח:**\n$$z^2=1+x^2+y^2=1+\\tfrac{z^2}{4}+\\tfrac{z^2}{4}=1+\\tfrac{z^2}{2}\\Rightarrow \\tfrac{z^2}{2}=1\\Rightarrow z=\\sqrt 2$$\n(לוקחים את הענף החיובי כי $z=\\sqrt{\\cdots}>0$).\n\nלכן $x=y=-\\tfrac{\\sqrt 2}{2}$.\n\n$$\\boxed{\\;\\left(-\\tfrac{\\sqrt 2}{2},\\,-\\tfrac{\\sqrt 2}{2},\\,\\sqrt 2\\right).\\;}$$\n\n**אימות:** $1+x^2+y^2=1+\\tfrac12+\\tfrac12=2=z^2$ ✓."
+    },
+    {
+      "qid": "y2013_m1_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "גוף יוצא מהראשית בזמן $t=0$ והוא נע במהירות $$\\vec v(t)=\\frac{\\hat i}{1+t^2}+\\frac{\\hat j}{1+t}+\\frac{\\sin 2t\\;\\hat k}{1+\\cos^2 t}.$$ באיזו נקודה הוא יהיה כעבור $10$ שניות ומה תהיה אז תאוצתו?",
+      "solution_he": "**מיקום:** $\\vec r(t)=\\int_0^t\\vec v(s)\\,ds$ (כי $\\vec r(0)=0$).\n\n* $x(t)=\\int_0^t\\frac{ds}{1+s^2}=\\arctan t$.\n* $y(t)=\\int_0^t\\frac{ds}{1+s}=\\ln(1+t)$.\n* $z(t)=\\int_0^t\\frac{\\sin 2s}{1+\\cos^2 s}\\,ds$. הצבה $u=\\cos s\\Rightarrow du=-\\sin s\\,ds$, $\\sin 2s\\,ds=2\\cos s\\sin s\\,ds=-2u\\,du$:\n$$z(t)=\\int\\frac{-2u\\,du}{1+u^2}=-\\ln(1+\\cos^2 s)\\Big|_0^t=\\ln\\frac{2}{1+\\cos^2 t}.$$\n\n**ב-$t=10$:**\n$$\\boxed{\\;\\vec r(10)=\\left(\\arctan 10,\\;\\ln 11,\\;\\ln\\!\\tfrac{2}{1+\\cos^2 10}\\right)\\approx(1.471,\\;2.398,\\;0.160).\\;}$$\n\n**תאוצה:** $\\vec a(t)=\\vec v\\,'(t)$:\n* $a_x=\\dfrac{-2t}{(1+t^2)^2}$.\n* $a_y=\\dfrac{-1}{(1+t)^2}$.\n* $a_z=\\dfrac{d}{dt}\\!\\left(\\dfrac{\\sin 2t}{1+\\cos^2 t}\\right)=\\dfrac{2\\cos 2t\\,(1+\\cos^2 t)+\\sin^2 2t}{(1+\\cos^2 t)^2}$.\n\n(נימוק $a_z$: כלל המנה. המונה: $2\\cos 2t\\cdot(1+\\cos^2 t)-\\sin 2t\\cdot(-\\sin 2t)=2\\cos 2t(1+\\cos^2 t)+\\sin^2 2t$.)\n\n**ב-$t=10$:**\n$$\\boxed{\\;\\vec a(10)=\\left(-\\tfrac{20}{10201},\\;-\\tfrac{1}{121},\\;\\tfrac{2\\cos 20\\,(1+\\cos^2 10)+\\sin^2 20}{(1+\\cos^2 10)^2}\\right)\\approx(-0.00196,\\;-0.00826,\\;0.766).\\;}$$"
+    },
+    {
+      "qid": "y2013_m1_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש לפתח את הפונקציה $f(x)=e^{-x}$ המוגדרת בתחום $(0,1)$ בטור של קוסינוסים.",
+      "solution_he": "**הגדרה.** טור הקוסינוסים על $(0,L)$ עם $L=1$ הוא המשך זוגי במחזור $2L=2$:\n$$f(x)=\\frac{a_0}{2}+\\sum_{n=1}^\\infty a_n\\cos(n\\pi x).$$\n\n**מקדם DC:**\n$$a_0=2\\int_0^1 e^{-x}dx=2(1-e^{-1}).$$\n\n**מקדמי קוסינוס:** משתמשים בנוסחה הסטנדרטית $\\int e^{ax}\\cos(bx)dx=\\frac{e^{ax}(a\\cos bx+b\\sin bx)}{a^2+b^2}$ עם $a=-1$, $b=n\\pi$:\n$$\\int_0^1 e^{-x}\\cos(n\\pi x)dx=\\frac{e^{-x}(-\\cos n\\pi x+n\\pi\\sin n\\pi x)}{1+n^2\\pi^2}\\bigg|_0^1=\\frac{-(-1)^n/e+1}{1+n^2\\pi^2}=\\frac{1-(-1)^n/e}{1+n^2\\pi^2}.$$\n\nלכן:\n$$a_n=\\frac{2\\bigl(1-(-1)^n/e\\bigr)}{1+n^2\\pi^2}.$$\n\n**סיכום:**\n$$\\boxed{\\;e^{-x}=(1-1/e)+\\sum_{n=1}^\\infty\\frac{2\\bigl(1-(-1)^n/e\\bigr)}{1+n^2\\pi^2}\\cos(n\\pi x).\\;}$$\n\n**הערה:** עבור $n$ אי-זוגי: $a_n=\\dfrac{2(1+1/e)}{1+n^2\\pi^2}$; עבור $n$ זוגי: $a_n=\\dfrac{2(1-1/e)}{1+n^2\\pi^2}$."
+    },
+    {
+      "qid": "y2013_m1_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\displaystyle\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(y+\\sin x)\\hat i+(z^2+\\cos y)\\hat j+x^3\\hat k$ ו-$C$ הוא המסלול $\\vec r=(\\sin t,\\cos t,\\sin 2t)$, $0\\le t\\le 2\\pi$.\n\nב. יש לחשב את מומנט האינרציה של גליל שבסיסו עיגול שרדיוסו $1$ וגובהו $4$, סביב ציר הניצב לבסיס ועובר דרך מרכז העיגול, אם נתון שהצפיפות שלו בכל נקודה היא $\\sigma=r^2 z e^{-r^3}$, כאשר $r$ הוא מרחק הנקודה מציר הגובה ו-$z$ הוא גובהה מעל הבסיס.\n\nג. יש לחשב את המסה הכוללת של דיסקה שרדיוסה $R$ אם נתון שצפיפות המסה בכל נקודה היא $kd^2$, כאשר $d$ הוא מרחק הנקודה מנקודה מסויימת שמרחקה מהראשית הוא $R/2$.\n\nד. נתון המשטח $S$ המתואר ע״י $z=(x^2+y^2)^{3/2}$ עבור $x^2+y^2\\le 1$. כמו כן נתון שצפיפות המסה בכל נקודה היא $kd^2$, כאשר $d$ הוא מרחק הנקודה מציר $z$. מה המסה הכוללת של המשטח?\n\nה. יש לחשב את $\\displaystyle\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא המשטח $z=2+\\sin^2(xy)$ עבור $0\\le x,y\\le 1$, ו-$\\vec F=\\hat i+\\hat j-xy\\hat k$.",
+      "solution_he": "**(א) Stokes על אוכף $z=2xy$.** המסלול נמצא על הצילינדר $x^2+y^2=1$ (כי $\\sin^2 t+\\cos^2 t=1$) ועל המשטח $z=2xy$ (כי $\\sin 2t=2\\sin t\\cos t=2xy$). נבחר $S$ = $\\{z=2xy:\\,x^2+y^2\\le 1\\}$.\n\n**רוטור:** עם $\\vec F=(y+\\sin x,\\,z^2+\\cos y,\\,x^3)$:\n$$\\nabla\\times\\vec F=(0-2z,\\;0-3x^2,\\;0-1)=(-2z,-3x^2,-1).$$\n\n**אוריינטציה:** ב-$t=0$, $\\vec r=(0,1,0)$ ו-$\\vec r\\,'(0)=(1,0,2)$ — תנועה ב-$+x$ מהנקודה $(0,1)$, כלומר היטל **בכיוון השעון** במישור $xy$.\n\n**יסוד נורמל למשטח** (כלפי מעלה): $\\vec n\\,dS=(-z_x,-z_y,1)dA=(-2y,-2x,1)dA$ — מתאים לאוריינטציה נגד-השעון. לכן עבור המסלול שלנו נשתמש בנורמל **כלפי מטה**: $-\\vec n\\,dS=(2y,2x,-1)dA$.\n\n$$\\oint_C\\vec F\\cdot d\\vec r=\\iint_D[(-2z)(2y)+(-3x^2)(2x)+(-1)(-1)]dA=\\iint_D[-4yz-6x^3+1]dA.$$\n\nעם $z=2xy$: $-4yz=-8xy^2$. שני האיברים הראשונים מתאפסים בסימטריה (אי-זוגיים ב-$x$). נשאר:\n$$\\oint_C\\vec F\\cdot d\\vec r=\\iint_D 1\\,dA=\\pi\\cdot 1^2=\\boxed{\\;\\pi.\\;}$$\n\n---\n\n**(ב) מומנט אינרציה.** $I_z=\\iiint r^2\\sigma\\,dV$ בגליליות:\n$$I_z=\\int_0^4\\!\\!\\int_0^{2\\pi}\\!\\!\\int_0^1 r^2\\cdot r^2 z e^{-r^3}\\cdot r\\,dr\\,d\\theta\\,dz=2\\pi\\int_0^4 z\\,dz\\int_0^1 r^5 e^{-r^3}dr.$$\n\n$\\int_0^4 z\\,dz=8$.\n\n$\\int_0^1 r^5 e^{-r^3}dr$: הצבה $u=r^3$, $du=3r^2 dr$, $r^5\\,dr=\\tfrac{u\\,du}{3}$:\n$$=\\tfrac{1}{3}\\int_0^1 ue^{-u}du=\\tfrac{1}{3}[-ue^{-u}-e^{-u}]_0^1=\\tfrac{1}{3}\\left(1-\\tfrac{2}{e}\\right).$$\n\n$$\\boxed{\\;I_z=2\\pi\\cdot 8\\cdot\\tfrac{1}{3}(1-2/e)=\\tfrac{16\\pi}{3}(1-2/e)=\\tfrac{16\\pi(e-2)}{3e}\\approx 4.42.\\;}$$\n\n---\n\n**(ג) מסה של דיסקה.** נציב את הנקודה הקבועה בלי לאבד כלליות ב-$\\vec a=(R/2,0)$:\n$$d^2=|\\vec r-\\vec a|^2=r^2-Rr\\cos\\theta+\\tfrac{R^2}{4}.$$\n\n$$M=k\\!\\int_0^{2\\pi}\\!\\!\\int_0^R\\!\\!\\left(r^2-Rr\\cos\\theta+\\tfrac{R^2}{4}\\right)r\\,dr\\,d\\theta.$$\n\n* $\\int_0^{2\\pi}\\!\\int_0^R r^3\\,dr\\,d\\theta=2\\pi\\cdot\\tfrac{R^4}{4}=\\tfrac{\\pi R^4}{2}$.\n* $\\int_0^{2\\pi}\\cos\\theta\\,d\\theta=0$ ⇒ האיבר האמצעי מתאפס.\n* $\\int_0^{2\\pi}\\!\\int_0^R\\tfrac{R^2}{4}r\\,dr\\,d\\theta=\\tfrac{R^2}{4}\\cdot 2\\pi\\cdot\\tfrac{R^2}{2}=\\tfrac{\\pi R^4}{4}$.\n\n$$\\boxed{\\;M=k\\left(\\tfrac{\\pi R^4}{2}+\\tfrac{\\pi R^4}{4}\\right)=\\tfrac{3k\\pi R^4}{4}.\\;}$$\n\n**הערה גאומטרית:** המסה אינה תלויה במיקום הנקודה הקבועה — בזכות הסימטריה הסיבובית של הדיסקה, רק $|\\vec a|^2=R^2/4$ נכנס לחשבון, לא הכיוון.\n\n---\n\n**(ד) מסה של משטח.** עם $z=r^3$ ו-$d=r$, יסוד שטח:\n$$dS=\\sqrt{1+z_x^2+z_y^2}\\,dA=\\sqrt{1+9r^4}\\,r\\,dr\\,d\\theta.$$\n\n$$M=k\\!\\int_0^{2\\pi}\\!\\!\\int_0^1 r^2\\sqrt{1+9r^4}\\,r\\,dr\\,d\\theta=2\\pi k\\!\\int_0^1 r^3\\sqrt{1+9r^4}\\,dr.$$\n\nהצבה $u=1+9r^4$, $du=36r^3 dr$. גבולות: $u=1\\to 10$.\n$$=2\\pi k\\cdot\\tfrac{1}{36}\\int_1^{10}\\!\\!\\sqrt u\\,du=\\tfrac{\\pi k}{18}\\cdot\\tfrac{2}{3}u^{3/2}\\Big|_1^{10}=\\tfrac{\\pi k}{27}(10\\sqrt{10}-1).$$\n\n$$\\boxed{\\;M=\\tfrac{\\pi k(10\\sqrt{10}-1)}{27}\\approx 3.56\\,k.\\;}$$\n\n---\n\n**(ה) שטף ישיר.** עם $\\vec n\\,dS=(-z_x,-z_y,1)dA$, $z_x=y\\sin(2xy)$, $z_y=x\\sin(2xy)$:\n$$\\vec F\\cdot\\vec n=-z_x-z_y-xy=-(x+y)\\sin(2xy)-xy.$$\n\n**אינטגרל ה-$xy$:** $\\int_0^1\\!\\int_0^1 xy\\,dx\\,dy=\\tfrac14$.\n\n**אינטגרל ה-$(x+y)\\sin(2xy)$:** הטריק העיקרי — $\\partial_x[-\\tfrac12\\cos(2xy)]=y\\sin(2xy)$ ו-$\\partial_y[-\\tfrac12\\cos(2xy)]=x\\sin(2xy)$.\n\nלכן $\\int_0^1 y\\sin(2xy)\\,dx=-\\tfrac{\\cos(2xy)}{2}\\Big|_0^1=\\tfrac{1-\\cos 2y}{2}=\\sin^2 y$.\n\nבסימטריה $\\int_0^1 x\\sin(2xy)\\,dy=\\sin^2 x$. נסכם:\n$$\\int_0^1\\!\\!\\int_0^1(x+y)\\sin(2xy)\\,dx\\,dy=\\int_0^1\\sin^2 x\\,dx+\\int_0^1\\sin^2 y\\,dy=2\\cdot\\left(\\tfrac12-\\tfrac{\\sin 2}{4}\\right)=1-\\tfrac{\\sin 2}{2}.$$\n\n**סכום:**\n$$\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds=-\\!\\left(1-\\tfrac{\\sin 2}{2}\\right)-\\tfrac14=\\boxed{\\;\\tfrac{\\sin 2}{2}-\\tfrac{5}{4}\\approx -0.795.\\;}$$"
+    },
+    {
+      "qid": "y2013_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** נתון $\\vec F=(x+xz)\\hat i-zye^{x^2+y^2+z^2}\\hat j-(z^3+x^2 yz)\\hat k$ ונתון כדור שרדיוסו $R$ ומרכזו בראשית הצירים. מהו הרדיוס $R$ עבורו $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ מקסימלי כאשר $\\sigma$ הוא מעטפת הכדור?",
+      "solution_he": "**משפט הדיברגנץ.**\n$$\\nabla\\cdot\\vec F=\\underbrace{(1+z)}_{\\partial_x F_1}+\\underbrace{(-ze^{r^2}(1+2y^2))}_{\\partial_y F_2}+\\underbrace{(-3z^2-x^2 y)}_{\\partial_z F_3},$$\nכאשר $r^2=x^2+y^2+z^2$.\n\n**אינטגרל על הכדור.** מסימטריה (הפיכת $z\\to-z$ או $y\\to-y$):\n* $\\iiint z\\,dV=0$, $\\iiint ze^{r^2}\\,dV=0$, $\\iiint ze^{r^2}y^2\\,dV=0$ (כולם אי-זוגיים ב-$z$).\n* $\\iiint x^2 y\\,dV=0$ (אי-זוגי ב-$y$).\n\nנשארים שני איברים:\n* $\\iiint 1\\,dV=\\tfrac{4\\pi R^3}{3}$.\n* $\\iiint 3z^2\\,dV=\\iiint r^2\\,dV=\\int_0^R r^2\\cdot 4\\pi r^2\\,dr=\\tfrac{4\\pi R^5}{5}$ (השתמשנו ב-$z^2=\\tfrac{r^2}{3}$ בממוצע על כדור).\n\n**שטף:**\n$$\\Phi(R)=\\tfrac{4\\pi R^3}{3}-\\tfrac{4\\pi R^5}{5}.$$\n\n**מקסום:**\n$$\\frac{d\\Phi}{dR}=4\\pi R^2-4\\pi R^4=4\\pi R^2(1-R^2)=0\\Rightarrow R=1.$$\n($R=0$ נותן מינימום $\\Phi=0$; הנגזרת השנייה ב-$R=1$ שלילית.)\n\n$$\\boxed{\\;R=1,\\quad \\Phi_{\\max}=\\tfrac{4\\pi}{3}-\\tfrac{4\\pi}{5}=\\tfrac{8\\pi}{15}\\approx 1.676.\\;}$$"
+    }
+  ]
+}

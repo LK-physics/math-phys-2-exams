@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2010_m1",
+  "year": 2010,
+  "moed": "א",
+  "date": "2010-06-30",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2010_s2m1y10.pdf",
+  "questions": [
+    {
+      "qid": "y2010_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "מסות במשקל של $1,2,3$ ו-$4$ ק״ג נמצאות במישור $xy$ בנקודות $(0,1)$, $(1,0)$, $(1,1)$ ו-$(0,0)$ בהתאמה. היכן חותך את מישור $xy$ ציר סיבוב בכיוון $z$ אשר סביבו מומנט האינרציה של $4$ המסות מינימלי?",
+      "solution_he": "**עיקרון.** $I_{(a,b)}=\\sum_i m_i[(x_i-a)^2+(y_i-b)^2]$. גזירה ב-$a$ ו-$b$ נותנת ש-$I$ מינימלית במרכז המסה ($\\sum m_i(x_i-a)=0$, $\\sum m_i(y_i-b)=0$). זוהי גרסה ספציפית של **משפט שטיינר** ($I_{(a,b)}=I_{\\text{COM}}+M d^2$).\n\n**מרכז מסה:** $M=1+2+3+4=10$.\n$$\\bar x=\\tfrac{1\\cdot 0+2\\cdot 1+3\\cdot 1+4\\cdot 0}{10}=\\tfrac{5}{10}=\\tfrac{1}{2}.$$\n$$\\bar y=\\tfrac{1\\cdot 1+2\\cdot 0+3\\cdot 1+4\\cdot 0}{10}=\\tfrac{4}{10}=\\tfrac{2}{5}.$$\n\n$$\\boxed{\\;\\text{ציר הסיבוב יעבור דרך }(\\tfrac{1}{2},\\tfrac{2}{5},0).\\;}$$\n\n**ערך $I_{\\min}$:** ישירות $I_O=1\\cdot 1+2\\cdot 1+3\\cdot 2+4\\cdot 0=9$ (סביב הראשית). $d^2=(\\tfrac12)^2+(\\tfrac25)^2=\\tfrac{41}{100}$. $I_{\\text{COM}}=I_O-Md^2=9-10\\cdot 0.41=4.9$ ק״ג·מ²."
+    },
+    {
+      "qid": "y2010_m1_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתון המשטח $z-\\sin x+\\cos y=0$. יש למצוא נקודה על פני המשטח בה המישור המשיק מקביל למישור $x+y+z=10$. האם יש עוד נקודות כאלה?",
+      "solution_he": "**נורמל למשטח** $F(x,y,z)=z-\\sin x+\\cos y$: $\\nabla F=(-\\cos x,-\\sin y,1)$.\n\n**נורמל למישור הנתון:** $(1,1,1)$.\n\n**מקביליות $(-\\cos x,-\\sin y,1)\\parallel(1,1,1)$:** מהתאמת רכיב $z$ הסקלר הוא $1$, ולכן $-\\cos x=1$, $-\\sin y=1$, כלומר $\\cos x=-1$, $\\sin y=-1$.\n\n**פתרונות:**\n* $\\cos x=-1\\Rightarrow x=\\pi+2k\\pi$ ($k\\in\\mathbb Z$).\n* $\\sin y=-1\\Rightarrow y=-\\tfrac{\\pi}{2}+2m\\pi$ ($m\\in\\mathbb Z$).\n\nעל המשטח: $z=\\sin x-\\cos y=0-0=0$.\n\n**נקודה בסיסית:** $(\\pi,-\\tfrac{\\pi}{2},0)$.\n\n$$\\boxed{\\;\\left(\\pi+2k\\pi,\\,-\\tfrac{\\pi}{2}+2m\\pi,\\,0\\right),\\ k,m\\in\\mathbb Z.\\;}$$\n\n**כן, אינסוף נקודות** — בגלל המחזוריות של $\\sin$ ו-$\\cos$."
+    },
+    {
+      "qid": "y2010_m1_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את הזווית בין הוקטור $\\vec v=\\hat i-\\hat j+3\\hat k$ ווקטור הניצב למישור $x-y+z=4$.",
+      "solution_he": "**נורמל למישור:** $\\vec n=(1,-1,1)$.\n\n**מכפלה סקלרית:** $\\vec v\\cdot\\vec n=1+1+3=5$.\n\n**גודלים:** $|\\vec v|=\\sqrt{1+1+9}=\\sqrt{11}$, $|\\vec n|=\\sqrt{1+1+1}=\\sqrt 3$.\n\n$$\\cos\\theta=\\frac{5}{\\sqrt{11}\\sqrt 3}=\\frac{5}{\\sqrt{33}}.$$\n\n$$\\boxed{\\;\\theta=\\arccos\\tfrac{5}{\\sqrt{33}}\\approx 29.5°.\\;}$$"
+    },
+    {
+      "qid": "y2010_m1_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא את טור פוריה של הפונקציה $f(x)=x/|x|$ המוגדרת בתחום $[-\\pi,\\pi]$.",
+      "solution_he": "**זיהוי הפונקציה:** $f(x)=\\text{sgn}(x)$ — $+1$ ל-$x>0$ ו-$-1$ ל-$x<0$ (גל ריבועי). אי-זוגית ⇒ $a_n=0$.\n\n**מקדמי סינוס:** $b_n=\\tfrac{1}{\\pi}\\int_{-\\pi}^\\pi f(x)\\sin(nx)dx=\\tfrac{2}{\\pi}\\int_0^\\pi\\sin(nx)dx=\\tfrac{2}{\\pi}\\cdot\\tfrac{1-(-1)^n}{n}$.\n\n* $n$ זוגי: $b_n=0$.\n* $n$ אי-זוגי: $b_n=\\tfrac{4}{n\\pi}$.\n\n$$\\boxed{\\;\\dfrac{x}{|x|}=\\frac{4}{\\pi}\\sum_{k=0}^\\infty\\frac{\\sin((2k+1)x)}{2k+1}.\\;}$$\n\n**הערה — תופעת גיבס:** הטור לא מתכנס במ-$x=0$ (סינגולריות); ההתכנסות לערך הממוצע $0$. סביב הקפיצה, סכומים חלקיים \"מקפצים\" ב-$\\sim 9\\%$ מעבר לערך — תופעת גיבס המפורסמת."
+    },
+    {
+      "qid": "y2010_m1_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\iint_G\\vec F\\cdot\\hat n\\,ds$ כאשר $G$ הוא משטח הנתון ע״י $z=10-x^2-y^2$ עבור $x^2+y^2\\le 2$, ו-$\\vec F(x,y,z)=(x,y,1)$.\n\nב. נתון כדור שמרכזו בראשית ושרדיוסו $1$ ואשר צפיפות המסה שלו היא $\\rho(x,y,z)=x^2+y^2+z^2$. יש לחשב את המסה של הכדור ואת מומנט האינרציה שלו סביב ציר $z$.\n\nג. נתון המשטח $S$ המתואר ע״י $z=4+x^2+y^2$ עבור $x^2+y^2\\le 1$. יש לחשב את $\\iint_S(x^2+y^2)^{1/2}ds$.\n\nד. יש לחשב את $\\oint_C\\vec F\\cdot d\\vec r$ כאשר $\\vec F=y\\hat i-x\\hat j+\\hat k$, והמסלול $C$ הוא היקף האליפסה $x^2+y^2/4=1$ בכיוון מנוגד לכיוון השעון.\n\nה. המשטח $S$ הוא מעטפת פירמידה משולשת שקודקודיה $(0,0,0), (1,0,0), (0,1,0)$ ו-$(0,0,1)$. מה ערך האינטגרל $\\iint_S\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=x^2\\hat i+xy\\hat j+z^2\\hat k$?",
+      "solution_he": "**(א) שטף דרך פרבולואיד פתוח.** $\\vec n\\,dS=(-z_x,-z_y,1)dA=(2x,2y,1)dA$.\n$$\\vec F\\cdot\\vec n=2x^2+2y^2+1=2r^2+1.$$\n$$\\iint=\\int_0^{2\\pi}\\!\\!\\int_0^{\\sqrt 2}(2r^2+1)r\\,dr\\,d\\theta=2\\pi[\\tfrac{r^4}{2}+\\tfrac{r^2}{2}]_0^{\\sqrt 2}=2\\pi(2+1)=$$\n$$\\boxed{\\;6\\pi.\\;}$$\n\n---\n\n**(ב) מסה ו-$I_z$ של כדור עם $\\rho=r^2$.**\n\n**מסה:** $M=\\int_0^1 r^2\\cdot 4\\pi r^2 dr=\\boxed{\\;\\tfrac{4\\pi}{5}.\\;}$\n\n**$I_z$:** $I_z=\\iiint(r^2-z^2)\\cdot r^2 dV$. בספריות, $z^2=r^2\\cos^2\\phi$:\n$$I_z=2\\pi\\!\\int_0^\\pi\\!\\sin^3\\phi\\,d\\phi\\!\\int_0^1 r^6 dr=2\\pi\\cdot\\tfrac{4}{3}\\cdot\\tfrac{1}{7}=$$\n$$\\boxed{\\;\\tfrac{8\\pi}{21}.\\;}$$\n\n($\\int_0^\\pi\\sin^3\\phi\\,d\\phi=\\tfrac{4}{3}$ סטנדרטי.)\n\n---\n\n**(ג) אינטגרל משטחי על פרבולואיד.** $dS=r\\sqrt{1+4r^2}\\,dr\\,d\\theta$. אינטגרנד $r$.\n$$\\iint=2\\pi\\!\\int_0^1 r^2\\sqrt{1+4r^2}\\,dr.$$\n\nהצבה $u=2r$, $du=2dr$:\n$$\\int_0^1 r^2\\sqrt{1+4r^2}dr=\\tfrac{1}{8}\\!\\int_0^2 u^2\\sqrt{1+u^2}du.$$\n\nעם נוסחה סטנדרטית $\\int u^2\\sqrt{1+u^2}du=\\tfrac{u(1+u^2)^{3/2}}{4}-\\tfrac{u\\sqrt{1+u^2}}{8}-\\tfrac{\\ln(u+\\sqrt{1+u^2})}{8}+C$.\n\nב-$u=2$, $\\sqrt 5$, $(1+u^2)^{3/2}=5\\sqrt 5$: $\\tfrac{10\\sqrt 5}{4}-\\tfrac{2\\sqrt 5}{8}-\\tfrac{\\ln(2+\\sqrt 5)}{8}=\\tfrac{18\\sqrt 5-\\ln(2+\\sqrt 5)}{8}$.\n\n$$\\iint=2\\pi\\cdot\\tfrac{1}{8}\\cdot\\tfrac{18\\sqrt 5-\\ln(2+\\sqrt 5)}{8}=$$\n$$\\boxed{\\;\\tfrac{\\pi[18\\sqrt 5-\\ln(2+\\sqrt 5)]}{32}\\approx 3.81.\\;}$$\n\n---\n\n**(ד) Green על אליפסה.** המסלול במישור $z=0$ ⇒ $\\hat k$ לא תורם.\n\n$\\oint(y\\,dx-x\\,dy)$: לפי Green עם $P=y$, $Q=-x$: $Q_x-P_y=-1-1=-2$. $\\oint=-2A$.\n\nשטח אליפסה $x^2+y^2/4=1$: $A=\\pi\\cdot 1\\cdot 2=2\\pi$.\n\n$$\\boxed{\\;\\oint_C\\vec F\\cdot d\\vec r=-2\\cdot 2\\pi=-4\\pi.\\;}$$\n\n---\n\n**(ה) דיברגנץ על טטרהדרון.** $\\nabla\\cdot\\vec F=2x+x+2z=3x+2z$.\n\nנפח הטטרהדרון $\\{x,y,z\\ge 0,x+y+z\\le 1\\}$: $V=\\tfrac{1}{6}$. צנטרואיד: $(\\tfrac{1}{4},\\tfrac{1}{4},\\tfrac{1}{4})$.\n\n$\\iiint x\\,dV=\\bar x\\cdot V=\\tfrac{1}{4}\\cdot\\tfrac{1}{6}=\\tfrac{1}{24}$. בסימטריה גם $\\iiint z\\,dV=\\tfrac{1}{24}$.\n\n$$\\iiint(3x+2z)dV=3\\cdot\\tfrac{1}{24}+2\\cdot\\tfrac{1}{24}=\\tfrac{5}{24}.$$\n\n$$\\boxed{\\;\\iint_S\\vec F\\cdot\\hat n\\,ds=\\tfrac{5}{24}\\approx 0.208.\\;}$$"
+    },
+    {
+      "qid": "y2010_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\displaystyle\\oint_C\\frac{y^3 dx-xy^2 dy}{(x^2+y^2)^2}$ כאשר $C$ הוא היקף האליפסה $2x^2+3y^2=1$ בכיוון מנוגד לכיוון השעון. (רמז: זכרו את אופן הוכחת משפט גאוס.)",
+      "solution_he": "(שאלה זהה למועד א׳ של 2011 וגם למועד א׳ של 2012 — האהוב על ליאור!)\n\n**רוטור $=0$** מחוץ לראשית, ולכן האינטגרל בלתי תלוי בצורת $C$ — כל מסלול CCW המקיף את הראשית פעם אחת נותן את אותו ערך.\n\n**מעבר למעגל $\\epsilon$:** $x=\\epsilon\\cos t$, $y=\\epsilon\\sin t$:\n$$\\oint=\\int_0^{2\\pi}\\!\\!-\\sin^2 t\\,dt=-\\pi.$$\n\n$$\\boxed{\\;\\oint_C=-\\pi.\\;}$$"
+    }
+  ]
+}
