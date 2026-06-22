@@ -1,0 +1,52 @@
+{
+  "exam_id": "y2000_m1",
+  "year": 2000,
+  "moed": "א",
+  "date": "2000-05-01",
+  "duration_hours": 3,
+  "instructions": "ארבע שאלות חובה (25 נק' כל אחת). שאלת בונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2000_s2m1y00.pdf",
+  "questions": [
+    {
+      "qid": "y2000_m1_q1",
+      "number": 1,
+      "points": 25,
+      "subparts": null,
+      "statement_he": "יש לבנות תיבה שנפחה $16$ מ״ק משני סוגי חומרים. את הבסיס העליון והבסיס התחתון יש להכין מחומר שעלותו $10$ ש״ח למ״ר ואילו את ארבעת הדפנות יש להכין מחומר שעלותו $5$ ש״ח למ״ר. יש למצוא עבור אילו ממדי תיבה (אורך, רוחב, גובה) תהיה עלות החומרים מינימלית. יש לנמק!",
+      "solution_he": "**מודל:** מימדים $a,b,c$. עלות:\n$$C=10\\cdot 2ab+5\\cdot 2c(a+b)=20ab+10c(a+b).$$\n\nאילוץ $abc=16$.\n\n**לגראנז׳:**\n* $C_a=20b+10c=\\lambda bc$.\n* $C_b=20a+10c=\\lambda ac$.\n* $C_c=10(a+b)=\\lambda ab$.\n\nהפרש (1)-(2): $20(b-a)=\\lambda c(b-a)$. או $a=b$ או $\\lambda c=20$. נבחר $a=b$ (סימטריה).\n\nמ-(1): $20a+10c=\\lambda ac$. מ-(3) עם $a=b$: $20a=\\lambda a^2\\Rightarrow\\lambda=\\tfrac{20}{a}$. הצבה: $20a+10c=\\tfrac{20c\\cdot a}{a}=20c\\Rightarrow c=2a$.\n\n**אילוץ:** $a^2\\cdot 2a=16\\Rightarrow a^3=8\\Rightarrow a=2$.\n\n$$\\boxed{\\;a=b=2\\text{ מ׳},\\quad c=4\\text{ מ׳}.\\;}$$\n\n**עלות מינימלית:** $C=20\\cdot 4+10\\cdot 4\\cdot 4=80+160=240$ ש״ח.\n\n**אינטואיציה:** הבסיסים יקרים פי 2 מהדפנות ⇒ כדאי להקטין את שטחם (תיבה גבוהה ולא רחבה) — אכן $c=2a$."
+    },
+    {
+      "qid": "y2000_m1_q2",
+      "number": 2,
+      "points": 25,
+      "subparts": null,
+      "statement_he": "נתון משטח מעגלי שמרכזו בראשית ורדיוסו $a$. צפיפות המסה של המשטח, $\\delta$, תלויה במרחק מציר ה-$x$: $\\delta(x,y)=1+y^2$. יש לחשב את מסת המשטח.",
+      "solution_he": "$$M=\\iint_{r\\le a}(1+y^2)dA=\\pi a^2+\\iint y^2 dA.$$\n\n**$\\iint y^2 dA$** בפולריות:\n$$\\int_0^{2\\pi}\\!\\sin^2\\theta d\\theta\\!\\int_0^a\\!r^3 dr=\\pi\\cdot\\tfrac{a^4}{4}=\\tfrac{\\pi a^4}{4}.$$\n\n$$\\boxed{\\;M=\\pi a^2+\\tfrac{\\pi a^4}{4}=\\tfrac{\\pi a^2(4+a^2)}{4}.\\;}$$"
+    },
+    {
+      "qid": "y2000_m1_q3",
+      "number": 3,
+      "points": 25,
+      "subparts": null,
+      "statement_he": "יש למצוא את נפח החיתוך בין הכדור $x^2+y^2+z^2=9$ והגליל $x^2+y^2=1$.",
+      "solution_he": "**בגליליות:** התחום $r\\le 1$, $|z|\\le\\sqrt{9-r^2}$.\n\n$$V=2\\pi\\!\\int_0^1\\!2r\\sqrt{9-r^2}dr=4\\pi\\!\\int_0^1\\!r\\sqrt{9-r^2}dr.$$\n\nהצבה $u=9-r^2, du=-2r dr$, גבולות $9\\to 8$:\n$$=4\\pi\\cdot(-\\tfrac{1}{2})\\!\\int_9^8\\!\\sqrt u du=2\\pi\\!\\int_8^9\\!\\sqrt u du=2\\pi\\cdot\\tfrac{2}{3}(27-16\\sqrt 2).$$\n\n$$\\boxed{\\;V=\\tfrac{4\\pi(27-16\\sqrt 2)}{3}\\approx 18.3.\\;}$$"
+    },
+    {
+      "qid": "y2000_m1_q4",
+      "number": 4,
+      "points": 25,
+      "subparts": null,
+      "statement_he": "נתון $w(r,\\theta)=r^2-r\\tan\\theta$. כמו כן נתון ש-$r$ ו-$\\theta$ הם פונקציות של $t$ אך תלות זאת ידועה באופן סתום: $r+\\cos\\theta=\\ln t$ ו-$r^2+\\sin\\theta=\\sin t$. יש לחשב $\\dfrac{\\partial w}{\\partial r}, \\dfrac{\\partial w}{\\partial\\theta}, \\dfrac{dr}{dt}, \\dfrac{d\\theta}{dt}, \\dfrac{dw}{dt}$.",
+      "solution_he": "**נגזרות חלקיות:**\n$$\\boxed{\\;\\frac{\\partial w}{\\partial r}=2r-\\tan\\theta;\\quad\\frac{\\partial w}{\\partial\\theta}=-r\\sec^2\\theta.\\;}$$\n\n**גזירה סתומה של המשוואות:**\n* $\\dot r-\\sin\\theta\\,\\dot\\theta=\\tfrac{1}{t}$.\n* $2r\\,\\dot r+\\cos\\theta\\,\\dot\\theta=\\cos t$.\n\n**מערכת לינארית:** דטרמיננטה $D=\\cos\\theta+2r\\sin\\theta$.\n\n$$\\boxed{\\;\\frac{dr}{dt}=\\frac{(\\cos\\theta)/t+\\sin\\theta\\cos t}{\\cos\\theta+2r\\sin\\theta};\\quad\\frac{d\\theta}{dt}=\\frac{\\cos t-2r/t}{\\cos\\theta+2r\\sin\\theta}.\\;}$$\n\n**כלל השרשרת:**\n$$\\boxed{\\;\\frac{dw}{dt}=(2r-\\tan\\theta)\\dot r-r\\sec^2\\theta\\cdot\\dot\\theta.\\;}$$"
+    },
+    {
+      "qid": "y2000_m1_q5",
+      "number": 5,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** נתונה האליפסה $\\dfrac{x^2}{9}+\\dfrac{y^2}{4}=1$. מהו הנפח שמתקבל אם נסובב את האליפסה סביב הציר $x+y=10$? **אין להשתמש באינטגרציה!**",
+      "solution_he": "**פפוס** ($V=2\\pi\\bar d A$):\n\n* **שטח אליפסה:** $A=\\pi\\cdot 3\\cdot 2=6\\pi$.\n* **צנטרואיד:** $(0,0)$ (אליפסה סימטרית).\n* **מרחק מ-$(0,0)$ לישר $x+y-10=0$:** $\\bar d=\\dfrac{10}{\\sqrt 2}=5\\sqrt 2$.\n\n**אימות לא חצייה:** $\\max(x+y)$ באליפסה $=\\sqrt{3^2+2^2}=\\sqrt{13}\\approx 3.6<10$ ✓.\n\n$$\\boxed{\\;V=2\\pi\\cdot 5\\sqrt 2\\cdot 6\\pi=60\\pi^2\\sqrt 2\\approx 837.4.\\;}$$"
+    }
+  ]
+}

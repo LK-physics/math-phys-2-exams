@@ -1,0 +1,79 @@
+{
+  "exam_id": "y1999_m1",
+  "year": 1999,
+  "moed": "א",
+  "date": "1999-07-30",
+  "duration_hours": 3,
+  "instructions": "שמונה שאלות חובה. נקודות שונות לכל שאלה (סה״כ 100). שאלת בונוס לא קיימת.",
+  "answer_n_of_m": null,
+  "source_pdf": "y1999_s2m1y99.pdf",
+  "questions": [
+    {
+      "qid": "y1999_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "חשב את האינטגרל $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(x^2+y^2)^{-3/2}(x\\hat i+y\\hat j)$ והמסלול נתון ע״י $\\vec r(t)=e^t\\sin t\\hat i+e^t\\cos t\\hat j$, $0\\le t\\le 1$.",
+      "solution_he": "**שדה משמר** $\\vec F=-\\nabla(1/r)$ עם $r=\\sqrt{x^2+y^2}$.\n\n**ערכי $r$ במסלול:** $r(t)=e^t\\sqrt{\\sin^2 t+\\cos^2 t}=e^t$.\n\n* $r(0)=1$, $\\phi=-1$.\n* $r(1)=e$, $\\phi=-1/e$.\n\n$$\\boxed{\\;\\int_c\\vec F\\cdot d\\vec r=-\\tfrac{1}{e}-(-1)=1-\\tfrac{1}{e}\\approx 0.632.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q2",
+      "number": 2,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "חשב את האינטגרל $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=(e^y+ye^x)\\hat i+(xe^y+e^x)\\hat j$ והמסלול נתון ע״י $\\vec r(t)=\\sin(\\pi t/2)\\hat i+\\ln t\\hat j$, $1\\le t\\le 2$.",
+      "solution_he": "**שדה משמר:** $\\partial_y(e^y+ye^x)=e^y+e^x=\\partial_x(xe^y+e^x)$ ✓.\n\n**פוטנציאל:** $\\phi=xe^y+ye^x$.\n\n**נקודות:**\n* $t=1$: $(\\sin\\tfrac{\\pi}{2},\\ln 1)=(1,0)$. $\\phi=1\\cdot 1+0=1$.\n* $t=2$: $(\\sin\\pi,\\ln 2)=(0,\\ln 2)$. $\\phi=0+\\ln 2\\cdot 1=\\ln 2$.\n\n$$\\boxed{\\;\\int_c\\vec F\\cdot d\\vec r=\\ln 2-1\\approx -0.307.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q3",
+      "number": 3,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "חשב את האינטגרל $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=x^2\\hat i+y^2\\hat j+z^2\\hat k$ והמעטפת $\\sigma$ בצורת קונוס $z=(x^2+y^2)^{1/2}$ החסום ע״י $z=0$ ו-$z=1$.",
+      "solution_he": "**דיברגנץ עם סגירה.** $\\nabla\\cdot\\vec F=2x+2y+2z$. נסגור עם דיסקה $z=1, r\\le 1$.\n\n**אינטגרל הנפח** (גוף החרוט $r\\le z\\le 1$):\n$\\iiint 2z\\,dV=2\\pi\\int_0^1 z^3 dz=\\tfrac{\\pi}{2}$ (האיברים $x,y$ מתאפסים בסימטריה).\n\n**שטף דרך הדיסקה** ($+\\hat z$, $z=1$): $\\iint F_3 dA=\\iint 1\\,dA=\\pi$.\n\n**שטף דרך החרוט** = $\\tfrac{\\pi}{2}-\\pi=$\n$$\\boxed{\\;-\\tfrac{\\pi}{2}\\approx -1.57.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q4",
+      "number": 4,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא את כל הנקודות על המשטח $x^2+y^2-z^2=1$ אשר הנורמל למשטח שם מקביל לישר העובר דרך הנקודות $(1,-1,2)$ ו-$(0,4,-1)$.",
+      "solution_he": "**כיוון הישר:** $(-1,5,-3)$.\n\n**נורמל למשטח:** $\\nabla(x^2+y^2-z^2)=(2x,2y,-2z)\\parallel(x,y,-z)$.\n\n**מקביליות:** $(x,y,-z)=t(-1,5,-3)$ ⇒ $x=-t,\\,y=5t,\\,z=3t$.\n\n**הצבה באילוץ:** $t^2+25t^2-9t^2=17t^2=1$ ⇒ $t=\\pm\\tfrac{1}{\\sqrt{17}}$.\n\n$$\\boxed{\\;\\text{שתי נקודות: }\\pm\\tfrac{(-1,5,3)}{\\sqrt{17}}=\\left(\\mp\\tfrac{1}{\\sqrt{17}},\\pm\\tfrac{5}{\\sqrt{17}},\\pm\\tfrac{3}{\\sqrt{17}}\\right).\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q5",
+      "number": 5,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "פתור את $x\\dfrac{dy}{dx}+xy=1-y$ עם $y(1)=0$.",
+      "solution_he": "**סידור מחדש:** $xy'+y(x+1)=1$ ⇒ $y'+\\bigl(1+\\tfrac{1}{x}\\bigr)y=\\tfrac{1}{x}$.\n\n**גורם אינטגרציה:** $\\mu=e^{\\int(1+1/x)dx}=xe^x$.\n\n$(\\mu y)'=\\tfrac{\\mu}{x}=e^x$ ⇒ $\\mu y=e^x+C$ ⇒ $y=\\tfrac{1+Ce^{-x}}{x}$.\n\n**תנאי התחלה $y(1)=0$:** $0=1+C/e$ ⇒ $C=-e$.\n\n$$\\boxed{\\;y(x)=\\tfrac{1-e^{1-x}}{x}.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "פתור את $(9x^2+y-1)-(4y-x)y'=0$.",
+      "solution_he": "**צורה סטנדרטית:** $M\\,dx+N\\,dy=0$ עם $M=9x^2+y-1$, $N=x-4y$.\n\n**מדויקות:** $M_y=1=N_x$ ✓.\n\n**פוטנציאל:** $\\Phi_x=9x^2+y-1$ ⇒ $\\Phi=3x^3+xy-x+g(y)$.\n\n$\\Phi_y=x+g'(y)=x-4y$ ⇒ $g'(y)=-4y$, $g=-2y^2$.\n\n$$\\boxed{\\;3x^3+xy-x-2y^2=C.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q7",
+      "number": 7,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "פתור את $2y''+3y'+y=x^2+3\\sin x$.",
+      "solution_he": "**הומוגנית:** $2r^2+3r+1=0\\Rightarrow r=-\\tfrac{1}{2},-1$.\n$y_h=C_1 e^{-x/2}+C_2 e^{-x}$.\n\n**ל-$x^2$:** ניחוש $y_p=Ax^2+Bx+C$. הצבה: $Ax^2+(6A+B)x+(4A+3B+C)=x^2$.\n$A=1, B=-6, C=14$. $y_{p1}=x^2-6x+14$.\n\n**ל-$3\\sin x$:** ניחוש $y_p=a\\cos x+b\\sin x$. הצבה נותנת מערכת:\n$-a+3b=0, -3a-b=3$. פתרון: $a=-\\tfrac{9}{10}, b=-\\tfrac{3}{10}$.\n$y_{p2}=-\\tfrac{9\\cos x+3\\sin x}{10}$.\n\n$$\\boxed{\\;y=C_1 e^{-x/2}+C_2 e^{-x}+x^2-6x+14-\\tfrac{9\\cos x+3\\sin x}{10}.\\;}$$"
+    },
+    {
+      "qid": "y1999_m1_q8",
+      "number": 8,
+      "points": 15,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. פתח בטור פוריה את $f(x)=\\begin{cases}0 & -\\pi\\le x<-\\pi/2\\\\1 & -\\pi/2\\le x<\\pi/2\\\\0 & \\pi/2\\le x<\\pi\\end{cases}$.\n\nב. העזר בא׳ כדי להראות ש-$\\dfrac{\\pi}{4}=1-\\dfrac{1}{3}+\\dfrac{1}{5}-\\dfrac{1}{7}+\\cdots$.",
+      "solution_he": "**(א) טור פוריה.** $f$ זוגית ⇒ $b_n=0$. מחזור $2\\pi$ ($L=\\pi$).\n\n**$a_0$:** $a_0=\\tfrac{1}{\\pi}\\int_{-\\pi/2}^{\\pi/2}1\\,dx=1$.\n\n**$a_n$:** $a_n=\\tfrac{1}{\\pi}\\int_{-\\pi/2}^{\\pi/2}\\cos(nx)dx=\\tfrac{2}{n\\pi}\\sin(n\\pi/2)$.\n\n$\\sin(n\\pi/2)$: $0$ ל-$n$ זוגי; $(-1)^k$ ל-$n=2k+1$.\n\n$$\\boxed{\\;f(x)=\\tfrac{1}{2}+\\tfrac{2}{\\pi}\\sum_{k=0}^\\infty\\frac{(-1)^k}{2k+1}\\cos((2k+1)x).\\;}$$\n\n---\n\n**(ב) Leibniz.** ב-$x=0$, $f(0)=1$:\n$$1=\\tfrac{1}{2}+\\tfrac{2}{\\pi}\\sum_{k=0}^\\infty\\frac{(-1)^k}{2k+1}\\Rightarrow \\sum_{k=0}^\\infty\\frac{(-1)^k}{2k+1}=\\tfrac{\\pi}{4}.$$\n\n$$\\boxed{\\;\\tfrac{\\pi}{4}=1-\\tfrac{1}{3}+\\tfrac{1}{5}-\\tfrac{1}{7}+\\cdots\\quad\\square\\;}$$"
+    }
+  ]
+}

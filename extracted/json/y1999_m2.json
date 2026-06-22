@@ -1,0 +1,66 @@
+{
+  "exam_id": "y1999_m2",
+  "year": 1999,
+  "moed": "ב",
+  "date": "1999-09-22",
+  "duration_hours": 3,
+  "instructions": "שש שאלות חובה (סה״כ 100 נקודות).",
+  "answer_n_of_m": null,
+  "source_pdf": "y1999_s2m2y99.pdf",
+  "questions": [
+    {
+      "qid": "y1999_m2_q1",
+      "number": 1,
+      "points": 25,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "א. נתון הטור $1+x^3+x^6+x^9+\\cdots$. יש לחשב בעזרתו את הטור האינסופי $3\\cdot(\\tfrac{1}{2})^2+6\\cdot(\\tfrac{1}{2})^5+9\\cdot(\\tfrac{1}{2})^8+\\cdots+3n\\cdot(\\tfrac{1}{2})^{3n-1}+\\cdots$.\n\nב. יש להפוך את האינטגרל $\\int_0^m\\dfrac{e^{-x^2}-1}{x}dx$ לטור אינסופי ב-$m$.",
+      "solution_he": "**(א) גזירה של טור הנדסי.** $S(x)=\\sum_{n=0}^\\infty x^{3n}=\\tfrac{1}{1-x^3}$.\n\n$S'(x)=\\sum_{n=1}^\\infty 3n x^{3n-1}=\\tfrac{3x^2}{(1-x^3)^2}$.\n\nב-$x=1/2$:\n$$\\sum_{n=1}^\\infty 3n\\bigl(\\tfrac{1}{2}\\bigr)^{3n-1}=\\tfrac{3\\cdot 1/4}{(1-1/8)^2}=\\tfrac{3/4}{49/64}=$$\n\n$$\\boxed{\\;\\tfrac{48}{49}\\approx 0.98.\\;}$$\n\n---\n\n**(ב) טור טיילור של אינטגרנד.** $e^{-x^2}-1=\\sum_{k=1}^\\infty\\tfrac{(-x^2)^k}{k!}=\\sum_{k=1}^\\infty\\tfrac{(-1)^k x^{2k}}{k!}$.\n\n$\\tfrac{e^{-x^2}-1}{x}=\\sum_{k=1}^\\infty\\tfrac{(-1)^k x^{2k-1}}{k!}$.\n\nאינטגרציה מ-$0$ עד $m$:\n$$\\boxed{\\;\\int_0^m\\tfrac{e^{-x^2}-1}{x}dx=\\sum_{k=1}^\\infty\\tfrac{(-1)^k m^{2k}}{2k\\cdot k!}.\\;}$$"
+    },
+    {
+      "qid": "y1999_m2_q2",
+      "number": 2,
+      "points": 25,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "יש לחשב את האינטגרלים:\n\nא. $\\int\\cos^4 x\\sin^2 x\\,dx$.\n\nב. $\\int\\dfrac{x^5}{x^3-2x^2+x}dx$.",
+      "solution_he": "**(א) זהויות זווית כפולה.** $\\sin^2 x\\cos^4 x=\\tfrac{\\sin^2 2x(1+\\cos 2x)}{8}=\\tfrac{(1-\\cos 4x)(1+\\cos 2x)}{16}$.\n\nהרחבה ושימוש ב-$\\cos 4x\\cos 2x=\\tfrac{\\cos 6x+\\cos 2x}{2}$:\n$$=\\tfrac{2+\\cos 2x-2\\cos 4x-\\cos 6x}{32}.$$\n\nאינטגרציה:\n$$\\boxed{\\;\\int\\cos^4 x\\sin^2 x\\,dx=\\tfrac{x}{16}+\\tfrac{\\sin 2x}{64}-\\tfrac{\\sin 4x}{64}-\\tfrac{\\sin 6x}{192}+C.\\;}$$\n\n---\n\n**(ב) חלוקת פולינומים.** $x^3-2x^2+x=x(x-1)^2$. $\\tfrac{x^5}{x(x-1)^2}=\\tfrac{x^4}{(x-1)^2}$.\n\nחלוקה ארוכה: $x^4=(x-1)^2(x^2+2x+3)+(4x-3)$. ולכן:\n$$\\tfrac{x^4}{(x-1)^2}=x^2+2x+3+\\tfrac{4(x-1)+1}{(x-1)^2}=x^2+2x+3+\\tfrac{4}{x-1}+\\tfrac{1}{(x-1)^2}.$$\n\n$$\\boxed{\\;\\int=\\tfrac{x^3}{3}+x^2+3x+4\\ln|x-1|-\\tfrac{1}{x-1}+C.\\;}$$"
+    },
+    {
+      "qid": "y1999_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "תיבה מלבנית בעלת נפח של $16$ מ״ק עשויה משני סוגי חומרים. שני הבסיסים עשויים מחומר העולה $10$ ש״ח למ״ר בעוד שארבעת הפאות עשויות מחומר העולה $5$ ש״ח למ״ר. יש למצוא עבור אילו ממדי תיבה (אורך, רוחב, גובה) תהיה עלות התיבה מינימלית.",
+      "solution_he": "(שאלה זהה ל-2000 מועד א׳ ש׳1.)\n\nלגראנז׳ נותן $a=b=2$ מ׳, $c=2a=4$ מ׳. עלות מינימלית $240$ ש״ח.\n\n$$\\boxed{\\;a=b=2,\\,c=4;\\quad C_{\\min}=240\\text{ ש״ח}.\\;}$$"
+    },
+    {
+      "qid": "y1999_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "פתור את המד״ר $y''+4y=xe^x+x\\sin 2x$.",
+      "solution_he": "**הומוגנית:** $r^2+4=0\\Rightarrow r=\\pm 2i$. $y_h=C_1\\cos 2x+C_2\\sin 2x$.\n\n**פרטי ל-$xe^x$** (ניחוש $y=(Ax+B)e^x$):\nהצבה נותנת $5A x+2A+5B=x$ ⇒ $A=\\tfrac{1}{5}, B=-\\tfrac{2}{25}$. $y_{p1}=\\bigl(\\tfrac{x}{5}-\\tfrac{2}{25}\\bigr)e^x$.\n\n**פרטי ל-$x\\sin 2x$** (תהודה — $\\pm 2i$ הם שורשים; ניחוש $y=(Ax^2+Bx)\\cos 2x+(Cx^2+Dx)\\sin 2x$):\nפתרון המערכת נותן $A=-\\tfrac{1}{8}, B=0, C=0, D=\\tfrac{1}{16}$.\n$y_{p2}=-\\tfrac{x^2}{8}\\cos 2x+\\tfrac{x}{16}\\sin 2x$.\n\n$$\\boxed{\\;y=C_1\\cos 2x+C_2\\sin 2x+\\bigl(\\tfrac{x}{5}-\\tfrac{2}{25}\\bigr)e^x-\\tfrac{x^2}{8}\\cos 2x+\\tfrac{x}{16}\\sin 2x.\\;}$$"
+    },
+    {
+      "qid": "y1999_m2_q5",
+      "number": 5,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "חשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F(x,y,z)=(x^3-e^y)\\hat i+(y^3+\\sin z)\\hat j+(z^3-xy)\\hat k$, ו-$\\sigma$ הוא שפה של גוף התחום ע״י $z=(4-x^2-y^2)^{1/2}$ ומישור $xy$.",
+      "solution_he": "**משפט הדיברגנץ.** $\\nabla\\cdot\\vec F=3x^2+3y^2+3z^2=3\\rho^2$.\n\nהגוף: חצי כדור עליון ברדיוס $2$.\n\n$$\\iiint 3\\rho^2\\,dV=2\\pi\\!\\int_0^{\\pi/2}\\!\\!\\sin\\phi d\\phi\\!\\int_0^2\\!3\\rho^4 d\\rho=2\\pi\\cdot 1\\cdot 3\\cdot\\tfrac{32}{5}=$$\n\n$$\\boxed{\\;\\iint_\\sigma=\\tfrac{192\\pi}{5}\\approx 120.6.\\;}$$"
+    },
+    {
+      "qid": "y1999_m2_q6",
+      "number": 6,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "יש למצוא את המסה של תיל דק בצורת קשת $y=(9-x^2)^{1/2}$ (כאשר $0<x<3$) אם צפיפותו נתונה ע״י $\\delta(x,y)=k\\,x\\,y^{1/2}$.",
+      "solution_he": "**אלמנט קשת:** $y=\\sqrt{9-x^2}$, $y'=-x/\\sqrt{9-x^2}$, $ds=\\sqrt{1+\\tfrac{x^2}{9-x^2}}dx=\\tfrac{3}{\\sqrt{9-x^2}}dx$.\n\n**מסה:**\n$$M=\\!\\int_0^3 k x\\sqrt y\\cdot\\tfrac{3}{\\sqrt{9-x^2}}dx=3k\\!\\int_0^3\\tfrac{x(9-x^2)^{1/4}}{\\sqrt{9-x^2}}dx=3k\\!\\int_0^3 x(9-x^2)^{-1/4}dx.$$\n\nהצבה $u=9-x^2, du=-2x\\,dx$:\n$$=\\tfrac{3k}{2}\\!\\int_0^9 u^{-1/4}du=\\tfrac{3k}{2}\\cdot\\tfrac{4}{3}\\bigl[u^{3/4}\\bigr]_0^9=2k\\cdot 9^{3/4}=2k\\cdot 3\\sqrt 3=$$\n\n$$\\boxed{\\;M=6k\\sqrt 3\\approx 10.39k.\\;}$$"
+    }
+  ]
+}
