@@ -106,10 +106,12 @@
   .exam-picker .pdf-link:hover { background: var(--accent); color: white; border-color: var(--accent); }
   .exam-picker .pdf-link.hidden { display: none; }
   @media (max-width: 600px) {
-    .search-field { flex-direction: column; align-items: stretch; gap: 6px; }
-    .search-field label { min-width: 0; }
-    .exam-picker-row { flex-direction: column; align-items: stretch; gap: 6px; }
-    .exam-picker label { min-width: 0; }
+    .search-wrap { padding: 14px 16px; }
+    .search-field label { min-width: 0; font-size: 14px; }
+    .search-field input { padding: 10px 14px; font-size: 15px; }
+    .exam-picker { padding: 14px 16px; }
+    .exam-picker label { min-width: 50px; font-size: 13px; }
+    .exam-picker select { padding: 8px 10px; font-size: 14px; }
   }
   .sol-toggle { background: var(--panel2); color: var(--text); border: 1px solid var(--line);
                 padding: 7px 14px; border-radius: 6px; cursor: pointer; margin-top: 12px;
