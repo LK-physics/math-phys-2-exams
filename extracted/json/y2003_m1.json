@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2003_m1",
+  "year": 2003,
+  "moed": "א",
+  "date": "2003-07-11",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4, על 4 מתוך 5 הסעיפים בשאלה 5 (כל סעיף 15 נקודות, רק 4 התשובות הראשונות ייבדקו). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2003_s2m1y03.pdf",
+  "questions": [
+    {
+      "qid": "y2003_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y,z)=\\arctan\\!\\left((x+yz)^{1/2}\\right)$. יש לחשב $\\dfrac{\\partial f}{\\partial x}, \\dfrac{\\partial f}{\\partial y}, \\dfrac{\\partial f}{\\partial z}$.",
+      "solution_he": "**שרשרת:** עם $u=(x+yz)^{1/2}$, $f=\\arctan u$, $f'(u)=\\dfrac{1}{1+u^2}=\\dfrac{1}{1+x+yz}$.\n\n**גזירת $u$:**\n$\\partial_x u=\\dfrac{1}{2\\sqrt{x+yz}}$.\n$\\partial_y u=\\dfrac{z}{2\\sqrt{x+yz}}$.\n$\\partial_z u=\\dfrac{y}{2\\sqrt{x+yz}}$.\n\n**תוצאה** (כפל בכלל השרשרת):\n$$\\boxed{\\;\\frac{\\partial f}{\\partial x}=\\frac{1}{2(1+x+yz)\\sqrt{x+yz}},\\quad\\frac{\\partial f}{\\partial y}=\\frac{z}{2(1+x+yz)\\sqrt{x+yz}},\\quad\\frac{\\partial f}{\\partial z}=\\frac{y}{2(1+x+yz)\\sqrt{x+yz}}.\\;}$$"
+    },
+    {
+      "qid": "y2003_m1_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y)=x^4-16xy+8y^2+7$. יש למצוא את כל נקודות הקיצון ולקבוע לגבי כל אחת מהן אם מדובר במקסימום מקומי, מינימום מקומי או נקודת אוכף.",
+      "solution_he": "**מערכת:** $f_x=4x^3-16y=0\\Rightarrow y=\\tfrac{x^3}{4}$. $f_y=-16x+16y=0\\Rightarrow y=x$.\n\nהצבה: $x=\\tfrac{x^3}{4}\\Rightarrow x^3=4x\\Rightarrow x(x^2-4)=0\\Rightarrow x=0,\\pm 2$.\n\n**שלוש נקודות:** $(0,0), (2,2), (-2,-2)$.\n\n**הסיאן:** $f_{xx}=12x^2$, $f_{yy}=16$, $f_{xy}=-16$. $D=192x^2-256$.\n\n**ב-$(0,0)$:** $D=-256<0$ ⇒ **אוכף**.\n\n**ב-$(\\pm 2,\\pm 2)$:** $D=768-256=512>0$, $f_{xx}=48>0$ ⇒ **מינימום מקומי**. $f=16-64+32+7=-9$.\n\n$$\\boxed{\\;(0,0)\\text{ אוכף};\\quad(\\pm 2,\\pm 2)\\text{ מינימום מקומי, }f=-9.\\;}$$"
+    },
+    {
+      "qid": "y2003_m1_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתון משולש שקואורדינטות 3 קודקודיו הן: $(-3,-2,-2), (2,3,-2)$ ו-$(1,-2,2)$. מה שטחו של משולש זה?",
+      "solution_he": "**וקטורים:** $\\vec u=(5,5,0)$, $\\vec v=(4,0,4)$.\n\n**מכפלה וקטורית:**\n$$\\vec u\\times\\vec v=\\begin{vmatrix}\\hat i&\\hat j&\\hat k\\\\5&5&0\\\\4&0&4\\end{vmatrix}=(20-0,\\,0-20,\\,0-20)=(20,-20,-20).$$\n\n$|\\vec u\\times\\vec v|=20\\sqrt 3$.\n\n$$\\boxed{\\;A=\\tfrac{1}{2}\\cdot 20\\sqrt 3=10\\sqrt 3\\approx 17.32.\\;}$$"
+    },
+    {
+      "qid": "y2003_m1_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא פתרון כללי למשוואה הדיפרנציאלית $y''-2y'+y=4e^x$.",
+      "solution_he": "**משוואת מאפיין:** $r^2-2r+1=(r-1)^2=0$. שורש כפול $r=1$.\n\n**פתרון הומוגני:** $y_h=(C_1+C_2 x)e^x$.\n\n**פתרון פרטי:** $r=1$ שורש כפול ⇒ ניחוש $y_p=Ax^2 e^x$. הצבה: $y_p''-2y_p'+y_p=2Ae^x$. שוויון $=4e^x$ ⇒ $A=2$.\n\n$$\\boxed{\\;y=(C_1+C_2 x)e^x+2x^2 e^x.\\;}$$"
+    },
+    {
+      "qid": "y2003_m1_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות על 4 מתוך 5 הסעיפים (15 נקודות לכל אחד). תיבדקנה רק 4 התשובות הראשונות.\n\nא. יש לחשב את $\\displaystyle\\int_0^1\\!\\!\\int_{\\sqrt x}^1\\! e^{y^3/3}dy\\,dx$.\n\nב. נתון המסלול $c(t)=(\\cos^3 t,\\sin^3 t,t)$ עבור $0\\le t\\le\\pi/4$. יש לחשב את $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=yz\\hat i+xz\\hat j+xy\\hat k$.\n\nג. יהי $c$ מסלול סגור המתקבל מחיתוך המישור $x+y+z=1$ עם הגליל האינסופי $x^2+y^2=1$. יש לחשב את $\\oint_c(x^2 z+x^2 y+y^3/3)dx-(y^2 z)dy+3dz$.\n\nד. יהי $S$ חלק ממעטפת של כדור שמרכזו בראשית ורדיוסו $1$ אשר עליו $x,y,z\\ge 0$. יש לחשב את $\\iint_S(x+y+z)ds$.\n\nה. יש לחשב את $\\iint_\\sigma(x^3+y^2+z^2)ds$ כאשר $\\sigma$ מעטפת של כדור שמרכזו בראשית ורדיוסו $1$.",
+      "solution_he": "**(א) החלפת סדר.** התחום $x\\in[0,1],\\sqrt x\\le y\\le 1$ ⇔ $y\\in[0,1],0\\le x\\le y^2$.\n\n$$\\int_0^1\\!\\int_0^{y^2}\\!e^{y^3/3}dx\\,dy=\\int_0^1 y^2 e^{y^3/3}dy.$$\n\nהצבה $u=y^3/3, du=y^2 dy$, גבולות $0\\to 1/3$:\n$$\\boxed{\\;\\int=e^{1/3}-1\\approx 0.396.\\;}$$\n\n---\n\n**(ב) שדה משמר.** $\\vec F=(yz,xz,xy)=\\nabla(xyz)$. פוטנציאל $\\phi=xyz$.\n\nב-$t=0$: $(1,0,0), \\phi=0$. ב-$t=\\pi/4$: $((\\sqrt 2/2)^3, (\\sqrt 2/2)^3, \\pi/4)=(\\sqrt 2/4, \\sqrt 2/4, \\pi/4)$, $\\phi=(\\sqrt 2/4)^2\\cdot\\pi/4=\\tfrac{\\pi}{32}$.\n\n$$\\boxed{\\;\\int_c\\vec F\\cdot d\\vec r=\\tfrac{\\pi}{32}\\approx 0.098.\\;}$$\n\n---\n\n**(ג) Stokes על מישור $x+y+z=1$.** רוטור $=(y^2,x^2,-(x^2+y^2))$. נורמל $(1,1,1)$.\n\n$(\\nabla\\times\\vec F)\\cdot(1,1,1)=y^2+x^2-x^2-y^2=0$.\n\n$$\\boxed{\\;\\oint_c=0.\\;}$$\n\n(הצירוף סודר במכוון לנטרל את כל התרומות.)\n\n---\n\n**(ד) אינטגרל על אוקטנט של ספירה.** בספריות $\\theta\\in[0,\\pi/2], \\phi\\in[0,\\pi/2]$:\n* $\\iint x\\,dS=\\int_0^{\\pi/2}\\!\\cos\\theta d\\theta\\!\\int_0^{\\pi/2}\\!\\sin^2\\phi d\\phi=1\\cdot\\tfrac{\\pi}{4}=\\tfrac{\\pi}{4}$.\n* בסימטריה: $\\iint y\\,dS=\\iint z\\,dS=\\tfrac{\\pi}{4}$.\n\n$$\\boxed{\\;\\iint_S(x+y+z)ds=3\\cdot\\tfrac{\\pi}{4}=\\tfrac{3\\pi}{4}.\\;}$$\n\n---\n\n**(ה) ספירת יחידה.** $\\iint x^3 dS=0$ (אי-זוגי). $\\iint y^2=\\iint z^2=\\tfrac{1}{3}\\iint(x^2+y^2+z^2)=\\tfrac{1}{3}\\cdot 4\\pi=\\tfrac{4\\pi}{3}$.\n\n$$\\boxed{\\;\\iint_\\sigma(x^3+y^2+z^2)ds=0+\\tfrac{4\\pi}{3}+\\tfrac{4\\pi}{3}=\\tfrac{8\\pi}{3}.\\;}$$"
+    },
+    {
+      "qid": "y2003_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** נתונה חממת זכוכית בצורת המשטח $z=8-2x^2-2y^2$. לחממה רצפת אדמה ב-$z=0$. התפלגות הטמפרטורה בתוך ומחוץ לחממה נתונה ע״י $T(x,y,z)=20+0.1(x^2+y^2+3(z-2)^2)$. הטמפרטורה גורמת לשטף חום הנתון ע״י $\\vec H=-k\\nabla T$ כאשר $k$ הוא קבוע שתלוי בתכונות הבידוד של התווך. יש למצוא את שטף החום הכללי היוצא מתוך החממה דרך קירות הזכוכית של החממה ורצפתה אם $k=1$ על הזכוכית ו-$k=3$ על האדמה.",
+      "solution_he": "**גרדיאנט הטמפרטורה:** $\\nabla T=(0.2x,\\,0.2y,\\,0.6(z-2))$.\n\n**דיברגנץ:** $\\nabla\\cdot\\nabla T=0.2+0.2+0.6=1$.\n\n**נפח החממה:** $V=\\int_0^8\\pi r^2 dz=\\int_0^8\\pi(8-z)/2 dz=\\tfrac{\\pi}{2}(64-32)=16\\pi$.\n\n**מ-משפט גאוס** $\\iint_{\\partial V}\\nabla T\\cdot\\hat n\\,dS=\\iiint\\Delta T\\,dV=16\\pi$ (סך הכל).\n\n**שטף $\\nabla T$ דרך הרצפה** (נורמל יוצא $-\\hat z$, ב-$z=0$): $\\nabla T\\cdot(-\\hat z)=-0.6(0-2)=1.2$. שטח רצפה $\\pi\\cdot 4=4\\pi$. שטף $=1.2\\cdot 4\\pi=4.8\\pi$.\n\n**שטף $\\nabla T$ דרך הזכוכית** $=16\\pi-4.8\\pi=11.2\\pi$.\n\n**שטף חום עם $k$ מתאים:**\n* רצפה ($k=3$): $\\vec H\\cdot\\hat n=-3\\cdot 1.2$ למשטח (בלי הגודל), שטף $=-3\\cdot 4.8\\pi=-14.4\\pi$.\n* זכוכית ($k=1$): $-1\\cdot 11.2\\pi=-11.2\\pi$.\n\n**סכום:**\n$$\\boxed{\\;\\Phi_H=-14.4\\pi-11.2\\pi=-25.6\\pi\\approx -80.4.\\;}$$\n\nהסימן השלילי משמעו שחום זורם **פנימה** לחממה (הטמפרטורה החיצונית גבוהה יותר ממשטחי החממה, כי $T$ גדל עם $z$ ובכל כיוון רדיאלי)."
+    }
+  ]
+}

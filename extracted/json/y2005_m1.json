@@ -1,0 +1,69 @@
+{
+  "exam_id": "y2005_m1",
+  "year": 2005,
+  "moed": "א",
+  "date": "2005-06-23",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4 ועל 4 מתוך 5 הסעיפים בשאלה 5 (פתרון חמישי לא ייבדק). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2005_s2m1y05.pdf",
+  "questions": [
+    {
+      "qid": "y2005_m1_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא ולאפיין את נקודות הקיצון של הפונקציה $f(x,y)=\\dfrac{x^5}{5}-\\dfrac{x^2}{2}+\\dfrac{y^3}{3}-y$.",
+      "solution_he": "**נגזרות:** $f_x=x^4-x=x(x^3-1)$, $f_y=y^2-1$.\n\n**נקודות קריטיות:** $x=0$ או $x=1$; $y=\\pm 1$. סך הכל $4$ נקודות.\n\n**הסיאן:** $f_{xx}=4x^3-1$, $f_{yy}=2y$, $f_{xy}=0$. $D=f_{xx}f_{yy}$.\n\n| נקודה | $f_{xx}$ | $f_{yy}$ | $D$ | סיווג | ערך $f$ |\n|---|---|---|---|---|---|\n| $(0,1)$ | $-1$ | $2$ | $-2$ | אוכף | $-\\tfrac{2}{3}$ |\n| $(0,-1)$ | $-1$ | $-2$ | $2$ | **מקסימום** | $\\tfrac{2}{3}$ |\n| $(1,1)$ | $3$ | $2$ | $6$ | **מינימום** | $-\\tfrac{29}{30}$ |\n| $(1,-1)$ | $3$ | $-2$ | $-6$ | אוכף | $\\tfrac{31}{30}$ |\n\n$$\\boxed{\\;(0,-1)\\text{ מקס׳ מקומי }f=\\tfrac{2}{3};\\quad(1,1)\\text{ מינ׳ מקומי }f=-\\tfrac{29}{30};\\quad(0,1),(1,-1)\\text{ אוכפים.}\\;}$$"
+    },
+    {
+      "qid": "y2005_m1_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתון המשטח $x^2 yz+4xz^2=4$ והישר המקביל לציר $y$ המקיים $x=2$ ו-$z=1$. יש למצוא את הנורמל למשטח בנקודת החיתוך של המשטח והישר ואת הזווית בין הנורמל לישר.",
+      "solution_he": "**נקודת חיתוך:** הצבת $x=2, z=1$: $4y+16=4\\Rightarrow y=-3$. נקודה $(2,-3,1)$.\n\n**נורמל:** $F=x^2 yz+4xz^2-4$. $\\nabla F=(2xyz+4z^2,\\,x^2 z,\\,x^2 y+8xz)$.\n\nב-$(2,-3,1)$: $(-12+4,\\,4,\\,-12+16)=(-8,4,4)\\parallel(-2,1,1)$.\n\n$$\\boxed{\\;\\vec n=(-2,1,1)\\text{ (או כפל סקלרי)}.\\;}$$\n\n**זווית עם $\\hat j=(0,1,0)$:**\n$$\\cos\\theta=\\tfrac{1}{\\sqrt 6}\\Rightarrow\\boxed{\\;\\theta=\\arccos\\tfrac{1}{\\sqrt 6}\\approx 65.9°.\\;}$$"
+    },
+    {
+      "qid": "y2005_m1_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": [
+        "א",
+        "ב"
+      ],
+      "statement_he": "יש לקבוע לגבי שתי הטענות הבאות אם נכון או לא נכון (אין צורך לנמק):\n\nא. $(\\vec u\\times\\vec v)\\times\\vec w=\\vec u\\times(\\vec v\\times\\vec w)$ לכל שלושה וקטורים.\n\nב. אם $\\vec F=\\vec G+\\vec A$ כאשר $\\vec A$ וקטור קבוע, אז $\\nabla\\times\\vec F=\\nabla\\times\\vec G$.",
+      "solution_he": "**(א) לא נכון.** המכפלה הוקטורית **לא אסוציאטיבית**. הזהות הנכונה: $\\vec u\\times(\\vec v\\times\\vec w)=\\vec v(\\vec u\\cdot\\vec w)-\\vec w(\\vec u\\cdot\\vec v)$ (זהות BAC-CAB), ובאופן דומה $(\\vec u\\times\\vec v)\\times\\vec w=\\vec v(\\vec u\\cdot\\vec w)-\\vec u(\\vec v\\cdot\\vec w)$. אלה שונים זה מזה.\n\n**דוגמה נגדית:** $\\vec u=\\vec v=\\hat x$, $\\vec w=\\hat y$. צד שמאל: $(\\hat x\\times\\hat x)\\times\\hat y=0$. צד ימין: $\\hat x\\times(\\hat x\\times\\hat y)=\\hat x\\times\\hat z=-\\hat y\\ne 0$.\n\n$$\\boxed{\\;\\text{(א) לא נכון.}\\;}$$\n\n---\n\n**(ב) נכון.** רוטור של וקטור קבוע הוא אפס: $\\nabla\\times\\vec A=0$. לכן $\\nabla\\times\\vec F=\\nabla\\times\\vec G+\\nabla\\times\\vec A=\\nabla\\times\\vec G$.\n\n$$\\boxed{\\;\\text{(ב) נכון.}\\;}$$"
+    },
+    {
+      "qid": "y2005_m1_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא פתרון כללי של $2xyy'-x^2-3y^2=0$.",
+      "solution_he": "**משוואה הומוגנית.** $y'=\\dfrac{x^2+3y^2}{2xy}=\\dfrac{x}{2y}+\\dfrac{3y}{2x}$.\n\n**הצבה** $v=y/x$, $y=vx$, $y'=v+xv'$:\n$$v+xv'=\\tfrac{1}{2v}+\\tfrac{3v}{2}\\Rightarrow xv'=\\tfrac{1}{2v}+\\tfrac{v}{2}=\\tfrac{1+v^2}{2v}.$$\n\n**הפרדת משתנים:** $\\dfrac{2v\\,dv}{1+v^2}=\\dfrac{dx}{x}\\Rightarrow\\ln(1+v^2)=\\ln|x|+C\\Rightarrow 1+v^2=Cx$.\n\n**חזרה ל-$y$:** $1+\\tfrac{y^2}{x^2}=Cx$ ⇒\n$$\\boxed{\\;x^2+y^2=Cx^3.\\;}$$"
+    },
+    {
+      "qid": "y2005_m1_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות **רק** על 4 מתוך 5 הסעיפים (פתרון חמישי לא ייבדק).\n\nא. יש לחשב את $\\displaystyle\\int_0^8\\!\\!\\int_{y^{1/3}}^2\\dfrac{y^2 e^{x^2}}{x^8}dx\\,dy$.\n\nב. יש לחשב את $\\oint_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=-y^3\\hat i+x^3\\hat j-z^3\\hat k$ ו-$c:(\\cos t,\\sin t,1-\\cos t-\\sin t)$ עבור $0\\le t\\le 2\\pi$.\n\nג. יש לחשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ המשטח $z=2-x^2-y^2$ עבור $(x,y)$ הנמצאים בתוך מעגל שמרכזו בראשית ורדיוסו $\\sqrt 2$, ו-$\\vec F=\\!\\left(-4x+\\dfrac{x^2+y^2-1}{1+3y^3}\\right)\\!\\hat i+3y\\,\\hat j+\\!\\left(7-z-\\dfrac{2xz}{1+3y^3}\\right)\\!\\hat k$.\n\nד. יש לחשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\vec F=xz^2\\hat i+2y^3\\hat j+3zx\\hat k$, $\\sigma$ מעטפת כדור שמרכזו בראשית ורדיוסו $2$.\n\nה. יש לחשב את האינטגרל הקווי $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=3xy\\hat i+xz\\hat j+y^2\\hat k$ ו-$c$ מסלול המחבר את הראשית עם הנקודה $(2,4,8)$ והנתון ע״י $c:\\bigl(2\\sin t,\\,4(1-\\cos t),\\,\\tfrac{16}{\\pi}t\\bigr)$ עבור $0\\le t\\le\\pi/2$.",
+      "solution_he": "**(א) החלפת סדר אינטגרציה.** התחום $0\\le y\\le 8$, $y^{1/3}\\le x\\le 2$ ⇔ $0\\le x\\le 2$, $0\\le y\\le x^3$.\n\n$$\\int_0^2\\!\\!\\int_0^{x^3}\\!\\!\\frac{y^2 e^{x^2}}{x^8}dy\\,dx=\\!\\int_0^2\\!\\frac{e^{x^2}}{x^8}\\cdot\\frac{x^9}{3}dx=\\frac{1}{3}\\!\\int_0^2\\!x e^{x^2}dx=\\frac{e^{x^2}}{6}\\bigg|_0^2=$$\n$$\\boxed{\\;\\frac{e^4-1}{6}\\approx 9.06.\\;}$$\n\n---\n\n**(ב) Stokes על דיסקת מישור.** המסלול נמצא במישור $x+y+z=1$. הצבה: $\\cos t+\\sin t+(1-\\cos t-\\sin t)=1$ ✓.\n\n**רוטור:** $\\nabla\\times\\vec F=(0,0,3x^2-(-3y^2))=(0,0,3x^2+3y^2)$.\n\n$\\vec r(x,y)=(x,y,1-x-y)$, $\\vec r_x\\times\\vec r_y=(1,1,1)$.\n$(\\nabla\\times\\vec F)\\cdot(1,1,1)=3r^2$.\n\n$$\\iint_{r\\le 1}3r^2\\,dA=6\\pi\\!\\int_0^1\\!r^3 dr=$$\n$$\\boxed{\\;\\tfrac{3\\pi}{2}.\\;}$$\n\n---\n\n**(ג) דיברגנץ — קיצוץ דרמטי.** האיברים המסובכים מתבטלים:\n$\\partial_x(-4x+\\tfrac{x^2+y^2-1}{1+3y^3})=-4+\\tfrac{2x}{1+3y^3}$.\n$\\partial_y(3y)=3$.\n$\\partial_z(7-z-\\tfrac{2xz}{1+3y^3})=-1-\\tfrac{2x}{1+3y^3}$.\n\n**סכום:** $-4+3-1=-2$. (האיברים עם $1/(1+3y^3)$ מתבטלים!)\n\nנסגור עם הדיסקה $r\\le\\sqrt 2$ ב-$z=0$. נפח: $V=2\\pi(2-1)=2\\pi$.\n\n$\\iiint\\nabla\\cdot\\vec F\\,dV=-4\\pi$ = שטף החוצה דרך הפרבולואיד + שטף החוצה דרך הדיסקה.\n\n**שטף דרך הדיסקה** ($-\\hat z$): $F_3|_{z=0}=7$. שטף $=-7\\cdot 2\\pi=-14\\pi$.\n\n$$\\iint_\\sigma=-4\\pi-(-14\\pi)=\\boxed{\\;10\\pi.\\;}$$\n\n---\n\n**(ד) דיברגנץ על כדור.** $\\nabla\\cdot\\vec F=z^2+6y^2+3x$.\n\n$\\iiint r^2\\,dV=4\\pi\\int_0^2 r^4 dr=\\tfrac{128\\pi}{5}$.\n$\\iiint z^2=\\tfrac{1}{3}\\iiint r^2=\\tfrac{128\\pi}{15}$. דומה $\\iiint y^2$.\n$\\iiint 3x=0$.\n\n$$\\iint=\\tfrac{128\\pi}{15}+6\\cdot\\tfrac{128\\pi}{15}+0=\\tfrac{7\\cdot 128\\pi}{15}=\\boxed{\\;\\tfrac{896\\pi}{15}\\approx 187.6.\\;}$$\n\n---\n\n**(ה) קו ישיר על מסלול מורכב.** $\\dot x=2\\cos t$, $\\dot y=4\\sin t$, $\\dot z=16/\\pi$.\n\n$3xy\\cdot\\dot x=48\\sin t\\cos t-48\\sin t\\cos^2 t$.\n* $\\int_0^{\\pi/2}48\\sin t\\cos t\\,dt=24$.\n* $\\int_0^{\\pi/2}48\\sin t\\cos^2 t\\,dt=16$.\n* תרומה: $24-16=8$.\n\n$xz\\cdot\\dot y=\\tfrac{128t\\sin^2 t}{\\pi}$.\n* $\\int_0^{\\pi/2}t\\sin^2 t\\,dt=\\tfrac{\\pi^2}{16}+\\tfrac{1}{4}$ (פירוק $\\sin^2$ + בחלקים).\n* תרומה: $\\tfrac{128}{\\pi}(\\tfrac{\\pi^2}{16}+\\tfrac{1}{4})=8\\pi+\\tfrac{32}{\\pi}$.\n\n$y^2\\cdot\\dot z=\\tfrac{256(1-\\cos t)^2}{\\pi}$.\n* $\\int_0^{\\pi/2}(1-\\cos t)^2\\,dt=\\tfrac{\\pi}{2}-2+\\tfrac{\\pi}{4}=\\tfrac{3\\pi}{4}-2$.\n* תרומה: $\\tfrac{256}{\\pi}(\\tfrac{3\\pi}{4}-2)=192-\\tfrac{512}{\\pi}$.\n\n**סכום:**\n$$\\boxed{\\;\\int_c\\vec F\\cdot d\\vec r=200+8\\pi-\\tfrac{480}{\\pi}\\approx 72.3.\\;}$$"
+    },
+    {
+      "qid": "y2005_m1_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש למצוא את המד״ר שפתרונה הוא פתרון בעיית ה-brachistochrone.",
+      "solution_he": "(שאלה זהה לבונוס של 2006 מועד ב׳.)\n\n**שמירת אנרגיה:** $v=\\sqrt{2gy}$. **זמן:** $T=\\int\\dfrac{\\sqrt{1+y'^2}}{\\sqrt{2gy}}dx$.\n\n**זהות בלטרמי** (כי $F$ אינו תלוי במפורש ב-$x$):\n$$\\frac{1}{\\sqrt{2gy(1+y'^2)}}=C\\Rightarrow y(1+y'^2)=K=\\tfrac{1}{2gC^2}.$$\n\n$$\\boxed{\\;y(1+y'^2)=K.\\;}$$\n\nהפתרון הוא **ציקלואידה** $x=\\tfrac{K}{2}(\\theta-\\sin\\theta), y=\\tfrac{K}{2}(1-\\cos\\theta)$."
+    }
+  ]
+}

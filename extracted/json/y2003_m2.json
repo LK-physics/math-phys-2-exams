@@ -1,0 +1,66 @@
+{
+  "exam_id": "y2003_m2",
+  "year": 2003,
+  "moed": "ב",
+  "date": "2003-09-19",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–4, על 4 מתוך 5 הסעיפים בשאלה 5 (כל סעיף 15 נקודות, רק 4 התשובות הראשונות ייבדקו). שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2003_s2m2y03.pdf",
+  "questions": [
+    {
+      "qid": "y2003_m2_q1",
+      "number": 1,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא וקטור $\\vec u$ שמקביל למישור $3x-2y+3z=4$ וניצב לוקטור $\\vec v=\\hat i-\\hat j+3\\hat k$.",
+      "solution_he": "**$\\vec u\\parallel\\vec n\\times\\vec v$** עם $\\vec n=(3,-2,3)$:\n$$\\vec n\\times\\vec v=((-2)(3)-(3)(-1),\\,(3)(1)-(3)(3),\\,(3)(-1)-(-2)(1))=(-3,-6,-1).$$\n\n$$\\boxed{\\;\\vec u=(3,6,1)\\text{ (או כפל סקלרי).}\\;}$$\n\n**אימות:** $\\vec u\\cdot\\vec n=9-12+3=0$ ✓; $\\vec u\\cdot\\vec v=3-6+3=0$ ✓."
+    },
+    {
+      "qid": "y2003_m2_q2",
+      "number": 2,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y,z)=\\sqrt{x^2+y^2}+\\ln(e^{yz}+1)$. יש לחשב $\\dfrac{\\partial^2 f}{\\partial y\\,\\partial z}$.",
+      "solution_he": "**הערה:** $\\sqrt{x^2+y^2}$ אינו תלוי ב-$z$, ולכן לא תורם.\n\n**שלב 1 — $\\partial f/\\partial z$:**\n$$\\frac{\\partial}{\\partial z}\\ln(e^{yz}+1)=\\frac{ye^{yz}}{e^{yz}+1}.$$\n\n**שלב 2 — גזירה ב-$y$:** עם $g(y)=ye^{yz}$, $h(y)=e^{yz}+1$:\n$g'(y)=e^{yz}+yze^{yz}=e^{yz}(1+yz)$, $h'(y)=ze^{yz}$.\n\n$$\\frac{\\partial^2 f}{\\partial y\\partial z}=\\frac{e^{yz}(1+yz)(e^{yz}+1)-ye^{yz}\\cdot ze^{yz}}{(e^{yz}+1)^2}=\\frac{e^{yz}[(1+yz)(e^{yz}+1)-yze^{yz}]}{(e^{yz}+1)^2}.$$\n\nהרחבה: $(1+yz)(e^{yz}+1)-yze^{yz}=e^{yz}+1+yze^{yz}+yz-yze^{yz}=e^{yz}+1+yz$.\n\n$$\\boxed{\\;\\frac{\\partial^2 f}{\\partial y\\partial z}=\\frac{e^{yz}(e^{yz}+yz+1)}{(e^{yz}+1)^2}.\\;}$$"
+    },
+    {
+      "qid": "y2003_m2_q3",
+      "number": 3,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה הפונקציה $f(x,y)=x^4+y^4-4xy+4$. יש למצוא את כל נקודות הקיצון ולקבוע לגבי כל אחת מהן אם היא נקודת מינימום, מקסימום או פיתול.",
+      "solution_he": "**מערכת:** $f_x=4x^3-4y=0\\Rightarrow y=x^3$. $f_y=4y^3-4x=0\\Rightarrow x=y^3$.\n\nהצבה: $x=x^9\\Rightarrow x(x^8-1)=0\\Rightarrow x=0,\\pm 1$.\n\n**שלוש נקודות:** $(0,0), (1,1), (-1,-1)$.\n\n**הסיאן:** $f_{xx}=12x^2$, $f_{yy}=12y^2$, $f_{xy}=-4$.\n\n**ב-$(0,0)$:** $D=0-16<0$ ⇒ **אוכף** (פיתול).\n\n**ב-$(\\pm 1,\\pm 1)$:** $D=144-16=128>0$, $f_{xx}=12>0$ ⇒ **מינימום מקומי**.\n\n$f(\\pm 1,\\pm 1)=1+1-4+4=2$.\n\n$$\\boxed{\\;(0,0)\\text{ אוכף};\\quad(1,1),(-1,-1)\\text{ מינימום מקומי, }f=2.\\;}$$"
+    },
+    {
+      "qid": "y2003_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "יש למצוא פתרון למשוואה הדיפרנציאלית $y'(1+2y^2)=y\\cos x$ עם תנאי ההתחלה $y(0)=1$.",
+      "solution_he": "**הפרדת משתנים:**\n$$\\frac{(1+2y^2)dy}{y}=\\cos x\\,dx\\Rightarrow\\int\\!\\!\\left(\\tfrac{1}{y}+2y\\right)dy=\\int\\cos x\\,dx.$$\n$$\\ln|y|+y^2=\\sin x+C.$$\n\n**תנאי התחלה $y(0)=1$:** $\\ln 1+1=0+C\\Rightarrow C=1$.\n\n$$\\boxed{\\;\\ln|y|+y^2=\\sin x+1.\\;}$$"
+    },
+    {
+      "qid": "y2003_m2_q5",
+      "number": 5,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "יש לענות על 4 מתוך 5 הסעיפים (15 נקודות לכל אחד). תיבדקנה רק 4 התשובות הראשונות.\n\nא. יש לחשב את $\\iiint_V x\\,dx\\,dy\\,dz$ כאשר $V$ הוא הנפח התחום בין המישורים $3x+y+z=6, x=0, y=0$ ו-$z=0$.\n\nב. נתון כדור שמרכזו בנקודה $(0,0,1)$ ורדיוסו $2$. יש לחשב את פני שטח מעטפת הכדור עבור $0\\le z\\le 1$.\n\nג. יש לחשב את $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=xy\\hat i+x\\hat j+z\\hat k$ ו-$c(t)=(\\sin t,\\cos t,t/4)$ עבור $0\\le t\\le 2\\pi$.\n\nד. יהי $S$ מעטפת של כדור שמרכזו בראשית ורדיוסו $1$. יש לחשב את $\\iint_S(x^4+y^4)ds$.\n\nה. נתון כדור בעל רדיוס $a$ שצפיפות המסה שלו $\\delta$ תלויה אך ורק במרחק $\\rho$ ממרכזו: $\\delta=\\delta_0 e^{-\\rho/k}$. יש לחשב את המסה של חלק הכדור הנמצא גם בתוך הקונוס $z=\\sqrt 3\\,r$ (קואורדינטות גליליות).",
+      "solution_he": "**(א) אינטגרל על טטרהדרון.** קודקודים $(0,0,0),(2,0,0),(0,6,0),(0,0,6)$.\n\n$$\\iiint x\\,dV=\\int_0^2 x\\,dx\\!\\int_0^{6-3x}\\!(6-3x-y)dy=\\int_0^2\\!x\\cdot\\tfrac{(6-3x)^2}{2}dx.$$\n\nהצבה $u=6-3x$:\n$$=\\tfrac{1}{18}\\!\\int_0^6(6u^2-u^3)du=\\tfrac{1}{18}(432-324)=$$\n$$\\boxed{\\;6.\\;}$$\n\n---\n\n**(ב) שטח אזור ספירי.** ספירה מרכזה $(0,0,1)$, רדיוס $2$. הקטע $0\\le z\\le 1$ הוא **אזור ספירי** מגובה $h=1$.\n\n**משפט ארכימדס:** שטח אזור ספירי = $2\\pi R h$.\n\n$$\\boxed{\\;A=2\\pi\\cdot 2\\cdot 1=4\\pi.\\;}$$\n\n---\n\n**(ג) קו על ספירלה.** $\\dot x=\\cos t, \\dot y=-\\sin t, \\dot z=1/4$.\n\n$\\vec F\\cdot\\vec r\\,'=\\sin t\\cos^2 t-\\sin^2 t+t/16$.\n\n* $\\int_0^{2\\pi}\\sin t\\cos^2 t\\,dt=0$.\n* $\\int_0^{2\\pi}\\sin^2 t\\,dt=\\pi$.\n* $\\int_0^{2\\pi}t/16\\,dt=\\pi^2/8$.\n\n$$\\boxed{\\;\\int_c\\vec F\\cdot d\\vec r=\\tfrac{\\pi^2}{8}-\\pi\\approx 0.092.\\;}$$\n\n---\n\n**(ד) ספירה — $x^4+y^4$.** (זהה ל-2012 מועד א׳ ש׳5ב.)\n\n$\\iint x^4 dS=\\int_0^\\pi\\sin^5\\phi d\\phi\\!\\int_0^{2\\pi}\\cos^4\\theta d\\theta=\\tfrac{16}{15}\\cdot\\tfrac{3\\pi}{4}=\\tfrac{4\\pi}{5}$.\n\n$$\\boxed{\\;\\iint_S(x^4+y^4)ds=\\tfrac{8\\pi}{5}\\approx 5.03.\\;}$$\n\n---\n\n**(ה) מסה של חתך כדורי בתוך קונוס.** קונוס $z=\\sqrt 3 r$ ⇔ $\\tan\\phi=1/\\sqrt 3$ ⇔ $\\phi=\\pi/6$.\n\n$$M=2\\pi\\delta_0\\!\\int_0^{\\pi/6}\\!\\sin\\phi d\\phi\\!\\int_0^a\\rho^2 e^{-\\rho/k}d\\rho.$$\n\n* $\\int_0^{\\pi/6}\\sin\\phi d\\phi=1-\\tfrac{\\sqrt 3}{2}=\\tfrac{2-\\sqrt 3}{2}$.\n* $\\int_0^a\\rho^2 e^{-\\rho/k}d\\rho=k^3\\bigl[2-(\\tfrac{a^2}{k^2}+\\tfrac{2a}{k}+2)e^{-a/k}\\bigr]$ (אינטגרל סטנדרטי).\n\n$$\\boxed{\\;M=\\pi\\delta_0(2-\\sqrt 3)k^3\\!\\left[2-\\bigl(\\tfrac{a^2}{k^2}+\\tfrac{2a}{k}+2\\bigr)e^{-a/k}\\right].\\;}$$\n\n**גבול $k\\to\\infty$** (צפיפות אחידה): $M\\to 0$ (תיקון מ-$2k^3$ ב-$k^3$). אבל לוקח טור: $M\\to\\pi\\delta_0(2-\\sqrt 3)\\cdot\\tfrac{a^3}{3}$. (בדיקה: מסה של אוקטנט-לימקון בצפיפות אחידה $\\delta_0$, חלק נפח כדור עם $(1-\\cos\\pi/6)=\\tfrac{2-\\sqrt 3}{2}$, כלומר $\\tfrac{4\\pi a^3}{3}\\cdot\\tfrac{1-\\cos\\pi/6}{2}=\\tfrac{2\\pi a^3(2-\\sqrt 3)}{12}$. בערך תואם ל-$\\tfrac{\\pi(2-\\sqrt 3) a^3}{3}$ — ✓.)"
+    },
+    {
+      "qid": "y2003_m2_q6",
+      "number": 6,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** יש לחשב את $\\iint_D\\dfrac{(x-y)\\tan^{-1}(x-y)}{x+y}dx\\,dy$ כאשר $D$ הוא המרובע שקודקודיו הם $(0,2), (2,4), (4,2), (2,0)$.",
+      "solution_he": "(שאלה זהה לבונוס של 2013 מועד ב׳.)\n\n**החלפת משתנים** $u=x-y, v=x+y$. יעקוביאן $1/2$. המרובע ב-$(u,v)$ הוא מלבן $[-2,2]\\times[2,6]$.\n\n$$I=\\tfrac{1}{2}\\!\\int_{-2}^2\\!u\\arctan u\\,du\\cdot\\!\\int_2^6\\!\\tfrac{dv}{v}=\\tfrac{1}{2}(5\\arctan 2-2)\\ln 3.$$\n\n$$\\boxed{\\;I=\\tfrac{(5\\arctan 2-2)\\ln 3}{2}\\approx 1.94.\\;}$$"
+    }
+  ]
+}

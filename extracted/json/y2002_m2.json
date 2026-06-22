@@ -1,0 +1,58 @@
+{
+  "exam_id": "y2002_m2",
+  "year": 2002,
+  "moed": "ב",
+  "date": "2002-08-25",
+  "duration_hours": 3,
+  "instructions": "יש לענות על שאלות 1–2 (15 נק' כל אחת), על 4 מתוך 5 הסעיפים בשאלה 3 (15 נק' כל אחד), ועל שאלה 4. שאלת הבונוס אופציונלית.",
+  "answer_n_of_m": null,
+  "source_pdf": "y2002_s2m2y02.pdf",
+  "questions": [
+    {
+      "qid": "y2002_m2_q1",
+      "number": 1,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "נתון $z=e^{xy^2}$ וכן ש-$x=t\\cos t$ ו-$y=t\\sin t$. יש לחשב $\\dfrac{dz}{dt}$ בנקודה $t=\\dfrac{\\pi}{2}$.",
+      "solution_he": "**שרשרת:** $\\tfrac{dz}{dt}=z_x\\dot x+z_y\\dot y$.\n\n$z_x=y^2 e^{xy^2}, z_y=2xy e^{xy^2}$.\n$\\dot x=\\cos t-t\\sin t, \\dot y=\\sin t+t\\cos t$.\n\n**ב-$t=\\pi/2$:** $\\cos(\\pi/2)=0, \\sin(\\pi/2)=1$. $x=0, y=\\pi/2$. $\\dot x=-\\pi/2, \\dot y=1$. $xy^2=0\\Rightarrow e^{xy^2}=1$.\n\n$z_x=(\\pi/2)^2\\cdot 1=\\pi^2/4$, $z_y=0$.\n\n$$\\frac{dz}{dt}=\\frac{\\pi^2}{4}\\cdot(-\\pi/2)+0\\cdot 1=$$\n\n$$\\boxed{\\;-\\tfrac{\\pi^3}{8}\\approx -3.876.\\;}$$"
+    },
+    {
+      "qid": "y2002_m2_q2",
+      "number": 2,
+      "points": 15,
+      "subparts": null,
+      "statement_he": "נתון המשטח $z=(x^2+y^2)^{1/2}$. יש למצוא איזה נקודה על המשטח היא הקרובה ביותר לנקודה $(5,5,0)$.",
+      "solution_he": "**הצבה:** מינום $d^2=(x-5)^2+(y-5)^2+z^2=(x-5)^2+(y-5)^2+x^2+y^2$ (כי $z^2=x^2+y^2$).\n\n**משוואות:** $\\partial_x=2(x-5)+2x=4x-10=0\\Rightarrow x=\\tfrac{5}{2}$. דומה $y=\\tfrac{5}{2}$.\n\n$z=\\sqrt{x^2+y^2}=\\sqrt{25/2}=\\tfrac{5\\sqrt 2}{2}$.\n\n$$\\boxed{\\;P=\\left(\\tfrac{5}{2},\\tfrac{5}{2},\\tfrac{5\\sqrt 2}{2}\\right).\\;}$$\n\n**מרחק מ-$(5,5,0)$:** $\\sqrt{(2.5)^2+(2.5)^2+(2.5\\sqrt 2)^2}=\\sqrt{6.25+6.25+12.5}=\\sqrt{25}=5$."
+    },
+    {
+      "qid": "y2002_m2_q3",
+      "number": 3,
+      "points": 60,
+      "subparts": [
+        "א",
+        "ב",
+        "ג",
+        "ד",
+        "ה"
+      ],
+      "statement_he": "ענו רק על 4 מתוך 5 הסעיפים (15 נק' לכל אחד):\n\nא. יש לחשב את $\\iint_\\sigma\\vec F\\cdot\\hat n\\,ds$ כאשר $\\sigma$ הוא משטח הנתון ע״י $x^2+y^2+z=9$ בתחום בו $z\\ge 0$, ו-$\\vec F=y\\hat i-x\\hat j+2\\hat k$.\n\nב. יש לחשב את הנפח המתקבל ע״י סיבוב המשולש שקודקודיו בנקודות $(2,-2,0), (-1,-2,0), (2,2,0)$ סביב הישר $2x+3y=30$.\n\nג. יש לחשב את $\\int_c\\vec F\\cdot d\\vec r$ כאשר $\\vec F=3\\vec r$ ו-$c$ הוא הקטע הישר המחבר את $(0,1,0)$ ו-$(2,0,0)$.\n\nד. יש למצוא את המסה של חלקו הקטן של כדור ברדיוס $r$ הנחתך ע״י מישור שמרחקו ממרכז הכדור הוא $h$ ($0<h<r$) אם ידוע שצפיפות המסה של הכדור נתונה ע״י $\\rho=A(2-\\sin^2\\theta)$.\n\nה. יש לחשב את $\\oint_c\\vec F\\cdot d\\vec r$ כאשר המסלול $c$ מתקבל מחיתוך מעטפת של כדור שמרכזו בראשית ורדיוסו $2$ והמישור $z=x$, ו-$\\vec F=2x\\hat i+y\\hat j+\\hat k$.",
+      "solution_he": "**(א) שטף דרך פרבולואיד.** $\\vec n dS=(2x,2y,1)dA$. $\\vec F\\cdot\\vec n=2xy-2xy+2=2$.\n\n$$\\boxed{\\;\\iint_\\sigma=2\\cdot\\pi\\cdot 3^2=18\\pi.\\;}$$\n\n---\n\n**(ב) פפוס.** משולש (Shoelace): $A=6$. צנטרואיד $(1,-\\tfrac{2}{3})$.\n\nמרחק מ-$2x+3y-30=0$: $\\bar d=|2-2-30|/\\sqrt{13}=\\tfrac{30}{\\sqrt{13}}$.\n\n(אימות: $\\max(2x+3y)=10$ ב-$(2,2)$, רחוק מ-$30$. ✓)\n\n$$\\boxed{\\;V=2\\pi\\cdot\\tfrac{30}{\\sqrt{13}}\\cdot 6=\\tfrac{360\\pi}{\\sqrt{13}}=\\tfrac{360\\pi\\sqrt{13}}{13}\\approx 313.5.\\;}$$\n\n---\n\n**(ג) שדה משמר $\\vec F=3\\vec r=\\nabla(\\tfrac{3}{2}r^2)$.** מ-$(0,1,0)$ ($r^2=1$) ל-$(2,0,0)$ ($r^2=4$):\n\n$$\\boxed{\\;\\int_c=\\tfrac{3}{2}(4-1)=\\tfrac{9}{2}.\\;}$$\n\n---\n\n**(ד) מסה של כיפה ספירית עם צפיפות לא קבועה.** $\\rho=A(2-\\sin^2\\phi)=A(1+\\cos^2\\phi)$.\n\nבספריות, התחום: $\\phi\\in[0,\\arccos(h/r)]$, $\\rho\\in[h/\\cos\\phi,r]$:\n$$M=2\\pi A\\!\\int_0^{\\arccos(h/r)}\\!\\sin\\phi(1+\\cos^2\\phi)\\cdot\\tfrac{r^3-h^3/\\cos^3\\phi}{3}d\\phi.$$\n\nהצבה $u=\\cos\\phi$:\n$$M=\\tfrac{2\\pi A}{3}\\!\\int_{h/r}^1\\!(1+u^2)(r^3-h^3/u^3)du.$$\n\nחישוב מפורש לאחר אינטגרציה:\n$$\\boxed{\\;M=\\tfrac{\\pi A}{9}\\bigl[8r^3-9r^2 h+h^3+6h^3\\ln\\!\\tfrac{h}{r}\\bigr].\\;}$$\n\n**אימות $h\\to 0$:** $\\lim h^3\\ln h=0$, ולכן $M\\to\\tfrac{8\\pi A r^3}{9}$ — מסת חצי הכדור העליון עם צפיפות $A(1+\\cos^2\\phi)$. ✓\n\n**אימות $h\\to r$:** $\\ln(h/r)\\to 0$ והאיבר ה\"רגיל\" $8r^3-9r^3+r^3=0$, ולכן $M\\to 0$ ✓ (אין כיפה).\n\n---\n\n**(ה) שדה משמר ⇒ מסלול סגור = 0.** $\\nabla\\times\\vec F=(0,0,0)$ (קל לחשב). $\\vec F=\\nabla(x^2+y^2/2+z)$.\n\nמסלול סגור (אליפסה — חיתוך ספירה עם מישור) של שדה משמר:\n\n$$\\boxed{\\;\\oint_c\\vec F\\cdot d\\vec r=0.\\;}$$"
+    },
+    {
+      "qid": "y2002_m2_q4",
+      "number": 4,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "נתונה המשוואה הדיפרנציאלית $(xy^2+bx^2 y)dx+(x+y)x^2\\,dy=0$. עבור איזה ערך של $b$ המשוואה היא מדויקת? יש לפתור את המשוואה עבור $b$ זה.",
+      "solution_he": "**תנאי המדויקות:** $\\partial_y(xy^2+bx^2 y)=\\partial_x[(x+y)x^2]$.\n* LHS: $2xy+bx^2$.\n* RHS: $\\partial_x(x^3+yx^2)=3x^2+2xy$.\n\nשוויון: $bx^2=3x^2\\Rightarrow b=3$.\n\n**עם $b=3$:** $(xy^2+3x^2 y)dx+(x^3+x^2 y)dy=0$.\n\n**פוטנציאל $\\Phi$:** $\\Phi_x=xy^2+3x^2 y$ ⇒ $\\Phi=\\tfrac{x^2 y^2}{2}+x^3 y+g(y)$.\n\n$\\Phi_y=x^2 y+x^3+g'(y)=x^3+x^2 y$ ⇒ $g'=0$, $g=$ קבוע.\n\n$$\\boxed{\\;b=3;\\quad\\tfrac{x^2 y^2}{2}+x^3 y=C\\quad\\text{(או }x^2 y(2x+y)=2C\\text{).}\\;}$$"
+    },
+    {
+      "qid": "y2002_m2_q5",
+      "number": 5,
+      "points": 10,
+      "subparts": null,
+      "statement_he": "**בונוס.** גוף מחליק ללא חיכוך על מסלול $y(x)=1-x^\\alpha$ כאשר $0\\le x\\le 1$. אם הגוף נשמט ממנוחה בנקודה הגבוהה, תוך כמה זמן יגיע לתחתית המסלול?",
+      "solution_he": "**גיאומטריה:** גובה התחלתי $y(0)=1$, סופי $y(1)=0$. מהירות מאנרגיה: $\\tfrac{1}{2}v^2=g(1-y)=g x^\\alpha$ ⇒ $v=\\sqrt{2g\\,x^\\alpha}$.\n\n**אלמנט אורך:** $ds=\\sqrt{1+(y')^2}dx=\\sqrt{1+\\alpha^2 x^{2\\alpha-2}}dx$.\n\n**זמן:** $T=\\int_0^1\\dfrac{ds}{v}$:\n$$\\boxed{\\;T=\\dfrac{1}{\\sqrt{2g}}\\!\\int_0^1\\!\\dfrac{\\sqrt{1+\\alpha^2 x^{2\\alpha-2}}}{x^{\\alpha/2}}dx.\\;}$$\n\n**תנאי התכנסות:** האינטגרל מתכנס סביב $x=0$ רק אם $\\alpha<2$ (ל-$\\alpha\\ge 2$ המהירות עולה מהר מדי מ-0, וזמן יציאה ממנוחה מתבדר).\n\n**מקרה $\\alpha=1$ (ישר):** $T=\\dfrac{1}{\\sqrt{2g}}\\int_0^1\\dfrac{\\sqrt 2}{\\sqrt x}dx=\\dfrac{1}{\\sqrt g}\\cdot 2=\\dfrac{2}{\\sqrt g}\\approx 0.639$ שנייה (עם $g=9.81$).\n\n**מקרה $\\alpha=1/2$:** $y'=-\\tfrac{1}{2}x^{-1/2}$, $(y')^2=\\tfrac{1}{4x}$. $T=\\dfrac{1}{\\sqrt{2g}}\\int_0^1\\dfrac{\\sqrt{1+1/(4x)}}{x^{1/4}}dx$. מתכנס.\n\n**ברקיסטוכרון:** הזמן המינימלי על מסלול $y=1-x^\\alpha$ מושג עבור ערך $\\alpha$ ספציפי (מקורב $\\alpha\\sim 1/2$). הפתרון הכי מהיר הוא ציקלואידה, לא חזקה."
+    }
+  ]
+}
